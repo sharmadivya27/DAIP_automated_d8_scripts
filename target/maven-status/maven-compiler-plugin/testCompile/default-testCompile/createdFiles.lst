@@ -1,0 +1,12 @@
+gov/daip/d8/test/pageObject/DAQuestionnaire.class
+gov/daip/d8/test/exceptions/FeedException.class
+gov/daip/d8/test/pageObject/DAPage.class
+gov/daip/d8/test/pageObject/DALandingPage.class
+gov/daip/d8/test/DailyRegressionSteps.class
+gov/daip/d8/test/exceptions/LocalResourcesException.class
+gov/daip/d8/test/pageObject/DrupalPage.class
+gov/daip/d8/test/User.class
+gov/daip/d8/test/DAIPAcceptanceTestSuite.class
+gov/daip/d8/test/exceptions/EmploymentException.class
+gov/daip/d8/test/exceptions/StateException.class
+gov/daip/d8/test/pageObject/DAHomepage.class

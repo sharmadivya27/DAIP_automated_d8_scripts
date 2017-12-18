@@ -1,0 +1,49 @@
+<story path="stories/fullRegression/regressionChecklistSpanish.story" title="">
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="In order to">assert that the basic functionality of https://www.disasterassistance.gov/es/ is working</inOrderTo>
+  <asA keyword="As a">tester</asA>
+  <iWantTo keyword="I want to">run the daily regressions at least twice a day
+
+Meta:</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="(Spanish) Verify the main links on homepage to assert that the Spanish pages open correctly">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<examples keyword="Examples:">
+<step>Given I am on the Spanish Disaster Assistance homepage</step>
+<step>When I click on &lt;mainLinksItem&gt; within the main links bar</step>
+<step>Then the &lt;mainLinksItem&gt; page should open correctly</step>
+<parameters>
+<names><name>mainLinksItem</name></names>
+<values><value>encontrar ayuda</value></values>
+<values><value>solicitar asistencia</value></values>
+<values><value>revisar estatus</value></values>
+</parameters>
+
+<example keyword="Example:">{mainLinksItem=encontrar ayuda, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
+<step outcome="successful">When I click on <parameter>encontrar ayuda</parameter> within the main links bar</step>
+<step outcome="successful">Then the <parameter>encontrar ayuda</parameter> page should open correctly</step>
+
+<example keyword="Example:">{mainLinksItem=solicitar asistencia, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
+<step outcome="successful">When I click on <parameter>solicitar asistencia</parameter> within the main links bar</step>
+<step outcome="successful">Then the <parameter>solicitar asistencia</parameter> page should open correctly</step>
+
+<example keyword="Example:">{mainLinksItem=revisar estatus, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
+<step outcome="successful">When I click on <parameter>revisar estatus</parameter> within the main links bar</step>
+<step outcome="successful">Then the <parameter>revisar estatus</parameter> page should open correctly</step>
+</examples>
+</scenario>
+<scenario keyword="Scenario:" title="(Spanish) Verify states in the Spanish declared disaster map are clickable">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
+<step outcome="successful">When I am viewing the declared disaster map</step>
+<step outcome="successful">Then states with disasters should be clickable</step>
+</scenario>
+</story>

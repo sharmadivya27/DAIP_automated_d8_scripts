@@ -1,0 +1,188 @@
+<html>
+<head>
+<title>stories.fullRegression.regressionChecklist</title>
+<style type="text/css" media="all">
+@import url( "./style/jbehave-core.css" );
+</style>
+</head>
+<body>
+ 
+<script type="syntaxhighlighter" class="brush: xml"><![CDATA[
+<story path="stories/fullRegression/regressionChecklist.story" title="">
+<meta>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<narrative keyword="Narrative:">
+  <inOrderTo keyword="In order to">assure that the basic functionality of disasterassistance.gov is working</inOrderTo>
+  <asA keyword="As a">tester</asA>
+  <iWantTo keyword="I want to">run the daily regressions at least twice a day
+
+Meta: @skip</iWantTo>
+</narrative>
+<scenario keyword="Scenario:" title="Verify the main links on homepage to assert that the pages open correctly">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<examples keyword="Examples:">
+<step>Given I am on the Disaster Assistance homepage</step>
+<step>When I click on &lt;mainLinksItem&gt; within the main links bar</step>
+<step>Then the &lt;mainLinksItem&gt; page should open correctly</step>
+<parameters>
+<names><name>mainLinksItem</name></names>
+<values><value>find assistance</value></values>
+<values><value>apply online</value></values>
+<values><value>check status</value></values>
+</parameters>
+
+<example keyword="Example:">{mainLinksItem=find assistance, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on <parameter>find assistance</parameter> within the main links bar</step>
+<step outcome="successful">Then the <parameter>find assistance</parameter> page should open correctly</step>
+
+<example keyword="Example:">{mainLinksItem=apply online, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on <parameter>apply online</parameter> within the main links bar</step>
+<step outcome="successful">Then the <parameter>apply online</parameter> page should open correctly</step>
+
+<example keyword="Example:">{mainLinksItem=check status, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on <parameter>check status</parameter> within the main links bar</step>
+<step outcome="successful">Then the <parameter>check status</parameter> page should open correctly</step>
+</examples>
+</scenario>
+<scenario keyword="Scenario:" title="Verify states in the declared disaster map are clickable">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I am viewing the declared disaster map</step>
+<step outcome="successful">Then states with disasters should be clickable</step>
+</scenario>
+<scenario keyword="Scenario:" title="Verify the declared states on the declared disaster map">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I am viewing the declared disaster map</step>
+<step outcome="successful">Then states with disasters should be clickable</step>
+<step outcome="successful">Then I should be able to view the list of the declared states</step>
+</scenario>
+<scenario keyword="Scenario:" title="Verify Local Resources flows correctly">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I am attempting to find local resources</step>
+<step outcome="successful">Then information on resources should be visible</step>
+</scenario>
+<scenario keyword="Scenario:" title="Verify all of the titles on the &quot;News Feeds&quot; landing page node">
+<meta>
+<property keyword="@" name="category" value="new"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">When I am on the News Feeds landing page node</step>
+<step outcome="successful">Then all of the sub-titles should show on the page</step>
+</scenario>
+<scenario keyword="Scenario:" title="Verify the results of the quick search items">
+<meta>
+<property keyword="@" name="category" value="NWD"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<examples keyword="Examples:">
+<step>Given I am on the Community Leaders page on Disaster Assistance</step>
+<step>When I click on a &lt;quickSearch&gt; item on the Community Leaders page</step>
+<step>Then the results should include the search words for that item</step>
+<parameters>
+<names><name>quickSearch</name></names>
+<values><value>Community Preparedness</value></values>
+<values><value>Emergency Shelter and Housing</value></values>
+<values><value>How Can You Help?</value></values>
+<values><value>Infrastructure, Utilities, and Other Public Assistance</value></values>
+</parameters>
+
+<example keyword="Example:">{quickSearch=Community Preparedness, category=NWD, skip=}</example>
+<step outcome="successful">Given I am on the Community Leaders page on Disaster Assistance</step>
+<step outcome="successful">When I click on a <parameter>Community Preparedness</parameter> item on the Community Leaders page</step>
+<step outcome="successful">Then the results should include the search words for that item</step>
+
+<example keyword="Example:">{quickSearch=Emergency Shelter and Housing, category=NWD, skip=}</example>
+<step outcome="successful">Given I am on the Community Leaders page on Disaster Assistance</step>
+<step outcome="successful">When I click on a <parameter>Emergency Shelter and Housing</parameter> item on the Community Leaders page</step>
+<step outcome="successful">Then the results should include the search words for that item</step>
+
+<example keyword="Example:">{quickSearch=How Can You Help?, category=NWD, skip=}</example>
+<step outcome="successful">Given I am on the Community Leaders page on Disaster Assistance</step>
+<step outcome="successful">When I click on a <parameter>How Can You Help?</parameter> item on the Community Leaders page</step>
+<step outcome="successful">Then the results should include the search words for that item</step>
+
+<example keyword="Example:">{quickSearch=Infrastructure, Utilities, and Other Public Assistance, category=NWD, skip=}</example>
+<step outcome="successful">Given I am on the Community Leaders page on Disaster Assistance</step>
+<step outcome="successful">When I click on a <parameter>Infrastructure, Utilities, and Other Public Assistance</parameter> item on the Community Leaders page</step>
+<step outcome="successful">Then the results should include the search words for that item</step>
+</examples>
+</scenario>
+<scenario keyword="Scenario:" title="Verify the declared disasters with Address Look-up">
+<meta>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">Given I am on the declared disasters DAC page</step>
+<step outcome="successful">When I type the declared disaster into the address look-up bar</step>
+<step outcome="successful">Then I should get the results for the given disaster</step>
+</scenario>
+<scenario keyword="Scenario:" title="Verify benefits results display according to use cases">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">Given I am on the Find Assistance page</step>
+<step outcome="successful">When I choose only Employment</step>
+<step outcome="successful">Then I should obtain 9 results and see all the content under the accordions</step>
+</scenario>
+<scenario keyword="Scenario:" title="Dynamically verify results of the questionnaire on the &quot;Find Assistance&quot; page">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">Given I am on the Find Assistance page</step>
+<step outcome="successful">When I fully complete the questionnaire</step>
+<step outcome="successful">Then I should accumulate the same number of results as the text on the Get Results button</step>
+</scenario>
+<scenario keyword="Scenario:" title="Verify that the FEMA Twitter feed is present on the News Feeds page">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">Given I am on the News Feed page</step>
+<step outcome="successful">When I am viewing the FEMA Twitter feed</step>
+<step outcome="successful">Then the most recent tweets should be displayed</step>
+</scenario>
+</story>
+
+]]></script>
+</body>
+<!--  SyntaxHighlighter resources:  should be included at end of body -->
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shCore.css"/>
+<link rel="stylesheet" type="text/css" href="./style/sh-3.0.83/shThemeRDark.css"/>
+<script language="javascript" src="./js/sh-3.0.83/shCore.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushBash.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushCss.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushDiff.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushGroovy.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJava.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushJScript.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPlain.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushPython.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushRuby.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushScala.js"></script>
+<script language="javascript" src="./js/sh-3.0.83/shBrushXml.js"></script>
+<script language="javascript" src="./js/shBrushBdd.js"></script>
+<script type="text/javascript">
+    SyntaxHighlighter.defaults['gutter'] = false;
+    SyntaxHighlighter.defaults['toolbar'] = false;    
+    SyntaxHighlighter.all();
+</script>
+</html>
