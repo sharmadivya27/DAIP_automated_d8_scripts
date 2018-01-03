@@ -52,6 +52,102 @@ public class DALandingPage extends PageObject {
 	@FindBy(xpath = "//*[@id='block-communityleadersresultspage']/div[6]")
 	private WebElementFacade infrastructure;
 	
+	@FindBy(xpath = "//*[@id='edit-filter-by-1']")
+	private WebElementFacade categoryType;
+	
+	@FindBy(xpath = "//*[@id='edit-filter-by-2']")
+	private WebElementFacade federalAgency;
+	
+	@FindBy(xpath = "//*[@id='edit-category-list-214']")
+	private WebElementFacade careerAssistance;
+	
+	@FindBy(xpath = "//*[@id='edit-category-list-215']")
+	private WebElementFacade disabilityAssistance;
+	
+	@FindBy(xpath = "//*[@id='edit-category-list-216']")
+	private WebElementFacade disasterRelief;
+	
+	@FindBy(xpath = "//*[@id='edit-category-list-217']")
+	private WebElementFacade educationTraining;
+	
+	@FindBy(xpath = "//*[@id='edit-category-list-218']")
+	private WebElementFacade energyAssistance;
+	
+	@FindBy(xpath = "//*[@id='edit-category-list-219']")
+	private WebElementFacade foodNutrition;
+	
+	@FindBy(xpath = "//*[@id='edit-category-list-220']")
+	private WebElementFacade grants;
+	
+	@FindBy(xpath = "//*[@id='edit-category-list-221']")
+	private WebElementFacade housing;
+	
+	@FindBy(xpath = "//*[@id='edit-category-list-222']")
+	private WebElementFacade insurance;
+	
+	@FindBy(xpath = "//*[@id='edit-category-list-223']")
+	private WebElementFacade legalCounsel;
+	
+	@FindBy(xpath = "//*[@id='edit-category-list-224']")
+	private WebElementFacade livingAssistance;
+	
+	@FindBy(xpath = "//*[@id='edit-category-list-225']")
+	private WebElementFacade loanRepayment;
+	
+	@FindBy(xpath = "//*[@id='edit-category-list-226']")
+	private WebElementFacade mentalHealth;
+	
+	@FindBy(xpath = "//*[@id='edit-category-list-227']")
+	private WebElementFacade socialSecurity;
+	
+	@FindBy(xpath = "//*[@id='edit-category-list-228']")
+	private WebElementFacade veterans;
+	
+	@FindBy(xpath = "//*[@id='edit-agency-title-list-usda']")
+	private WebElementFacade USDA;
+	
+	@FindBy(xpath = "//*[@id='edit-agency-title-list-ed']")
+	private WebElementFacade ED;
+	
+	@FindBy(xpath = "//*[@id='edit-agency-title-list-hhs']")
+	private WebElementFacade HHS;
+	
+	@FindBy(xpath = "//*[@id='edit-agency-title-list-dhs']")
+	private WebElementFacade DHS;
+	
+	@FindBy(xpath = "//*[@id='edit-agency-title-list-hud']")
+	private WebElementFacade HUD;
+	
+	@FindBy(xpath = "//*[@id='edit-agency-title-list-doj']") 
+	private WebElementFacade DOJ;
+	
+	@FindBy(xpath = "//*[@id='edit-agency-title-list-dol']")
+	private WebElementFacade DOL;
+	
+	@FindBy(xpath = "//*[@id='edit-agency-title-list-va']")
+	private WebElementFacade VA;
+	
+	@FindBy(xpath = "//*[@id='edit-agency-title-list-doi']")
+	private WebElementFacade DOI;
+	
+	@FindBy(xpath = "//*[@id='edit-agency-title-list-treasury']")
+	private WebElementFacade treasury;
+	
+	@FindBy(xpath = "//*[@id='edit-agency-title-list-opm']")
+	private WebElementFacade OPM;
+	
+	@FindBy(xpath = "//*[@id='edit-agency-title-list-usps']")
+	private WebElementFacade USPS;
+	
+	@FindBy(xpath = "//*[@id='edit-agency-title-list-sba']")
+	private WebElementFacade SBA;
+	
+	@FindBy(xpath = "//*[@id='edit-agency-title-list-ssa']")
+	private WebElementFacade SSA;
+	
+	@FindBy(xpath = "//*[@class='desktop-header']")
+	private WebElementFacade results;
+	
 	// *************************************************************************
 	// Functions
 	
@@ -147,5 +243,58 @@ public class DALandingPage extends PageObject {
 
 	public void clickInfrastructure() {
 		infrastructure.click();
+	}
+	
+	public void clickCategoryType() {
+		categoryType.click();
+	}
+	
+	public void clickFederalAgency() {
+		federalAgency.click();
+	}
+	
+	public void clickFirstCategoryTypes() {
+		careerAssistance.click();
+		disabilityAssistance.click();
+		disasterRelief.click();
+		educationTraining.click();
+		energyAssistance.click();
+		foodNutrition.click();
+		grants.click();
+	}
+	
+	public void clickNextCategoryTypes() {
+		housing.click();
+		insurance.click();
+		legalCounsel.click();
+		livingAssistance.click();
+		loanRepayment.click();
+		mentalHealth.click();
+		socialSecurity.click();
+		veterans.click();
+	}
+	
+	public void clickFirstSevenFederalAgencies() {
+		USDA.click();
+		ED.click();
+		HHS.click();
+		DHS.click();
+		HUD.click();
+		DOJ.click();
+		DOL.click();
+	}
+	
+	public void clickNextFederalAgencies() {
+		VA.click();
+		DOI.click();
+		treasury.click();
+		OPM.click();
+		USPS.click();
+		SBA.click();
+		SSA.click();
+	}
+	
+	public String getResults() {
+		return results.getText();
 	}
 }

@@ -6,44 +6,50 @@
 
 Meta:</iWantTo>
 </narrative>
-<scenario keyword="Scenario:" title="(Spanish) Verify the main links on homepage to assert that the Spanish pages open correctly">
+<scenario keyword="Scenario:" title="(Spanish) Verify all the menu links on the &quot;Get Assistance&quot; tab">
 <meta>
 <property keyword="@" name="category" value="daily"/>
-<property keyword="@" name="skip" value=""/>
 </meta>
 <examples keyword="Examples:">
 <step>Given I am on the Spanish Disaster Assistance homepage</step>
-<step>When I click on &lt;mainLinksItem&gt; within the main links bar</step>
-<step>Then the &lt;mainLinksItem&gt; page should open correctly</step>
+<step>When I click on the &lt;menuLinks&gt; in the Get Assistance tab</step>
+<step>Then the &lt;menuLinks&gt; page should open correctly</step>
 <parameters>
-<names><name>mainLinksItem</name></names>
+<names><name>menuLinks</name></names>
+<values><value>buscador de direcciónes</value></values>
 <values><value>encontrar ayuda</value></values>
 <values><value>solicitar asistencia</value></values>
 <values><value>revisar estatus</value></values>
+<values><value>formas de asistencia</value></values>
+<values><value>otra ayuda para recuperación</value></values>
+<values><value>líderes comunitarios</value></values>
+<values><value>lista de verificación para aplicarse</value></values>
+<values><value>formularios</value></values>
 </parameters>
 
-<example keyword="Example:">{mainLinksItem=encontrar ayuda, category=daily, skip=}</example>
+<example keyword="Example:">{menuLinks=buscador de direcciónes, category=daily}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
-<step outcome="successful">When I click on <parameter>encontrar ayuda</parameter> within the main links bar</step>
-<step outcome="successful">Then the <parameter>encontrar ayuda</parameter> page should open correctly</step>
+<step outcome="successful">When I click on the <parameter>buscador de direcciónes</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>buscador de direcciónes</parameter> page should open correctly</step>
 
-<example keyword="Example:">{mainLinksItem=solicitar asistencia, category=daily, skip=}</example>
+<example keyword="Example:">{menuLinks=encontrar ayuda, category=daily}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
-<step outcome="successful">When I click on <parameter>solicitar asistencia</parameter> within the main links bar</step>
-<step outcome="successful">Then the <parameter>solicitar asistencia</parameter> page should open correctly</step>
+<step outcome="successful">When I click on the <parameter>encontrar ayuda</parameter> in the Get Assistance tab</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>encontrar ayuda</parameter> page should open correctly<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Timed out after 2 seconds. Element not found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
+System info: host: &apos;c02rj1fvfvh8.users.bah.com&apos;, ip: &apos;fe80:0:0:0:10aa:d69e:db6f:a5e4%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: driver.version: unknown</failure></step>
 
-<example keyword="Example:">{mainLinksItem=revisar estatus, category=daily, skip=}</example>
+<example keyword="Example:">{menuLinks=solicitar asistencia, category=daily}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
-<step outcome="successful">When I click on <parameter>revisar estatus</parameter> within the main links bar</step>
-<step outcome="successful">Then the <parameter>revisar estatus</parameter> page should open correctly</step>
-</examples>
-</scenario>
-<scenario keyword="Scenario:" title="(Spanish) Verify states in the Spanish declared disaster map are clickable">
-<meta>
-<property keyword="@" name="category" value="daily"/>
-</meta>
+<step outcome="successful">When I click on the <parameter>solicitar asistencia</parameter> in the Get Assistance tab</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>solicitar asistencia</parameter> page should open correctly<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Timed out after 2 seconds. Element not found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
+System info: host: &apos;c02rj1fvfvh8.users.bah.com&apos;, ip: &apos;fe80:0:0:0:10aa:d69e:db6f:a5e4%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: driver.version: unknown</failure></step>
+
+<example keyword="Example:">{menuLinks=revisar estatus, category=daily}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
-<step outcome="successful">When I am viewing the declared disaster map</step>
-<step outcome="successful">Then states with disasters should be clickable</step>
-</scenario>
-</story>
+<step outcome="successful">When I click on the <parameter>revisar estatus</parameter> in the Get Assistance tab</step>

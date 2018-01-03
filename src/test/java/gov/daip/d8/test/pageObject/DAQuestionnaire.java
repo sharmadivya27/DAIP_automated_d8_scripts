@@ -5,6 +5,9 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import java.util.Iterator;
 import java.util.List;
 
+import org.openqa.selenium.WebElement;
+
+import net.serenitybdd.core.annotations.findby.By;
 import net.serenitybdd.core.annotations.findby.FindBy;
 import net.thucydides.core.pages.PageObject;
 
@@ -15,7 +18,7 @@ public class DAQuestionnaire extends PageObject {
 	// *************************************************************************
 	// FindBy / private variables section
 
-	@FindBy(xpath = "//*[@id='questionnaire_form']/div[1]/div[2]/div/div[1]/label/input")
+	@FindBy(xpath = "//*[@id='2211_1']")
 	private WebElementFacade employment;
 
 	@FindBy(xpath = "//*[@id='result_count']")
@@ -29,6 +32,33 @@ public class DAQuestionnaire extends PageObject {
 
 	@FindBy(id = "stateSelector")
 	private WebElementFacade stateSelector;
+	
+	@FindBy(xpath = "//*[@id='2214_1']")
+	private WebElementFacade yesButton1;
+	
+	@FindBy(xpath = "//*[@id='2218_1']")
+	private WebElementFacade yesButton2;
+	
+	@FindBy(xpath = "//*[@id='2220_1']")
+	private WebElementFacade yesButton3;
+	
+	@FindBy(xpath = "//*[@id='2219_1']")
+	private WebElementFacade yesButton4;
+	
+	@FindBy(xpath = "//div[@class='panel-heading']")
+	private List<WebElementFacade> FOAChecklistAccordions;
+	
+	@FindBy(xpath = "//*[@class[contains(., 'col-xs-offset-2')]]")
+	private List<WebElementFacade> FOAfooter;
+	
+	@FindBy(xpath = "//*[@id='pageContent']")
+	private WebElementFacade checkStatusPageContent;
+	
+	@FindBy(xpath = "//span[contains(., 'Disaster Assistance Center') or contains(.,'Centro de Asistencia por Desastre')]")
+	private WebElementFacade dacPage;
+	
+	@FindBy(xpath = "//*[@id='apply_now']")
+	private WebElementFacade applyNow;
 
 	// *************************************************************************
 	// Functions
@@ -70,10 +100,83 @@ public class DAQuestionnaire extends PageObject {
 		stateSelector.sendKeys("Alabama");
 		this.evaluateJavascript("window.scrollBy(0,50)", "");
 		//////////// getResultsButton.click();
+	} 
+	
+	/*************************************************************************
+	 * Returns true if you can see both of the buttons on the footer of the FOA
+	 * questionnaire page. Currently it is only looking for the next and back
+	 * buttons
+	 * 
+	 * @return true if the next and back buttons are visible
+	 *************************************************************************/
+	public boolean foaFooterIsVisible() {
+		Iterator<WebElementFacade> iter = FOAfooter.iterator();
+		int textMatchCounter = 0;
+
+		while (iter.hasNext()) {
+			if (iter.next().isDisplayed()) {
+				textMatchCounter++;
+			}
+		}
+
+		return (textMatchCounter == 2 || textMatchCounter == 1);
+	}
+	
+	/*************************************************************************
+	 * Opens and closes each accordion on the final page of the questionnaire
+	 * and returns the number of content sections it could see
+	 * 
+	 * @return number of content sections visible
+	 *************************************************************************/
+	public int numApplyOnlineFOAs() {
+		Iterator<WebElementFacade> iter = FOAChecklistAccordions.iterator();
+		int contentCounter = 0;
+
+		while (iter.hasNext()) {
+			WebElementFacade accordion = iter.next();
+
+			if (accordion.isDisplayed()) {
+				contentCounter++;
+			}
+
+		}
+
+		return contentCounter;
+
+	}
+	
+	public int getnumApplyOnlineFOA() {
+		return FOAChecklistAccordions.size();
 	}
 
 	public int getResultsVal() {
 		int i = Integer.parseInt(benefitCounter.getText());
 		return i;
+	}
+	
+	public int getNumEmploymentResults() {
+		return FOAExpandedResults.size();
+	}
+	
+	public List<WebElement> getFOAFooter() {
+		return this.getDriver()
+				.findElements(By.xpath("//*[@class[contains(., 'col-xs-offset-2')]]"));
+	}
+	
+	public void clickNextFOA() {
+		List<WebElement> footer = getFOAFooter();
+		footer.get(footer.size() - 1).click();
+	}
+	
+	public void clickApplyOnline() {
+		applyNow.click();
+	}
+	
+	public boolean checkStatusPageIsDisplayed() {
+		return checkStatusPageContent.isDisplayed();
+	}
+	
+	public boolean dacPageIsDisplayed() {
+		return dacPage.isDisplayed();
 	}
 }

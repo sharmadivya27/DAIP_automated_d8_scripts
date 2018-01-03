@@ -16,6 +16,102 @@ public class DAHomepage extends PageObject {
 	// *************************************************************************
 	// FindBy / private variables section
 	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][1]/a")
+	private WebElementFacade getAssistanceTab;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][1]/ul/li[1]/a")
+	private WebElementFacade addressLookUpMenu;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][1]/ul/li[2]/a")
+	private WebElementFacade findAssistance;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][1]/ul/li[3]/a")
+	private WebElementFacade applyOnline;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][1]/ul/li[4]/a")
+	private WebElementFacade checkYourStatus;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][1]/ul/li[5]/a")
+	private WebElementFacade formsOfAssistance;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][1]/ul/li[6]/a")
+	private WebElementFacade communityLeaders;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][1]/ul/li[7]/a")
+	private WebElementFacade otherHelp;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][1]/ul/li[8]/a")
+	private WebElementFacade applicationChecklist;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][1]/ul/li[9]/a")
+	private WebElementFacade forms;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][2]/a")
+	private WebElementFacade informationTab;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][2]/ul/li[1]/a")
+	private WebElementFacade newsFeeds;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][2]/ul/li[2]/a")
+	private WebElementFacade immediateNeeds;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][2]/ul/li[3]/a")
+	private WebElementFacade movingForward;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][2]/ul/li[4]/a")
+	private WebElementFacade disabilities;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][2]/ul/li[5]/a")
+	private WebElementFacade olderAmericans;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][2]/ul/li[6]/a")
+	private WebElementFacade childrenFamilies;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][2]/ul/li[7]/a")
+	private WebElementFacade disasterTypes;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][2]/ul/li[8]/a")
+	private WebElementFacade foreignDisasters;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][2]/ul/li[9]/a")
+	private WebElementFacade factSheets;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][3]/a")
+	private WebElementFacade aboutUsTab;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][3]/ul/li[1]/a")
+	private WebElementFacade overview;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][3]/ul/li[2]/a")
+	private WebElementFacade partners;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][4]/a")
+	private WebElementFacade helpTab;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][4]/ul/li[1]/a")
+	private WebElementFacade faqs;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][4]/ul/li[2]/a")
+	private WebElementFacade contactUs;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][4]/ul/li[3]/a")
+	private WebElementFacade privacyPolicy;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][4]/ul/li[4]/a")
+	private WebElementFacade accessibility;
+	
+	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][4]/ul/li[5]/a")
+	private WebElementFacade downloadPlugIns;
+	
+	@FindBy(xpath = "//*[@class='header-page-title col-md-12']")
+	private WebElementFacade pageTitle;
+	
+	@FindBy(xpath = "//*[@class='basic-page-label']")
+	private WebElementFacade pageSubtitle;
+	
+	@FindBy(xpath = "//*//div[@class='address-lookup']")
+	private WebElementFacade addressLookup;
+	
 	@FindBy(xpath = "//*[@id='svg2']")
 	private WebElementFacade disasterMap;
 	
@@ -66,6 +162,161 @@ public class DAHomepage extends PageObject {
 	
 	// *************************************************************************
 	// Functions
+	
+	public void mouseOverGetAssistanceTab() {
+		/*Actions action = new Actions(getDriver());
+		action.moveToElement(getAssistanceTab).perform();*/
+		getAssistanceTab.click();
+	}
+	
+	public void clickAddressLookUp() {
+		mouseOverGetAssistanceTab();
+		addressLookUpMenu.click();
+	}
+	
+	public void clickFindAssistance() {
+		mouseOverGetAssistanceTab();
+		findAssistance.click();
+	}
+	
+	public void clickApplyOnline() {
+		mouseOverGetAssistanceTab();
+		applyOnline.click();
+	}
+	
+	public void clickCheckYourStatus() {
+		mouseOverGetAssistanceTab();
+		checkYourStatus.click();
+	}
+	
+	public void clickFormsOfAssistance() {
+		mouseOverGetAssistanceTab();
+		formsOfAssistance.click();
+	}
+	
+	public void clickCommLeaders() {
+		mouseOverGetAssistanceTab();
+		communityLeaders.click();
+	}
+	
+	public void clickOtherHelp() {
+		mouseOverGetAssistanceTab();
+		otherHelp.click();
+	}
+	
+	public void clickApplicationChecklist() {
+		mouseOverGetAssistanceTab();
+		applicationChecklist.click();
+	}
+	
+	public void clickForms() {
+		mouseOverGetAssistanceTab();
+		forms.click();
+	}
+	
+	public void mouseOverInfoTab() {
+		informationTab.click();
+	}
+	
+	public void clickNewsFeeds() {
+		mouseOverInfoTab();
+		newsFeeds.click();
+	}
+	
+	public void clickImmediateNeeds() {
+		mouseOverInfoTab();
+		immediateNeeds.click();
+	}
+	
+	public void clickMovingForward() {
+		mouseOverInfoTab();
+		movingForward.click();
+	}
+	
+	public void clickDisabilities() {
+		mouseOverInfoTab();
+		disabilities.click();
+	}
+	
+	public void clickOlderAmericans() {
+		mouseOverInfoTab();
+		olderAmericans.click();
+	}
+	
+	public void clickChildrenAndFamilies() {
+		mouseOverInfoTab();
+		childrenFamilies.click();
+	}
+	
+	public void clickDisasterTypes() {
+		mouseOverInfoTab();
+		disasterTypes.click();
+	}
+	
+	public void clickForeignDisasters() {
+		mouseOverInfoTab();
+		foreignDisasters.click();
+	}
+	
+	public void clickFactSheets() {
+		mouseOverInfoTab();
+		factSheets.click();
+	}
+	
+	public void mouseOverAboutTab() {
+		aboutUsTab.click();
+	}
+	
+	public void clickOverview() {
+		mouseOverAboutTab();
+		overview.click();
+	}
+	
+	public void clickPartners() {
+		mouseOverAboutTab();
+		partners.click();
+	}
+	
+	public void mouseOverHelpTab() {
+		helpTab.click();
+	}
+	
+	public void clickFaqs() {
+		mouseOverHelpTab();
+		faqs.click();
+	}
+	
+	public void clickContactUs() {
+		mouseOverHelpTab();
+		contactUs.click();
+	}
+	
+	public void clickPrivacyPolicy() {
+		mouseOverHelpTab();
+		privacyPolicy.click();
+	}  
+	
+	public void clickAccessibility() {
+		mouseOverHelpTab();
+		accessibility.click();
+	}
+	
+	public void clickDownload() {
+		mouseOverHelpTab();
+		downloadPlugIns.click();
+	}
+	
+	public String pullPageTitle() {
+		return pageTitle.getText();
+	}
+	
+	public String pullPageSubTitle() {
+		return pageSubtitle.getText();
+	}
+	
+	public boolean addressLookupIsDisplayed() {
+		return addressLookup.isDisplayed();
+	}
 	
 	public void lookUpLocation() {
 		pause(4000);
@@ -138,6 +389,19 @@ public class DAHomepage extends PageObject {
 	}
 	
 	/*************************************************************************
+	 * Checks the currently declared disasters in edit in Spanish.  
+	 * 
+	*************************************************************************/
+	public String checkSpanishDisasterStatesEdit() {
+		getDriver().get("https://edit.staging.disasterassistance.gov/es");
+		for (int i = 0; i < disasterStates.size(); i++) {
+			editState += disasterStates.get(i).getText().replaceAll("to see if your county is in a declared area", "")
+					.replaceAll("Select", "");
+		}
+		return editState;
+	}
+	
+	/*************************************************************************
 	 * Checks the currently declared disasters in prod.  
 	 * 
 	*************************************************************************/
@@ -182,6 +446,21 @@ public class DAHomepage extends PageObject {
 		String state = getDeclaredDisasterState();
 		String county = getDeclaredDisasterCounty();
 		this.openAt("https://staging.disasterassistance.gov/?mobile=unL9HuS");
+		addressLookUpTextField.click();
+		addressLookUpTextField.type(county + "," + state);
+		addressLookUpButton.click();
+		pause(4000);
+	}
+	
+	/*************************************************************************
+	 * Types the declared disaster state and county into the Spanish Address 
+	 * Look-up search field. 
+	 * 
+	*************************************************************************/
+	public void typeSpanishAddressLookUp() {
+		String state = getDeclaredDisasterState();
+		String county = getDeclaredDisasterCounty();
+		this.openAt("https://staging.disasterassistance.gov/es/?mobile=unL9HuS");
 		addressLookUpTextField.click();
 		addressLookUpTextField.type(county + "," + state);
 		addressLookUpButton.click();

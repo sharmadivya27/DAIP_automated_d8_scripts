@@ -9,6 +9,212 @@
 
 Meta: @skip</iWantTo>
 </narrative>
+<scenario keyword="Scenario:" title="Verify all the menu links on the &quot;Get Assistance&quot; tab">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<examples keyword="Examples:">
+<step>Given I am on the Disaster Assistance homepage</step>
+<step>When I click on the &lt;menuLinks&gt; in the Get Assistance tab</step>
+<step>Then the &lt;menuLinks&gt; page should open correctly</step>
+<parameters>
+<names><name>menuLinks</name></names>
+<values><value>address look-up</value></values>
+<values><value>find assistance</value></values>
+<values><value>apply online</value></values>
+<values><value>check your status</value></values>
+<values><value>forms of assistance</value></values>
+<values><value>community leaders</value></values>
+<values><value>other recovery help</value></values>
+<values><value>application checklist</value></values>
+<values><value>forms</value></values>
+</parameters>
+
+<example keyword="Example:">{menuLinks=address look-up, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>address look-up</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>address look-up</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=find assistance, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>find assistance</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>find assistance</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=apply online, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>apply online</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>apply online</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=check your status, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>check your status</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>check your status</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=forms of assistance, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>forms of assistance</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>forms of assistance</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=community leaders, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>community leaders</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>community leaders</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=other recovery help, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>other recovery help</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>other recovery help</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=application checklist, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>application checklist</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>application checklist</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=forms, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>forms</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>forms</parameter> page should open correctly</step>
+</examples>
+</scenario>
+<scenario keyword="Scenario:" title="Verify all the menu links on the &quot;Information&quot; tab">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<examples keyword="Examples:">
+<step>Given I am on the Disaster Assistance homepage</step>
+<step>When I click on the &lt;menuLinks&gt; in the Information tab</step>
+<step>Then the &lt;menuLinks&gt; page should open correctly</step>
+<parameters>
+<names><name>menuLinks</name></names>
+<values><value>news feeds</value></values>
+<values><value>immediate needs</value></values>
+<values><value>moving forward</value></values>
+<values><value>disabilities or access and functional needs</value></values>
+<values><value>older americans</value></values>
+<values><value>children and families</value></values>
+<values><value>disaster types</value></values>
+<values><value>foreign disasters</value></values>
+<values><value>fact sheets</value></values>
+</parameters>
+
+<example keyword="Example:">{menuLinks=news feeds, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>news feeds</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>news feeds</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=immediate needs, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>immediate needs</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>immediate needs</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=moving forward, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>moving forward</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>moving forward</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=disabilities or access and functional needs, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>disabilities or access and functional needs</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>disabilities or access and functional needs</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=older americans, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>older americans</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>older americans</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=children and families, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>children and families</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>children and families</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=disaster types, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>disaster types</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>disaster types</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=foreign disasters, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>foreign disasters</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>foreign disasters</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=fact sheets, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>fact sheets</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>fact sheets</parameter> page should open correctly</step>
+</examples>
+</scenario>
+<scenario keyword="Scenario:" title="Verify all the menu links on the &quot;About Us&quot; tab">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<examples keyword="Examples:">
+<step>Given I am on the Disaster Assistance homepage</step>
+<step>When I click on the &lt;menuLinks&gt; in the About Us tab</step>
+<step>Then the &lt;menuLinks&gt; page should open correctly</step>
+<parameters>
+<names><name>menuLinks</name></names>
+<values><value>overview</value></values>
+<values><value>partners</value></values>
+</parameters>
+
+<example keyword="Example:">{menuLinks=overview, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>overview</parameter> in the About Us tab</step>
+<step outcome="successful">Then the <parameter>overview</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=partners, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>partners</parameter> in the About Us tab</step>
+<step outcome="successful">Then the <parameter>partners</parameter> page should open correctly</step>
+</examples>
+</scenario>
+<scenario keyword="Scenario:" title="Verify all the menu links on the &quot;Help&quot; tab">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<examples keyword="Examples:">
+<step>Given I am on the Disaster Assistance homepage</step>
+<step>When I click on the &lt;menuLinks&gt; in the Help tab</step>
+<step>Then the &lt;menuLinks&gt; page should open correctly</step>
+<parameters>
+<names><name>menuLinks</name></names>
+<values><value>faqs</value></values>
+<values><value>contact us</value></values>
+<values><value>privacy policy</value></values>
+<values><value>accessibility</value></values>
+<values><value>download plug-ins</value></values>
+</parameters>
+
+<example keyword="Example:">{menuLinks=faqs, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>faqs</parameter> in the Help tab</step>
+<step outcome="successful">Then the <parameter>faqs</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=contact us, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>contact us</parameter> in the Help tab</step>
+<step outcome="successful">Then the <parameter>contact us</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=privacy policy, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>privacy policy</parameter> in the Help tab</step>
+<step outcome="successful">Then the <parameter>privacy policy</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=accessibility, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>accessibility</parameter> in the Help tab</step>
+<step outcome="successful">Then the <parameter>accessibility</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=download plug-ins, category=daily, skip=}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>download plug-ins</parameter> in the Help tab</step>
+<step outcome="successful">Then the <parameter>download plug-ins</parameter> page should open correctly</step>
+</examples>
+</scenario>
 <scenario keyword="Scenario:" title="Verify the main links on homepage to assert that the pages open correctly">
 <meta>
 <property keyword="@" name="category" value="daily"/>
@@ -141,6 +347,20 @@ Meta: @skip</iWantTo>
 <step outcome="successful">When I fully complete the questionnaire</step>
 <step outcome="successful">Then I should accumulate the same number of results as the text on the Get Results button</step>
 </scenario>
+<scenario keyword="Scenario:" title="Verify all the functionality of the FOA questionnaire">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">Given I am on the Find Assistance page</step>
+<step outcome="successful">When I fully complete the questionnaire</step>
+<step outcome="successful">Then I should be able to see all of the content</step>
+<step outcome="successful">And the next and back buttons are displayed</step>
+<step outcome="successful">When I click next</step>
+<step outcome="successful">Then the 3 accordions should have content visible</step>
+<step outcome="successful">When I click apply now</step>
+<step outcome="successful">Then the DAC page should load</step>
+</scenario>
 <scenario keyword="Scenario:" title="Verify that the FEMA Twitter feed is present on the News Feeds page">
 <meta>
 <property keyword="@" name="category" value="daily"/>
@@ -149,5 +369,41 @@ Meta: @skip</iWantTo>
 <step outcome="successful">Given I am on the News Feed page</step>
 <step outcome="successful">When I am viewing the FEMA Twitter feed</step>
 <step outcome="successful">Then the most recent tweets should be displayed</step>
+</scenario>
+<scenario keyword="Scenario:" title="Verify the Category Type filter with the first seven types on the Forms of Assistance page">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">Given I am on the Forms of Assistance page</step>
+<step outcome="successful">When I click on Category Type to check the first seven category types</step>
+<step outcome="successful">Then 90 results should appear</step>
+</scenario>
+<scenario keyword="Scenario:" title="Verify the Category Type filter with the next eight types on the Forms of Assistance page">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">Given I am on the Forms of Assistance page</step>
+<step outcome="successful">When I click on Category Type to check the next eight category types</step>
+<step outcome="successful">Then 112 results should appear</step>
+</scenario>
+<scenario keyword="Scenario:" title="Verify the Federal Agency filter on the Forms of Assistance page">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">Given I am on the Forms of Assistance page</step>
+<step outcome="successful">When I click on Federal Agency to check the first seven federal agencies</step>
+<step outcome="successful">Then 43 results should appear</step>
+</scenario>
+<scenario keyword="Scenario:" title="Verify the Federal Agency filter with the next seven types on the Forms of Assistance page">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">Given I am on the Forms of Assistance page</step>
+<step outcome="successful">When I click on Federal Agency to check the next seven federal agencies</step>
+<step outcome="successful">Then 38 results should appear</step>
 </scenario>
 </story>

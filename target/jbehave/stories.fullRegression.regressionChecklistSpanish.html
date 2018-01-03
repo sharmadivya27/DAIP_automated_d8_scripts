@@ -9,56 +9,66 @@
 Meta:</div>
 </div>
 <div class="scenario">
-<h2>Scenario: (Spanish) Verify the main links on homepage to assert that the Spanish pages open correctly</h2>
+<h2>Scenario: (Spanish) Verify all the menu links on the &quot;Get Assistance&quot; tab</h2>
 <div class="meta">
 <div class="keyword">Meta:</div>
 <div class="property">@category daily</div>
-<div class="property">@skip </div>
 </div>
 <div class="examples">
 <h3>Examples:</h3>
 <div class="step">Given I am on the Spanish Disaster Assistance homepage</div>
-<div class="step">When I click on &lt;mainLinksItem&gt; within the main links bar</div>
-<div class="step">Then the &lt;mainLinksItem&gt; page should open correctly</div>
+<div class="step">When I click on the &lt;menuLinks&gt; in the Get Assistance tab</div>
+<div class="step">Then the &lt;menuLinks&gt; page should open correctly</div>
 <table>
 <thead>
 <tr>
-<th>mainLinksItem</th></tr>
+<th>menuLinks</th></tr>
 </thead>
 <tbody>
+<tr>
+<td>buscador de direcci&oacute;nes</td></tr>
 <tr>
 <td>encontrar ayuda</td></tr>
 <tr>
 <td>solicitar asistencia</td></tr>
 <tr>
 <td>revisar estatus</td></tr>
+<tr>
+<td>formas de asistencia</td></tr>
+<tr>
+<td>otra ayuda para recuperaci&oacute;n</td></tr>
+<tr>
+<td>l&iacute;deres comunitarios</td></tr>
+<tr>
+<td>lista de verificaci&oacute;n para aplicarse</td></tr>
+<tr>
+<td>formularios</td></tr>
 </tbody>
 </table>
 
-<h3 class="example">Example: {mainLinksItem=encontrar ayuda, category=daily, skip=}</h3>
+<h3 class="example">Example: {menuLinks=buscador de direcci&oacute;nes, category=daily}</h3>
 <div class="step successful">Given I am on the Spanish Disaster Assistance homepage</div>
-<div class="step successful">When I click on <span class="step parameter">encontrar ayuda</span> within the main links bar</div>
-<div class="step successful">Then the <span class="step parameter">encontrar ayuda</span> page should open correctly</div>
+<div class="step successful">When I click on the <span class="step parameter">buscador de direcci&oacute;nes</span> in the Get Assistance tab</div>
+<div class="step successful">Then the <span class="step parameter">buscador de direcci&oacute;nes</span> page should open correctly</div>
 
-<h3 class="example">Example: {mainLinksItem=solicitar asistencia, category=daily, skip=}</h3>
+<h3 class="example">Example: {menuLinks=encontrar ayuda, category=daily}</h3>
 <div class="step successful">Given I am on the Spanish Disaster Assistance homepage</div>
-<div class="step successful">When I click on <span class="step parameter">solicitar asistencia</span> within the main links bar</div>
-<div class="step successful">Then the <span class="step parameter">solicitar asistencia</span> page should open correctly</div>
+<div class="step successful">When I click on the <span class="step parameter">encontrar ayuda</span> in the Get Assistance tab</div>
+<div class="step failed">Then the <span class="step parameter">encontrar ayuda</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Timed out after 2 seconds. Element not found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
+System info: host: 'c02rj1fvfvh8.users.bah.com', ip: 'fe80:0:0:0:10aa:d69e:db6f:a5e4%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_101'
+Driver info: driver.version: unknown</span></div>
 
-<h3 class="example">Example: {mainLinksItem=revisar estatus, category=daily, skip=}</h3>
+<h3 class="example">Example: {menuLinks=solicitar asistencia, category=daily}</h3>
 <div class="step successful">Given I am on the Spanish Disaster Assistance homepage</div>
-<div class="step successful">When I click on <span class="step parameter">revisar estatus</span> within the main links bar</div>
-<div class="step successful">Then the <span class="step parameter">revisar estatus</span> page should open correctly</div>
-</div>
-</div>
-<div class="scenario">
-<h2>Scenario: (Spanish) Verify states in the Spanish declared disaster map are clickable</h2>
-<div class="meta">
-<div class="keyword">Meta:</div>
-<div class="property">@category daily</div>
-</div>
+<div class="step successful">When I click on the <span class="step parameter">solicitar asistencia</span> in the Get Assistance tab</div>
+<div class="step failed">Then the <span class="step parameter">solicitar asistencia</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Timed out after 2 seconds. Element not found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
+System info: host: 'c02rj1fvfvh8.users.bah.com', ip: 'fe80:0:0:0:10aa:d69e:db6f:a5e4%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_101'
+Driver info: driver.version: unknown</span></div>
+
+<h3 class="example">Example: {menuLinks=revisar estatus, category=daily}</h3>
 <div class="step successful">Given I am on the Spanish Disaster Assistance homepage</div>
-<div class="step successful">When I am viewing the declared disaster map</div>
-<div class="step successful">Then states with disasters should be clickable</div>
-</div>
-</div>
+<div class="step successful">When I click on the <span class="step parameter">revisar estatus</span> in the Get Assistance tab</div>
