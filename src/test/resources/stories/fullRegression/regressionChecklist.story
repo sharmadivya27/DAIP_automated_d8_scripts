@@ -19,7 +19,7 @@ Examples:
 |find assistance|
 |apply online|
 |check your status|
-|forms of assistance|
+|forms of assistance| 
 |community leaders|
 |other recovery help|
 |application checklist| 
