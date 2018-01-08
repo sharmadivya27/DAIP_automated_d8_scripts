@@ -49,7 +49,7 @@ public class User {
 	}
 
 	/*********************************************/
-	
+
 	@Step
 	public void open_page(String directoryPath) {
 		dapage.clearCookies();
@@ -61,100 +61,78 @@ public class User {
 
 		daHomepage.openAt(url);
 	}
-	
+
 	@Step
 	public void clickGetAssistanceMenuLinks(String menuLinks) {
-		if ((menuLinks.equals("address look-up"))) {
+		if ((menuLinks.equals("address look-up")) || (menuLinks.equals("buscador de direcciones"))) {
 			daHomepage.clickAddressLookUp();
-		} else if ((menuLinks.equals("find assistance"))) {
+		} else if ((menuLinks.equals("find assistance")) || (menuLinks.equals("encontrar ayuda"))) {
 			daHomepage.clickFindAssistance();
-		} else if ((menuLinks.equals("apply online"))) {
+		} else if ((menuLinks.equals("apply online")) || (menuLinks.equals("solicitar asistencia"))) {
 			daHomepage.clickApplyOnline();
-		} else if ((menuLinks.equals("check your status"))) {
+		} else if ((menuLinks.equals("check your status")) || (menuLinks.equals("revisar estatus"))) {
 			daHomepage.clickCheckYourStatus();
-		} else if ((menuLinks.equals("forms of assistance"))) {
+		} else if ((menuLinks.equals("forms of assistance")) || (menuLinks.equals("formas de asistencia"))) {
 			daHomepage.clickFormsOfAssistance();
-		} else if ((menuLinks.equals("community leaders"))) {
+		} else if ((menuLinks.equals("community leaders")) || (menuLinks.equals("líderes comunitarios"))) {
 			daHomepage.clickCommLeaders();
-		} else if ((menuLinks.equals("other recovery help"))) {
+		} else if ((menuLinks.equals("other recovery help")) || (menuLinks.equals("otra ayuda para recuperación"))) {
 			daHomepage.clickOtherHelp();
-		} else if ((menuLinks.equals("application checklist"))) {
+		} else if ((menuLinks.equals("application checklist"))
+				|| (menuLinks.equals("lista de verificación para aplicarse"))) {
 			daHomepage.clickApplicationChecklist();
-		} else if ((menuLinks.equals("forms"))) {
+		} else if ((menuLinks.equals("forms")) || (menuLinks.equals("formularios"))) {
 			daHomepage.clickForms();
 		}
 	}
 
-	/*@Step
-	public void clickSpanishGetAssistanceTab(String menuLinks) {
-		if (menuLinks.equals("buscador de direcciones")) {
-			daHomepage.clickSpanishAddressLookUp();
-		} else if (menuLinks.equals("encontrar ayuda")) {
-			daHomepage.clickSpanishFindAssistance();
-		} else if (menuLinks.equals("solicitar asistencia")) {
-			daHomepage.clickSpanishApplyOnline();
-		} else if (menuLinks.equals("revisar estatus")) {
-			daHomepage.clickSpanishCheckStatus();
-		} else if (menuLinks.equals("formas de asistencia")) {
-			daHomepage.clickSpanishAssistanceCategory();
-		} else if (menuLinks.equals("otra ayuda para recuperación")) {
-			daHomepage.clickSpanishOtherHelp();
-		} else if (menuLinks.equals("líderes comunitarios")) {
-			daHomepage.clickSpanishCommLeaders();
-		} else if (menuLinks.equals("lista de verificación para aplicarse")) {
-			daHomepage.clickSpanishApplicationChecklist();
-		} else if (menuLinks.equals("formularios")) {
-			daHomepage.clickSpanishForms();
-		}
-	}*/
-	
 	@Step
 	public void clickInfoMenuLinks(String menuLinks) {
-		if (menuLinks.equals("news feeds")) {
+		if ((menuLinks.equals("news feeds")) || (menuLinks.equals("canales de noticias"))) {
 			daHomepage.clickNewsFeeds();
-		} else if (menuLinks.equals("immediate needs")) {
+		} else if ((menuLinks.equals("immediate needs")) || (menuLinks.equals("necesidades inmediatas"))) {
 			daHomepage.clickImmediateNeeds();
-		} else if (menuLinks.equals("moving forward")) {
+		} else if ((menuLinks.equals("moving forward")) || (menuLinks.equals("próximo paso"))) {
 			daHomepage.clickMovingForward();
-		} else if (menuLinks.equals("disabilities or access and functional needs")) {
+		} else if ((menuLinks.equals("disabilities or access and functional needs")) || (menuLinks.equals("discapacidades o necesidades funcionales y de acceso"))) {
 			daHomepage.clickDisabilities();
-		} else if (menuLinks.equals("older americans")) {
+		} else if ((menuLinks.equals("older americans")) || (menuLinks.equals("adultos mayores estadounidenses"))) {
 			daHomepage.clickOlderAmericans();
-		} else if (menuLinks.equals("children and families")) {
+		} else if ((menuLinks.equals("children and families")) || (menuLinks.equals("niños y familias"))) {
 			daHomepage.clickChildrenAndFamilies();
-		} else if (menuLinks.equals("disaster types")) {
+		} else if ((menuLinks.equals("disaster types")) || (menuLinks.equals("los recursos del desastre"))) {
 			daHomepage.clickDisasterTypes();
-		} else if (menuLinks.equals("foreign disasters")) {
+		} else if ((menuLinks.equals("foreign disasters")) || (menuLinks.equals("desastres en el extranjero"))) {
 			daHomepage.clickForeignDisasters();
-		} else if (menuLinks.equals("fact sheets")) {
+		} else if ((menuLinks.equals("fact sheets")) || (menuLinks.equals("hojas de datos"))) {
 			daHomepage.clickFactSheets();
 		}
 	}
-	
+
 	@Step
 	public void clickAboutMenuLinks(String menuLinks) {
-		if (menuLinks.equals("overview")) {
+		if ((menuLinks.equals("overview")) || (menuLinks.equals("descripción general"))) {
 			daHomepage.clickOverview();
-		} else if (menuLinks.equals("partners")) {
+		} else if ((menuLinks.equals("partners")) || (menuLinks.equals("socios"))) {
 			daHomepage.clickPartners();
 		}
 	}
-	
+
 	@Step
 	public void clickHelpMenuLinks(String menuLinks) {
-		if (menuLinks.equals("faqs")) {
+		if ((menuLinks.equals("faqs")) || (menuLinks.equals("preguntas comunes"))) {
 			daHomepage.clickFaqs();
-		} else if (menuLinks.equals("contact us")) {
+		} else if ((menuLinks.equals("contact us")) || (menuLinks.equals("contáctenos"))) {
 			daHomepage.clickContactUs();
-		} else if (menuLinks.equals("privacy policy")) {
+		} else if ((menuLinks.equals("privacy policy")) || (menuLinks.equals("política de privacidad"))) {
 			daHomepage.clickPrivacyPolicy();
-		} else if (menuLinks.equals("accessibility")) {
+		} else if ((menuLinks.equals("accessibility")) || (menuLinks.equals("accesibilidad"))) {
 			daHomepage.clickAccessibility();
-		} else if (menuLinks.equals("download plug-ins")) {
+		} else if ((menuLinks.equals("download plug-ins")) || (menuLinks.equals("descargar plug-ins"))) {
 			daHomepage.clickDownload();
 		}
 	}
-	
+
 	@Step
 	public void clickMainLink(String mainLink) {
 		if ((mainLink.equals("find assistance")) || (mainLink.equals("encontrar ayuda"))) {
@@ -168,7 +146,7 @@ public class User {
 			daHomepage.pause(2000);
 		}
 	}
-	
+
 	/************************************************************************
 	 * Runs the assertions to make sure a page is valid using simple checks such
 	 * as comparing the page title.
@@ -209,7 +187,7 @@ public class User {
 			// after switch
 			Assert.assertEquals(expectedPageName.toLowerCase(), daHomepage.pullPageTitle().toLowerCase());
 			break;
-			
+
 		case "other recovery help":
 		case "otra ayuda para recuperación":
 		case "application checklist":
@@ -236,21 +214,21 @@ public class User {
 		case "descargar plug-ins":
 			Assert.assertEquals(expectedPageName.toLowerCase(), daHomepage.pullPageSubTitle().toLowerCase());
 			break;
-			
+
 		case "faqs":
 			Assert.assertEquals("Frequently Asked Questions (FAQs)", daHomepage.pullPageSubTitle());
 			break;
 		case "preguntas Comunes":
 			Assert.assertEquals("Preguntas Comunes", daHomepage.pullPageSubTitle());
 			break;
-			
+
 		case "home":
 		case "inicio":
 		case "address look-up":
 		case "buscador de direcciónes":
 			Assert.assertEquals(true, daHomepage.addressLookupIsDisplayed());
-			break;	
-		
+			break;
+
 		case "find assistance":
 			Assert.assertEquals(true, daHomepage.questionnaireIsDisplayed());
 			break;
@@ -264,33 +242,33 @@ public class User {
 			boolean dacPageVisible = (daHomepage.checkStatusPageIsDisplayed() || daHomepage.dacPageIsDisplayed());
 			Assert.assertEquals(true, dacPageVisible);
 			break;
-			
+
 		default:
 			System.err.println("INVALID PAGE SENT");
 			break;
 		} // end switch
 	}
-	
+
 	@Step
 	public void checkDisasterMap() throws StateException {
 		daHomepage.checkDisasterMap();
 	}
-	
+
 	@Step
 	public void checkStates() throws StateException {
 		daHomepage.checkStates();
 	}
-	
-	@Step 
+
+	@Step
 	public void checkDisasterState() {
 		Assert.assertEquals(daHomepage.checkDisasterStatesEdit(), daHomepage.checkDisasterStates());
 	}
-	
-	@Step 
+
+	@Step
 	public void checkSpanishDisasterState() {
 		Assert.assertEquals(daHomepage.checkSpanishDisasterStatesEdit(), daHomepage.checkDisasterStates());
 	}
-	
+
 	@Step
 	public void lookUpLocation() {
 		daHomepage.lookUpLocation();
@@ -300,7 +278,7 @@ public class User {
 	public void verifyLocalResources() throws LocalResourcesException {
 		daHomepage.verifyLocalResourcesResults();
 	}
-	
+
 	@Step
 	public void shouldSeeTitle() {
 		Assert.assertEquals("Severe Storms", daLanding.stormTitle());
@@ -309,7 +287,7 @@ public class User {
 		Assert.assertEquals("Drought", daLanding.droughtTitle());
 		Assert.assertEquals("Wildfires", daLanding.wildfireTitle());
 	}
-	
+
 	@Step
 	public void shouldSeeSpanishTitle() {
 		Assert.assertEquals("Tormentas Severas (en inglés)", daLanding.stormTitle());
@@ -318,32 +296,36 @@ public class User {
 		Assert.assertEquals("Sequía (en inglés)", daLanding.droughtTitle());
 		Assert.assertEquals("Incendios Forestales (en inglés)", daLanding.wildfireTitle());
 	}
-	
+
 	@Step
 	public void onCommunityLeadersPage() {
 		drupalPage.openAt("https://staging.disasterassistance.gov/get-assistance/community-leaders/?mobile=unL9HuS");
 	}
-	
+
 	@Step
 	public void onSpanishCommunityLeadersPage() {
-		drupalPage.openAt("https://staging.disasterassistance.gov/es/obtener-asistencia/líderes-comunitarios/?mobile=unL9HuS");
+		drupalPage.openAt(
+				"https://staging.disasterassistance.gov/es/obtener-asistencia/líderes-comunitarios/?mobile=unL9HuS");
 	}
-	
+
 	@Step
 	public void clickQuickSearch(String quickSearch) {
 		if ((quickSearch.equals("Community Preparedness")) || (quickSearch.equals("Preparación para la comunidad"))) {
 			daLanding.clickCommunityPreparedness();
-		} else if ((quickSearch.equals("Disaster Recovery Resources")) || (quickSearch.equals("Recursos para recuperación de desastre"))) {
+		} else if ((quickSearch.equals("Disaster Recovery Resources"))
+				|| (quickSearch.equals("Recursos para recuperación de desastre"))) {
 			daLanding.clickDisasterRecoveryResources();
-		} else if ((quickSearch.equals("Emergency Shelter and Housing")) || (quickSearch.equals("Viviendas y refugios de emergencia"))) {
+		} else if ((quickSearch.equals("Emergency Shelter and Housing"))
+				|| (quickSearch.equals("Viviendas y refugios de emergencia"))) {
 			daLanding.clickEmergencyShelterHousing();
 		} else if ((quickSearch.equals("How Can You Help?")) || (quickSearch.equals("¿Como puede ayudar?"))) {
 			daLanding.clickHowCanYouHelp();
-		} else if ((quickSearch.equals("Infrastructure, Utilities, and Other Public Assistance")) || (quickSearch.equals("Infraestructura, servicios públicos y otra asistencia pública"))) {
+		} else if ((quickSearch.equals("Infrastructure, Utilities, and Other Public Assistance"))
+				|| (quickSearch.equals("Infraestructura, servicios públicos y otra asistencia pública"))) {
 			daLanding.clickInfrastructure();
-		} 
+		}
 	}
-	
+
 	@Step
 	public void quickSearchResults() {
 		Assert.assertTrue(daLanding.communityResults());
@@ -353,149 +335,149 @@ public class User {
 	public void openDisasterDACPage() {
 		daHomepage.openAt("https://www.disasterassistance.gov/drupal_api/declaredStates");
 	}
-	
-	@Step 
+
+	@Step
 	public void declaredDisasters() {
 		daHomepage.typeAddressLookUp();
 	}
-	
-	@Step 
+
+	@Step
 	public void declaredSpanishDisasters() {
 		daHomepage.typeSpanishAddressLookUp();
 	}
-	
+
 	@Step
 	public void disasterResults() {
 		Assert.assertTrue(daHomepage.disasterAppears());
 	}
-	
-	@Step 
+
+	@Step
 	public void getEmploymentResults() {
 		daQues.clickEmploymentCheckbox();
 		daQues.getFOAResultsPage();
 	}
-	
-	@Step 
+
+	@Step
 	public void verifyEmploymentResultsAndVisibility() {
 		Assert.assertEquals(9, daQues.getNumQuesResults());
 	}
-	
+
 	@Step
 	public void completeQuestionnaire() {
 		daQues.completeFullQuestionnaire();
 		daHomepage.pause(1000);
 	}
-	
+
 	@Step
 	public void checkResults() {
 		int i = daQues.getResultsVal();
-		daQues.getFOAResultsPage(); 
+		daQues.getFOAResultsPage();
 		Assert.assertEquals(i, daQues.getNumQuesResults());
 	}
-	
+
 	@Step
 	public void verifyFOAExpandedContentVisible() {
-		int i = daQues.getResultsVal(); 
+		int i = daQues.getResultsVal();
 		daQues.getFOAResultsPage();
 		Assert.assertEquals(i, daQues.getNumEmploymentResults());
 	}
-	
+
 	@Step
 	public void seesFOAFooter() {
 		Assert.assertTrue(daQues.foaFooterIsVisible());
 	}
-	
+
 	@Step
 	public void clicksNextFOA() {
 		daQues.clickNextFOA();
 	}
-	
+
 	@Step
 	public void testsApplyOnlineAccordions() {
 		Assert.assertEquals(3, daQues.numApplyOnlineFOAs());
 	}
-	
+
 	@Step
 	public void clicksApplyOnline() {
 		daQues.clickApplyOnline();
 	}
-	
+
 	@Step
 	public void shouldSeeDAC() {
 		daHomepage.pause(2000);
 		boolean dacPageVisible = (daQues.checkStatusPageIsDisplayed() || daQues.dacPageIsDisplayed());
 		Assert.assertEquals(true, dacPageVisible);
-	} 
-	
+	}
+
 	@Step
 	public void checkTwitterFeedBlock() throws FeedException {
 		daLanding.checkTwitterFeedBlock();
 	}
-	
+
 	@Step
 	public void checkTwitterFeed() throws FeedException {
 		daLanding.checkTwitterFeed();
 	}
-	
+
 	@Step
 	public void clickCategoryType() {
 		daLanding.clickCategoryType();
 		daLanding.clickFirstCategoryTypes();
 	}
-	
-	@Step 
+
+	@Step
 	public void get90Results() {
-		Assert.assertEquals("Showing 1 - 10 of 90 results View 10 50 All", daLanding.getResults());
+		Assert.assertEquals("Showing 1 - 10 of 45 results View 10 50 All", daLanding.getResults());
 	}
-	
+
 	@Step
 	public void get90SpanishResults() {
-		Assert.assertEquals("Mostrando 1 - 10 de 90 resultados Ver 10 50 Todos", daLanding.getResults());
+		Assert.assertEquals("Mostrando 1 - 10 de 45 resultados Ver 10 50 Todos", daLanding.getResults());
 	}
-	
-	@Step 
+
+	@Step
 	public void clickNextCategoryType() {
 		daLanding.clickCategoryType();
 		daLanding.clickNextCategoryTypes();
 	}
-	
-	@Step 
+
+	@Step
 	public void get112Results() {
-		Assert.assertEquals("Showing 1 - 10 of 112 results View 10 50 All", daLanding.getResults());
+		Assert.assertEquals("Showing 1 - 10 of 56 results View 10 50 All", daLanding.getResults());
 	}
-	
+
 	@Step
 	public void get112SpanishResults() {
-		Assert.assertEquals("Mostrando 1 - 10 de 112 resultados Ver 10 50 Todos", daLanding.getResults());
+		Assert.assertEquals("Mostrando 1 - 10 de 56 resultados Ver 10 50 Todos", daLanding.getResults());
 	}
-	
-	@Step 
+
+	@Step
 	public void clickFederalAgency() {
 		daLanding.clickFederalAgency();
 		daLanding.clickFirstSevenFederalAgencies();
 	}
-	
+
 	@Step
 	public void get43Results() {
 		Assert.assertEquals("Showing 1 - 10 of 43 results View 10 50 All", daLanding.getResults());
 	}
-	
+
 	@Step
 	public void get43SpanishResults() {
 		Assert.assertEquals("Mostrando 1 - 10 de 43 resultados Ver 10 50 Todos", daLanding.getResults());
 	}
-	
+
 	@Step
 	public void clickNextFederalAgency() {
 		daLanding.clickFederalAgency();
 		daLanding.clickNextFederalAgencies();
 	}
-	
+
 	@Step
 	public void get38Results() {
 		Assert.assertEquals("Showing 1 - 10 of 38 results View 10 50 All", daLanding.getResults());
 	}
-	
+
 	@Step
 	public void get38SpanishResults() {
 		Assert.assertEquals("Mostrando 1 - 10 de 38 resultados Ver 10 50 Todos", daLanding.getResults());

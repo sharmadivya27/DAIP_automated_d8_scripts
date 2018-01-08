@@ -1,0 +1,1488 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/html">
+
+
+<head>
+    <meta charset="UTF-8"/>
+    <title>Features</title>
+<link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css">
+<!--[if IE 7]>
+<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">
+<![endif]--><!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Bootstrap -->
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script><link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- JQuery-UI -->
+<link type="text/css" href="jqueryui/1.11.2-start/jquery-ui.min.css" rel="Stylesheet" />
+<script type="text/javascript" src="jqueryui/1.11.2-start/jquery-ui.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.4/media/jqueryui/dataTables.jqueryui.css" rel="Stylesheet"/>
+<link type="text/css" href="css/tables.css" rel="stylesheet" />
+
+<script type="text/javascript" src="datatables/1.10.4/media/js/jquery.dataTables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.4/media/jqueryui/dataTables.jqueryui.min.js"></script><!-- jQplot -->
+<!--[if IE]>
+<script language="javascript" type="text/javascript" src="excanvas/3/excanvas.compiled.js"></script>
+<![endif]--><link rel="stylesheet" type="text/css" href="jqplot/1.0.8/jquery.jqplot.min.css"/>
+<script type="text/javascript" src="jqplot/1.0.8/jquery.jqplot.min.js"></script>
+<script type="text/javascript" src="jqplot/1.0.8/plugins/jqplot.pieRenderer.min.js"></script>
+
+
+
+
+    <script class="code" type="text/javascript">$(document).ready(function () {
+        var plot1 = $.jqplot('coverage_pie_chart', [
+            [
+                ['Passing', 0],
+                ['Pending', 0],
+                ['Ignored', 0],
+                ['Failing', 0],
+                ['Errors',  2],
+                ['Compromised',  0],
+                ['Untested',  0],
+            ]
+        ], {
+            gridPadding: {top: 0, bottom: 38, left: 0, right: 0},
+            seriesColors: [
+                '#30cb23',
+                '#a2f2f2',
+                '#eeeadd',
+                '#f8001f',
+                '#fc6e1f',
+                'fuchsia',
+                'darkgrey'],
+            seriesDefaults: {
+                renderer: $.jqplot.PieRenderer,
+                trendline: {show: false},
+                rendererOptions: {padding: 8, showDataLabels: true}
+            },
+            legend: {
+                show: true,
+                placement: 'outside',
+                rendererOptions: {
+                    numberRows: 3
+                },
+                location: 's',
+                marginTop: '15px'
+            },
+            series: [
+                {label: '0 requirements tested successfully'},
+                {label: '0 requirements pending'},
+                {label: '0} requirements skipped'},
+                {label: '0} requirements with failures'},
+                {label: '2} requirements with errors'},
+                {label: '0} requirements compromised'},
+                {label: '0} requirements untested'},
+            ]
+        });
+        // Results table
+        $('#test-results-table').DataTable({
+            "order": [
+                [ 1, "asc" ]
+            ],
+            "pageLength": 100,
+            "lengthMenu": [ [50, 100, 200, -1] , [50, 100, 200, "All"] ]
+        });
+
+        // Results table
+        $('#req-results-table').DataTable({
+            "order": [
+                [ 1, "asc" ]
+            ],
+            "pageLength": 100,
+            "lengthMenu": [ [50, 100, 200, -1] , [50, 100, 200, "All"] ]
+        });
+
+        $('#examples-table').DataTable({
+            "order": [
+                [2, "asc"]
+            ],
+            "pageLength": 25
+        });
+        $("#requirements-tabs").tabs();
+        $("#test-tabs").tabs();
+    })
+    ;
+    </script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $(".read-more-link").click(function () {
+                $(this).nextAll("div.read-more-text").toggle();
+                var isrc = $(this).find("img").attr('src');
+                if (isrc == 'images/plus.png') {
+                    $(this).find("img").attr("src", function () {
+                        return "images/minus.png";
+                    });
+                } else {
+                    $(this).find("img").attr("src", function () {
+                        return "images/plus.png";
+                    });
+                }
+            });
+        });
+    </script>
+</head>
+
+<body class="results-page">
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">DAIP Automated Scripts</span>
+        </div>
+    </div>
+</div>
+
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+            <a href='index.html'>Home</a> > <a href="capabilities.html">Requirements</a>
+
+
+
+                > <span class="truncate-40">Full Regression</span>
+
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li >
+            <a href="index.html"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li class="active">
+            <a href="#"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+        <li >
+            <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 08-01-2018 12:45</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+    <div id="beforetable"></div>
+    <div id="results-dashboard">
+        <div class="middlb">
+            <div class="table">
+                <div>
+                    <h2><i class="fa fa-book"></i> Feature:  Full Regression</h2>
+                        <div class="requirementNarrativeTitle">
+                        Full regression
+                        </div>
+
+                </div>
+
+                <div id="requirements-summary">
+                    <div id="coverage_pie_chart"
+                         style="margin-top:10px; margin-left:10px; width:250px; height:250px;"></div>
+                    <div id="coverage_summary">
+                        <div>
+                            <h4>Requirements Overview</h4>
+                            <table class="summary-table">
+                                <head>
+                                    <tr>
+                                        <th>Requirement Type</th>
+                                        <th>Total</th>
+                                        <th>Pass&nbsp;<i class="icon-check"></i></th>
+                                        <th>Fail&nbsp;<i class="icon-thumbs-down"></i></th>
+                                        <th>Pending&nbsp;<i class="icon-calendar"></i></th>
+                                        <th>Ignored&nbsp;<i class="icon-ban-circle"></i></th>
+                                    </tr>
+                                </head>
+                                <body>
+                                    <tr>
+                                        <td class="summary-leading-column"><a href="#requirements-tabs">Stories</a></td>
+                                        <td>2</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                        <td>0</td>
+                                    </tr>
+
+                                <tr>
+                                    <td class="summary-leading-column"><a href="#test-results-table">Acceptance Criteria (tests)</a></td>
+                                    <td>91</td>
+                                    <td>3</td>
+                                    <td>3</td>
+                                    <td>2</td>
+                                    <td>83</td>
+                                    <td></td>
+                                </tr>
+                                </body>
+                            </table>
+                        </div>
+
+
+
+
+
+<div>
+    <h4>Test Result Summary</h4>
+    <table class="summary-table">
+        <head>
+            <tr>
+                <th>Test Type</th>
+                <th>Total</th>
+                <th>Pass&nbsp;<i class="icon-check"/> </th>
+                <th>Fail&nbsp;<i class="icon-thumbs-down"/></th>
+                <th>Pending&nbsp;<i class="icon-calendar"/></th>
+                <th>Ignore/Skip&nbsp;<i class="icon-ban-circle"/></th>
+            </tr>
+        </head>
+        <body>
+        <tr>
+            <td class="summary-leading-column">Automated</td>
+            <td>91</td>
+            <td>3 (3%)</td>
+            <td>3 (3%)</td>
+            <td>2 (2%)</td>
+            <td>83 (91%)</td>
+        </tr>
+        <tr>
+            <td class="summary-leading-column">Manual</td>
+            <td>0</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+            <td>0 (0%)</td>
+        </tr>
+        <tr>
+            <td class="summary-leading-column">Total</td>
+            <td>91</td>
+            <td>3 (3%)</td>
+            <td>3 (3%)</td>
+            <td>2 (2%)</td>
+            <td>83 (91%)</td>
+        </tr>
+        <tr>
+            <td class="summary-leading-column">Total Duration</td>
+                <td colspan="5">16 minutes 10 seconds</td>
+        </tr>
+        </body>
+    </table>
+</div>
+                    </div>
+                </div>
+                <div class="clr"></div>
+
+                <div id="requirements-tabs">
+                        <ul>
+                                <li><a href="#tabs-1">
+                                Stories (2)
+                                </a></li>
+                        </ul>
+                        <div id="tabs-1" class="capabilities-table">
+                            <div id="tabs-1" class="capabilities-table">
+
+
+<div id="req_list_tests" class="table">
+    <div class="test-results">
+        <table id="req-results-table">
+            <thead>
+            <tr>
+                <th width="30" class="test-results-heading">&nbsp;</th>
+                <th width="65" class="test-results-heading">ID</th>
+                <th width="525" class="test-results-heading">Story</th>
+                <th class="test-results-heading" width="75px">Automated<br/>Tests</th>
+                    <th class="test-results-heading" width="75px">Manual<br/>Tests</th>
+
+                <th width="125px" class="test-results-heading">Test Results</th>
+
+            </tr>
+            <tbody>
+
+
+
+                <tr class="test-ERROR requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                        <span style="display:none">4</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="ERROR-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="9a48091cff6e8772525a21170de2b17cb0ae7a4cd5922fc606678dedadefb27c.html">Regression checklist</a></span>
+
+                        <div class="requirementNarrative read-more-text">In order to assure that the basic functionality of disasterassistance.gov is working
+As a tester
+I want to run the daily regressions at least twice a day</div>
+                    </td>
+
+
+                    <td class="greentext highlighted-value requirementRowCell">45</td>
+<!--
+                    <td class="greentext requirementRowCell">1</td>
+                    <td class="bluetext requirementRowCell">42</td>
+                    <td class="redtext requirementRowCell">1</td>
+                    <td class="lightorangetext requirementRowCell">1</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">2.2%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 45
+  - Passing tests: 1 (2.2%)
+  - Failing tests: 1 (2.2%)
+  - Tests with errors: 1 (2.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 2 (4.4%)
+  - Ignored or skipped tests: 0 (88.9%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 45
+  - Passing tests: 1 (2.2%)
+  - Failing tests: 1 (2.2%)
+  - Tests with errors: 1 (2.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 2 (4.4%)
+  - Ignored or skipped tests: 0 (88.9%)"
+                     style="width: 125px;">
+                    <div class="ignoredbar"
+                         style="width: 119px;"
+                         title="  - Total tests: 45
+  - Passing tests: 1 (2.2%)
+  - Failing tests: 1 (2.2%)
+  - Tests with errors: 1 (2.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 2 (4.4%)
+  - Ignored or skipped tests: 0 (88.9%)">
+                        <div class="compromisedbar"
+                             style="width: 8px;"
+                             title="  - Total tests: 45
+  - Passing tests: 1 (2.2%)
+  - Failing tests: 1 (2.2%)
+  - Tests with errors: 1 (2.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 2 (4.4%)
+  - Ignored or skipped tests: 0 (88.9%)">
+                            <div class="errorbar"
+                                 style="width: 8px;"
+                                 title="  - Total tests: 45
+  - Passing tests: 1 (2.2%)
+  - Failing tests: 1 (2.2%)
+  - Tests with errors: 1 (2.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 2 (4.4%)
+  - Ignored or skipped tests: 0 (88.9%)">
+                                <div class="failingbar"
+                                     style="width: 6px;"
+                                     title="  - Total tests: 45
+  - Passing tests: 1 (2.2%)
+  - Failing tests: 1 (2.2%)
+  - Tests with errors: 1 (2.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 2 (4.4%)
+  - Ignored or skipped tests: 0 (88.9%)">
+                                    <div class="passingbar"
+                                         style="width: 3px;"
+                                         title="  - Total tests: 45
+  - Passing tests: 1 (2.2%)
+  - Failing tests: 1 (2.2%)
+  - Tests with errors: 1 (2.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 2 (4.4%)
+  - Ignored or skipped tests: 0 (88.9%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                </tr>
+
+
+                <tr class="test-ERROR requirementRow">
+                    <td class="requirementRowCell">
+                        <span class="status_icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                        <span style="display:none">4</span>
+                    </td>
+                    <td class="cardNumber requirementRowCell"></td>
+
+                    <td class="ERROR-text requirementRowCell">
+                        <a href="javaScript:void(0)" class="read-more-link">
+                            <img src="images/plus.png" height="16"/></a>
+                        <span class="requirementName"><a
+                                href="97be23141df29e9bc479938d306985c783ca95f9f8f2ecba1b218b94855299a6.html">Regression checklist spanish</a></span>
+
+                        <div class="requirementNarrative read-more-text">In order to assert that the basic functionality of https://www.disasterassistance.gov/es/ is working
+As a tester
+I want to run the daily regressions at least twice a day</div>
+                    </td>
+
+
+                    <td class="greentext highlighted-value requirementRowCell">46</td>
+<!--
+                    <td class="greentext requirementRowCell">2</td>
+                    <td class="bluetext requirementRowCell">43</td>
+                    <td class="redtext requirementRowCell">0</td>
+                    <td class="lightorangetext requirementRowCell">1</td>
+                    <td class="violettext requirementRowCell">0</td>
+-->
+                        <td class="greentext highlighted-value requirementRowCell">0</td>
+<!--
+                        <td class="greentext requirementRowCell">0</td>
+                        <td class="bluetext requirementRowCell">0</td>
+                        <td class="redtext requirementRowCell">0</td>
+                        <td class="lightorangetext requirementRowCell">0</td>
+                        -->
+
+                    <td width="125px" class="lightgreentext requirementRowCell">
+
+
+<table>
+    <tr>
+        <td width="40px">
+            <div class="small">4.3%</div>
+        </td>
+        <td width="125px">
+            <div class="percentagebar"
+                 title="  - Total tests: 46
+  - Passing tests: 2 (4.3%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 1 (2.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (93.5%)"
+                 style="width: 125px;">
+                <div class="pendingbar"
+                     title="  - Total tests: 46
+  - Passing tests: 2 (4.3%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 1 (2.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (93.5%)"
+                     style="width: 125px;">
+                    <div class="ignoredbar"
+                         style="width: 125px;"
+                         title="  - Total tests: 46
+  - Passing tests: 2 (4.3%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 1 (2.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (93.5%)">
+                        <div class="compromisedbar"
+                             style="width: 8px;"
+                             title="  - Total tests: 46
+  - Passing tests: 2 (4.3%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 1 (2.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (93.5%)">
+                            <div class="errorbar"
+                                 style="width: 8px;"
+                                 title="  - Total tests: 46
+  - Passing tests: 2 (4.3%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 1 (2.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (93.5%)">
+                                <div class="failingbar"
+                                     style="width: 5px;"
+                                     title="  - Total tests: 46
+  - Passing tests: 2 (4.3%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 1 (2.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (93.5%)">
+                                    <div class="passingbar"
+                                         style="width: 5px;"
+                                         title="  - Total tests: 46
+  - Passing tests: 2 (4.3%)
+  - Failing tests: 0 (0%)
+  - Tests with errors: 1 (2.2%)
+  - Compromised tests 0 (0%)
+  - Pending tests: 0 (0%)
+  - Ignored or skipped tests: 0 (93.5%)">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+                    </td>
+
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+
+                            </div>
+                        </div>
+<table>
+    <tr>
+        <td>
+            <div><h3>Acceptance Criteria</h3></div>
+            <div id="test_list_tests" class="table">
+                <div class="test-results">
+                    <table id="test-results-table">
+                        <thead>
+                        <tr>
+                            <th width="50" class="test-results-heading">&nbsp;</th>
+                            <th width="%" class="test-results-heading">Tests</th>
+                            <th width="70" class="test-results-heading">Steps</th>
+
+                            <th width="100" class="test-results-heading">Started</th>
+                            <th width="100" class="test-results-heading">Took<br>(secs)</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="44995ccb6e5025b89fa20124a52110ac9b1288f528c66046f3b4c152c9832d1a.html" class="ellipsis"
+                                           title="Verify all the menu links on the 'Get Assistance' tab ">
+                                            Verify all the menu links on the &quot;Get Assistance&quot; tab&nbsp;(9  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">63</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:45:52">12:45:52</td>
+
+                                <td class="SKIPPED-text">53.25</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="e7956ac3852aec51efa7529fa15975253627224436e7d077d5accb987e2281ff.html" class="ellipsis"
+                                           title="Verify all the menu links on the 'Information' tab ">
+                                            Verify all the menu links on the &quot;Information&quot; tab&nbsp;(9  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">63</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:46:46">12:46:46</td>
+
+                                <td class="SKIPPED-text">52.79</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="4805328353e65b42d2ff32d41d8ac2632c6babf02fa534f6b22849df63c421f9.html" class="ellipsis"
+                                           title="Verify all the menu links on the 'About Us' tab ">
+                                            Verify all the menu links on the &quot;About Us&quot; tab&nbsp;(2  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">14</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:47:38">12:47:38</td>
+
+                                <td class="SKIPPED-text">24.34</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="7de5dc3d4c8e4b403c674f8e742a25f7b35fbfc35a3e733d7387f25cd704a173.html" class="ellipsis"
+                                           title="Verify all the menu links on the 'Help' tab ">
+                                            Verify all the menu links on the &quot;Help&quot; tab&nbsp;(5  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">35</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:48:03">12:48:03</td>
+
+                                <td class="SKIPPED-text">36.47</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="ca8761002183406194075d57e2bdfe41af949961c848cde0daff75e7461390e9.html" class="ellipsis"
+                                           title="Verify the main links on homepage to assert that the pages open correctly ">
+                                            Verify the main links on homepage to assert that the pages open correctly&nbsp;(3  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">21</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:48:39">12:48:39</td>
+
+                                <td class="SKIPPED-text">26.34</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="902088924640255f25c9eb9c464c85a349500f846f193df1b4dd6309da62c408.html" class="ellipsis"
+                                           title="Verify states in the declared disaster map are clickable ">
+                                            Verify states in the declared disaster map are clickable
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">6</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:49:06">12:49:06</td>
+
+                                <td class="SKIPPED-text">10.15</td>
+                            </tr>
+
+                            <tr class="test-FAILURE">
+                                <td><span class="summary-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
+                                    
+                                    <span style="display:none">FAILURE</span></td>
+                                <td class="FAILURE-text">
+                                    <div class="ellipsis">
+
+                                        <a href="25d865e6d66bb5483ac3cdf76405c71ef3282ce00e1dcbfb51ed70108dd25030.html" class="ellipsis"
+                                           title="Verify the declared states on the declared disaster map Assertion error: expected:(null) but ...">
+                                            Verify the declared states on the declared disaster map
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="FAILURE-text">8</td>
+
+
+                                <td class="FAILURE-text" data-sort="2018-01-08 12:49:16">12:49:16</td>
+
+                                <td class="FAILURE-text">26.16</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="195c2662d37d30581b77bb2735c771aa88fa3362dbd3283d98c8e2993692cabf.html" class="ellipsis"
+                                           title="Verify Local Resources flows correctly ">
+                                            Verify Local Resources flows correctly
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">6</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:49:42">12:49:42</td>
+
+                                <td class="SKIPPED-text">14.14</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="3ab105bc475fa2c7e86e1d8cc2d4b8921005192a4a50648b1a13a8af487fbc0c.html" class="ellipsis"
+                                           title="Verify all of the titles on the 'News Feeds' landing page node ">
+                                            Verify all of the titles on the &quot;News Feeds&quot; landing page node
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">4</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:49:56">12:49:56</td>
+
+                                <td class="SKIPPED-text">10.12</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="dfcb7b4da7fc925265a4e7d1315203bb418da0bd306629f40661e661125ab7b5.html" class="ellipsis"
+                                           title="Verify the results of the quick search items ">
+                                            Verify the results of the quick search items&nbsp;(4  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">28</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:50:07">12:50:07</td>
+
+                                <td class="SKIPPED-text">32.53</td>
+                            </tr>
+
+                            <tr class="test-ERROR">
+                                <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                                    
+                                    <span style="display:none">ERROR</span></td>
+                                <td class="ERROR-text">
+                                    <div class="ellipsis">
+
+                                        <a href="1873930ff361e6ecd2a5a33a5b894f80336e4bb7b52806e21c879a8d2c25233a.html" class="ellipsis"
+                                           title="Verify the declared disasters with Address Look-up No such element exception: The follow...">
+                                            Verify the declared disasters with Address Look-up
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="ERROR-text">6</td>
+
+
+                                <td class="ERROR-text" data-sort="2018-01-08 12:50:39">12:50:39</td>
+
+                                <td class="ERROR-text">31.19</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="4d94da35fb1ee2647c1d13c9a3490ff5bb4c0b414f11b548ea6e7acc37ce3b5e.html" class="ellipsis"
+                                           title="Verify benefits results display according to use cases ">
+                                            Verify benefits results display according to use cases
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">6</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:51:10">12:51:10</td>
+
+                                <td class="SKIPPED-text">13.17</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="b9c9bf5afa2ba7995cc218b024a6578265859d46dcc62d41a4cd042755a09f1d.html" class="ellipsis"
+                                           title="Dynamically verify results of the questionnaire on the 'Find Assistance' page ">
+                                            Dynamically verify results of the questionnaire on the &quot;Find Assistance&quot; page
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">6</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:51:24">12:51:24</td>
+
+                                <td class="SKIPPED-text">28.3</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="b19f2c01a1fdcbb0ce5cb7991d3dde1a08cc1d0a593cdba685545470a368daa0.html" class="ellipsis"
+                                           title="Verify all the functionality of the FOA questionnaire ">
+                                            Verify all the functionality of the FOA questionnaire
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">16</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-01-08 12:51:52">12:51:52</td>
+
+                                <td class="SUCCESS-text">36.44</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="90c165dfaf934a71cef5fd8fb42920e73f8c3dc758fa3e95cba30372587e7ab7.html" class="ellipsis"
+                                           title="Verify that the FEMA Twitter feed is present on the News Feeds page ">
+                                            Verify that the FEMA Twitter feed is present on the News Feeds page
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">6</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:52:28">12:52:28</td>
+
+                                <td class="SKIPPED-text">10.17</td>
+                            </tr>
+
+                            <tr class="test-PENDING">
+                                <td><span class="summary-icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                                    
+                                    <span style="display:none">PENDING</span></td>
+                                <td class="PENDING-text">
+                                    <div class="ellipsis">
+
+                                        <a href="94de29845ce1f296b8152dfc543a8095b7dc92ae6f0f524dcc31b86db913488a.html" class="ellipsis"
+                                           title="Verify the Category Type filter with the first seven types on the Forms of Assistance page ">
+                                            Verify the Category Type filter with the first seven types on the Forms of Assistance page
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="PENDING-text">5</td>
+
+
+                                <td class="PENDING-text" data-sort="2018-01-08 12:52:39">12:52:39</td>
+
+                                <td class="PENDING-text">22.43</td>
+                            </tr>
+
+                            <tr class="test-PENDING">
+                                <td><span class="summary-icon"><i class='fa fa-square-o pending-icon ' title='PENDING'></i></span>
+                                    
+                                    <span style="display:none">PENDING</span></td>
+                                <td class="PENDING-text">
+                                    <div class="ellipsis">
+
+                                        <a href="3daa84818164d9c89e3f63a99067b2de6097b3ac0723d3c3522638f20c3d6bdf.html" class="ellipsis"
+                                           title="Verify the Category Type filter with the next eight types on the Forms of Assistance page ">
+                                            Verify the Category Type filter with the next eight types on the Forms of Assistance page
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="PENDING-text">5</td>
+
+
+                                <td class="PENDING-text" data-sort="2018-01-08 12:53:01">12:53:01</td>
+
+                                <td class="PENDING-text">31.61</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="e67e7975c8c5e039e4941871fb1d7cf71ab66428e439b4d463aee4912a432229.html" class="ellipsis"
+                                           title="Verify the Federal Agency filter on the Forms of Assistance page ">
+                                            Verify the Federal Agency filter on the Forms of Assistance page
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">6</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:53:33">12:53:33</td>
+
+                                <td class="SKIPPED-text">20.28</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="8329baf0f11a7ed2a5a577160765cc3cab88aca13d8f83180b60865628356a04.html" class="ellipsis"
+                                           title="Verify the Federal Agency filter with the next seven types on the Forms of Assistance page ">
+                                            Verify the Federal Agency filter with the next seven types on the Forms of Assistance page
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">6</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:53:53">12:53:53</td>
+
+                                <td class="SKIPPED-text">20.27</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="a51ab47e448e59c3b65efb8bdddac7d03709f4089ec3dbbf8d32a584ece418f1.html" class="ellipsis"
+                                           title="(Spanish) Verify all the menu links on the 'Get Assistance' tab ">
+                                            (Spanish) Verify all the menu links on the &quot;Get Assistance&quot; tab&nbsp;(9  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">63</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:54:13">12:54:13</td>
+
+                                <td class="SKIPPED-text">42.56</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="764539f039c436f3c3e1ae061b8dd2ea489437810907e50d2640d7408bf85f4a.html" class="ellipsis"
+                                           title="(Spanish) Verify all the menu links on the 'Information' tab ">
+                                            (Spanish) Verify all the menu links on the &quot;Information&quot; tab&nbsp;(9  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">63</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:54:56">12:54:56</td>
+
+                                <td class="SKIPPED-text">40.62</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="a66cfe8e0b284b6fd257e5c8b7a0c36b7d22272a21246ea8e79e6374f6da296d.html" class="ellipsis"
+                                           title="(Spanish) Verify all the menu links on the 'About Us' tab ">
+                                            (Spanish) Verify all the menu links on the &quot;About Us&quot; tab&nbsp;(2  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">14</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:55:36">12:55:36</td>
+
+                                <td class="SKIPPED-text">24.33</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="4ac05710035573b7c7c522bc0c3b7c0812c40f3d7319f0e4d576720ee6aefc83.html" class="ellipsis"
+                                           title="(Spanish) Verify all the menu links on the 'Help' tab ">
+                                            (Spanish) Verify all the menu links on the &quot;Help&quot; tab&nbsp;(5  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">35</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:56:01">12:56:01</td>
+
+                                <td class="SKIPPED-text">26.44</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="6b968398826182a9408bcc51f6472ffde1879acc61a6ad7f3dea1a0c4df4d8be.html" class="ellipsis"
+                                           title="(Spanish) Verify the main links on homepage to assert that the Spanish pages open correctly ">
+                                            (Spanish) Verify the main links on homepage to assert that the Spanish pages open correctly&nbsp;(3  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">21</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:56:27">12:56:27</td>
+
+                                <td class="SKIPPED-text">28.38</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="8559af46d683c090555d00e8bb4d1f73725a1be21e6eb1fb5074d7fc6eef8c13.html" class="ellipsis"
+                                           title="(Spanish) Verify states in the Spanish declared disaster map are clickable ">
+                                            (Spanish) Verify states in the Spanish declared disaster map are clickable
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">6</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:56:56">12:56:56</td>
+
+                                <td class="SKIPPED-text">10.16</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="d59ca540a8ba332aed8bbffddceb5029e9ce57dfb8c8d3451ae1bc14bf6607ca.html" class="ellipsis"
+                                           title="(Spanish) Verify the declared states on the declared disaster map ">
+                                            (Spanish) Verify the declared states on the declared disaster map
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">8</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:57:06">12:57:06</td>
+
+                                <td class="SKIPPED-text">10.16</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="6d5c157bc3b0483c88a12a91431c12680ef42a08700e449b3a745e95ebbc5504.html" class="ellipsis"
+                                           title="(Spanish) Verify Local Resources flows correctly on the Spanish homepage ">
+                                            (Spanish) Verify Local Resources flows correctly on the Spanish homepage
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">6</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:57:16">12:57:16</td>
+
+                                <td class="SKIPPED-text">14.15</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="2de64d07b9cf8512feba55d8ea718af19cf1549f64a2ca05f2bae58b92d47c86.html" class="ellipsis"
+                                           title="(Spanish) Verify all of the titles on the 'News Feeds' landing page node ">
+                                            (Spanish) Verify all of the titles on the &quot;News Feeds&quot; landing page node
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">6</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:57:30">12:57:30</td>
+
+                                <td class="SKIPPED-text">10.14</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="4bb69153fa418025df67148271d78eefb73c478fad1eac5fea6c655f103fa195.html" class="ellipsis"
+                                           title="(Spanish) Verify the results of the quick search items ">
+                                            (Spanish) Verify the results of the quick search items&nbsp;(5  examples)
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">35</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:57:40">12:57:40</td>
+
+                                <td class="SKIPPED-text">36.51</td>
+                            </tr>
+
+                            <tr class="test-ERROR">
+                                <td><span class="summary-icon"><i class='fa fa-exclamation-triangle error-icon ' title='ERROR'></i></span>
+                                    
+                                    <span style="display:none">ERROR</span></td>
+                                <td class="ERROR-text">
+                                    <div class="ellipsis">
+
+                                        <a href="4cd02e42da90a2944bb9bc8c553c0528a5282b0ec10a10c7b8ccb2a486af13f6.html" class="ellipsis"
+                                           title="(Spanish) Verify the declared disasters with Address Look-up No such element exception: The follow...">
+                                            (Spanish) Verify the declared disasters with Address Look-up
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="ERROR-text">6</td>
+
+
+                                <td class="ERROR-text" data-sort="2018-01-08 12:58:17">12:58:17</td>
+
+                                <td class="ERROR-text">24.88</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="fbc5898f9a6687ed26c9f93924eb4f8bc698078870e1628ab2c94e0fbba315bc.html" class="ellipsis"
+                                           title="(Spanish) Verify Spanish benefits results display according to use cases ">
+                                            (Spanish) Verify Spanish benefits results display according to use cases
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">6</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:58:42">12:58:42</td>
+
+                                <td class="SKIPPED-text">13.16</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="65f6f4eedb476411015e8f237c43424bca3f957f7a56214f0933924d51c5ce2a.html" class="ellipsis"
+                                           title="(Spanish) Dynamically verify results of the questionnaire on the 'Find Assistance' page ">
+                                            (Spanish) Dynamically verify results of the questionnaire on the &quot;Find Assistance&quot; page
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">6</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:58:55">12:58:55</td>
+
+                                <td class="SKIPPED-text">28.25</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="df7dd7621e4d55ac30716404fc8ae5467dc5860d3d4cbd53a6258dba3c203a77.html" class="ellipsis"
+                                           title="(Spanish) Verify all the functionality of the FOA questionnaire ">
+                                            (Spanish) Verify all the functionality of the FOA questionnaire
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">16</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 12:59:23">12:59:23</td>
+
+                                <td class="SKIPPED-text">50.5</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="aab9d299a86f0ac58bb863d0a920eaf8242d526dc542b369f198290e1aa452ce.html" class="ellipsis"
+                                           title="(Spanish) Verify that the FEMA Twitter feed is present on the Spanish homepage ">
+                                            (Spanish) Verify that the FEMA Twitter feed is present on the Spanish homepage
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">6</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:00:14">13:00:14</td>
+
+                                <td class="SKIPPED-text">10.13</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="3f50cdeb84a16fc512c628a09f5919f6afbbeb4e258de1c3e9362d6d875a4dbf.html" class="ellipsis"
+                                           title="(Spanish) Verify the Category Type filter with the first seven types on the Forms of Assistance page ">
+                                            (Spanish) Verify the Category Type filter with the first seven types on the Forms of Assistance page
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">6</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-01-08 13:00:24">13:00:24</td>
+
+                                <td class="SUCCESS-text">30.74</td>
+                            </tr>
+
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                                    
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
+                                    <div class="ellipsis">
+
+                                        <a href="76a89df27eadc71986831a37205ac422b563eae96f64af032abb2af4990f46a4.html" class="ellipsis"
+                                           title="(Spanish) Verify the Category Type filter with the next eight types on the Forms of Assistance page ">
+                                            (Spanish) Verify the Category Type filter with the next eight types on the Forms of Assistance page
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SUCCESS-text">6</td>
+
+
+                                <td class="SUCCESS-text" data-sort="2018-01-08 13:00:55">13:00:55</td>
+
+                                <td class="SUCCESS-text">28.34</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="4ffc45ae7f725e4e50a2d9cb876cce40e78cc3932b3b14d3123496a302d91314.html" class="ellipsis"
+                                           title="(Spanish) Verify the Federal Agency filter on the Forms of Assistance page ">
+                                            (Spanish) Verify the Federal Agency filter on the Forms of Assistance page
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">6</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:01:23">13:01:23</td>
+
+                                <td class="SKIPPED-text">20.28</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="12e492160e56c101a25579f60e439097ef6f29d4b4d8b657a06eae17b252f8cb.html" class="ellipsis"
+                                           title="(Spanish) Verify the Federal Agency filter with the next seven types on the Forms of Assistance page ">
+                                            (Spanish) Verify the Federal Agency filter with the next seven types on the Forms of Assistance page
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">6</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:01:43">13:01:43</td>
+
+                                <td class="SKIPPED-text">20.26</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </td>
+    </tr>
+</table>
+</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+</div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 1.5.1</span>
+</div>
+</body>
+</html>
