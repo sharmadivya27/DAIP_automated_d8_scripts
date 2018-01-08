@@ -1,12 +1,12 @@
 -------------------------------------------------------------------------------
 Test set: gov.daip.d8.test.DAIPAcceptanceTestSuite
 -------------------------------------------------------------------------------
-Tests run: 323, Failures: 1, Errors: 2, Skipped: 2, Time elapsed: 977.035 sec <<< FAILURE! - in gov.daip.d8.test.DAIPAcceptanceTestSuite
-Then I should be able to view the list of the declared states(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 15.238 sec  <<< FAILURE!
+Tests run: 322, Failures: 1, Errors: 3, Skipped: 3, Time elapsed: 945.372 sec <<< FAILURE! - in gov.daip.d8.test.DAIPAcceptanceTestSuite
+Then I should be able to view the list of the declared states(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 9.975 sec  <<< FAILURE!
 java.lang.AssertionError: expected:<null> but was:<null Alaska  Florida  Maine  New York  Pennsylvania  Virginia  West Virginia  Ohio  Illinois  North Carolina  Tennessee  Arkansas  Missouri  Georgia  South Carolina  Kentucky  Alabama  Louisiana  Mississippi  Minnesota  Oklahoma  Texas  Kansas  Nebraska  North Dakota  Montana  Colorado  Idaho  Arizona  Washington  California  Vermont  Rhode Island  New Jersey  Maryland  District of Columbia  Massachusetts >
 	at gov.daip.d8.test.DailyRegressionSteps.thenShouldBeAbleToViewListOfDeclaredStates(DailyRegressionSteps.java:129)
 
-Then I should get the results for the given disaster(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 4.469 sec  <<< ERROR!
+Then I should get the results for the given disaster(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 4.652 sec  <<< ERROR!
 net.serenitybdd.core.exceptions.SerenityManagedException: 
 The following error occurred: Timed out after 2 seconds. Element not found
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
@@ -15,7 +15,7 @@ System info: host: 'c02rj1fvfvh8.users.bah.com', ip: 'fe80:0:0:0:1470:558c:2427:
 Driver info: driver.version: unknown
 	at gov.daip.d8.test.DailyRegressionSteps.thenShouldGetResultsForGivenDisaster(DailyRegressionSteps.java:213)
 
-Then I should get the results for the given disaster(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 4.463 sec  <<< ERROR!
+Then I should get the results for the given disaster(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 4.638 sec  <<< ERROR!
 net.serenitybdd.core.exceptions.SerenityManagedException: 
 The following error occurred: Timed out after 2 seconds. Element not found
 For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
@@ -23,4 +23,17 @@ Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.58
 System info: host: 'c02rj1fvfvh8.users.bah.com', ip: 'fe80:0:0:0:1470:558c:2427:d727%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_101'
 Driver info: driver.version: unknown
 	at gov.daip.d8.test.DailyRegressionSteps.thenShouldGetResultsForGivenDisaster(DailyRegressionSteps.java:213)
+
+When I click on Category Type to check the next eight category types(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 25.992 sec  <<< ERROR!
+net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected enabled element was not enabled
+	at gov.daip.d8.test.DailyRegressionSteps.when_I_check_next_eight_category_types(DailyRegressionSteps.java:328)
+Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for DALandingPage.socialSecurity to be enabled (tried for 5 second(s) with 100 MILLISECONDS interval)
+	at gov.daip.d8.test.DailyRegressionSteps.when_I_check_next_eight_category_types(DailyRegressionSteps.java:328)
+Caused by: org.openqa.selenium.NoSuchElementException: 
+Timed out after 2 seconds. Element not found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
+System info: host: 'c02rj1fvfvh8.users.bah.com', ip: 'fe80:0:0:0:1470:558c:2427:d727%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_101'
+Driver info: driver.version: unknown
+	at gov.daip.d8.test.DailyRegressionSteps.when_I_check_next_eight_category_types(DailyRegressionSteps.java:328)
 

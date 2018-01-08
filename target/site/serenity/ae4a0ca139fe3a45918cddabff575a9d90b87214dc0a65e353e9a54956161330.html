@@ -53,13 +53,13 @@
     <script class="code" type="text/javascript">$(document).ready(function () {
         var test_results_plot = $.jqplot('test_results_pie_chart', [
             [
-                ['Passing', 0.043478],
+                ['Passing', 0.021739],
                 
                 ['Pending', 0],
                 
                 ['Ignored/Skipped', 0.934783],
                 
-                ['Failing', 0],
+                ['Failing', 0.021739],
                 
                 ['Errors',  0.021739],
                 ['Compromised',  0]
@@ -92,10 +92,10 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '2 / 46 tests passed' },
+                {label: '1 / 46 tests passed' },
                 {label: '0 / 46 tests pending'},
                 {label: '43 / 46 tests not executed'},
-                {label: '0 / 46 tests failed'},
+                {label: '1 / 46 tests failed'},
                 {label: '1 / 46 errors'},
                 {label: '0 / 46 compromised tests'}
             ]
@@ -103,15 +103,15 @@
 
         var weighted_test_results_plot = $.jqplot('weighted_test_results_pie_chart', [
             [
-                ['Passing', 0.757009],
+                ['Passing', 0.740625],
                 
                 ['Pending', 0],
                 
-                ['Ignored', 0.224299],
+                ['Ignored', 0.225],
                 
-                ['Failing', 0],
+                ['Failing', 0.015625],
                 
-                ['Errors', 0.018692],
+                ['Errors', 0.01875],
                 ['Compromised', 0],
             ]
         ], {
@@ -143,11 +143,11 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '2 / 46 tests passed (0.757009% of all test steps)' },
+                {label: '1 / 46 tests passed (0.740625% of all test steps)' },
                 {label: '0 / 46 tests pending'},
                 {label: '43 / 46 tests not executed'},
-                {label: '0 / 46 tests failed (0% of all test steps)'},
-                {label: '1 / 46 errors (0.018692% of all test steps)'}
+                {label: '1 / 46 tests failed (0.015625% of all test steps)'},
+                {label: '1 / 46 errors (0.01875% of all test steps)'}
             ]
         });
 
@@ -221,7 +221,7 @@
             <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 08-01-2018 13:02</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 08-01-2018 13:22</span>
     <br style="clear:left"/>
 </div>
 <div class="clr"></div>
@@ -241,17 +241,17 @@
                 <div>
 
                     <span class="test-count"> |
-                        2
+                        1
                             <a href="e8aec572c60d6673d764bc7752a47f6ad5ed21e6bfa76d36237c39334436ae9c.html">passed</a>
                         
                     </span>
                     <span class="test-count"> |
-                        1
+                        2
                             <a href="0db8c313e595514f41ca0d5ce7897d0e686ed44899e1850b167d45ef0b40b900.html">unsuccessful</a>
                         
                     </span>(
                     <span class="test-count">
-                        0
+                        1
                             <a href="f40480e62c21b3d6707460920781abf17f3ade0a703bc70b1ddefbe6102a7e34.html">failed</a>
                         ,
                     </span>
@@ -316,8 +316,8 @@
         <tr>
             <td class="summary-leading-column">Automated</td>
             <td>46</td>
-            <td>2 (4%)</td>
             <td>1 (2%)</td>
+            <td>2 (4%)</td>
             <td>0 (0%)</td>
             <td>43 (93%)</td>
         </tr>
@@ -332,14 +332,14 @@
         <tr>
             <td class="summary-leading-column">Total</td>
             <td>46</td>
-            <td>2 (4%)</td>
             <td>1 (2%)</td>
+            <td>2 (4%)</td>
             <td>0 (0%)</td>
             <td>43 (93%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Total Duration</td>
-                <td colspan="5">7 minutes 49 seconds</td>
+                <td colspan="5">7 minutes 52 seconds</td>
         </tr>
         </body>
     </table>
@@ -370,7 +370,7 @@
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="2 out of 46 tests (12 steps) passing">4.3%</span></td>
+                                <td class="related-tag-percentage"><span title="1 out of 46 tests (6 steps) passing">2.2%</span></td>
                                 <td width="150px">
                                     <a href="c2569e96ae6bf78356adde99ce8f5f5fed36977143e44c3a650f7381d3b0440f.html">
                                         <div class="pendingbar"
@@ -387,10 +387,10 @@
                                                          title="1 out of 46 tests (6 steps) broken">
                                                         <div class="failingbar"
                                                              style="width: 7px;"
-                                                             title="0 out of 46 tests (0 steps) failing">
+                                                             title="1 out of 46 tests (5 steps) failing">
                                                             <div class="passingbar"
-                                                                 style="width: 7px;"
-                                                                 title="2 out of 46 tests (12 steps) passing">
+                                                                 style="width: 3px;"
+                                                                 title="1 out of 46 tests (6 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -422,7 +422,7 @@
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="2 out of 46 tests (12 steps) passing">4.3%</span></td>
+                                <td class="related-tag-percentage"><span title="1 out of 46 tests (6 steps) passing">2.2%</span></td>
                                 <td width="150px">
                                     <a href="0823beee868795cfebac2d06605775216a1592e844f9c0a372097ea55e21f005.html">
                                         <div class="pendingbar"
@@ -439,10 +439,10 @@
                                                          title="1 out of 46 tests (6 steps) broken">
                                                         <div class="failingbar"
                                                              style="width: 7px;"
-                                                             title="0 out of 46 tests (0 steps) failing">
+                                                             title="1 out of 46 tests (5 steps) failing">
                                                             <div class="passingbar"
-                                                                 style="width: 7px;"
-                                                                 title="2 out of 46 tests (12 steps) passing">
+                                                                 style="width: 3px;"
+                                                                 title="1 out of 46 tests (6 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -499,8 +499,8 @@
         <tr>
             <td class="summary-leading-column">Automated</td>
             <td>46</td>
-            <td>2 (4%)</td>
             <td>1 (2%)</td>
+            <td>2 (4%)</td>
             <td>0 (0%)</td>
             <td>43 (93%)</td>
         </tr>
@@ -515,14 +515,14 @@
         <tr>
             <td class="summary-leading-column">Total</td>
             <td>46</td>
-            <td>2 (4%)</td>
             <td>1 (2%)</td>
+            <td>2 (4%)</td>
             <td>0 (0%)</td>
             <td>43 (93%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Total Duration</td>
-                <td colspan="5">7 minutes 49 seconds</td>
+                <td colspan="5">7 minutes 52 seconds</td>
         </tr>
         </body>
     </table>
@@ -553,7 +553,7 @@
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="2 out of 46 tests (12 steps) passing">75.7%</span></td>
+                                <td class="related-tag-percentage"><span title="1 out of 46 tests (6 steps) passing">74.1%</span></td>
                                 <td width="150px">
                                     <a href="c2569e96ae6bf78356adde99ce8f5f5fed36977143e44c3a650f7381d3b0440f.html">
                                         <div class="pendingbar"
@@ -569,11 +569,11 @@
                                                          style="width: 116px;"
                                                          title="1 out of 46 tests (6 steps) broken">
                                                         <div class="failingbar"
-                                                             style="width: 114px;"
-                                                             title="0 out of 46 tests (0 steps) failing">
+                                                             style="width: 113px;"
+                                                             title="1 out of 46 tests (5 steps) failing">
                                                             <div class="passingbar"
-                                                                 style="width: 114px;"
-                                                                 title="2 out of 46 tests (12 steps) passing">
+                                                                 style="width: 111px;"
+                                                                 title="1 out of 46 tests (6 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -605,7 +605,7 @@
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="2 out of 46 tests (12 steps) passing">75.7%</span></td>
+                                <td class="related-tag-percentage"><span title="1 out of 46 tests (6 steps) passing">74.1%</span></td>
                                 <td width="150px">
                                     <a href="0823beee868795cfebac2d06605775216a1592e844f9c0a372097ea55e21f005.html">
                                         <div class="pendingbar"
@@ -621,11 +621,11 @@
                                                          style="width: 116px;"
                                                          title="1 out of 46 tests (6 steps) broken">
                                                         <div class="failingbar"
-                                                             style="width: 114px;"
-                                                             title="0 out of 46 tests (0 steps) failing">
+                                                             style="width: 113px;"
+                                                             title="1 out of 46 tests (5 steps) failing">
                                                             <div class="passingbar"
-                                                                 style="width: 114px;"
-                                                                 title="2 out of 46 tests (12 steps) passing">
+                                                                 style="width: 111px;"
+                                                                 title="1 out of 46 tests (6 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -688,9 +688,9 @@
                                 <td class="SKIPPED-text">63</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 12:54:13">12:54:13</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:14:10">13:14:10</td>
 
-                                <td class="SKIPPED-text">42.56</td>
+                                <td class="SKIPPED-text">42.63</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -711,9 +711,9 @@
                                 <td class="SKIPPED-text">63</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 12:54:56">12:54:56</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:14:53">13:14:53</td>
 
-                                <td class="SKIPPED-text">40.62</td>
+                                <td class="SKIPPED-text">40.59</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -734,9 +734,9 @@
                                 <td class="SKIPPED-text">14</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 12:55:36">12:55:36</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:15:34">13:15:34</td>
 
-                                <td class="SKIPPED-text">24.33</td>
+                                <td class="SKIPPED-text">24.3</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -757,9 +757,9 @@
                                 <td class="SKIPPED-text">35</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 12:56:01">12:56:01</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:15:58">13:15:58</td>
 
-                                <td class="SKIPPED-text">26.44</td>
+                                <td class="SKIPPED-text">26.43</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -780,9 +780,9 @@
                                 <td class="SKIPPED-text">21</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 12:56:27">12:56:27</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:16:24">13:16:24</td>
 
-                                <td class="SKIPPED-text">28.38</td>
+                                <td class="SKIPPED-text">28.41</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -803,9 +803,9 @@
                                 <td class="SKIPPED-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 12:56:56">12:56:56</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:16:53">13:16:53</td>
 
-                                <td class="SKIPPED-text">10.16</td>
+                                <td class="SKIPPED-text">10.15</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -826,9 +826,9 @@
                                 <td class="SKIPPED-text">8</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 12:57:06">12:57:06</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:17:03">13:17:03</td>
 
-                                <td class="SKIPPED-text">10.16</td>
+                                <td class="SKIPPED-text">10.18</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -849,7 +849,7 @@
                                 <td class="SKIPPED-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 12:57:16">12:57:16</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:17:13">13:17:13</td>
 
                                 <td class="SKIPPED-text">14.15</td>
                             </tr>
@@ -872,9 +872,9 @@
                                 <td class="SKIPPED-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 12:57:30">12:57:30</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:17:27">13:17:27</td>
 
-                                <td class="SKIPPED-text">10.14</td>
+                                <td class="SKIPPED-text">10.12</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -895,9 +895,9 @@
                                 <td class="SKIPPED-text">35</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 12:57:40">12:57:40</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:17:37">13:17:37</td>
 
-                                <td class="SKIPPED-text">36.51</td>
+                                <td class="SKIPPED-text">36.46</td>
                             </tr>
 
                             <tr class="test-ERROR">
@@ -918,9 +918,9 @@
                                 <td class="ERROR-text">6</td>
 
 
-                                <td class="ERROR-text" data-sort="2018-01-08 12:58:17">12:58:17</td>
+                                <td class="ERROR-text" data-sort="2018-01-08 13:18:14">13:18:14</td>
 
-                                <td class="ERROR-text">24.88</td>
+                                <td class="ERROR-text">25.92</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -941,9 +941,9 @@
                                 <td class="SKIPPED-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 12:58:42">12:58:42</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:18:40">13:18:40</td>
 
-                                <td class="SKIPPED-text">13.16</td>
+                                <td class="SKIPPED-text">13.13</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -964,7 +964,7 @@
                                 <td class="SKIPPED-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 12:58:55">12:58:55</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:18:53">13:18:53</td>
 
                                 <td class="SKIPPED-text">28.25</td>
                             </tr>
@@ -987,7 +987,7 @@
                                 <td class="SKIPPED-text">16</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 12:59:23">12:59:23</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:19:21">13:19:21</td>
 
                                 <td class="SKIPPED-text">50.5</td>
                             </tr>
@@ -1010,9 +1010,9 @@
                                 <td class="SKIPPED-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 13:00:14">13:00:14</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:20:12">13:20:12</td>
 
-                                <td class="SKIPPED-text">10.13</td>
+                                <td class="SKIPPED-text">10.12</td>
                             </tr>
 
                             <tr class="test-SUCCESS">
@@ -1033,32 +1033,32 @@
                                 <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-01-08 13:00:24">13:00:24</td>
+                                <td class="SUCCESS-text" data-sort="2018-01-08 13:20:22">13:20:22</td>
 
-                                <td class="SUCCESS-text">30.74</td>
+                                <td class="SUCCESS-text">31.29</td>
                             </tr>
 
-                            <tr class="test-SUCCESS">
-                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
+                            <tr class="test-FAILURE">
+                                <td><span class="summary-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
                                     
-                                    <span style="display:none">SUCCESS</span></td>
-                                <td class="SUCCESS-text">
+                                    <span style="display:none">FAILURE</span></td>
+                                <td class="FAILURE-text">
                                     <div class="ellipsis">
 
                                         <a href="76a89df27eadc71986831a37205ac422b563eae96f64af032abb2af4990f46a4.html" class="ellipsis"
-                                           title="(Spanish) Verify the Category Type filter with the next eight types on the Forms of Assistance page ">
+                                           title="(Spanish) Verify the Category Type filter with the next eight types on the Forms of Assistance page Element should be enabled exception: ...">
                                             (Spanish) Verify the Category Type filter with the next eight types on the Forms of Assistance page
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SUCCESS-text">6</td>
+                                <td class="FAILURE-text">5</td>
 
 
-                                <td class="SUCCESS-text" data-sort="2018-01-08 13:00:55">13:00:55</td>
+                                <td class="FAILURE-text" data-sort="2018-01-08 13:20:53">13:20:53</td>
 
-                                <td class="SUCCESS-text">28.34</td>
+                                <td class="FAILURE-text">29.68</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -1079,9 +1079,9 @@
                                 <td class="SKIPPED-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 13:01:23">13:01:23</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:21:23">13:21:23</td>
 
-                                <td class="SKIPPED-text">20.28</td>
+                                <td class="SKIPPED-text">20.24</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -1102,7 +1102,7 @@
                                 <td class="SKIPPED-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-01-08 13:01:43">13:01:43</td>
+                                <td class="SKIPPED-text" data-sort="2018-01-08 13:21:43">13:21:43</td>
 
                                 <td class="SKIPPED-text">20.26</td>
                             </tr>

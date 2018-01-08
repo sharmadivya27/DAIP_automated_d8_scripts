@@ -1,4 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist","Verify all the functionality of the FOA questionnaire","SUCCESS","2018-01-08T12:51:52.34-05:00[America/New_York]","0.0","36.44"
-"Regression checklist spanish","(Spanish) Verify the Category Type filter with the first seven types on the Forms of Assistance page","SUCCESS","2018-01-08T13:00:24.301-05:00[America/New_York]","0.0","30.74"
-"Regression checklist spanish","(Spanish) Verify the Category Type filter with the next eight types on the Forms of Assistance page","SUCCESS","2018-01-08T13:00:55.092-05:00[America/New_York]","0.0","28.34"
+"Regression checklist spanish","(Spanish) Verify the Category Type filter with the first seven types on the Forms of Assistance page","SUCCESS","2018-01-08T13:20:22.343-05:00[America/New_York]","0.0","31.29"

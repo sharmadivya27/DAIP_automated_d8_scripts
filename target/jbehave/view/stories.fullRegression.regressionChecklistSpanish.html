@@ -515,8 +515,19 @@ Driver info: driver.version: unknown
 <div class="property">@category daily</div>
 </div>
 <div class="step successful">Given I am on the Spanish Forms of Assistance page</div>
-<div class="step successful">When I click on Category Type to check the next eight category types</div>
-<div class="step successful">Then 112 spanish results should appear</div>
+<div class="step failed">When I click on Category Type to check the next eight category types <span class="keyword failed">(FAILED)</span><br/><span class="message failed">net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected enabled element was not enabled</span></div>
+<div class="step notPerformed">Then 112 spanish results should appear <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
+<pre class="failure">net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected enabled element was not enabled
+	at net.serenitybdd.core.exceptions.SerenityManagedException.detachedCopyOf(SerenityManagedException.java:21)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:394)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:133)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:62)
+	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.clickNextCategoryType(&lt;generated&gt;)
+	at gov.daip.d8.test.DailyRegressionSteps.when_I_check_next_eight_category_types(DailyRegressionSteps.java:328)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:733)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:346)
+...</pre>
 </div>
 <div class="scenario">
 <h2>Scenario: (Spanish) Verify the Federal Agency filter on the Forms of Assistance page</h2>

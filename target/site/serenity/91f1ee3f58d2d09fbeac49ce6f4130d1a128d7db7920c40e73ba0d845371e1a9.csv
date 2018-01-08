@@ -1,4 +1,5 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist","Verify the declared states on the declared disaster map","FAILURE","2018-01-08T12:49:16.258-05:00[America/New_York]","0.0","26.16"
-"Regression checklist","Verify the declared disasters with Address Look-up","ERROR","2018-01-08T12:50:39.591-05:00[America/New_York]","0.0","31.19"
-"Regression checklist spanish","(Spanish) Verify the declared disasters with Address Look-up","ERROR","2018-01-08T12:58:17.213-05:00[America/New_York]","0.0","24.88"
+"Regression checklist","Verify the declared states on the declared disaster map","FAILURE","2018-01-08T13:09:47.784-05:00[America/New_York]","0.0","18.3"
+"Regression checklist","Verify the declared disasters with Address Look-up","ERROR","2018-01-08T13:11:03.138-05:00[America/New_York]","0.0","24.67"
+"Regression checklist spanish","(Spanish) Verify the declared disasters with Address Look-up","ERROR","2018-01-08T13:18:14.276-05:00[America/New_York]","0.0","25.92"
+"Regression checklist spanish","(Spanish) Verify the Category Type filter with the next eight types on the Forms of Assistance page","FAILURE","2018-01-08T13:20:53.69-05:00[America/New_York]","0.0","29.68"

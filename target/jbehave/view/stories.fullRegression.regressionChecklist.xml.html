@@ -392,6 +392,7 @@ Driver info: driver.version: unknown
 <scenario keyword="Scenario:" title="Verify all the functionality of the FOA questionnaire">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Find Assistance page</step>
 <step outcome="successful">When I fully complete the questionnaire</step>
@@ -414,6 +415,7 @@ Driver info: driver.version: unknown
 <scenario keyword="Scenario:" title="Verify the Category Type filter with the first seven types on the Forms of Assistance page">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Forms of Assistance page</step>
 <step outcome="successful">When I click on Category Type to check the first seven category types</step>
@@ -428,6 +430,7 @@ public void then45ResultsShouldAppear() {
 <scenario keyword="Scenario:" title="Verify the Category Type filter with the next eight types on the Forms of Assistance page">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Forms of Assistance page</step>
 <step outcome="successful">When I click on Category Type to check the next eight category types</step>
