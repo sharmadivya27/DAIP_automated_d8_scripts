@@ -378,12 +378,14 @@ public class User {
 	@Step
 	public void verifyFOAExpandedContentVisible() {
 		int i = daQues.getResultsVal();
+		daHomepage.pause(3000);
 		daQues.getFOAResultsPage();
 		Assert.assertEquals(i, daQues.getNumEmploymentResults());
 	}
 
 	@Step
 	public void seesFOAFooter() {
+		daHomepage.pause(4000);
 		Assert.assertTrue(daQues.foaFooterIsVisible());
 	}
 

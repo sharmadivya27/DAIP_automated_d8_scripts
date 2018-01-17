@@ -33,22 +33,11 @@ public class DAQuestionnaire extends PageObject {
 	@FindBy(id = "stateSelector")
 	private WebElementFacade stateSelector;
 	
-	@FindBy(xpath = "//*[@id='2214_1']")
-	private WebElementFacade yesButton1;
-	
-	@FindBy(xpath = "//*[@id='2218_1']")
-	private WebElementFacade yesButton2;
-	
-	@FindBy(xpath = "//*[@id='2220_1']")
-	private WebElementFacade yesButton3;
-	
-	@FindBy(xpath = "//*[@id='2219_1']")
-	private WebElementFacade yesButton4;
-	
 	@FindBy(xpath = "//div[@class='panel-heading']")
 	private List<WebElementFacade> FOAChecklistAccordions;
 	
-	@FindBy(xpath = "//*[@class[contains(., 'col-xs-offset-2')]]")
+	//@FindBy(xpath = "//*[@class[contains(., 'col-xs-offset-2')]]")
+	@FindBy(xpath = "//*[@id='results_next']")
 	private List<WebElementFacade> FOAfooter;
 	
 	@FindBy(xpath = "//*[@id='pageContent']")
@@ -110,7 +99,7 @@ public class DAQuestionnaire extends PageObject {
 	 * @return true if the next and back buttons are visible
 	 *************************************************************************/
 	public boolean foaFooterIsVisible() {
-		Iterator<WebElementFacade> iter = FOAfooter.iterator();
+		/*Iterator<WebElementFacade> iter = FOAfooter.iterator();
 		int textMatchCounter = 0;
 
 		while (iter.hasNext()) {
@@ -119,7 +108,8 @@ public class DAQuestionnaire extends PageObject {
 			}
 		}
 
-		return (textMatchCounter == 2 || textMatchCounter == 1);
+		return (textMatchCounter == 2 || textMatchCounter == 1);*/
+		return FOAfooter.toString().contains("Next");
 	}
 	
 	/*************************************************************************

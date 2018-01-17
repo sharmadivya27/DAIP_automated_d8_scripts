@@ -1,11 +1,13 @@
-/Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/gov/daip/d8/test/exceptions/EmploymentException.java
-/Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/gov/daip/d8/test/pageObject/DAHomepage.java
-/Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/gov/daip/d8/test/pageObject/DrupalPage.java
+/Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/com/browserstack/BrowserStackSerenityDriver.java
 /Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/gov/daip/d8/test/pageObject/DALandingPage.java
 /Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/gov/daip/d8/test/DailyRegressionSteps.java
 /Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/gov/daip/d8/test/exceptions/LocalResourcesException.java
-/Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/gov/daip/d8/test/pageObject/DAPage.java
 /Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/gov/daip/d8/test/exceptions/StateException.java
+/Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/com/browserstack/BrowserStackSerenityTest.java
+/Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/gov/daip/d8/test/exceptions/EmploymentException.java
+/Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/gov/daip/d8/test/pageObject/DAHomepage.java
+/Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/gov/daip/d8/test/pageObject/DrupalPage.java
+/Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/gov/daip/d8/test/pageObject/DAPage.java
 /Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/gov/daip/d8/test/pageObject/DAQuestionnaire.java
 /Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/gov/daip/d8/test/exceptions/FeedException.java
 /Users/divyasharma/Documents/workspace/D8-DA-Automation/DAIP_automated_d8_scripts/src/test/java/gov/daip/d8/test/User.java

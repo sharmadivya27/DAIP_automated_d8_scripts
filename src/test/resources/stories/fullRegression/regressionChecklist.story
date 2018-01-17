@@ -6,7 +6,7 @@ I want to run the daily regressions at least twice a day
 Meta: 
 
 Scenario: Verify all the menu links on the "Get Assistance" tab
-Meta:
+Meta: 
 @category daily
 
 Given I am on the Disaster Assistance homepage
@@ -97,7 +97,7 @@ When I am viewing the declared disaster map
 Then states with disasters should be clickable
 
 Scenario: Verify the declared states on the declared disaster map 
-Meta: 
+Meta:  
 @category daily 
 
 Given I am on the Disaster Assistance homepage
@@ -159,7 +159,7 @@ When I fully complete the questionnaire
 Then I should accumulate the same number of results as the text on the Get Results button
 
 Scenario: Verify all the functionality of the FOA questionnaire
-Meta: 
+Meta:  
 @category daily 
 
 Given I am on the Find Assistance page
@@ -180,7 +180,7 @@ When I am viewing the FEMA Twitter feed
 Then the most recent tweets should be displayed
 
 Scenario: Verify the Category Type filter with the first seven types on the Forms of Assistance page
-Meta:
+Meta: 
 @category daily
 
 Given I am on the Forms of Assistance page 
@@ -188,7 +188,7 @@ When I click on Category Type to check the first seven category types
 Then 45 results should appear 
 
 Scenario: Verify the Category Type filter with the next eight types on the Forms of Assistance page
-Meta:
+Meta: 
 @category daily
 
 Given I am on the Forms of Assistance page 
@@ -196,7 +196,7 @@ When I click on Category Type to check the next eight category types
 Then 56 results should appear
 
 Scenario: Verify the Federal Agency filter on the Forms of Assistance page 
-Meta:
+Meta: 
 @category daily 
 
 Given I am on the Forms of Assistance page 

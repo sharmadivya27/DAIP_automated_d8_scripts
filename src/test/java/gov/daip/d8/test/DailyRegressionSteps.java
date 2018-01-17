@@ -313,12 +313,12 @@ public class DailyRegressionSteps {
 		user.clickCategoryType();
 	}
 	
-	@Then("90 results should appear") 
+	@Then("45 results should appear") 
 	public void then_these_results_should_appear() {
 		user.get90Results();
 	}
 	
-	@Then("90 spanish results should appear")
+	@Then("45 spanish results should appear")
 	public void then_these_spanish_results_should_appear() {
 		user.get90SpanishResults();
 	}
@@ -328,12 +328,12 @@ public class DailyRegressionSteps {
 		 user.clickNextCategoryType();
 	}
 	
-	@Then("112 results should appear")
+	@Then("56 results should appear")
 	public void then_other_results_should_appear() {
 		user.get112Results();
 	}
 	
-	@Then("112 spanish results should appear") 
+	@Then("56 spanish results should appear") 
 	public void then_other_spanish_results_should_appear() {
 		user.get112SpanishResults();
 	}
