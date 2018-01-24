@@ -1,0 +1,7 @@
+#org.jbehave.core.embedder.StoryManager
+#Wed Jan 24 12:11:11 EST 2018
+threads=1
+total=903000
+stories/fullRegression/regressionChecklistSpanish.story=446000
+stories/fullRegression/regressionChecklist.story=457000
+threadAverage=903000

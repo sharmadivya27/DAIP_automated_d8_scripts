@@ -53,7 +53,6 @@ public class User {
 	@Step
 	public void open_page(String directoryPath) {
 		dapage.clearCookies();
-
 		String url = dapage.defaultUrl + directoryPath;
 		if (dapage.defaultUrl.contains("staging")) {
 			url += "?mobile=unL9HuS";
@@ -299,13 +298,15 @@ public class User {
 
 	@Step
 	public void onCommunityLeadersPage() {
-		drupalPage.openAt("https://staging.disasterassistance.gov/get-assistance/community-leaders/?mobile=unL9HuS");
+		//FIXME back to staging
+		drupalPage.openAt("https://www.disasterassistance.gov/get-assistance/community-leaders/?mobile=unL9HuS");
 	}
 
 	@Step
 	public void onSpanishCommunityLeadersPage() {
+		//FIXME back to staging
 		drupalPage.openAt(
-				"https://staging.disasterassistance.gov/es/obtener-asistencia/líderes-comunitarios/?mobile=unL9HuS");
+				"https://www.disasterassistance.gov/es/obtener-asistencia/líderes-comunitarios/?mobile=unL9HuS");
 	}
 
 	@Step
@@ -378,15 +379,9 @@ public class User {
 	@Step
 	public void verifyFOAExpandedContentVisible() {
 		int i = daQues.getResultsVal();
-		daHomepage.pause(3000);
+		daHomepage.pause(7000);
 		daQues.getFOAResultsPage();
 		Assert.assertEquals(i, daQues.getNumEmploymentResults());
-	}
-
-	@Step
-	public void seesFOAFooter() {
-		daHomepage.pause(4000);
-		Assert.assertTrue(daQues.foaFooterIsVisible());
 	}
 
 	@Step

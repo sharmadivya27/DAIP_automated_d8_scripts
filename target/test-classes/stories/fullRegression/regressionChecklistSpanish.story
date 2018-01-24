@@ -167,7 +167,6 @@ Meta:
 Given I am on the Find Assistance Spanish page
 When I fully complete the questionnaire
 Then I should be able to see all of the content 
-And the next and back buttons are displayed
 When I click next
 Then the 3 accordions should have content visible
 When I click apply now

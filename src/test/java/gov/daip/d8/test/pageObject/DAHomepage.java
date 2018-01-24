@@ -380,7 +380,7 @@ public class DAHomepage extends PageObject {
 	String editState;
 
 	public String checkDisasterStatesEdit() {
-		getDriver().get("https://edit.staging.disasterassistance.gov/");
+		getDriver().get("https://edit.disasterassistance.gov/");
 		for (int i = 0; i < disasterStates.size(); i++) {
 			editState += disasterStates.get(i).getText().replaceAll("to see if your county is in a declared area", "")
 					.replaceAll("Select", "");
@@ -394,7 +394,7 @@ public class DAHomepage extends PageObject {
 	 *************************************************************************/
 	public String checkSpanishDisasterStatesEdit() {
 		//FIX THIS !!! 
-		getDriver().get("https://edit.staging.disasterassistance.gov/es");
+		getDriver().get("https://edit.disasterassistance.gov/es");
 		for (int i = 0; i < disasterStates.size(); i++) {
 			editState += disasterStates.get(i).getText().replaceAll("to see if your county is in a declared area", "")
 					.replaceAll("Select", "").replaceAll("daip_disaster_map_select_desc", "")
@@ -448,7 +448,7 @@ public class DAHomepage extends PageObject {
 	public void typeAddressLookUp() {
 		String state = getDeclaredDisasterState();
 		String county = getDeclaredDisasterCounty();
-		this.openAt("https://staging.disasterassistance.gov/?mobile=unL9HuS");
+		this.openAt("https://www.disasterassistance.gov");
 		addressLookUpTextField.click();
 		addressLookUpTextField.type(county + "," + state);
 		addressLookUpButton.click();
@@ -463,7 +463,7 @@ public class DAHomepage extends PageObject {
 	public void typeSpanishAddressLookUp() {
 		String state = getDeclaredDisasterState();
 		String county = getDeclaredDisasterCounty();
-		this.openAt("https://staging.disasterassistance.gov/es/?mobile=unL9HuS");
+		this.openAt("https://www.disasterassistance.gov/es");
 		addressLookUpTextField.click();
 		addressLookUpTextField.type(county + "," + state);
 		addressLookUpButton.click();

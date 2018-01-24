@@ -350,32 +350,11 @@ Meta:</iWantTo>
 </meta>
 <step outcome="successful">Given I am on the Find Assistance page</step>
 <step outcome="successful">When I fully complete the questionnaire</step>
-<step outcome="failed" keyword="FAILED">Then I should be able to see all of the content<failure>java.lang.AssertionError: expected:&lt;19&gt; but was:&lt;21&gt;</failure></step>
-<step outcome="notPerformed" keyword="NOT PERFORMED">And the next and back buttons are displayed</step>
-<step outcome="notPerformed" keyword="NOT PERFORMED">When I click next</step>
-<step outcome="notPerformed" keyword="NOT PERFORMED">Then the 3 accordions should have content visible</step>
-<step outcome="notPerformed" keyword="NOT PERFORMED">When I click apply now</step>
-<step outcome="notPerformed" keyword="NOT PERFORMED">Then the DAC page should load</step>
-<failure>java.lang.AssertionError: expected:&lt;19&gt; but was:&lt;21&gt;
-	at org.junit.Assert.fail(Assert.java:88)
-	at org.junit.Assert.failNotEquals(Assert.java:834)
-	at org.junit.Assert.assertEquals(Assert.java:645)
-	at org.junit.Assert.assertEquals(Assert.java:631)
-	at gov.daip.d8.test.User.verifyFOAExpandedContentVisible(User.java:383)
-	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.CGLIB$verifyFOAExpandedContentVisible$30(&lt;generated&gt;)
-	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141$$FastClassByCGLIB$$f81e77a4.invoke(&lt;generated&gt;)
-	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
-	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:425)
-	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:410)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:385)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:133)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:62)
-	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.verifyFOAExpandedContentVisible(&lt;generated&gt;)
-	at gov.daip.d8.test.DailyRegressionSteps.then_i_should_be_able_to_see_all_the_content(DailyRegressionSteps.java:256)
-	(reflection-invoke)
-	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:733)
-	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:346)
-...</failure>
+<step outcome="successful">Then I should be able to see all of the content</step>
+<step outcome="successful">When I click next</step>
+<step outcome="successful">Then the 3 accordions should have content visible</step>
+<step outcome="successful">When I click apply now</step>
+<step outcome="successful">Then the DAC page should load</step>
 </scenario>
 <scenario keyword="Scenario:" title="Verify that the FEMA Twitter feed is present on the News Feeds page">
 <meta>

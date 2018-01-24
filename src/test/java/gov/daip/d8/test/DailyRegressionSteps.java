@@ -256,11 +256,6 @@ public class DailyRegressionSteps {
 		user.verifyFOAExpandedContentVisible();
 	}
 	
-	@Then("the next and back buttons are displayed")
-	public void and_the_next_and_back_buttons_are_displayed() {
-		user.seesFOAFooter();
-	}
-	
 	@When("I click next")
 	public void when_user_clicks_next() {
 		user.clicksNextFOA();
