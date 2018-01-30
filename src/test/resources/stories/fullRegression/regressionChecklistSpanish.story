@@ -5,7 +5,7 @@ I want to run the daily regressions at least twice a day
 
 Meta: 
 
-Scenario: (Spanish) Verify all the menu links on the "Get Assistance" tab
+Scenario: (Spanish) Homepage - Header - All the menu links on the "Get Assistance" tab
 Meta:  
 @category daily
 
@@ -25,7 +25,7 @@ Examples:
 |lista de verificación para aplicarse|
 |formularios|
 
-Scenario: (Spanish) Verify all the menu links on the "Information" tab
+Scenario: (Spanish) Homepage - Header - All the menu links on the "Information" tab
 Meta: 
 @category daily
 
@@ -45,7 +45,7 @@ Examples:
 |desastres en el extranjero|
 |hojas de datos|
 
-Scenario: (Spanish) Verify all the menu links on the "About Us" tab
+Scenario: (Spanish) Homepage - Header - All the menu links on the "About Us" tab
 Meta: 
 @category daily
 
@@ -58,7 +58,7 @@ Examples:
 |descripción general|
 |socios|
 
-Scenario: (Spanish) Verify all the menu links on the "Help" tab
+Scenario: (Spanish) Homepage - Header - All the menu links on the "Help" tab
 Meta:   
 @category daily
 
@@ -74,7 +74,7 @@ Examples:
 |accesibilidad|
 |descargar plug-ins|
 
-Scenario: (Spanish) Verify the main links on homepage to assert that the Spanish pages open correctly
+Scenario: (Spanish) Homepage - Key Links - Main links on homepage to assert that the Spanish pages open correctly
 Meta:  
 @category daily 
                           
@@ -88,7 +88,7 @@ Examples:
 |solicitar asistencia|
 |revisar estatus|
 
-Scenario: (Spanish) Verify states in the Spanish declared disaster map are clickable
+Scenario: (Spanish) Homepage - Currently declared disasters - States in the Spanish declared disaster map are clickable
 Meta: 
 @category daily 
                                
@@ -96,7 +96,7 @@ Given I am on the Spanish Disaster Assistance homepage
 When I am viewing the declared disaster map
 Then states with disasters should be clickable
 
-Scenario: (Spanish) Verify the declared states on the declared disaster map 
+Scenario: (Spanish) Homepage - Currently declared disasters - The declared states on the declared disaster map 
 Meta: 
 @category daily 
 
@@ -105,7 +105,7 @@ When I am viewing the declared disaster map
 Then states with disasters should be clickable
 Then I should be able to view the list of the declared states in Spanish
 
-Scenario: (Spanish) Verify Local Resources flows correctly on the Spanish homepage
+Scenario: (Spanish) Homepage - Find Local Resources flows correctly on the Spanish homepage
 Meta: 
 @category daily 
                             
@@ -113,7 +113,7 @@ Given I am on the Spanish Disaster Assistance homepage
 When I am attempting to find local resources
 Then information on resources should be visible
 
-Scenario: (Spanish) Verify all of the titles on the "News Feeds" landing page node
+Scenario: (Spanish) News Feeds - All of the titles on the page
 Meta: 
 @category new 
 
@@ -121,7 +121,7 @@ Given I am on the Spanish Disaster Assistance homepage
 When I am on the Spanish News Feeds landing page node
 Then all of the spanish sub-titles should show on the page
 
-Scenario: (Spanish) Verify the results of the quick search items on the Community Leaders page 
+Scenario: (Spanish) Community Leaders - Results of the quick search items
 Meta: 
 @category NWD 
 
@@ -137,14 +137,14 @@ Examples:
 |Viviendas y refugios de emergencia|
 |¿Como puede ayudar?|
 
-Scenario: (Spanish) Verify the declared disasters with Address Look-up
+Scenario: (Spanish) Homepage - Address Look-Up - Declared disasters 
 Meta:  
 
 Given I am on the declared disasters DAC page 
 When I type the declared disaster into the address look-up bar in Spanish 
 Then I should get the results for the given disaster
 
-Scenario: (Spanish) Verify Spanish benefits results display according to use cases
+Scenario: (Spanish) Find Assistance - Spanish benefits results display according to use cases
 Meta:  
 @category daily
                     
@@ -152,7 +152,7 @@ Given I am on the Find Assistance Spanish page
 When I choose only Employment
 Then I should obtain 9 results and see all the content under the accordions
 
-Scenario: (Spanish) Dynamically verify results of the questionnaire on the "Find Assistance" page 
+Scenario: (Spanish) Find Assistance - Dynamically verify results of the questionnaire  
 Meta: 
 @category daily 
   
@@ -160,7 +160,7 @@ Given I am on the Find Assistance Spanish page
 When I fully complete the questionnaire
 Then I should accumulate the same number of results as the text on the Get Results button
 
-Scenario: (Spanish) Verify all the functionality of the FOA questionnaire
+Scenario: (Spanish) Find Assistance - All the functionality of the FOA questionnaire
 Meta: 
 @category daily 
 
@@ -172,7 +172,7 @@ Then the 3 accordions should have content visible
 When I click apply now
 Then the DAC page should load 
 
-Scenario: (Spanish) Verify that the FEMA Twitter feed is present on the Spanish homepage
+Scenario: (Spanish) News Feeds - FEMA Twitter feed is present
 Meta: 
 @category daily 
                              
@@ -180,7 +180,7 @@ When I am on the Spanish News Feeds landing page node
 When I am viewing the FEMA Twitter feed
 Then the most recent tweets should be displayed
 
-Scenario: (Spanish) Verify the Category Type filter with the first seven types on the Forms of Assistance page
+Scenario: (Spanish) Forms of Assistance - Category Type filter with the first seven types
 Meta:  
 @category daily
 
@@ -188,7 +188,7 @@ Given I am on the Spanish Forms of Assistance page
 When I click on Category Type to check the first seven category types
 Then 42 spanish results should appear 
 
-Scenario: (Spanish) Verify the Category Type filter with the next eight types on the Forms of Assistance page
+Scenario: (Spanish) Forms of Assistance - Category Type filter with the next eight types
 Meta:  
 @category daily
 
@@ -196,7 +196,7 @@ Given I am on the Spanish Forms of Assistance page
 When I click on Category Type to check the next eight category types
 Then 53 spanish results should appear
 
-Scenario: (Spanish) Verify the Federal Agency filter on the Forms of Assistance page 
+Scenario: (Spanish) Forms of Assistance - Federal Agency filter with the first seven types 
 Meta: 
 @category daily 
 
@@ -204,7 +204,7 @@ Given I am on the Spanish Forms of Assistance page
 When I click on Federal Agency to check the first seven federal agencies
 Then 40 spanish results should appear
 
-Scenario: (Spanish) Verify the Federal Agency filter with the next seven types on the Forms of Assistance page 
+Scenario: (Spanish) Forms of Assistance - Federal Agency filter with the next seven types
 Meta: 
 @category daily 
 

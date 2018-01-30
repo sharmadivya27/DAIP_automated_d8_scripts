@@ -5,7 +5,7 @@ I want to run the daily regressions at least twice a day
 
 Meta: 
 
-Scenario: Verify all the menu links on the "Get Assistance" tab
+Scenario: Homepage - Header - All the menu links on the "Get Assistance" tab
 Meta:  
 @category daily
 
@@ -25,7 +25,7 @@ Examples:
 |application checklist| 
 |forms|
 
-Scenario: Verify all the menu links on the "Information" tab
+Scenario: Homepage - Header - All the menu links on the "Information" tab
 Meta:  
 @category daily
 
@@ -45,7 +45,7 @@ Examples:
 |foreign disasters|
 |fact sheets|
 
-Scenario: Verify all the menu links on the "About Us" tab
+Scenario: Homepage - Header - All the menu links on the "About Us" tab
 Meta:  
 @category daily
 
@@ -58,7 +58,7 @@ Examples:
 |overview|
 |partners|
 
-Scenario: Verify all the menu links on the "Help" tab
+Scenario: Homepage - Header - All the menu links on the "Help" tab
 Meta:  
 @category daily
 
@@ -74,7 +74,7 @@ Examples:
 |accessibility|
 |download plug-ins|
 
-Scenario: Verify the main links on homepage to assert that the pages open correctly
+Scenario: Homepage - Key Links - Main links on homepage to assert that the pages open correctly
 Meta:  
 @category daily 
 
@@ -88,7 +88,7 @@ Examples:
 |apply online|
 |check status|
 
-Scenario: Verify states in the declared disaster map are clickable
+Scenario: Homepage - Currently declared disasters - States in the declared disaster map are clickable
 Meta:  
 @category daily 
                         
@@ -96,7 +96,7 @@ Given I am on the Disaster Assistance homepage
 When I am viewing the declared disaster map
 Then states with disasters should be clickable
 
-Scenario: Verify the declared states on the declared disaster map 
+Scenario: Homepage - Currently declared disasters - The declared states on the declared disaster map 
 Meta:  
 @category daily 
 
@@ -105,7 +105,7 @@ When I am viewing the declared disaster map
 Then states with disasters should be clickable 
 Then I should be able to view the list of the declared states
 
-Scenario: Verify Local Resources flows correctly
+Scenario: Homepage - Find Local Resources flows correctly
 Meta:  
 @category daily 
 
@@ -113,14 +113,14 @@ Given I am on the Disaster Assistance homepage
 When I am attempting to find local resources
 Then information on resources should be visible
 
-Scenario: Verify all of the titles on the "News Feeds" landing page node
+Scenario: News Feeds - All of the titles on the page
 Meta:  
 @category new 
 
 When I am on the News Feeds landing page node
 Then all of the sub-titles should show on the page 
 
-Scenario: Verify the results of the quick search items on the Community Leaders page 
+Scenario: Community Leaders - Results of the quick search items  
 Meta:  
 @category NWD 
 
@@ -135,14 +135,14 @@ Examples:
 |How Can You Help?|
 |Infrastructure, Utilities, and Other Public Assistance|
 
-Scenario: Verify the declared disasters with Address Look-up
+Scenario: Homepage - Address Look-Up - Declared disasters 
 Meta:  
 
 Given I am on the declared disasters DAC page 
 When I type the declared disaster into the address look-up bar 
 Then I should get the results for the given disaster
 
-Scenario: Verify benefits results display according to use cases
+Scenario: Find Assistance - Benefits results display according to use cases
 Meta:  
 @category daily
                  
@@ -150,7 +150,7 @@ Given I am on the Find Assistance page
 When I choose only Employment 
 Then I should obtain 9 results and see all the content under the accordions
 
-Scenario: Dynamically verify results of the questionnaire on the "Find Assistance" page 
+Scenario: Find Assistance - Dynamically verify results of the questionnaire 
 Meta:  
 @category daily 
           
@@ -158,7 +158,7 @@ Given I am on the Find Assistance page
 When I fully complete the questionnaire
 Then I should accumulate the same number of results as the text on the Get Results button
 
-Scenario: Verify all the functionality of the FOA questionnaire
+Scenario: Find Assistance - All the functionality of the FOA questionnaire
 Meta: 
 @category daily 
 
@@ -170,7 +170,7 @@ Then the 3 accordions should have content visible
 When I click apply now
 Then the DAC page should load 
 
-Scenario: Verify that the FEMA Twitter feed is present on the News Feeds page
+Scenario: News Feeds - FEMA Twitter feed is present 
 Meta:   
 @category daily 
                
@@ -178,7 +178,7 @@ Given I am on the News Feed page
 When I am viewing the FEMA Twitter feed
 Then the most recent tweets should be displayed
 
-Scenario: Verify the Category Type filter with the first seven types on the Forms of Assistance page
+Scenario: Forms of Assistance - Category Type filter with the first seven types
 Meta:  
 @category daily
 
@@ -186,7 +186,7 @@ Given I am on the Forms of Assistance page
 When I click on Category Type to check the first seven category types
 Then 42 results should appear 
 
-Scenario: Verify the Category Type filter with the next eight types on the Forms of Assistance page
+Scenario: Forms of Assistance - Category Type filter with the next eight types 
 Meta:  
 @category daily
 
@@ -194,7 +194,7 @@ Given I am on the Forms of Assistance page
 When I click on Category Type to check the next eight category types
 Then 53 results should appear
 
-Scenario: Verify the Federal Agency filter on the Forms of Assistance page 
+Scenario: Forms of Assistance - Federal Agency filter with the first seven types 
 Meta:  
 @category daily 
 
@@ -202,7 +202,7 @@ Given I am on the Forms of Assistance page
 When I click on Federal Agency to check the first seven federal agencies
 Then 40 results should appear
 
-Scenario: Verify the Federal Agency filter with the next seven types on the Forms of Assistance page 
+Scenario: Forms of Assistance - Federal Agency filter with the next seven types 
 Meta:  
 @category daily 
 
