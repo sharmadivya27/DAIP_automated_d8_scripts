@@ -290,7 +290,7 @@ Meta:</iWantTo>
 <step outcome="successful">When I am on the News Feeds landing page node</step>
 <step outcome="successful">Then all of the sub-titles should show on the page</step>
 </scenario>
-<scenario keyword="Scenario:" title="Verify the results of the quick search items">
+<scenario keyword="Scenario:" title="Verify the results of the quick search items on the Community Leaders page">
 <meta>
 <property keyword="@" name="category" value="NWD"/>
 <property keyword="@" name="skip" value=""/>
@@ -357,6 +357,7 @@ Meta:</iWantTo>
 <scenario keyword="Scenario:" title="Verify all the functionality of the FOA questionnaire">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Find Assistance page</step>
 <step outcome="successful">When I fully complete the questionnaire</step>
@@ -378,38 +379,34 @@ Meta:</iWantTo>
 <scenario keyword="Scenario:" title="Verify the Category Type filter with the first seven types on the Forms of Assistance page">
 <meta>
 <property keyword="@" name="category" value="daily"/>
-<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Forms of Assistance page</step>
 <step outcome="successful">When I click on Category Type to check the first seven category types</step>
-<step outcome="successful">Then 45 results should appear</step>
+<step outcome="successful">Then 42 results should appear</step>
 </scenario>
 <scenario keyword="Scenario:" title="Verify the Category Type filter with the next eight types on the Forms of Assistance page">
 <meta>
 <property keyword="@" name="category" value="daily"/>
-<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Forms of Assistance page</step>
 <step outcome="successful">When I click on Category Type to check the next eight category types</step>
-<step outcome="successful">Then 56 results should appear</step>
+<step outcome="successful">Then 53 results should appear</step>
 </scenario>
 <scenario keyword="Scenario:" title="Verify the Federal Agency filter on the Forms of Assistance page">
 <meta>
 <property keyword="@" name="category" value="daily"/>
-<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Forms of Assistance page</step>
 <step outcome="successful">When I click on Federal Agency to check the first seven federal agencies</step>
-<step outcome="successful">Then 43 results should appear</step>
+<step outcome="successful">Then 40 results should appear</step>
 </scenario>
 <scenario keyword="Scenario:" title="Verify the Federal Agency filter with the next seven types on the Forms of Assistance page">
 <meta>
 <property keyword="@" name="category" value="daily"/>
-<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Forms of Assistance page</step>
 <step outcome="successful">When I click on Federal Agency to check the next seven federal agencies</step>
-<step outcome="successful">Then 38 results should appear</step>
+<step outcome="successful">Then 37 results should appear</step>
 </scenario>
 </story>
 

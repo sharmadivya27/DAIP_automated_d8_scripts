@@ -308,14 +308,14 @@ public class DailyRegressionSteps {
 		user.clickCategoryType();
 	}
 	
-	@Then("45 results should appear") 
+	@Then("42 results should appear") 
 	public void then_these_results_should_appear() {
-		user.get90Results();
+		user.get42Results();
 	}
 	
-	@Then("45 spanish results should appear")
+	@Then("42 spanish results should appear")
 	public void then_these_spanish_results_should_appear() {
-		user.get90SpanishResults();
+		user.get42SpanishResults();
 	}
 	
 	@When("I click on Category Type to check the next eight category types")
@@ -323,14 +323,14 @@ public class DailyRegressionSteps {
 		 user.clickNextCategoryType();
 	}
 	
-	@Then("56 results should appear")
+	@Then("53 results should appear")
 	public void then_other_results_should_appear() {
-		user.get112Results();
+		user.get53Results();
 	}
 	
-	@Then("56 spanish results should appear") 
+	@Then("53 spanish results should appear") 
 	public void then_other_spanish_results_should_appear() {
-		user.get112SpanishResults();
+		user.get53SpanishResults();
 	}
 	
 	// Scenario: Verify the Federal Agency filter on the Forms of Assistance page 
@@ -341,14 +341,14 @@ public class DailyRegressionSteps {
 		user.clickFederalAgency();
 	}
 	
-	@Then("43 results should appear")
+	@Then("40 results should appear")
 	public void then_results_for_types_should_appear() {
-		user.get43Results();
+		user.get40Results();
 	}
 	
-	@Then("43 spanish results should appear")
+	@Then("40 spanish results should appear")
 	public void then_43_spanish_results_should_appear() {
-		user.get43SpanishResults();
+		user.get40SpanishResults();
 	}
 	
 	@When("I click on Federal Agency to check the next seven federal agencies")
@@ -356,13 +356,13 @@ public class DailyRegressionSteps {
 		user.clickNextFederalAgency();
 	}
 	
-	@Then("38 results should appear")
+	@Then("37 results should appear")
 	public void then_next_results_should_appear() {
-		user.get38Results();
+		user.get37Results();
 	}
 	
-	@Then("38 spanish results should appear")
+	@Then("37 spanish results should appear")
 	public void then_38_spanish_results_should_appear() {
-		user.get38SpanishResults();
+		user.get37SpanishResults();
 	}
 }

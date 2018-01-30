@@ -3,7 +3,7 @@ In order to assert that the basic functionality of https://www.disasterassistanc
 As a tester
 I want to run the daily regressions at least twice a day
 
-Meta: 
+Meta: @skip 
 
 Scenario: (Spanish) Verify all the menu links on the "Get Assistance" tab
 Meta:  
@@ -121,7 +121,7 @@ Given I am on the Spanish Disaster Assistance homepage
 When I am on the Spanish News Feeds landing page node
 Then all of the spanish sub-titles should show on the page
 
-Scenario: (Spanish) Verify the results of the quick search items 
+Scenario: (Spanish) Verify the results of the quick search items on the Community Leaders page 
 Meta: 
 @category NWD 
 
@@ -186,7 +186,7 @@ Meta:
 
 Given I am on the Spanish Forms of Assistance page 
 When I click on Category Type to check the first seven category types
-Then 45 spanish results should appear 
+Then 42 spanish results should appear 
 
 Scenario: (Spanish) Verify the Category Type filter with the next eight types on the Forms of Assistance page
 Meta:  
@@ -194,7 +194,7 @@ Meta:
 
 Given I am on the Spanish Forms of Assistance page
 When I click on Category Type to check the next eight category types
-Then 56 spanish results should appear
+Then 53 spanish results should appear
 
 Scenario: (Spanish) Verify the Federal Agency filter on the Forms of Assistance page 
 Meta: 
@@ -202,7 +202,7 @@ Meta:
 
 Given I am on the Spanish Forms of Assistance page
 When I click on Federal Agency to check the first seven federal agencies
-Then 43 spanish results should appear
+Then 40 spanish results should appear
 
 Scenario: (Spanish) Verify the Federal Agency filter with the next seven types on the Forms of Assistance page 
 Meta: 
@@ -210,4 +210,4 @@ Meta:
 
 Given I am on the Spanish Forms of Assistance page
 When I click on Federal Agency to check the next seven federal agencies 
-Then 38 spanish results should appear
+Then 37 spanish results should appear

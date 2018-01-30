@@ -6,7 +6,7 @@ I want to run the daily regressions at least twice a day
 Meta: 
 
 Scenario: Verify all the menu links on the "Get Assistance" tab
-Meta:  
+Meta: @skip  
 @category daily
 
 Given I am on the Disaster Assistance homepage
@@ -26,7 +26,7 @@ Examples:
 |forms|
 
 Scenario: Verify all the menu links on the "Information" tab
-Meta:  
+Meta: @skip  
 @category daily
 
 Given I am on the Disaster Assistance homepage
@@ -46,7 +46,7 @@ Examples:
 |fact sheets|
 
 Scenario: Verify all the menu links on the "About Us" tab
-Meta:  
+Meta: @skip  
 @category daily
 
 Given I am on the Disaster Assistance homepage
@@ -59,7 +59,7 @@ Examples:
 |partners|
 
 Scenario: Verify all the menu links on the "Help" tab
-Meta:  
+Meta: @skip  
 @category daily
 
 Given I am on the Disaster Assistance homepage 
@@ -75,7 +75,7 @@ Examples:
 |download plug-ins|
 
 Scenario: Verify the main links on homepage to assert that the pages open correctly
-Meta:  
+Meta: @skip  
 @category daily 
 
 Given I am on the Disaster Assistance homepage
@@ -89,7 +89,7 @@ Examples:
 |check status|
 
 Scenario: Verify states in the declared disaster map are clickable
-Meta:  
+Meta: @skip  
 @category daily 
                         
 Given I am on the Disaster Assistance homepage
@@ -97,7 +97,7 @@ When I am viewing the declared disaster map
 Then states with disasters should be clickable
 
 Scenario: Verify the declared states on the declared disaster map 
-Meta:  
+Meta: @skip  
 @category daily 
 
 Given I am on the Disaster Assistance homepage
@@ -106,7 +106,7 @@ Then states with disasters should be clickable
 Then I should be able to view the list of the declared states
 
 Scenario: Verify Local Resources flows correctly
-Meta:  
+Meta: @skip  
 @category daily 
 
 Given I am on the Disaster Assistance homepage
@@ -114,14 +114,14 @@ When I am attempting to find local resources
 Then information on resources should be visible
 
 Scenario: Verify all of the titles on the "News Feeds" landing page node
-Meta:  
+Meta: @skip  
 @category new 
 
 When I am on the News Feeds landing page node
 Then all of the sub-titles should show on the page 
 
-Scenario: Verify the results of the quick search items 
-Meta:  
+Scenario: Verify the results of the quick search items on the Community Leaders page 
+Meta: @skip  
 @category NWD 
 
 Given I am on the Community Leaders page on Disaster Assistance
@@ -136,14 +136,14 @@ Examples:
 |Infrastructure, Utilities, and Other Public Assistance|
 
 Scenario: Verify the declared disasters with Address Look-up
-Meta:  
+Meta: @skip  
 
 Given I am on the declared disasters DAC page 
 When I type the declared disaster into the address look-up bar 
 Then I should get the results for the given disaster
 
 Scenario: Verify benefits results display according to use cases
-Meta:  
+Meta: @skip  
 @category daily
                  
 Given I am on the Find Assistance page
@@ -151,7 +151,7 @@ When I choose only Employment
 Then I should obtain 9 results and see all the content under the accordions
 
 Scenario: Dynamically verify results of the questionnaire on the "Find Assistance" page 
-Meta:  
+Meta: @skip  
 @category daily 
           
 Given I am on the Find Assistance page
@@ -159,7 +159,7 @@ When I fully complete the questionnaire
 Then I should accumulate the same number of results as the text on the Get Results button
 
 Scenario: Verify all the functionality of the FOA questionnaire
-Meta: 
+Meta: @skip 
 @category daily 
 
 Given I am on the Find Assistance page
@@ -171,7 +171,7 @@ When I click apply now
 Then the DAC page should load 
 
 Scenario: Verify that the FEMA Twitter feed is present on the News Feeds page
-Meta:   
+Meta: @skip   
 @category daily 
                
 Given I am on the News Feed page
@@ -179,33 +179,33 @@ When I am viewing the FEMA Twitter feed
 Then the most recent tweets should be displayed
 
 Scenario: Verify the Category Type filter with the first seven types on the Forms of Assistance page
-Meta:  
+Meta: 
 @category daily
 
 Given I am on the Forms of Assistance page 
 When I click on Category Type to check the first seven category types
-Then 45 results should appear 
+Then 42 results should appear 
 
 Scenario: Verify the Category Type filter with the next eight types on the Forms of Assistance page
-Meta:  
+Meta: 
 @category daily
 
 Given I am on the Forms of Assistance page 
 When I click on Category Type to check the next eight category types
-Then 56 results should appear
+Then 53 results should appear
 
 Scenario: Verify the Federal Agency filter on the Forms of Assistance page 
-Meta:  
+Meta: 
 @category daily 
 
 Given I am on the Forms of Assistance page 
 When I click on Federal Agency to check the first seven federal agencies
-Then 43 results should appear
+Then 40 results should appear
 
 Scenario: Verify the Federal Agency filter with the next seven types on the Forms of Assistance page 
-Meta:  
+Meta: 
 @category daily 
 
 Given I am on the Forms of Assistance page 
 When I click on Federal Agency to check the next seven federal agencies 
-Then 38 results should appear
+Then 37 results should appear

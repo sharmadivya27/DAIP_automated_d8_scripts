@@ -423,13 +423,13 @@ public class User {
 	}
 
 	@Step
-	public void get90Results() {
-		Assert.assertEquals("Showing 1 - 10 of 45 results View 10 50 All", daLanding.getResults());
+	public void get42Results() {
+		Assert.assertEquals("Showing 1 - 10 of 42 results View 10 50 All", daLanding.getResults());
 	}
 
 	@Step
-	public void get90SpanishResults() {
-		Assert.assertEquals("Mostrando 1 - 10 de 45 resultados Ver 10 50 Todos", daLanding.getResults());
+	public void get42SpanishResults() {
+		Assert.assertEquals("Mostrando 1 - 10 de 42 resultados Ver 10 50 Todos", daLanding.getResults());
 	}
 
 	@Step
@@ -439,13 +439,13 @@ public class User {
 	}
 
 	@Step
-	public void get112Results() {
-		Assert.assertEquals("Showing 1 - 10 of 56 results View 10 50 All", daLanding.getResults());
+	public void get53Results() {
+		Assert.assertEquals("Showing 1 - 10 of 53 results View 10 50 All", daLanding.getResults());
 	}
 
 	@Step
-	public void get112SpanishResults() {
-		Assert.assertEquals("Mostrando 1 - 10 de 56 resultados Ver 10 50 Todos", daLanding.getResults());
+	public void get53SpanishResults() {
+		Assert.assertEquals("Mostrando 1 - 10 de 53 resultados Ver 10 50 Todos", daLanding.getResults());
 	}
 
 	@Step
@@ -455,13 +455,13 @@ public class User {
 	}
 
 	@Step
-	public void get43Results() {
-		Assert.assertEquals("Showing 1 - 10 of 43 results View 10 50 All", daLanding.getResults());
+	public void get40Results() {
+		Assert.assertEquals("Showing 1 - 10 of 40 results View 10 50 All", daLanding.getResults());
 	}
 
 	@Step
-	public void get43SpanishResults() {
-		Assert.assertEquals("Mostrando 1 - 10 de 43 resultados Ver 10 50 Todos", daLanding.getResults());
+	public void get40SpanishResults() {
+		Assert.assertEquals("Mostrando 1 - 10 de 40 resultados Ver 10 50 Todos", daLanding.getResults());
 	}
 
 	@Step
@@ -471,12 +471,12 @@ public class User {
 	}
 
 	@Step
-	public void get38Results() {
-		Assert.assertEquals("Showing 1 - 10 of 38 results View 10 50 All", daLanding.getResults());
+	public void get37Results() {
+		Assert.assertEquals("Showing 1 - 10 of 37 results View 10 50 All", daLanding.getResults());
 	}
 
 	@Step
-	public void get38SpanishResults() {
-		Assert.assertEquals("Mostrando 1 - 10 de 38 resultados Ver 10 50 Todos", daLanding.getResults());
+	public void get37SpanishResults() {
+		Assert.assertEquals("Mostrando 1 - 10 de 37 resultados Ver 10 50 Todos", daLanding.getResults());
 	}
 }
