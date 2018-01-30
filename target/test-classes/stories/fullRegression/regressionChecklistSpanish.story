@@ -3,7 +3,7 @@ In order to assert that the basic functionality of https://www.disasterassistanc
 As a tester
 I want to run the daily regressions at least twice a day
 
-Meta: @skip 
+Meta: 
 
 Scenario: (Spanish) Verify all the menu links on the "Get Assistance" tab
 Meta:  
