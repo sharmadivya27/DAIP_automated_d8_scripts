@@ -1,5 +1,2 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist","Verify the Category Type filter with the first seven types on the Forms of Assistance page","SUCCESS","2018-01-30T14:24:50.859-05:00[America/New_York]","0.0","36.35"
-"Regression checklist","Verify the Category Type filter with the next eight types on the Forms of Assistance page","SUCCESS","2018-01-30T14:25:27.368-05:00[America/New_York]","0.0","33.08"
-"Regression checklist","Verify the Federal Agency filter on the Forms of Assistance page","SUCCESS","2018-01-30T14:26:00.5-05:00[America/New_York]","0.0","31.3"
-"Regression checklist","Verify the Federal Agency filter with the next seven types on the Forms of Assistance page","SUCCESS","2018-01-30T14:26:31.847-05:00[America/New_York]","0.0","35.77"
+"Regression checklist spanish","(Spanish) Find Assistance - Dynamically verify results of the questionnaire","SUCCESS","2018-02-06T17:42:41.329-05:00[America/New_York]","0.0","26.71"

@@ -66,6 +66,17 @@ public class DAQuestionnaire extends PageObject {
 		daHomepage.pause(3000);
 		benefitCounter.click();
 	}
+	
+	public void getSpanishFOAResultsPage() {
+		daHomepage.pause(3000);
+		//this.evaluateJavascript("window.scrollBy(0,500)", "");
+		daHomepage.pause(1000);
+		//this.evaluateJavascript("window.scrollBy(0,500)", "");
+		daHomepage.pause(1000);
+		//this.evaluateJavascript("window.scrollBy(0,500)", "");
+		daHomepage.pause(2000);
+		benefitCounter.click();
+	}
 
 	public int getNumQuesResults() {
 		daHomepage.pause(3000);

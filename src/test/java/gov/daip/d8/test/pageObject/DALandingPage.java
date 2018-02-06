@@ -25,9 +25,6 @@ public class DALandingPage extends PageObject {
 	@FindBy(xpath = "//*[@id='block-wildfire']/h3")
 	private WebElementFacade wildfire;
 
-	@FindBy(xpath = "//*[@id='block-aggregatorfeed']/h3")
-	private WebElementFacade hurricanes;
-
 	@FindBy(xpath = "//*[@id='block-earthquakes']/h3")
 	private WebElementFacade earthquakes;
 
@@ -211,10 +208,6 @@ public class DALandingPage extends PageObject {
  
 	public String wildfireTitle() {
 		return wildfire.getText();
-	}
-
-	public String hurricaneTitle() {
-		return hurricanes.getText();
 	}
 
 	public String earthquakesTitle() {

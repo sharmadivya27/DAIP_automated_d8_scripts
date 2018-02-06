@@ -105,7 +105,7 @@ When I am viewing the declared disaster map
 Then states with disasters should be clickable
 Then I should be able to view the list of the declared states in Spanish
 
-Scenario: (Spanish) Homepage - Find Local Resources flows correctly on the Spanish homepage
+Scenario: (Spanish) Homepage - Find Local Resources flows correctly in Spanish
 Meta: 
 @category daily 
                             
@@ -158,7 +158,7 @@ Meta:
   
 Given I am on the Find Assistance Spanish page
 When I fully complete the questionnaire
-Then I should accumulate the same number of results as the text on the Get Results button
+Then I should accumulate the same number of results as the text on the Get Results button in Spanish
 
 Scenario: (Spanish) Find Assistance - All the functionality of the FOA questionnaire
 Meta: 
@@ -166,7 +166,7 @@ Meta:
 
 Given I am on the Find Assistance Spanish page
 When I fully complete the questionnaire
-Then I should be able to see all of the content 
+Then I should be able to see all of the content in Spanish
 When I click next
 Then the 3 accordions should have content visible
 When I click apply now
@@ -181,7 +181,7 @@ When I am viewing the FEMA Twitter feed
 Then the most recent tweets should be displayed
 
 Scenario: (Spanish) Forms of Assistance - Category Type filter with the first seven types
-Meta:  
+Meta: 
 @category daily
 
 Given I am on the Spanish Forms of Assistance page 
@@ -189,7 +189,7 @@ When I click on Category Type to check the first seven category types
 Then 42 spanish results should appear 
 
 Scenario: (Spanish) Forms of Assistance - Category Type filter with the next eight types
-Meta:  
+Meta: 
 @category daily
 
 Given I am on the Spanish Forms of Assistance page

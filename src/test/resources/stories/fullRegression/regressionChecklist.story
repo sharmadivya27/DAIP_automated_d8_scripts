@@ -6,7 +6,7 @@ I want to run the daily regressions at least twice a day
 Meta: 
 
 Scenario: Homepage - Header - All the menu links on the "Get Assistance" tab
-Meta:  
+Meta: 
 @category daily
 
 Given I am on the Disaster Assistance homepage
@@ -26,7 +26,7 @@ Examples:
 |forms|
 
 Scenario: Homepage - Header - All the menu links on the "Information" tab
-Meta:  
+Meta: 
 @category daily
 
 Given I am on the Disaster Assistance homepage
@@ -46,7 +46,7 @@ Examples:
 |fact sheets|
 
 Scenario: Homepage - Header - All the menu links on the "About Us" tab
-Meta:  
+Meta: 
 @category daily
 
 Given I am on the Disaster Assistance homepage
@@ -59,7 +59,7 @@ Examples:
 |partners|
 
 Scenario: Homepage - Header - All the menu links on the "Help" tab
-Meta:  
+Meta: 
 @category daily
 
 Given I am on the Disaster Assistance homepage 
@@ -75,7 +75,7 @@ Examples:
 |download plug-ins|
 
 Scenario: Homepage - Key Links - Main links on homepage to assert that the pages open correctly
-Meta:  
+Meta: 
 @category daily 
 
 Given I am on the Disaster Assistance homepage
@@ -89,7 +89,7 @@ Examples:
 |check status|
 
 Scenario: Homepage - Currently declared disasters - States in the declared disaster map are clickable
-Meta:  
+Meta: 
 @category daily 
                         
 Given I am on the Disaster Assistance homepage
@@ -97,7 +97,7 @@ When I am viewing the declared disaster map
 Then states with disasters should be clickable
 
 Scenario: Homepage - Currently declared disasters - The declared states on the declared disaster map 
-Meta:  
+Meta: 
 @category daily 
 
 Given I am on the Disaster Assistance homepage
@@ -106,7 +106,7 @@ Then states with disasters should be clickable
 Then I should be able to view the list of the declared states
 
 Scenario: Homepage - Find Local Resources flows correctly
-Meta:  
+Meta: 
 @category daily 
 
 Given I am on the Disaster Assistance homepage
@@ -114,14 +114,14 @@ When I am attempting to find local resources
 Then information on resources should be visible
 
 Scenario: News Feeds - All of the titles on the page
-Meta:  
+Meta:
 @category new 
 
 When I am on the News Feeds landing page node
 Then all of the sub-titles should show on the page 
 
 Scenario: Community Leaders - Results of the quick search items  
-Meta:  
+Meta: 
 @category NWD 
 
 Given I am on the Community Leaders page on Disaster Assistance
@@ -131,19 +131,20 @@ Then the results should include the search words for that item
 Examples: 
 |quickSearch|
 |Community Preparedness|
+|Disaster Recovery Resources|
 |Emergency Shelter and Housing|
 |How Can You Help?|
 |Infrastructure, Utilities, and Other Public Assistance|
 
 Scenario: Homepage - Address Look-Up - Declared disasters 
-Meta:  
+Meta: 
 
 Given I am on the declared disasters DAC page 
 When I type the declared disaster into the address look-up bar 
 Then I should get the results for the given disaster
 
 Scenario: Find Assistance - Benefits results display according to use cases
-Meta:  
+Meta: 
 @category daily
                  
 Given I am on the Find Assistance page
@@ -151,7 +152,7 @@ When I choose only Employment
 Then I should obtain 9 results and see all the content under the accordions
 
 Scenario: Find Assistance - Dynamically verify results of the questionnaire 
-Meta:  
+Meta: 
 @category daily 
           
 Given I am on the Find Assistance page
@@ -159,7 +160,7 @@ When I fully complete the questionnaire
 Then I should accumulate the same number of results as the text on the Get Results button
 
 Scenario: Find Assistance - All the functionality of the FOA questionnaire
-Meta: 
+Meta:
 @category daily 
 
 Given I am on the Find Assistance page
@@ -171,7 +172,7 @@ When I click apply now
 Then the DAC page should load 
 
 Scenario: News Feeds - FEMA Twitter feed is present 
-Meta:   
+Meta:  
 @category daily 
                
 Given I am on the News Feed page
@@ -179,7 +180,7 @@ When I am viewing the FEMA Twitter feed
 Then the most recent tweets should be displayed
 
 Scenario: Forms of Assistance - Category Type filter with the first seven types
-Meta:  
+Meta:
 @category daily
 
 Given I am on the Forms of Assistance page 
@@ -187,7 +188,7 @@ When I click on Category Type to check the first seven category types
 Then 42 results should appear 
 
 Scenario: Forms of Assistance - Category Type filter with the next eight types 
-Meta:  
+Meta:
 @category daily
 
 Given I am on the Forms of Assistance page 
@@ -195,7 +196,7 @@ When I click on Category Type to check the next eight category types
 Then 53 results should appear
 
 Scenario: Forms of Assistance - Federal Agency filter with the first seven types 
-Meta:  
+Meta: 
 @category daily 
 
 Given I am on the Forms of Assistance page 
@@ -203,7 +204,7 @@ When I click on Federal Agency to check the first seven federal agencies
 Then 40 results should appear
 
 Scenario: Forms of Assistance - Federal Agency filter with the next seven types 
-Meta:  
+Meta:
 @category daily 
 
 Given I am on the Forms of Assistance page 

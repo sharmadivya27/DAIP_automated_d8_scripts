@@ -235,7 +235,7 @@ public class DailyRegressionSteps {
 	}
 
 	// Scenario: Dynamically verify results of the questionnaire on the "Find
-	// Assistance" page
+	// Assistance" page 
 	// given see above
 
 	@When("I fully complete the questionnaire")
@@ -248,12 +248,22 @@ public class DailyRegressionSteps {
 		user.checkResults();
 	}
 	
+	@Then("I should accumulate the same number of results as the text on the Get Results button in Spanish")
+	public void then_i_should_accumulate_same_number_of_results_as_get_results_button_spanish() {
+		user.checkSpanishResults();
+	}
+	
 	//Scenario: Verify all the functionality of the FOA questionnaire
 	//given see above
 	
 	@Then("I should be able to see all of the content")
 	public void then_i_should_be_able_to_see_all_the_content() {
 		user.verifyFOAExpandedContentVisible();
+	}
+	
+	@Then("I should be able to see all of the content in Spanish")
+	public void then_i_should_be_able_to_see_all_the_content_spanish() {
+		user.verifySpanishFOAExpandedContentVisible();
 	}
 	
 	@When("I click next")

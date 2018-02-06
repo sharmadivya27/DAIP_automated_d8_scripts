@@ -281,7 +281,6 @@ public class User {
 	@Step
 	public void shouldSeeTitle() {
 		Assert.assertEquals("Severe Storms", daLanding.stormTitle());
-		Assert.assertEquals("Hurricanes", daLanding.hurricaneTitle());
 		Assert.assertEquals("Earthquakes", daLanding.earthquakesTitle());
 		Assert.assertEquals("Drought", daLanding.droughtTitle());
 		Assert.assertEquals("Wildfires", daLanding.wildfireTitle());
@@ -290,7 +289,6 @@ public class User {
 	@Step
 	public void shouldSeeSpanishTitle() {
 		Assert.assertEquals("Tormentas Severas (en inglés)", daLanding.stormTitle());
-		Assert.assertEquals("Huracanes (en inglés)", daLanding.hurricaneTitle());
 		Assert.assertEquals("Terremotos (en inglés)", daLanding.earthquakesTitle());
 		Assert.assertEquals("Sequía (en inglés)", daLanding.droughtTitle());
 		Assert.assertEquals("Incendios Forestales (en inglés)", daLanding.wildfireTitle());
@@ -375,12 +373,27 @@ public class User {
 		daQues.getFOAResultsPage();
 		Assert.assertEquals(i, daQues.getNumQuesResults());
 	}
-
+	
+	@Step
+	public void checkSpanishResults() {
+		int i = daQues.getResultsVal();
+		daQues.getSpanishFOAResultsPage();
+		Assert.assertEquals(i, daQues.getNumQuesResults());
+	}
+	
 	@Step
 	public void verifyFOAExpandedContentVisible() {
 		int i = daQues.getResultsVal();
-		daHomepage.pause(7000);
+		daHomepage.pause(5000);
 		daQues.getFOAResultsPage();
+		Assert.assertEquals(i, daQues.getNumEmploymentResults());
+	}
+
+	@Step
+	public void verifySpanishFOAExpandedContentVisible() {
+		int i = daQues.getResultsVal();
+		daHomepage.pause(5000);
+		daQues.getSpanishFOAResultsPage();
 		Assert.assertEquals(i, daQues.getNumEmploymentResults());
 	}
 
