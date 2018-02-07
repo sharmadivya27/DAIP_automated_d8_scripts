@@ -411,6 +411,11 @@ public class User {
 	public void clicksApplyOnline() {
 		daQues.clickApplyOnline();
 	}
+	
+	@Step
+	public void clicksSpanishApplyOnline() {
+		daQues.clickSpanishApplyOnline();
+	}
 
 	@Step
 	public void shouldSeeDAC() {

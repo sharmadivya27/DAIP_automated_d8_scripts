@@ -138,7 +138,7 @@ Examples:
 |¿Como puede ayudar?|
 
 Scenario: (Spanish) Homepage - Address Look-Up - Declared disasters 
-Meta:  
+Meta: 
 
 Given I am on the declared disasters DAC page 
 When I type the declared disaster into the address look-up bar in Spanish 
@@ -169,7 +169,7 @@ When I fully complete the questionnaire
 Then I should be able to see all of the content in Spanish
 When I click next
 Then the 3 accordions should have content visible
-When I click apply now
+When I click apply now in Spanish
 Then the DAC page should load 
 
 Scenario: (Spanish) News Feeds - FEMA Twitter feed is present

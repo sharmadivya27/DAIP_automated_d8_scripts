@@ -426,10 +426,6 @@ Meta:</div>
 </div>
 <div class="scenario">
 <h2>Scenario: (Spanish) Homepage - Address Look-Up - Declared disasters</h2>
-<div class="meta">
-<div class="keyword">Meta:</div>
-<div class="property">@skip </div>
-</div>
 <div class="step successful">Given I am on the declared disasters DAC page</div>
 <div class="step successful">When I type the declared disaster into the address look-up bar in Spanish</div>
 <div class="step successful">Then I should get the results for the given disaster</div>
@@ -450,6 +446,7 @@ Meta:</div>
 <div class="meta">
 <div class="keyword">Meta:</div>
 <div class="property">@category daily</div>
+<div class="property">@skip </div>
 </div>
 <div class="step successful">Given I am on the Find Assistance Spanish page</div>
 <div class="step successful">When I fully complete the questionnaire</div>
@@ -463,17 +460,11 @@ Meta:</div>
 </div>
 <div class="step successful">Given I am on the Find Assistance Spanish page</div>
 <div class="step successful">When I fully complete the questionnaire</div>
-<div class="step pending">Then I should be able to see all of the content on Spanish <span class="keyword pending">(PENDING)</span></div>
-<div class="step notPerformed">When I click next <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
-<div class="step notPerformed">Then the 3 accordions should have content visible <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
-<div class="step notPerformed">When I click apply now <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
-<div class="step notPerformed">Then the DAC page should load <span class="keyword notPerformed">(NOT PERFORMED)</span></div>
-<div><pre class="pending">@Then(&quot;I should be able to see all of the content on Spanish&quot;)
-@Pending
-public void thenIShouldBeAbleToSeeAllOfTheContentOnSpanish() {
-  // PENDING
-}
-</pre></div>
+<div class="step successful">Then I should be able to see all of the content in Spanish</div>
+<div class="step successful">When I click next</div>
+<div class="step successful">Then the 3 accordions should have content visible</div>
+<div class="step successful">When I click apply now in Spanish</div>
+<div class="step successful">Then the DAC page should load</div>
 </div>
 <div class="scenario">
 <h2>Scenario: (Spanish) News Feeds - FEMA Twitter feed is present</h2>

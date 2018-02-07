@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: gov.daip.d8.test.DAIPAcceptanceTestSuite
 -------------------------------------------------------------------------------
-Tests run: 327, Failures: 0, Errors: 0, Skipped: 5, Time elapsed: 896.862 sec - in gov.daip.d8.test.DAIPAcceptanceTestSuite
+Tests run: 327, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 890.208 sec - in gov.daip.d8.test.DAIPAcceptanceTestSuite

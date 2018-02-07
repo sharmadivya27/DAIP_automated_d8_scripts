@@ -160,7 +160,7 @@ When I fully complete the questionnaire
 Then I should accumulate the same number of results as the text on the Get Results button
 
 Scenario: Find Assistance - All the functionality of the FOA questionnaire
-Meta:
+Meta: 
 @category daily 
 
 Given I am on the Find Assistance page
@@ -180,7 +180,7 @@ When I am viewing the FEMA Twitter feed
 Then the most recent tweets should be displayed
 
 Scenario: Forms of Assistance - Category Type filter with the first seven types
-Meta:
+Meta: 
 @category daily
 
 Given I am on the Forms of Assistance page 
@@ -188,7 +188,7 @@ When I click on Category Type to check the first seven category types
 Then 42 results should appear 
 
 Scenario: Forms of Assistance - Category Type filter with the next eight types 
-Meta:
+Meta: 
 @category daily
 
 Given I am on the Forms of Assistance page 
@@ -204,7 +204,7 @@ When I click on Federal Agency to check the first seven federal agencies
 Then 40 results should appear
 
 Scenario: Forms of Assistance - Federal Agency filter with the next seven types 
-Meta:
+Meta: 
 @category daily 
 
 Given I am on the Forms of Assistance page 

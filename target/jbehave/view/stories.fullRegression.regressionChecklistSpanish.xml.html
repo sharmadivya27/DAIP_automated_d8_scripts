@@ -336,9 +336,6 @@ Meta:</iWantTo>
 </examples>
 </scenario>
 <scenario keyword="Scenario:" title="(Spanish) Homepage - Address Look-Up - Declared disasters">
-<meta>
-<property keyword="@" name="skip" value=""/>
-</meta>
 <step outcome="successful">Given I am on the declared disasters DAC page</step>
 <step outcome="successful">When I type the declared disaster into the address look-up bar in Spanish</step>
 <step outcome="successful">Then I should get the results for the given disaster</step>
@@ -355,6 +352,7 @@ Meta:</iWantTo>
 <scenario keyword="Scenario:" title="(Spanish) Find Assistance - Dynamically verify results of the questionnaire">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Find Assistance Spanish page</step>
 <step outcome="successful">When I fully complete the questionnaire</step>
@@ -366,17 +364,11 @@ Meta:</iWantTo>
 </meta>
 <step outcome="successful">Given I am on the Find Assistance Spanish page</step>
 <step outcome="successful">When I fully complete the questionnaire</step>
-<step outcome="pending" keyword="PENDING">Then I should be able to see all of the content on Spanish</step>
-<step outcome="notPerformed" keyword="NOT PERFORMED">When I click next</step>
-<step outcome="notPerformed" keyword="NOT PERFORMED">Then the 3 accordions should have content visible</step>
-<step outcome="notPerformed" keyword="NOT PERFORMED">When I click apply now</step>
-<step outcome="notPerformed" keyword="NOT PERFORMED">Then the DAC page should load</step>
-<pendingMethod>@Then(&quot;I should be able to see all of the content on Spanish&quot;)
-@Pending
-public void thenIShouldBeAbleToSeeAllOfTheContentOnSpanish() {
-  // PENDING
-}
-</pendingMethod>
+<step outcome="successful">Then I should be able to see all of the content in Spanish</step>
+<step outcome="successful">When I click next</step>
+<step outcome="successful">Then the 3 accordions should have content visible</step>
+<step outcome="successful">When I click apply now in Spanish</step>
+<step outcome="successful">Then the DAC page should load</step>
 </scenario>
 <scenario keyword="Scenario:" title="(Spanish) News Feeds - FEMA Twitter feed is present">
 <meta>

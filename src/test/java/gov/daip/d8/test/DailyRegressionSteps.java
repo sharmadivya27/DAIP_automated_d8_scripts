@@ -281,6 +281,11 @@ public class DailyRegressionSteps {
 		user.clicksApplyOnline();
 	}
 	
+	@When("I click apply now in Spanish")
+	public void when_user_clicks_apply_online_spanish() {
+		user.clicksSpanishApplyOnline();
+	}
+	
 	@Then("the DAC page should load")
 	public void then_DAC_page_should_load() {
 		user.shouldSeeDAC();

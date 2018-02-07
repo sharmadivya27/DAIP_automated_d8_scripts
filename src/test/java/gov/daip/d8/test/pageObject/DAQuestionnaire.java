@@ -152,6 +152,12 @@ public class DAQuestionnaire extends PageObject {
 		applyNow.click();
 	}
 	
+	public void clickSpanishApplyOnline() {
+		daHomepage.pause(3000); 
+		this.evaluateJavascript("window.scrollBy(0,-50)", "");
+		applyNow.click();		
+	}
+	
 	public boolean checkStatusPageIsDisplayed() {
 		return checkStatusPageContent.isDisplayed();
 	}

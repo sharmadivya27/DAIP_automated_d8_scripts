@@ -425,7 +425,7 @@ public class DAHomepage extends PageObject {
 	public String getDeclaredDisasterState() {
 		String declaredStates = declaredDisasterDAC.getText();
 		String[] states = declaredStates.split(",");
-		state = states[1].replaceAll("\"", "");
+		state = states[1].replaceAll("\"", "").replaceAll("]", "");
 		this.openAt("https://www.disasterassistance.gov/drupal_api/declaredCounties/" + state);
 		return state;
 	}

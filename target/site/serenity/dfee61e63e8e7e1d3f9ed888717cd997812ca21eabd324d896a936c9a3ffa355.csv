@@ -1,5 +1,3 @@
 "Story","Title","Result","Date","Stability","Duration (s)"
 "Regression checklist","News Feeds - All of the titles on the page","SUCCESS","2018-02-07T11:56:32.164-05:00[America/New_York]","0.0","6.51"
 "Regression checklist","Homepage - Address Look-Up - Declared disasters","SUCCESS","2018-02-07T11:57:15.386-05:00[America/New_York]","0.0","10.42"
-"Regression checklist spanish","(Spanish) Homepage - Address Look-Up - Declared disasters","SUCCESS","2018-02-07T12:04:32.348-05:00[America/New_York]","0.0","10.4"
-"Regression checklist spanish","(Spanish) Find Assistance - All the functionality of the FOA questionnaire","SUCCESS","2018-02-07T12:05:24.269-05:00[America/New_York]","0.0","33.08"

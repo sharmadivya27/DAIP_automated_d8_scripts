@@ -275,7 +275,6 @@ Meta:</iWantTo>
 <scenario keyword="Scenario:" title="News Feeds - All of the titles on the page">
 <meta>
 <property keyword="@" name="category" value="new"/>
-<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">When I am on the News Feeds landing page node</step>
 <step outcome="successful">Then all of the sub-titles should show on the page</step>
@@ -325,9 +324,6 @@ Meta:</iWantTo>
 </examples>
 </scenario>
 <scenario keyword="Scenario:" title="Homepage - Address Look-Up - Declared disasters">
-<meta>
-<property keyword="@" name="skip" value=""/>
-</meta>
 <step outcome="successful">Given I am on the declared disasters DAC page</step>
 <step outcome="successful">When I type the declared disaster into the address look-up bar</step>
 <step outcome="successful">Then I should get the results for the given disaster</step>
