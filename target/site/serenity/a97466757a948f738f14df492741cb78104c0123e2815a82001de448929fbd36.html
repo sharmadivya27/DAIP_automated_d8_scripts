@@ -81,7 +81,7 @@
             <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 07-02-2018 12:06</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 09-02-2018 11:51</span>
     <br style="clear:left"/>
 </div>
     <div class="clr"></div>
@@ -123,9 +123,9 @@ I want to run the daily regressions at least twice a day
                 <table class="outcome-header">
                     <tr>
                         <td colspan="2" class="test-title-bar">
-                            <span class="outcome-icon"><i class='fa fa-fast-forward skipped-icon fa-2x' title='SKIPPED'></i></span>
+                            <span class="outcome-icon"><i class='fa fa-times-circle failure-icon fa-2x' title='FAILURE'></i></span>
                             <span class="test-case-title">
-                                    <span class="ignore-color">
+                                    <span class="failing-color">
                                     (Spanish) Forms of Assistance - Federal Agency filter with the first seven types
                                         <span class="related-issue-title"></span>
                                 </span>
@@ -150,21 +150,22 @@ I want to run the daily regressions at least twice a day
                     <th width="65">                        &nbsp;
                     </th>
 
-                    <th width="%" class="step-description-wide-column greentext">
+                    <th width="%" class="step-description-column greentext">
                         Steps
                     </th>
+                    <th width="120" class="greentext">Screenshot</th>
                     <th width="100" class="greentext">Outcome</th>
                     <th width="75" class="greentext">Duration</th>
                 </tr>
                 <tr class="step-table-separator">
                     <td colspan="5"></td>
                 </tr>
-                <tr class="test-IGNORED">
+                <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
                         <a name="0"/>
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection0')"
                                style="display:block">
-                                <i class="fa fa-plus-square-o imgstepSection0 ignored-icon"
+                                <i class="fa fa-plus-square-o imgstepSection0 success-icon"
                                    style="margin-left: 20px; float:left;  padding-right:5px"></i>
                             </a>
                     </td>
@@ -179,18 +180,20 @@ I want to run the daily regressions at least twice a day
 
                         </div>
                     </td>
-                    <td width="100"><span class="top-level-step">IGNORED</span></td>
-                    <td width="100"><span class="top-level-step">0.01s</span></td>
+                        <td width="100" class="SUCCESS-text">
+                        </td>
+                    <td width="100"><span class="top-level-step">SUCCESS</span></td>
+                    <td width="100"><span class="top-level-step">3.7s</span></td>
                 </tr>
                     <tr>
                     <td colspan="5">
                     <table id="stepSection0" style="display:none; width:100%">
 
-                <tr class="test-IGNORED">
+                <tr class="test-SUCCESS">
                     <td width="60" class="step-icon">
                         
                             <span style="margin-left: 40px; margin-right: 5px;"
-                                  class="nested-group-icon"><i class='fa fa-ban ignored-icon ' title='IGNORED'></i></span>
+                                  class="nested-group-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
@@ -200,19 +203,21 @@ I want to run the daily regressions at least twice a day
 
                         </div>
                     </td>
-                    <td width="100"><span class="nested-group-step">IGNORED</span></td>
-                    <td width="100"><span class="nested-group-step">0s</span></td>
+                        <td width="100" class="SUCCESS-text">
+                        </td>
+                    <td width="100"><span class="nested-group-step">SUCCESS</span></td>
+                    <td width="100"><span class="nested-group-step">2.7s</span></td>
                 </tr>
 
                     </table>
                     </td>
                     <tr>
-                <tr class="test-IGNORED">
+                <tr class="test-FAILURE">
                     <td width="60" class="step-icon">
                         <a name="1"/>
                             <a href="javaScript:void(0)" onClick="toggleDiv('stepSection1')"
                                style="display:block">
-                                <i class="fa fa-plus-square-o imgstepSection1 ignored-icon"
+                                <i class="fa fa-plus-square-o imgstepSection1 failure-icon"
                                    style="margin-left: 20px; float:left;  padding-right:5px"></i>
                             </a>
                     </td>
@@ -227,18 +232,20 @@ I want to run the daily regressions at least twice a day
 
                         </div>
                     </td>
-                    <td width="100"><span class="top-level-step">IGNORED</span></td>
-                    <td width="100"><span class="top-level-step">10.12s</span></td>
+                        <td width="100" class="FAILURE-text">
+                        </td>
+                    <td width="100"><span class="top-level-step">FAILURE</span></td>
+                    <td width="100"><span class="top-level-step">0s</span></td>
                 </tr>
                     <tr>
                     <td colspan="5">
                     <table id="stepSection1" style="display:none; width:100%">
 
-                <tr class="test-IGNORED">
+                <tr class="test-FAILURE">
                     <td width="60" class="step-icon">
                         
                             <span style="margin-left: 40px; margin-right: 5px;"
-                                  class="nested-group-icon"><i class='fa fa-ban ignored-icon ' title='IGNORED'></i></span>
+                                  class="nested-group-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
@@ -248,65 +255,110 @@ I want to run the daily regressions at least twice a day
 
                         </div>
                     </td>
-                    <td width="100"><span class="nested-group-step">IGNORED</span></td>
-                    <td width="100"><span class="nested-group-step">10.11s</span></td>
+                        <td width="100" class="FAILURE-text">
+                                <a href="a97466757a948f738f14df492741cb78104c0123e2815a82001de448929fbd36_screenshots.html#screenshots?screenshot=0">
+                                    <!-- Added invalid href-attribute to img for imgpreviewer -->
+                                    <img src="2ea8b6efa103299c9f5f5379a3b0513b49b1c8ce8682b59c4e52e93645bbb784.png"
+                                         href="2ea8b6efa103299c9f5f5379a3b0513b49b1c8ce8682b59c4e52e93645bbb784.png"
+                                         class="screenshot"
+                                         width="48" height="48"/>
+                                </a>
+                        </td>
+                    <td width="100"><span class="nested-group-step">FAILURE</span></td>
+                    <td width="100"><span class="nested-group-step">13.22s</span></td>
                 </tr>
+                    <tr class="test-FAILURE">
+                        <td width="40">&nbsp</td>
+                        <td width="%" colspan="4" class="error-message-cell">
+                            <div class="error-message ellipsis"
+                                 title='Element should be enabled exception: The following error occurred: Expected enabled element was not enabled'>
+                                <pre>Element should be enabled exception: The following error occurred: Expected enabled element was not enabled</pre>
+                            </div>
+                <div><!-- Stack trace -->
+                    <button type="button" class="btn btn-danger btn-sm" data-toggle="modal"
+                            data-target="#stacktraceModal-4">
+                        View stack trace
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="stacktraceModal-4" tabindex="-1" role="dialog"
+                     aria-labelledby="stacktraceModalLabel" aria-hidden="true">
+                    <div class="modal-dialog modal-lg">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <button type="button" class="close" data-dismiss="modal"
+                                        aria-label="Close"><span aria-hidden="true">&times;</span>
+                                </button>
+                                <h4 class="modal-title" id="stacktraceModalLabel">
+                                net.thucydides.core.webdriver.exceptions.ElementShouldBeEnabledException
+                                </h4>
+                            </div>
+                            <div class="modal-body">
+                                    <h5>
+                                        <pre>The following error occurred: Expected enabled element was not enabled</pre>
+                                    </h5>
+                                gov.daip.d8.test.pageObject.DALandingPage.clickFirstSevenFederalAgencies(DALandingPage.java
+                                    :273) <br>
+                                gov.daip.d8.test.User.clickFederalAgency(User.java
+                                    :472) <br>
+                                gov.daip.d8.test.DailyRegressionSteps.when_I_click_on_federal_agency_and_check_first_seven(DailyRegressionSteps.java
+                                    :356) <br>
+                            </div>
 
-                    </table>
-                    </td>
-                    <tr>
-                <tr class="test-IGNORED">
-                    <td width="60" class="step-icon">
-                        <a name="2"/>
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
-                               style="display:block">
-                                <i class="fa fa-plus-square-o imgstepSection2 ignored-icon"
-                                   style="margin-left: 20px; float:left;  padding-right:5px"></i>
-                            </a>
-                    </td>
-                    <td>
-                        <div class="step-description">
-                            <a href="javaScript:void(0)" onClick="toggleDiv('stepSection2')"
-                               style="display:block;">
-                            <span class="top-level-step">
-                                Then 40 spanish results should appear
-                            </span>
-                            </a>
+                                <div class="modal-header">
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close"><span aria-hidden="true">&times;</span>
+                                    </button>
+                                    <h4 class="modal-title" id="stacktraceModalLabel">
+                                    Caused by: org.openqa.selenium.TimeoutException
+                                    </h4>
+                                </div>
+                                <div class="modal-body">
+                                        <pre>Expected condition failed: waiting for DALandingPage.HHS to be enabled (tried for 5 second(s) with 100 MILLISECONDS interval)</pre>
+                                    <pre>
+                                        gov.daip.d8.test.pageObject.DALandingPage.clickFirstSevenFederalAgencies(DALandingPage.java :273) <br>
+                                        gov.daip.d8.test.User.clickFederalAgency(User.java :472) <br>
+                                        gov.daip.d8.test.DailyRegressionSteps.when_I_click_on_federal_agency_and_check_first_seven(DailyRegressionSteps.java :356) <br>
+                                    </pre>
+                                </div>
 
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-default" data-dismiss="modal">
+                                    Close
+                                </button>
+                            </div>
                         </div>
-                    </td>
-                    <td width="100"><span class="top-level-step">IGNORED</span></td>
-                    <td width="100"><span class="top-level-step">10.14s</span></td>
-                </tr>
-                    <tr>
-                    <td colspan="5">
-                    <table id="stepSection2" style="display:none; width:100%">
-
-                <tr class="test-IGNORED">
+                    </div>
+                </div>
+                        </td>
+                    </tr>
+                <tr class="test-SKIPPED">
                     <td width="60" class="step-icon">
                         
                             <span style="margin-left: 40px; margin-right: 5px;"
-                                  class="nested-group-icon"><i class='fa fa-ban ignored-icon ' title='IGNORED'></i></span>
+                                  class="nested-group-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
                     </td>
                     <td>
                         <div class="step-description">
                             <span class="nested-group-step">
-                                Get40 spanish results
+                                Then 40 spanish results should appear
                             </span>
 
                         </div>
                     </td>
-                    <td width="100"><span class="nested-group-step">IGNORED</span></td>
-                    <td width="100"><span class="nested-group-step">10.14s</span></td>
+                        <td width="100" class="SKIPPED-text">
+                        </td>
+                    <td width="100"><span class="nested-group-step">SKIPPED</span></td>
+                    <td width="100"><span class="nested-group-step">0s</span></td>
                 </tr>
 
                     </table>
                     </td>
                     <tr>
-                <tr class="test-SKIPPED">
-                    <td colspan="2"></td>
-                    <td width="100"><span class="top-level-step"><em>SKIPPED</em></span></td>
-                    <td width="100"><span class="top-level-step"><em>20.26s</em></span></td>
+                <tr class="test-FAILURE">
+                    <td colspan="3"></td>
+                    <td width="100"><span class="top-level-step"><em>FAILURE</em></span></td>
+                    <td width="100"><span class="top-level-step"><em>16.92s</em></span></td>
                 </tr>
 
             </table>

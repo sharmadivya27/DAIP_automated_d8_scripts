@@ -92,22 +92,22 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '0 / 88 tests passed' },
-                {label: '0 / 88 tests pending'},
-                {label: '88 / 88 tests not executed'},
-                {label: '0 / 88 tests failed'},
-                {label: '0 / 88 errors'},
-                {label: '0 / 88 compromised tests'}
+                {label: '0 / 3 tests passed' },
+                {label: '0 / 3 tests pending'},
+                {label: '3 / 3 tests not executed'},
+                {label: '0 / 3 tests failed'},
+                {label: '0 / 3 errors'},
+                {label: '0 / 3 compromised tests'}
             ]
         });
 
         var weighted_test_results_plot = $.jqplot('weighted_test_results_pie_chart', [
             [
-                ['Passing', 0.762376],
+                ['Passing', 0],
                 
                 ['Pending', 0],
                 
-                ['Ignored', 0.237624],
+                ['Ignored', 1],
                 
                 ['Failing', 0],
                 
@@ -143,11 +143,11 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '0 / 88 tests passed (0.762376% of all test steps)' },
-                {label: '0 / 88 tests pending'},
-                {label: '88 / 88 tests not executed'},
-                {label: '0 / 88 tests failed (0% of all test steps)'},
-                {label: '0 / 88 errors (0% of all test steps)'}
+                {label: '0 / 3 tests passed (0% of all test steps)' },
+                {label: '0 / 3 tests pending'},
+                {label: '3 / 3 tests not executed'},
+                {label: '0 / 3 tests failed (0% of all test steps)'},
+                {label: '0 / 3 errors (0% of all test steps)'}
             ]
         });
 
@@ -218,7 +218,7 @@
             <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 07-02-2018 12:07</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 09-02-2018 11:52</span>
     <br style="clear:left"/>
 </div>
 <div class="clr"></div>
@@ -232,16 +232,15 @@
     <tr>
         <td width="375px" valign="top">
             <div class="test-count-summary">
-                <span class="test-count-title">34
-                    test scenarios (88 tests in all, including 66
-                    rows of test data)</span>
+                <span class="test-count-title">3
+                    test scenarios </span>
                 <div>
 
 
                 
 
                 <span class="test-count"> |
-                    34
+                    3
 skipped
                 </span>
 
@@ -291,11 +290,11 @@ skipped
         <body>
         <tr>
             <td class="summary-leading-column">Automated</td>
-            <td>88</td>
+            <td>3</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
-            <td>88 (100%)</td>
+            <td>3 (100%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Manual</td>
@@ -307,15 +306,15 @@ skipped
         </tr>
         <tr>
             <td class="summary-leading-column">Total</td>
-            <td>88</td>
+            <td>3</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
-            <td>88 (100%)</td>
+            <td>3 (100%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Total Duration</td>
-                <td colspan="5">13 minutes 43 seconds</td>
+                <td colspan="5">0 seconds</td>
         </tr>
         </body>
     </table>
@@ -346,27 +345,27 @@ skipped
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="0 out of 88 tests (0 steps) passing">0%</span></td>
+                                <td class="related-tag-percentage"><span title="0 out of 3 tests (0 steps) passing">0%</span></td>
                                 <td width="150px">
                                     <a href="860287b5c250bb669bac0c572c45a1e03de4dacc9ea918579decc2d513db0d5c.html">
                                         <div class="pendingbar"
-                                             title="0 out of 88 tests (0 steps) pending"
+                                             title="0 out of 3 tests (0 steps) pending"
                                              style="width: 150px;">
                                             <div class="ignoredbar"
                                                  style="width: 150px;"
-                                                 title="88 out of 88 tests (606 steps) skipped or ignored">
+                                                 title="3 out of 3 tests (12 steps) skipped or ignored">
                                                 <div class="compromisedbar"
                                                      style="width: 0px;"
-                                                     title="0 out of 88 tests (0 steps) compromised">
+                                                     title="0 out of 3 tests (0 steps) compromised">
                                                     <div class="errorbar"
                                                          style="width: 0px;"
-                                                         title="0 out of 88 tests (0 steps) broken">
+                                                         title="0 out of 3 tests (0 steps) broken">
                                                         <div class="failingbar"
                                                              style="width: 0px;"
-                                                             title="0 out of 88 tests (0 steps) failing">
+                                                             title="0 out of 3 tests (0 steps) failing">
                                                             <div class="passingbar"
                                                                  style="width: 0px;"
-                                                                 title="0 out of 88 tests (0 steps) passing">
+                                                                 title="0 out of 3 tests (0 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -375,7 +374,7 @@ skipped
                                         </div>
                                     </a>
                                 </td>
-                                <td class="related-tag-count"><span class="result-test-count" title="88 tests">88</span></td>
+                                <td class="related-tag-count"><span class="result-test-count" title="3 tests">3</span></td>
                             </tr>
                         </table>
                     </td>
@@ -398,27 +397,27 @@ skipped
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="0 out of 44 tests (0 steps) passing">0%</span></td>
+                                <td class="related-tag-percentage"><span title="0 out of 3 tests (0 steps) passing">0%</span></td>
                                 <td width="150px">
                                     <a href="9a48091cff6e8772525a21170de2b17cb0ae7a4cd5922fc606678dedadefb27c.html">
                                         <div class="pendingbar"
-                                             title="0 out of 44 tests (0 steps) pending"
+                                             title="0 out of 3 tests (0 steps) pending"
                                              style="width: 150px;">
                                             <div class="ignoredbar"
                                                  style="width: 150px;"
-                                                 title="44 out of 44 tests (307 steps) skipped or ignored">
+                                                 title="3 out of 3 tests (12 steps) skipped or ignored">
                                                 <div class="compromisedbar"
                                                      style="width: 0px;"
-                                                     title="0 out of 44 tests (0 steps) compromised">
+                                                     title="0 out of 3 tests (0 steps) compromised">
                                                     <div class="errorbar"
                                                          style="width: 0px;"
-                                                         title="0 out of 44 tests (0 steps) broken">
+                                                         title="0 out of 3 tests (0 steps) broken">
                                                         <div class="failingbar"
                                                              style="width: 0px;"
-                                                             title="0 out of 44 tests (0 steps) failing">
+                                                             title="0 out of 3 tests (0 steps) failing">
                                                             <div class="passingbar"
                                                                  style="width: 0px;"
-                                                                 title="0 out of 44 tests (0 steps) passing">
+                                                                 title="0 out of 3 tests (0 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -427,52 +426,7 @@ skipped
                                         </div>
                                     </a>
                                 </td>
-                                <td class="related-tag-count"><span class="result-test-count" title="44 tests">44</span></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="bluetext tag-title">
-                        <span class="SKIPPED-text truncated-tag-title">
-                                <a href="97be23141df29e9bc479938d306985c783ca95f9f8f2ecba1b218b94855299a6.html" title="Regression Checklist Spanish">Regression Checklist Spanish</a>
-                        </span>
-                    </td>
-                    <td width="220px" class="table-figure">
-
-
-                        <table>
-                            <tr>
-                                <td class="related-tag-percentage"><span title="0 out of 44 tests (0 steps) passing">0%</span></td>
-                                <td width="150px">
-                                    <a href="97be23141df29e9bc479938d306985c783ca95f9f8f2ecba1b218b94855299a6.html">
-                                        <div class="pendingbar"
-                                             title="0 out of 44 tests (0 steps) pending"
-                                             style="width: 150px;">
-                                            <div class="ignoredbar"
-                                                 style="width: 150px;"
-                                                 title="44 out of 44 tests (299 steps) skipped or ignored">
-                                                <div class="compromisedbar"
-                                                     style="width: 0px;"
-                                                     title="0 out of 44 tests (0 steps) compromised">
-                                                    <div class="errorbar"
-                                                         style="width: 0px;"
-                                                         title="0 out of 44 tests (0 steps) broken">
-                                                        <div class="failingbar"
-                                                             style="width: 0px;"
-                                                             title="0 out of 44 tests (0 steps) failing">
-                                                            <div class="passingbar"
-                                                                 style="width: 0px;"
-                                                                 title="0 out of 44 tests (0 steps) passing">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td class="related-tag-count"><span class="result-test-count" title="44 tests">44</span></td>
+                                <td class="related-tag-count"><span class="result-test-count" title="3 tests">3</span></td>
                             </tr>
                         </table>
                     </td>
@@ -487,7 +441,7 @@ skipped
                     <table>
                         <tr>
                             <td colspan="2">
-                                <span class="caption">Test results weighted by test size in steps (average steps per test: 7) .</span>
+                                <span class="caption">Test results weighted by test size in steps (average steps per test: 4) .</span>
                                 <span class="togglePieChart" id="toggleWeightedPieChart"><a href="#">Show/Hide Pie
                                     Chart</a></span>
                             </td>
@@ -519,11 +473,11 @@ skipped
         <body>
         <tr>
             <td class="summary-leading-column">Automated</td>
-            <td>88</td>
+            <td>3</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
-            <td>88 (100%)</td>
+            <td>3 (100%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Manual</td>
@@ -535,15 +489,15 @@ skipped
         </tr>
         <tr>
             <td class="summary-leading-column">Total</td>
-            <td>88</td>
+            <td>3</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
             <td>0 (0%)</td>
-            <td>88 (100%)</td>
+            <td>3 (100%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Total Duration</td>
-                <td colspan="5">13 minutes 43 seconds</td>
+                <td colspan="5">0 seconds</td>
         </tr>
         </body>
     </table>
@@ -574,27 +528,27 @@ skipped
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="0 out of 88 tests (0 steps) passing">76.2%</span></td>
+                                <td class="related-tag-percentage"><span title="0 out of 3 tests (0 steps) passing">0%</span></td>
                                 <td width="150px">
                                     <a href="860287b5c250bb669bac0c572c45a1e03de4dacc9ea918579decc2d513db0d5c.html">
                                         <div class="pendingbar"
-                                             title="0 out of 88 tests (0 steps) pending"
+                                             title="0 out of 3 tests (0 steps) pending"
                                              style="width: 150px;">
                                             <div class="ignoredbar"
                                                  style="width: 150px;"
-                                                 title="88 out of 88 tests (606 steps) skipped or ignored">
+                                                 title="3 out of 3 tests (12 steps) skipped or ignored">
                                                 <div class="compromisedbar"
-                                                     style="width: 114px;"
-                                                     title="0 out of 88 tests (0 steps) compromised">
+                                                     style="width: 0px;"
+                                                     title="0 out of 3 tests (0 steps) compromised">
                                                     <div class="errorbar"
-                                                         style="width: 114px;"
-                                                         title="0 out of 88 tests (0 steps) broken">
+                                                         style="width: 0px;"
+                                                         title="0 out of 3 tests (0 steps) broken">
                                                         <div class="failingbar"
-                                                             style="width: 114px;"
-                                                             title="0 out of 88 tests (0 steps) failing">
+                                                             style="width: 0px;"
+                                                             title="0 out of 3 tests (0 steps) failing">
                                                             <div class="passingbar"
-                                                                 style="width: 114px;"
-                                                                 title="0 out of 88 tests (0 steps) passing">
+                                                                 style="width: 0px;"
+                                                                 title="0 out of 3 tests (0 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -603,7 +557,7 @@ skipped
                                         </div>
                                     </a>
                                 </td>
-                                <td class="related-tag-count"><span class="result-test-count" title="88 tests">88</span></td>
+                                <td class="related-tag-count"><span class="result-test-count" title="3 tests">3</span></td>
                             </tr>
                         </table>
                     </td>
@@ -626,27 +580,27 @@ skipped
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="0 out of 44 tests (0 steps) passing">75.2%</span></td>
+                                <td class="related-tag-percentage"><span title="0 out of 3 tests (0 steps) passing">0%</span></td>
                                 <td width="150px">
                                     <a href="9a48091cff6e8772525a21170de2b17cb0ae7a4cd5922fc606678dedadefb27c.html">
                                         <div class="pendingbar"
-                                             title="0 out of 44 tests (0 steps) pending"
+                                             title="0 out of 3 tests (0 steps) pending"
                                              style="width: 150px;">
                                             <div class="ignoredbar"
                                                  style="width: 150px;"
-                                                 title="44 out of 44 tests (307 steps) skipped or ignored">
+                                                 title="3 out of 3 tests (12 steps) skipped or ignored">
                                                 <div class="compromisedbar"
-                                                     style="width: 113px;"
-                                                     title="0 out of 44 tests (0 steps) compromised">
+                                                     style="width: 0px;"
+                                                     title="0 out of 3 tests (0 steps) compromised">
                                                     <div class="errorbar"
-                                                         style="width: 113px;"
-                                                         title="0 out of 44 tests (0 steps) broken">
+                                                         style="width: 0px;"
+                                                         title="0 out of 3 tests (0 steps) broken">
                                                         <div class="failingbar"
-                                                             style="width: 113px;"
-                                                             title="0 out of 44 tests (0 steps) failing">
+                                                             style="width: 0px;"
+                                                             title="0 out of 3 tests (0 steps) failing">
                                                             <div class="passingbar"
-                                                                 style="width: 113px;"
-                                                                 title="0 out of 44 tests (0 steps) passing">
+                                                                 style="width: 0px;"
+                                                                 title="0 out of 3 tests (0 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -655,52 +609,7 @@ skipped
                                         </div>
                                     </a>
                                 </td>
-                                <td class="related-tag-count"><span class="result-test-count" title="44 tests">44</span></td>
-                            </tr>
-                        </table>
-                    </td>
-                </tr>
-                <tr>
-                    <td class="bluetext tag-title">
-                        <span class="SKIPPED-text truncated-tag-title">
-                                <a href="97be23141df29e9bc479938d306985c783ca95f9f8f2ecba1b218b94855299a6.html" title="Regression Checklist Spanish">Regression Checklist Spanish</a>
-                        </span>
-                    </td>
-                    <td width="220px" class="table-figure">
-
-
-                        <table>
-                            <tr>
-                                <td class="related-tag-percentage"><span title="0 out of 44 tests (0 steps) passing">77.3%</span></td>
-                                <td width="150px">
-                                    <a href="97be23141df29e9bc479938d306985c783ca95f9f8f2ecba1b218b94855299a6.html">
-                                        <div class="pendingbar"
-                                             title="0 out of 44 tests (0 steps) pending"
-                                             style="width: 150px;">
-                                            <div class="ignoredbar"
-                                                 style="width: 150px;"
-                                                 title="44 out of 44 tests (299 steps) skipped or ignored">
-                                                <div class="compromisedbar"
-                                                     style="width: 116px;"
-                                                     title="0 out of 44 tests (0 steps) compromised">
-                                                    <div class="errorbar"
-                                                         style="width: 116px;"
-                                                         title="0 out of 44 tests (0 steps) broken">
-                                                        <div class="failingbar"
-                                                             style="width: 116px;"
-                                                             title="0 out of 44 tests (0 steps) failing">
-                                                            <div class="passingbar"
-                                                                 style="width: 116px;"
-                                                                 title="0 out of 44 tests (0 steps) passing">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </a>
-                                </td>
-                                <td class="related-tag-count"><span class="result-test-count" title="44 tests">44</span></td>
+                                <td class="related-tag-count"><span class="result-test-count" title="3 tests">3</span></td>
                             </tr>
                         </table>
                     </td>
@@ -743,20 +652,20 @@ skipped
                                 <td class="SKIPPED-text">
                                     <div class="ellipsis">
 
-                                        <a href="7a97281980274e1552b877e081d7916f5a8e0ec2f507963c1e9870a838214187.html" class="ellipsis"
-                                           title="Homepage - Header - All the menu links on the 'Get Assistance' tab ">
-                                            Homepage - Header - All the menu links on the &quot;Get Assistance&quot; tab&nbsp;(9  examples)
+                                        <a href="b1acbd9bff9dd2d438e8742155a4a605be331d18f129fea746adb59376f6b3db.html" class="ellipsis"
+                                           title="Homepage - 'Apply Online' DAC page includes mobile string ">
+                                            Homepage - &quot;Apply Online&quot; DAC page includes mobile string
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">63</td>
+                                <td class="SKIPPED-text">4</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:52:43">11:52:43</td>
+                                <td class="SKIPPED-text" data-sort="2018-02-09 11:42:52">11:42:52</td>
 
-                                <td class="SKIPPED-text">53.39</td>
+                                <td class="SKIPPED-text">0.03</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -766,20 +675,20 @@ skipped
                                 <td class="SKIPPED-text">
                                     <div class="ellipsis">
 
-                                        <a href="38de936727abdba4964e960c8c8ce9ce6a8741cbb8fb1fc7355baff6a8348bce.html" class="ellipsis"
-                                           title="Homepage - Header - All the menu links on the 'Information' tab ">
-                                            Homepage - Header - All the menu links on the &quot;Information&quot; tab&nbsp;(9  examples)
+                                        <a href="594559299bf0fd851403c46335307abc6b8bdd85996b0337ab9a66742436e3b3.html" class="ellipsis"
+                                           title="Homepage - 'Check Status' DAC page includes mobile string ">
+                                            Homepage - &quot;Check Status&quot; DAC page includes mobile string
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">63</td>
+                                <td class="SKIPPED-text">4</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:53:37">11:53:37</td>
+                                <td class="SKIPPED-text" data-sort="2018-02-09 11:42:52">11:42:52</td>
 
-                                <td class="SKIPPED-text">52.88</td>
+                                <td class="SKIPPED-text">0.02</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -789,733 +698,20 @@ skipped
                                 <td class="SKIPPED-text">
                                     <div class="ellipsis">
 
-                                        <a href="e253b673fb7100ccd415ff1f4aef581dc7a40311ddda6364b8e99136e2dbb45b.html" class="ellipsis"
-                                           title="Homepage - Header - All the menu links on the 'About Us' tab ">
-                                            Homepage - Header - All the menu links on the &quot;About Us&quot; tab&nbsp;(2  examples)
+                                        <a href="e91300d136a8f37ecc54a2413367ef9c2900a2edbcbca93cb22b2da2e696336d.html" class="ellipsis"
+                                           title="Homepage - 'Apply Online' from the questionnaire DAC page includes mobile string ">
+                                            Homepage - &quot;Apply Online&quot; from the questionnaire DAC page includes mobile string
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">14</td>
+                                <td class="SKIPPED-text">4</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:54:30">11:54:30</td>
+                                <td class="SKIPPED-text" data-sort="2018-02-09 11:42:52">11:42:52</td>
 
-                                <td class="SKIPPED-text">24.36</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="5944444f5058fd2bf1a7fec80cafc57cd1051634fa3e50fb92a7b3f3f84fb1dd.html" class="ellipsis"
-                                           title="Homepage - Header - All the menu links on the 'Help' tab ">
-                                            Homepage - Header - All the menu links on the &quot;Help&quot; tab&nbsp;(5  examples)
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">35</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:54:54">11:54:54</td>
-
-                                <td class="SKIPPED-text">36.58</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="d2811a0b586a1c7b7f30469dc6d8e09a5254ae5c6616c72d2fc57a00cbb59e22.html" class="ellipsis"
-                                           title="Homepage - Key Links - Main links on homepage to assert that the pages open correctly ">
-                                            Homepage - Key Links - Main links on homepage to assert that the pages open correctly&nbsp;(3  examples)
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">21</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:55:31">11:55:31</td>
-
-                                <td class="SKIPPED-text">26.4</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="26ac54ecd91923364e2eab15f56c2698910af0c8c6c523a5193dabfc2373e9d6.html" class="ellipsis"
-                                           title="Homepage - Currently declared disasters - States in the declared disaster map are clickable ">
-                                            Homepage - Currently declared disasters - States in the declared disaster map are clickable
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:55:57">11:55:57</td>
-
-                                <td class="SKIPPED-text">10.15</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="866c4142c25c1dd7fb30260060165b483447c5e53c3889e02b77ed3b71a1ccf9.html" class="ellipsis"
-                                           title="Homepage - Currently declared disasters - The declared states on the declared disaster map ">
-                                            Homepage - Currently declared disasters - The declared states on the declared disaster map
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">8</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:56:07">11:56:07</td>
-
-                                <td class="SKIPPED-text">10.16</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="f21019f352539866f02dc1f94626ef864189d52e2539f8b603b1772ff57e5ec0.html" class="ellipsis"
-                                           title="Homepage - Find Local Resources flows correctly ">
-                                            Homepage - Find Local Resources flows correctly
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:56:17">11:56:17</td>
-
-                                <td class="SKIPPED-text">14.16</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="80d55cb57c731780080b2fb58c8bb91d9004dc1a432c0e93ed1ec33559c308bd.html" class="ellipsis"
-                                           title="Community Leaders - Results of the quick search items ">
-                                            Community Leaders - Results of the quick search items&nbsp;(5  examples)
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">35</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:56:38">11:56:38</td>
-
-                                <td class="SKIPPED-text">36.6</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="9cbc9d8eebc1e3e532592937491ff026754cd8e00aab04748dfed952107abdee.html" class="ellipsis"
-                                           title="Find Assistance - Benefits results display according to use cases ">
-                                            Find Assistance - Benefits results display according to use cases
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:57:25">11:57:25</td>
-
-                                <td class="SKIPPED-text">13.19</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="5d0e119e1a9e113d2275be0f71b3e3c6804a244bea999ac6ca1135449c747c0e.html" class="ellipsis"
-                                           title="Find Assistance - Dynamically verify results of the questionnaire ">
-                                            Find Assistance - Dynamically verify results of the questionnaire
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:57:39">11:57:39</td>
-
-                                <td class="SKIPPED-text">28.26</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="a17dc0f43ca35d84de0a15886ae9ce07b32b9e93e30d26ee885786a1df44c613.html" class="ellipsis"
-                                           title="Find Assistance - All the functionality of the FOA questionnaire ">
-                                            Find Assistance - All the functionality of the FOA questionnaire
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">14</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:58:07">11:58:07</td>
-
-                                <td class="SKIPPED-text">50.52</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="13e7b4006472f3adedda20edbd6bc03465fafc7b171616537111804f1e63c15d.html" class="ellipsis"
-                                           title="News Feeds - FEMA Twitter feed is present ">
-                                            News Feeds - FEMA Twitter feed is present
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:58:57">11:58:57</td>
-
-                                <td class="SKIPPED-text">10.15</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="3c3b14e2de342800ec144e5c4760a31a1bb41fe6d70d0c861a0b79fb838c8678.html" class="ellipsis"
-                                           title="Forms of Assistance - Category Type filter with the first seven types ">
-                                            Forms of Assistance - Category Type filter with the first seven types
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:59:07">11:59:07</td>
-
-                                <td class="SKIPPED-text">20.23</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="c9c14038f888b201e58a5e6ed8ff4b2b142540947574e4bf8a1a2521d3b1c36f.html" class="ellipsis"
-                                           title="Forms of Assistance - Category Type filter with the next eight types ">
-                                            Forms of Assistance - Category Type filter with the next eight types
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:59:28">11:59:28</td>
-
-                                <td class="SKIPPED-text">20.27</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="869f9808e01b0919021322359a78a5f98f714c27399e3db772352d992958dd59.html" class="ellipsis"
-                                           title="Forms of Assistance - Federal Agency filter with the first seven types ">
-                                            Forms of Assistance - Federal Agency filter with the first seven types
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 11:59:48">11:59:48</td>
-
-                                <td class="SKIPPED-text">20.28</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="741ff53f964d7c299114e9ec06e89a914422be764d19b8ba058e33979eccc860.html" class="ellipsis"
-                                           title="Forms of Assistance - Federal Agency filter with the next seven types ">
-                                            Forms of Assistance - Federal Agency filter with the next seven types
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:00:08">12:00:08</td>
-
-                                <td class="SKIPPED-text">20.27</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="2b709e36f4e505decae7bb71d715410080e3630dad631fa335cba29513507b03.html" class="ellipsis"
-                                           title="(Spanish) Homepage - Header - All the menu links on the 'Get Assistance' tab ">
-                                            (Spanish) Homepage - Header - All the menu links on the &quot;Get Assistance&quot; tab&nbsp;(9  examples)
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">63</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:00:29">12:00:29</td>
-
-                                <td class="SKIPPED-text">42.56</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="40d0b70f285a87dfa43c10f102590d985e349add931868c9145ffb65b1686438.html" class="ellipsis"
-                                           title="(Spanish) Homepage - Header - All the menu links on the 'Information' tab ">
-                                            (Spanish) Homepage - Header - All the menu links on the &quot;Information&quot; tab&nbsp;(9  examples)
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">63</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:01:11">12:01:11</td>
-
-                                <td class="SKIPPED-text">40.55</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="7907bbcf25f1b06fe8acefacb1a2e348c413bcc886d59dd6d57c71dc818ddd47.html" class="ellipsis"
-                                           title="(Spanish) Homepage - Header - All the menu links on the 'About Us' tab ">
-                                            (Spanish) Homepage - Header - All the menu links on the &quot;About Us&quot; tab&nbsp;(2  examples)
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">14</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:01:52">12:01:52</td>
-
-                                <td class="SKIPPED-text">24.33</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="6ee7d5f82c6b3c1659c5eb8439f94a2d4c4fface7469ad0d3b9576f1a6f6294b.html" class="ellipsis"
-                                           title="(Spanish) Homepage - Header - All the menu links on the 'Help' tab ">
-                                            (Spanish) Homepage - Header - All the menu links on the &quot;Help&quot; tab&nbsp;(5  examples)
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">35</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:02:16">12:02:16</td>
-
-                                <td class="SKIPPED-text">26.33</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="3c49101b7f6da3b4f44d5e343c5b24bf06f86e05e4cbb15c553b95e287e928a3.html" class="ellipsis"
-                                           title="(Spanish) Homepage - Key Links - Main links on homepage to assert that the Spanish pages open correctly ">
-                                            (Spanish) Homepage - Key Links - Main links on homepage to assert that the Spanish pages open correctly&nbsp;(3  examples)
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">21</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:02:42">12:02:42</td>
-
-                                <td class="SKIPPED-text">28.35</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="308f7c5afe619dfd2c73a2b8dd9a0301afc0b5c0c7472cca8298cb8ba64c1325.html" class="ellipsis"
-                                           title="(Spanish) Homepage - Currently declared disasters - States in the Spanish declared disaster map are clickable ">
-                                            (Spanish) Homepage - Currently declared disasters - States in the Spanish declared disaster map are clickable
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:03:11">12:03:11</td>
-
-                                <td class="SKIPPED-text">10.14</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="ff95d2558a25968b6c1b696cd37b87428f680d638321a3a7bfd91a072ff7fc29.html" class="ellipsis"
-                                           title="(Spanish) Homepage - Currently declared disasters - The declared states on the declared disaster map ">
-                                            (Spanish) Homepage - Currently declared disasters - The declared states on the declared disaster map
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">8</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:03:21">12:03:21</td>
-
-                                <td class="SKIPPED-text">10.15</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="128b16936bbe4f6b2c2d5ddd574557a2e09547543e874b49750d2809325ca9de.html" class="ellipsis"
-                                           title="(Spanish) Homepage - Find Local Resources flows correctly in Spanish ">
-                                            (Spanish) Homepage - Find Local Resources flows correctly in Spanish
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:03:31">12:03:31</td>
-
-                                <td class="SKIPPED-text">14.13</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="0dbf29a5fe853f68b939d8f51f130344251f6aa478420e48f316819ee56f44fa.html" class="ellipsis"
-                                           title="(Spanish) News Feeds - All of the titles on the page ">
-                                            (Spanish) News Feeds - All of the titles on the page
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:03:45">12:03:45</td>
-
-                                <td class="SKIPPED-text">10.15</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="3cb70303383ce086459b1d86f4b5a750c5b0dc8ad4802e58a1a3e847f08aa5e1.html" class="ellipsis"
-                                           title="(Spanish) Community Leaders - Results of the quick search items ">
-                                            (Spanish) Community Leaders - Results of the quick search items&nbsp;(5  examples)
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">35</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:03:55">12:03:55</td>
-
-                                <td class="SKIPPED-text">36.57</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="f3a0606a6900eba7a97149a56226c43529486789ac63d936e8a1a0c1c734e419.html" class="ellipsis"
-                                           title="(Spanish) Find Assistance - Spanish benefits results display according to use cases ">
-                                            (Spanish) Find Assistance - Spanish benefits results display according to use cases
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:04:42">12:04:42</td>
-
-                                <td class="SKIPPED-text">13.16</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="16f3c7b87f92c2629da8a4f047bebeb71b0d395053a8d5423e6ed5a2425203e1.html" class="ellipsis"
-                                           title="(Spanish) Find Assistance - Dynamically verify results of the questionnaire ">
-                                            (Spanish) Find Assistance - Dynamically verify results of the questionnaire
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:04:55">12:04:55</td>
-
-                                <td class="SKIPPED-text">28.3</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="9c85583bfddd485f0a5040fe76ffc878a1cc5480e31f18e5bb3597bcaddebf1a.html" class="ellipsis"
-                                           title="(Spanish) News Feeds - FEMA Twitter feed is present ">
-                                            (Spanish) News Feeds - FEMA Twitter feed is present
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:05:57">12:05:57</td>
-
-                                <td class="SKIPPED-text">10.13</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="f2adea34b05ee77a0262cef992b8eb3f80880f36985904ea130ca56f5c1330d7.html" class="ellipsis"
-                                           title="(Spanish) Forms of Assistance - Category Type filter with the first seven types ">
-                                            (Spanish) Forms of Assistance - Category Type filter with the first seven types
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:06:07">12:06:07</td>
-
-                                <td class="SKIPPED-text">20.26</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="5475788ffced1c8c24c30781b3d6bb5f5c18a123822495f6120b8c54680e7497.html" class="ellipsis"
-                                           title="(Spanish) Forms of Assistance - Category Type filter with the next eight types ">
-                                            (Spanish) Forms of Assistance - Category Type filter with the next eight types
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:06:27">12:06:27</td>
-
-                                <td class="SKIPPED-text">20.29</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="a97466757a948f738f14df492741cb78104c0123e2815a82001de448929fbd36.html" class="ellipsis"
-                                           title="(Spanish) Forms of Assistance - Federal Agency filter with the first seven types ">
-                                            (Spanish) Forms of Assistance - Federal Agency filter with the first seven types
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:06:48">12:06:48</td>
-
-                                <td class="SKIPPED-text">20.26</td>
-                            </tr>
-
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
-                                    
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
-                                    <div class="ellipsis">
-
-                                        <a href="1b9a2e4eeaa2e4d203753921bb54fdff6d77acf41c6c0384a93fc9c9f322ba7b.html" class="ellipsis"
-                                           title="(Spanish) Forms of Assistance - Federal Agency filter with the next seven types ">
-                                            (Spanish) Forms of Assistance - Federal Agency filter with the next seven types
-                                                <span class="related-issue-title"></span>
-                                        </a>
-                                    </div>
-                                </td>
-
-                                <td class="SKIPPED-text">6</td>
-
-
-                                <td class="SKIPPED-text" data-sort="2018-02-07 12:07:08">12:07:08</td>
-
-                                <td class="SKIPPED-text">20.29</td>
+                                <td class="SKIPPED-text">0.01</td>
                             </tr>
                         </tbody>
                     </table>

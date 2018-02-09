@@ -380,4 +380,16 @@ public class DailyRegressionSteps {
 	public void then_38_spanish_results_should_appear() {
 		user.get37SpanishResults();
 	}
+	
+	// Scenario: Homepage - "Apply Online" DAC page includes mobile string 
+	
+	/*@When("I click on Apply Online")
+	public void click_Apply_Online() {
+		
+	}
+	
+	@Then("the DAC page with the mobile string should appear")
+	public void dac_page_with_mobile_string() {
+		
+	}*/
 }

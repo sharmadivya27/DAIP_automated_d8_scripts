@@ -20,7 +20,7 @@ public class BrowserStackSerenityTest {
         EnvironmentVariables environmentVariables = SystemEnvironmentVariables.createEnvironmentVariables();
 
         //might need to change this with another access key 
-        String accessKey = System.getenv("AJ2qL2UKCVPxC7pu8t6y");
+        String accessKey = System.getenv("rfvDzxheEdKW4qo3Yrqw");
         if(accessKey == null) {
             accessKey = (String) environmentVariables.getProperty("browserstack.key");
         }

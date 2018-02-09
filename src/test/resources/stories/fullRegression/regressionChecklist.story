@@ -141,7 +141,7 @@ Meta:
 
 Given I am on the declared disasters DAC page 
 When I type the declared disaster into the address look-up bar 
-Then I should get the results for the given disaster
+Then I should get the results for the given disaster  
 
 Scenario: Find Assistance - Benefits results display according to use cases
 Meta: 
@@ -210,3 +210,27 @@ Meta:
 Given I am on the Forms of Assistance page 
 When I click on Federal Agency to check the next seven federal agencies 
 Then 37 results should appear
+
+Scenario: Homepage - "Apply Online" DAC page includes mobile string 
+Meta: @skip
+@category daily 
+
+Given I am on the Disaster Assistance homepage 
+When I click on Apply Online
+Then the DAC page with the mobile string should appear
+
+Scenario: Homepage - "Check Status" DAC page includes mobile string
+Meta: @skip  
+@category daily 
+
+Given I am on the Disaster Assistance homepage 
+When I click on Check Status
+Then the DAC page with the mobile string should appear
+
+Scenario: Homepage - "Apply Online" from the questionnaire DAC page includes mobile string 
+Meta: @skip
+@category daily
+
+Given I am on the Disaster Assistance homepage
+When I click on the Apply Online button in the questionnaire
+Then the DAC page with the mobile string should appear
