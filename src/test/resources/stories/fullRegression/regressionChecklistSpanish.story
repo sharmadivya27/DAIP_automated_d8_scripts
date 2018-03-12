@@ -3,10 +3,10 @@ In order to assert that the basic functionality of https://www.disasterassistanc
 As a tester
 I want to run the daily regressions at least twice a day
 
-Meta: 
+Meta:
 
 Scenario: (Spanish) Homepage - Header - All the menu links on the "Get Assistance" tab
-Meta:  
+Meta: 
 @category daily
 
 Given I am on the Spanish Disaster Assistance homepage
@@ -26,7 +26,7 @@ Examples:
 |formularios|
 
 Scenario: (Spanish) Homepage - Header - All the menu links on the "Information" tab
-Meta: 
+Meta:
 @category daily
 
 Given I am on the Spanish Disaster Assistance homepage
@@ -46,7 +46,7 @@ Examples:
 |hojas de datos|
 
 Scenario: (Spanish) Homepage - Header - All the menu links on the "About Us" tab
-Meta: 
+Meta:
 @category daily
 
 Given I am on the Spanish Disaster Assistance homepage
@@ -59,7 +59,7 @@ Examples:
 |socios|
 
 Scenario: (Spanish) Homepage - Header - All the menu links on the "Help" tab
-Meta:   
+Meta:  
 @category daily
 
 Given I am on the Spanish Disaster Assistance homepage 
@@ -75,7 +75,7 @@ Examples:
 |descargar plug-ins|
 
 Scenario: (Spanish) Homepage - Key Links - Main links on homepage to assert that the Spanish pages open correctly
-Meta:  
+Meta: 
 @category daily 
                           
 Given I am on the Spanish Disaster Assistance homepage
@@ -89,7 +89,7 @@ Examples:
 |revisar estatus|
 
 Scenario: (Spanish) Homepage - Currently declared disasters - States in the Spanish declared disaster map are clickable
-Meta: 
+Meta:
 @category daily 
                                
 Given I am on the Spanish Disaster Assistance homepage
@@ -97,7 +97,7 @@ When I am viewing the declared disaster map
 Then states with disasters should be clickable
 
 Scenario: (Spanish) Homepage - Currently declared disasters - The declared states on the declared disaster map 
-Meta: 
+Meta:
 @category daily 
 
 Given I am on the Spanish Disaster Assistance homepage
@@ -106,7 +106,7 @@ Then states with disasters should be clickable
 Then I should be able to view the list of the declared states in Spanish
 
 Scenario: (Spanish) Homepage - Find Local Resources flows correctly in Spanish
-Meta: 
+Meta:
 @category daily 
                             
 Given I am on the Spanish Disaster Assistance homepage
@@ -114,7 +114,7 @@ When I am attempting to find local resources
 Then information on resources should be visible
 
 Scenario: (Spanish) News Feeds - All of the titles on the page
-Meta: 
+Meta:
 @category new 
 
 Given I am on the Spanish Disaster Assistance homepage
@@ -122,7 +122,7 @@ When I am on the Spanish News Feeds landing page node
 Then all of the spanish sub-titles should show on the page
 
 Scenario: (Spanish) Community Leaders - Results of the quick search items
-Meta: 
+Meta:
 @category NWD 
 
 Given I am on the spanish Community Leaders page on Disaster Assistance
@@ -138,14 +138,22 @@ Examples:
 |¿Como puede ayudar?|
 
 Scenario: (Spanish) Homepage - Address Look-Up - Declared disasters 
-Meta: 
+Meta:
 
 Given I am on the declared disasters DAC page 
 When I type the declared disaster into the address look-up bar in Spanish 
 Then I should get the results for the given disaster
 
+Scenario: (Spanish) Address Look-Up - Declared disasters 
+Meta:
+@category daily
+
+Given I am on the declared disasters DAC page 
+When I type the declared disaster into the address look-up bar from the Address Look-Up page in Spanish
+Then I should get the results for the given disaster  
+
 Scenario: (Spanish) Find Assistance - Spanish benefits results display according to use cases
-Meta:  
+Meta: 
 @category daily
                     
 Given I am on the Find Assistance Spanish page
@@ -153,7 +161,7 @@ When I choose only Employment
 Then I should obtain 9 results and see all the content under the accordions
 
 Scenario: (Spanish) Find Assistance - Dynamically verify results of the questionnaire  
-Meta: 
+Meta:
 @category daily 
   
 Given I am on the Find Assistance Spanish page
@@ -161,7 +169,7 @@ When I fully complete the questionnaire
 Then I should accumulate the same number of results as the text on the Get Results button in Spanish
 
 Scenario: (Spanish) Find Assistance - All the functionality of the FOA questionnaire
-Meta: 
+Meta:
 @category daily 
 
 Given I am on the Find Assistance Spanish page
@@ -173,7 +181,7 @@ When I click apply now in Spanish
 Then the DAC page should load 
 
 Scenario: (Spanish) News Feeds - FEMA Twitter feed is present
-Meta: 
+Meta:
 @category daily 
                              
 When I am on the Spanish News Feeds landing page node
@@ -181,7 +189,7 @@ When I am viewing the FEMA Twitter feed
 Then the most recent tweets should be displayed
 
 Scenario: (Spanish) Forms of Assistance - Category Type filter with the first seven types
-Meta: 
+Meta:
 @category daily
 
 Given I am on the Spanish Forms of Assistance page 
@@ -189,7 +197,7 @@ When I click on Category Type to check the first seven category types
 Then 42 spanish results should appear 
 
 Scenario: (Spanish) Forms of Assistance - Category Type filter with the next eight types
-Meta: 
+Meta:
 @category daily
 
 Given I am on the Spanish Forms of Assistance page
@@ -197,7 +205,7 @@ When I click on Category Type to check the next eight category types
 Then 53 spanish results should appear
 
 Scenario: (Spanish) Forms of Assistance - Federal Agency filter with the first seven types 
-Meta: 
+Meta:
 @category daily 
 
 Given I am on the Spanish Forms of Assistance page
@@ -205,7 +213,7 @@ When I click on Federal Agency to check the first seven federal agencies
 Then 40 spanish results should appear
 
 Scenario: (Spanish) Forms of Assistance - Federal Agency filter with the next seven types
-Meta: 
+Meta:
 @category daily 
 
 Given I am on the Spanish Forms of Assistance page

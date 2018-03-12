@@ -145,6 +145,18 @@ public class DALandingPage extends PageObject {
 	@FindBy(xpath = "//*[@class='desktop-header']")
 	private WebElementFacade results;
 	
+	@FindBy(xpath = "//*[@id='edit-category-select']")
+	private WebElementFacade searchCategoryButton;
+	
+	@FindBy(xpath = "//*[@id='edit-agency-select']")
+	private WebElementFacade searchAgencyButton;
+	
+	@FindBy(xpath = "//*[@id='edit-elasticsearch-query']")
+	private WebElementFacade searchBar;
+	
+	@FindBy(xpath = "//*[@id='edit-submit-desktop']")
+	private WebElementFacade communityLeadersSearch;
+	
 	// *************************************************************************
 	// Functions
 	
@@ -180,7 +192,7 @@ public class DALandingPage extends PageObject {
 	public void checkTwitterFeedBlock() throws FeedException {
 		if (!twitterFeedBlock.isVisible()) {
 			throw new FeedException("Twitter feed not visible");
-		}
+		}  
 	}
 	
 	/*************************************************************************
@@ -254,6 +266,7 @@ public class DALandingPage extends PageObject {
 		energyAssistance.click();
 		foodNutrition.click();
 		grants.click();
+		searchCategoryButton.click();
 	}
 	
 	public void clickNextCategoryTypes() {
@@ -265,6 +278,7 @@ public class DALandingPage extends PageObject {
 		mentalHealth.click();
 		socialSecurity.click();
 		veterans.click();
+		searchCategoryButton.click();
 	}
 	
 	public void clickFirstSevenFederalAgencies() {
@@ -275,19 +289,32 @@ public class DALandingPage extends PageObject {
 		HUD.click();
 		DOJ.click();
 		DOL.click();
+		this.evaluateJavascript("window.scrollBy(0,500)", "");
+		this.evaluateJavascript("window.scrollBy(0,500)", "");
+		searchAgencyButton.click();
 	}
 	
 	public void clickNextFederalAgencies() {
 		VA.click();
-		DOI.click();
-		treasury.click();
-		OPM.click();
-		USPS.click();
 		SBA.click();
 		SSA.click();
+		DOI.click();
+		treasury.click();
+		this.evaluateJavascript("window.scrollBy(0,500)", "");
+		OPM.click();
+		USPS.click();
+		this.evaluateJavascript("window.scrollBy(0,500)", "");
+		this.evaluateJavascript("window.scrollBy(0,500)", "");
+		searchAgencyButton.click();
 	}
 	
 	public String getResults() {
-		return results.getText();
+		return results.getText(); 
+	}
+	
+	public void typeIntoSearchBar() {
+		searchBar.click();
+		searchBar.type("disaster");
+		communityLeadersSearch.click();
 	}
 }

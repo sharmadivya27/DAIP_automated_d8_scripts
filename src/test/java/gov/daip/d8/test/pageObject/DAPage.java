@@ -20,8 +20,8 @@ import java.util.concurrent.TimeUnit;
 
 public class DAPage extends PageObject {
 	
-	/*********************************************/
-
+	/*********************************************/ 
+ 
 	@FindBy(xpath = "logo")
 	private WebElementFacade homeLogo;
 

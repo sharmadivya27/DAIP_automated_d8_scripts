@@ -1,57 +1,28 @@
 -------------------------------------------------------------------------------
 Test set: gov.daip.d8.test.DAIPAcceptanceTestSuite
 -------------------------------------------------------------------------------
-Tests run: 336, Failures: 0, Errors: 5, Skipped: 8, Time elapsed: 1,073.487 sec <<< FAILURE! - in gov.daip.d8.test.DAIPAcceptanceTestSuite
-Then the results should include the search words for that item(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 4.921 sec  <<< ERROR!
-net.serenitybdd.core.exceptions.SerenityManagedException: 
-The following error occurred: Timed out after 2 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
-System info: host: 'c02rj1fvfvh8.users.bah.com', ip: 'fe80:0:0:0:18d0:f6d3:d5c8:a0a9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at gov.daip.d8.test.DailyRegressionSteps.thenShouldIncludeSearchWords(DailyRegressionSteps.java:192)
+Tests run: 498, Failures: 6, Errors: 0, Skipped: 0, Time elapsed: 1,304.616 sec <<< FAILURE! - in gov.daip.d8.test.DAIPAcceptanceTestSuite
+Then the <menuLinks> page should open correctly(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 0.836 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[immediate needs]> but was:<[sitemap]>
+	at gov.daip.d8.test.DailyRegressionSteps.then_the_menu_links_page_should_open_correctly(DailyRegressionSteps.java:70)
 
-Then the results should include the search words for that item(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 4.675 sec  <<< ERROR!
-net.serenitybdd.core.exceptions.SerenityManagedException: 
-The following error occurred: Timed out after 2 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
-System info: host: 'c02rj1fvfvh8.users.bah.com', ip: 'fe80:0:0:0:18d0:f6d3:d5c8:a0a9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at gov.daip.d8.test.DailyRegressionSteps.thenShouldIncludeSearchWords(DailyRegressionSteps.java:192)
+Then the <menuLinks> page should open correctly(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 0.572 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[moving forward]> but was:<[sitemap]>
+	at gov.daip.d8.test.DailyRegressionSteps.then_the_menu_links_page_should_open_correctly(DailyRegressionSteps.java:70)
 
-Then the results should include the search words for that item(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 4.548 sec  <<< ERROR!
-net.serenitybdd.core.exceptions.SerenityManagedException: 
-The following error occurred: Timed out after 2 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
-System info: host: 'c02rj1fvfvh8.users.bah.com', ip: 'fe80:0:0:0:18d0:f6d3:d5c8:a0a9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at gov.daip.d8.test.DailyRegressionSteps.thenShouldIncludeSearchWords(DailyRegressionSteps.java:192)
+Then the <menuLinks> page should open correctly(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 0.588 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[disabilities or access and functional needs]> but was:<[sitemap]>
+	at gov.daip.d8.test.DailyRegressionSteps.then_the_menu_links_page_should_open_correctly(DailyRegressionSteps.java:70)
 
-When I click on Federal Agency to check the first seven federal agencies(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 13.217 sec  <<< ERROR!
-net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected enabled element was not enabled
-	at gov.daip.d8.test.DailyRegressionSteps.when_I_click_on_federal_agency_and_check_first_seven(DailyRegressionSteps.java:356)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for DALandingPage.HHS to be enabled (tried for 5 second(s) with 100 MILLISECONDS interval)
-	at gov.daip.d8.test.DailyRegressionSteps.when_I_click_on_federal_agency_and_check_first_seven(DailyRegressionSteps.java:356)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-Timed out after 2 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
-System info: host: 'c02rj1fvfvh8.users.bah.com', ip: 'fe80:0:0:0:18d0:f6d3:d5c8:a0a9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at gov.daip.d8.test.DailyRegressionSteps.when_I_click_on_federal_agency_and_check_first_seven(DailyRegressionSteps.java:356)
+Then the <menuLinks> page should open correctly(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 0.603 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[older americans]> but was:<[sitemap]>
+	at gov.daip.d8.test.DailyRegressionSteps.then_the_menu_links_page_should_open_correctly(DailyRegressionSteps.java:70)
 
-When I click on Federal Agency to check the next seven federal agencies(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 12.741 sec  <<< ERROR!
-net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected enabled element was not enabled
-	at gov.daip.d8.test.DailyRegressionSteps.when_i_check_the_next_seven(DailyRegressionSteps.java:371)
-Caused by: org.openqa.selenium.TimeoutException: Expected condition failed: waiting for DALandingPage.treasury to be enabled (tried for 5 second(s) with 100 MILLISECONDS interval)
-	at gov.daip.d8.test.DailyRegressionSteps.when_i_check_the_next_seven(DailyRegressionSteps.java:371)
-Caused by: org.openqa.selenium.NoSuchElementException: 
-Timed out after 2 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
-System info: host: 'c02rj1fvfvh8.users.bah.com', ip: 'fe80:0:0:0:18d0:f6d3:d5c8:a0a9%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_101'
-Driver info: driver.version: unknown
-	at gov.daip.d8.test.DailyRegressionSteps.when_i_check_the_next_seven(DailyRegressionSteps.java:371)
+Then the <menuLinks> page should open correctly(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 0.617 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[children and families]> but was:<[sitemap]>
+	at gov.daip.d8.test.DailyRegressionSteps.then_the_menu_links_page_should_open_correctly(DailyRegressionSteps.java:70)
+
+Then the <menuLinks> page should open correctly(gov.daip.d8.test.DailyRegressionSteps)  Time elapsed: 0.619 sec  <<< FAILURE!
+org.junit.ComparisonFailure: expected:<[disaster types]> but was:<[sitemap]>
+	at gov.daip.d8.test.DailyRegressionSteps.then_the_menu_links_page_should_open_correctly(DailyRegressionSteps.java:70)
 

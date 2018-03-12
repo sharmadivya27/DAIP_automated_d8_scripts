@@ -8,6 +8,7 @@ import gov.daip.d8.test.pageObject.DAPage;
 import gov.daip.d8.test.pageObject.DAHomepage;
 import gov.daip.d8.test.pageObject.DALandingPage;
 import gov.daip.d8.test.pageObject.DAQuestionnaire;
+import gov.daip.d8.test.pageObject.DASitemap;
 import gov.daip.d8.test.pageObject.DrupalPage;
 import gov.daip.d8.test.exceptions.LocalResourcesException;
 import gov.daip.d8.test.exceptions.FeedException;
@@ -24,11 +25,12 @@ import gov.daip.d8.test.exceptions.StateException;
 
 public class User {
 
-	DAPage dapage;
+	DAPage dapage; 
 	DAHomepage daHomepage;
 	DALandingPage daLanding;
 	DAQuestionnaire daQues;
 	DrupalPage drupalPage;
+	DASitemap sitemap;
 
 	/*********************************************/
 
@@ -339,10 +341,20 @@ public class User {
 	public void declaredDisasters() {
 		daHomepage.typeAddressLookUp();
 	}
+	
+	@Step
+	public void declaredDisastersPage() {
+		daHomepage.typeAddressLookUpPage();
+	}
 
 	@Step
 	public void declaredSpanishDisasters() {
 		daHomepage.typeSpanishAddressLookUp();
+	}
+	
+	@Step
+	public void declaredDisastersPageSpanish() {
+		daHomepage.typeAddressLookUpPageSpanish();
 	}
 
 	@Step
@@ -496,5 +508,129 @@ public class User {
 	@Step
 	public void get37SpanishResults() {
 		Assert.assertEquals("Mostrando 1 - 10 de 37 resultados Ver 10 50 Todos", daLanding.getResults());
+	}
+	
+	@Step 
+	public void clickApplyOnlineMainLink() {
+		daHomepage.clickApplyOnlineMainLink();
+	}
+	
+	@Step 
+	public void clickCheckStatusMainLink() {
+		daHomepage.clickCheckStatusMainLink();
+	}
+	
+	@Step
+	public void getURL() {
+		daHomepage.getUrl();
+		Assert.assertTrue(daHomepage.URLMobileFlag());
+	}
+	
+	@Step
+	public void typeSearchBar() {
+		daLanding.typeIntoSearchBar();
+	}
+	
+	@Step
+	public void clickSiteMap(String menuLinks) {
+		if (menuLinks.equals("home")) {
+			sitemap.clickOnHome();
+		} else if (menuLinks.equals("address look-up")) {
+			sitemap.clickAddresslookUp();
+		} else if (menuLinks.equals("find assistance")) {
+			sitemap.clickFindAssistance();
+		} else if (menuLinks.equals("apply online")) {
+			sitemap.clickApplyOnline();
+		} else if (menuLinks.equals("check your status")) {
+			sitemap.clickCheckStatusSitemap();
+		} else if (menuLinks.equals("forms of assistance")) {
+			sitemap.clickFormsAssistance();
+		} else if (menuLinks.equals("community leaders")) {
+			sitemap.clickCommunityLeaders();
+		} else if (menuLinks.equals("other recovery help")) {
+			sitemap.clickOtherHelp();
+		} else if (menuLinks.equals("application checklist")) {
+			sitemap.clickApplicationChecklist();
+		} else if (menuLinks.equals("forms")) {
+			sitemap.clickForms();
+		} else if (menuLinks.equals("news feeds")) {
+			sitemap.clickNewsFeeds();
+		} else if (menuLinks.equals("immediate needs")) {
+			sitemap.clickImmediateNeeds();
+		} else if (menuLinks.equals("evacuate or stay put")) {
+			sitemap.clickEvacuate();
+		} else if (menuLinks.equals("gathering up loved ones")) {
+			sitemap.clickLovedOnes();
+		} else if (menuLinks.equals("emergency food and water")) {
+			sitemap.clickEmergencyFood();
+		} else if (menuLinks.equals("emergency shelter")) {
+			sitemap.clickEmergencyShelter();
+		} else if (menuLinks.equals("moving forward")) {
+			sitemap.movingForward();
+		} else if (menuLinks.equals("your home")) {
+			sitemap.yourHome();
+		} else if (menuLinks.equals("your business or farm")) {
+			sitemap.clickBusiness();
+		} else if (menuLinks.equals("your finances, job, and insurance")) {
+			sitemap.clickFinance();
+		} else if (menuLinks.equals("your health")) {
+			sitemap.clickHealth();
+		} else if (menuLinks.equals("your official documents")) {
+			sitemap.clickOfficialDocs();
+		} else if (menuLinks.equals("disabilities or access and functional needs")) {
+			sitemap.clickDisabilities();
+		} else if (menuLinks.equals("older americans")) {
+			sitemap.clickOlderAmericans();
+		} else if (menuLinks.equals("children and families")) {
+			sitemap.clickChildrenFamilies();
+		} else if (menuLinks.equals("disaster types")) {
+			sitemap.clickDisasterTypes();
+		} else if (menuLinks.equals("biological threat")) {
+			sitemap.clickBiological();
+		} else if (menuLinks.equals("chemical threat")) {
+			sitemap.clickChemical();
+		} else if (menuLinks.equals("drought")) {
+			sitemap.clickDrought();
+		} else if (menuLinks.equals("earthquake")) {
+			sitemap.clickEarthquake();
+		} else if (menuLinks.equals("fire")) {
+			sitemap.clickFire();
+		} else if (menuLinks.equals("flood")) {
+			sitemap.clickFlood();
+		} else if (menuLinks.equals("heat")) {
+			sitemap.clickHeat();
+		} else if (menuLinks.equals("hurricane")) {
+			sitemap.clickHurricane();
+		} else if (menuLinks.equals("landslide")) {
+			sitemap.clickLandslide();
+		} else if (menuLinks.equals("radiation and nuclear")) {
+			sitemap.clickRadiation();
+		} else if (menuLinks.equals("tornado")) {
+			sitemap.clickTornado();
+		} else if (menuLinks.equals("tsunami")) {
+			sitemap.clickTsunami();
+		} else if (menuLinks.equals("volcano")) {
+			sitemap.clickVolcano();
+		} else if (menuLinks.equals("wildfires")) {
+			sitemap.clickWildfires();
+		} else if (menuLinks.equals("winter storm")) {
+			sitemap.clickWinterStorms();
+		} else if (menuLinks.equals("foreign disasters")) {
+			sitemap.clickForeignDisasters();
+		} else if (menuLinks.equals("fact sheets")) {
+			sitemap.clickFactSheets();
+		} else if (menuLinks.equals("partners")) {
+			sitemap.clickPartners();
+		} else if (menuLinks.equals("faqs")) {
+			sitemap.clickFaqs();
+		} else if (menuLinks.equals("contact us")) {
+			sitemap.clickContactUs();
+		} else if (menuLinks.equals("privacy policy")) {
+			sitemap.clickPrivacyPolicy();
+		} else if (menuLinks.equals("accessibility")) {
+			sitemap.clickAccessibility();
+		} else if (menuLinks.equals("download plug-ins")) {
+			sitemap.clickDownloadPlugIns();
+		}
 	}
 }

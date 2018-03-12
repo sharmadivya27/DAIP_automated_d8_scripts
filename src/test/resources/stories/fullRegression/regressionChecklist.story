@@ -75,7 +75,7 @@ Examples:
 |download plug-ins|
 
 Scenario: Homepage - Key Links - Main links on homepage to assert that the pages open correctly
-Meta: 
+Meta:
 @category daily 
 
 Given I am on the Disaster Assistance homepage
@@ -114,7 +114,7 @@ When I am attempting to find local resources
 Then information on resources should be visible
 
 Scenario: News Feeds - All of the titles on the page
-Meta:
+Meta: 
 @category new 
 
 When I am on the News Feeds landing page node
@@ -138,9 +138,18 @@ Examples:
 
 Scenario: Homepage - Address Look-Up - Declared disasters 
 Meta: 
+@category daily
 
 Given I am on the declared disasters DAC page 
 When I type the declared disaster into the address look-up bar 
+Then I should get the results for the given disaster 
+
+Scenario: Address Look-Up - Declared disasters 
+Meta: 
+@category daily
+
+Given I am on the declared disasters DAC page 
+When I type the declared disaster into the address look-up bar from the Address Look-Up page
 Then I should get the results for the given disaster  
 
 Scenario: Find Assistance - Benefits results display according to use cases
@@ -172,7 +181,7 @@ When I click apply now
 Then the DAC page should load 
 
 Scenario: News Feeds - FEMA Twitter feed is present 
-Meta:  
+Meta: 
 @category daily 
                
 Given I am on the News Feed page
@@ -211,26 +220,87 @@ Given I am on the Forms of Assistance page
 When I click on Federal Agency to check the next seven federal agencies 
 Then 37 results should appear
 
-Scenario: Homepage - "Apply Online" DAC page includes mobile string 
+Scenario: Homepage - "Apply Online" DAC page includes mobile flag 
 Meta: @skip
 @category daily 
 
 Given I am on the Disaster Assistance homepage 
 When I click on Apply Online
-Then the DAC page with the mobile string should appear
+Then the DAC page with the mobile string should appear    
 
-Scenario: Homepage - "Check Status" DAC page includes mobile string
-Meta: @skip  
+Scenario: Homepage - "Check Status" DAC page includes mobile flag
+Meta: @skip
 @category daily 
 
 Given I am on the Disaster Assistance homepage 
 When I click on Check Status
-Then the DAC page with the mobile string should appear
+Then the DAC page with the mobile string should appear 
 
-Scenario: Homepage - "Apply Online" from the questionnaire DAC page includes mobile string 
-Meta: @skip
+Scenario: Community Leaders - Type keyword into search bar
+Meta:
 @category daily
 
-Given I am on the Disaster Assistance homepage
-When I click on the Apply Online button in the questionnaire
-Then the DAC page with the mobile string should appear
+Given I am on the Community Leaders page on Disaster Assistance
+When I type a keyword into the search bar
+Then the results should include the search words for that item
+
+Scenario: Sitemap - All links in Sitemap point to the right page 
+Meta: 
+@category daily
+
+Given I am on the sitemap
+When I click on a <menuLinks> within the sitemap
+Then the <menuLinks> page should open correctly 
+
+Examples:
+|menuLinks|
+|home|
+|address look-up|
+|find assistance|
+|apply online|
+|check your status|
+|forms of assistance|
+|community leaders|
+|other recovery help|
+|application checklist|
+|forms|
+|news feeds|
+|immediate needs|
+|evacuate or stay put|
+|gathering up loved ones|
+|emergency food and water|
+|emergency shelter|
+|emergency medical|
+|moving forward|
+|your home|
+|your business or farm|
+|your finances, job, and insurance|
+|your health|
+|your official documents|
+|disabilities or access and functional needs|
+|older americans|
+|children and families|
+|disaster types|
+|biological threat|
+|chemical threat|
+|drought|
+|earthquake|
+|fire|
+|flood|
+|heat|
+|hurricane|
+|landslide|
+|radiation and nuclear|
+|tornado|
+|tsunami|
+|volcano|
+|wildfires|
+|winter storm|
+|foreign disasters|
+|fact sheets|
+|partners|
+|faqs|
+|contact us|
+|privacy policy|
+|accessibility|
+|download plug-ins|

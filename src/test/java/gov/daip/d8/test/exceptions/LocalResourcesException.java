@@ -10,3 +10,4 @@ public class LocalResourcesException extends Exception {
 		super(message);
 	}
 }
+   

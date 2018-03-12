@@ -6,6 +6,7 @@ com/browserstack/BrowserStackSerenityTest.class
 gov/daip/d8/test/pageObject/DALandingPage.class
 gov/daip/d8/test/DailyRegressionSteps.class
 gov/daip/d8/test/exceptions/LocalResourcesException.class
+gov/daip/d8/test/pageObject/DASitemap.class
 gov/daip/d8/test/pageObject/DrupalPage.class
 gov/daip/d8/test/User.class
 gov/daip/d8/test/DAIPAcceptanceTestSuite.class

@@ -1,16 +1,15 @@
 package com.browserstack;
 
-import com.browserstack.local.Local;
-
 import java.util.HashMap;
 import java.util.Map;
 
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
 
+import com.browserstack.local.Local;
+
 import net.thucydides.core.util.EnvironmentVariables;
 import net.thucydides.core.util.SystemEnvironmentVariables;
-
 
 public class BrowserStackSerenityTest {
     static Local bsLocal;
@@ -19,14 +18,13 @@ public class BrowserStackSerenityTest {
     public static void setUp() throws Exception {
         EnvironmentVariables environmentVariables = SystemEnvironmentVariables.createEnvironmentVariables();
 
-        //might need to change this with another access key 
-        String accessKey = System.getenv("rfvDzxheEdKW4qo3Yrqw");
+        String accessKey = System.getenv("BROWSERSTACK_ACCESS_KEY");
         if(accessKey == null) {
             accessKey = (String) environmentVariables.getProperty("browserstack.key");
         }
 
         String environment = System.getProperty("environment");
-        String key = "browserstack.local"; 
+        String key = "browserstack.local";
         boolean is_local = environmentVariables.getProperty(key) != null && environmentVariables.getProperty(key).equals("true");
 
         if(environment != null && !is_local){

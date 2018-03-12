@@ -9,16 +9,20 @@
  
 <script type="syntaxhighlighter" class="brush: xml"><![CDATA[
 <story path="stories/fullRegression/regressionChecklistSpanish.story" title="">
+<meta>
+<property keyword="@" name="skip" value=""/>
+</meta>
 <narrative keyword="Narrative:">
   <inOrderTo keyword="In order to">assert that the basic functionality of https://www.disasterassistance.gov/es/ is working</inOrderTo>
   <asA keyword="As a">tester</asA>
   <iWantTo keyword="I want to">run the daily regressions at least twice a day
 
-Meta:</iWantTo>
+Meta: @skip</iWantTo>
 </narrative>
 <scenario keyword="Scenario:" title="(Spanish) Homepage - Header - All the menu links on the &quot;Get Assistance&quot; tab">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <examples keyword="Examples:">
 <step>Given I am on the Spanish Disaster Assistance homepage</step>
@@ -37,47 +41,47 @@ Meta:</iWantTo>
 <values><value>formularios</value></values>
 </parameters>
 
-<example keyword="Example:">{menuLinks=buscador de direcciónes, category=daily}</example>
+<example keyword="Example:">{menuLinks=buscador de direcciónes, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>buscador de direcciónes</parameter> in the Get Assistance tab</step>
 <step outcome="successful">Then the <parameter>buscador de direcciónes</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=encontrar ayuda, category=daily}</example>
+<example keyword="Example:">{menuLinks=encontrar ayuda, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>encontrar ayuda</parameter> in the Get Assistance tab</step>
 <step outcome="successful">Then the <parameter>encontrar ayuda</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=solicitar asistencia, category=daily}</example>
+<example keyword="Example:">{menuLinks=solicitar asistencia, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>solicitar asistencia</parameter> in the Get Assistance tab</step>
 <step outcome="successful">Then the <parameter>solicitar asistencia</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=revisar estatus, category=daily}</example>
+<example keyword="Example:">{menuLinks=revisar estatus, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>revisar estatus</parameter> in the Get Assistance tab</step>
 <step outcome="successful">Then the <parameter>revisar estatus</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=formas de asistencia, category=daily}</example>
+<example keyword="Example:">{menuLinks=formas de asistencia, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>formas de asistencia</parameter> in the Get Assistance tab</step>
 <step outcome="successful">Then the <parameter>formas de asistencia</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=otra ayuda para recuperación, category=daily}</example>
+<example keyword="Example:">{menuLinks=otra ayuda para recuperación, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>otra ayuda para recuperación</parameter> in the Get Assistance tab</step>
 <step outcome="successful">Then the <parameter>otra ayuda para recuperación</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=líderes comunitarios, category=daily}</example>
+<example keyword="Example:">{menuLinks=líderes comunitarios, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>líderes comunitarios</parameter> in the Get Assistance tab</step>
 <step outcome="successful">Then the <parameter>líderes comunitarios</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=lista de verificación para aplicarse, category=daily}</example>
+<example keyword="Example:">{menuLinks=lista de verificación para aplicarse, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>lista de verificación para aplicarse</parameter> in the Get Assistance tab</step>
 <step outcome="successful">Then the <parameter>lista de verificación para aplicarse</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=formularios, category=daily}</example>
+<example keyword="Example:">{menuLinks=formularios, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>formularios</parameter> in the Get Assistance tab</step>
 <step outcome="successful">Then the <parameter>formularios</parameter> page should open correctly</step>
@@ -86,6 +90,7 @@ Meta:</iWantTo>
 <scenario keyword="Scenario:" title="(Spanish) Homepage - Header - All the menu links on the &quot;Information&quot; tab">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <examples keyword="Examples:">
 <step>Given I am on the Spanish Disaster Assistance homepage</step>
@@ -104,47 +109,47 @@ Meta:</iWantTo>
 <values><value>hojas de datos</value></values>
 </parameters>
 
-<example keyword="Example:">{menuLinks=canales de noticias, category=daily}</example>
+<example keyword="Example:">{menuLinks=canales de noticias, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>canales de noticias</parameter> in the Information tab</step>
 <step outcome="successful">Then the <parameter>canales de noticias</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=necesidades inmediatas, category=daily}</example>
+<example keyword="Example:">{menuLinks=necesidades inmediatas, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>necesidades inmediatas</parameter> in the Information tab</step>
 <step outcome="successful">Then the <parameter>necesidades inmediatas</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=próximo paso, category=daily}</example>
+<example keyword="Example:">{menuLinks=próximo paso, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>próximo paso</parameter> in the Information tab</step>
 <step outcome="successful">Then the <parameter>próximo paso</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=discapacidades o necesidades funcionales y de acceso, category=daily}</example>
+<example keyword="Example:">{menuLinks=discapacidades o necesidades funcionales y de acceso, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>discapacidades o necesidades funcionales y de acceso</parameter> in the Information tab</step>
 <step outcome="successful">Then the <parameter>discapacidades o necesidades funcionales y de acceso</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=adultos mayores estadounidenses, category=daily}</example>
+<example keyword="Example:">{menuLinks=adultos mayores estadounidenses, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>adultos mayores estadounidenses</parameter> in the Information tab</step>
 <step outcome="successful">Then the <parameter>adultos mayores estadounidenses</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=niños y familias, category=daily}</example>
+<example keyword="Example:">{menuLinks=niños y familias, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>niños y familias</parameter> in the Information tab</step>
 <step outcome="successful">Then the <parameter>niños y familias</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=los recursos del desastre, category=daily}</example>
+<example keyword="Example:">{menuLinks=los recursos del desastre, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>los recursos del desastre</parameter> in the Information tab</step>
 <step outcome="successful">Then the <parameter>los recursos del desastre</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=desastres en el extranjero, category=daily}</example>
+<example keyword="Example:">{menuLinks=desastres en el extranjero, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>desastres en el extranjero</parameter> in the Information tab</step>
 <step outcome="successful">Then the <parameter>desastres en el extranjero</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=hojas de datos, category=daily}</example>
+<example keyword="Example:">{menuLinks=hojas de datos, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>hojas de datos</parameter> in the Information tab</step>
 <step outcome="successful">Then the <parameter>hojas de datos</parameter> page should open correctly</step>
@@ -153,6 +158,7 @@ Meta:</iWantTo>
 <scenario keyword="Scenario:" title="(Spanish) Homepage - Header - All the menu links on the &quot;About Us&quot; tab">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <examples keyword="Examples:">
 <step>Given I am on the Spanish Disaster Assistance homepage</step>
@@ -164,12 +170,12 @@ Meta:</iWantTo>
 <values><value>socios</value></values>
 </parameters>
 
-<example keyword="Example:">{menuLinks=descripción general, category=daily}</example>
+<example keyword="Example:">{menuLinks=descripción general, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>descripción general</parameter> in the About Us tab</step>
 <step outcome="successful">Then the <parameter>descripción general</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=socios, category=daily}</example>
+<example keyword="Example:">{menuLinks=socios, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>socios</parameter> in the About Us tab</step>
 <step outcome="successful">Then the <parameter>socios</parameter> page should open correctly</step>
@@ -178,6 +184,7 @@ Meta:</iWantTo>
 <scenario keyword="Scenario:" title="(Spanish) Homepage - Header - All the menu links on the &quot;Help&quot; tab">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <examples keyword="Examples:">
 <step>Given I am on the Spanish Disaster Assistance homepage</step>
@@ -192,27 +199,27 @@ Meta:</iWantTo>
 <values><value>descargar plug-ins</value></values>
 </parameters>
 
-<example keyword="Example:">{menuLinks=preguntas comunes, category=daily}</example>
+<example keyword="Example:">{menuLinks=preguntas comunes, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>preguntas comunes</parameter> in the Help tab</step>
 <step outcome="successful">Then the <parameter>preguntas comunes</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=contáctenos, category=daily}</example>
+<example keyword="Example:">{menuLinks=contáctenos, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>contáctenos</parameter> in the Help tab</step>
 <step outcome="successful">Then the <parameter>contáctenos</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=política de privacidad, category=daily}</example>
+<example keyword="Example:">{menuLinks=política de privacidad, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>política de privacidad</parameter> in the Help tab</step>
 <step outcome="successful">Then the <parameter>política de privacidad</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=accesibilidad, category=daily}</example>
+<example keyword="Example:">{menuLinks=accesibilidad, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>accesibilidad</parameter> in the Help tab</step>
 <step outcome="successful">Then the <parameter>accesibilidad</parameter> page should open correctly</step>
 
-<example keyword="Example:">{menuLinks=descargar plug-ins, category=daily}</example>
+<example keyword="Example:">{menuLinks=descargar plug-ins, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>descargar plug-ins</parameter> in the Help tab</step>
 <step outcome="successful">Then the <parameter>descargar plug-ins</parameter> page should open correctly</step>
@@ -221,6 +228,7 @@ Meta:</iWantTo>
 <scenario keyword="Scenario:" title="(Spanish) Homepage - Key Links - Main links on homepage to assert that the Spanish pages open correctly">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <examples keyword="Examples:">
 <step>Given I am on the Spanish Disaster Assistance homepage</step>
@@ -233,17 +241,17 @@ Meta:</iWantTo>
 <values><value>revisar estatus</value></values>
 </parameters>
 
-<example keyword="Example:">{mainLinksItem=encontrar ayuda, category=daily}</example>
+<example keyword="Example:">{mainLinksItem=encontrar ayuda, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on <parameter>encontrar ayuda</parameter> within the main links bar</step>
 <step outcome="successful">Then the <parameter>encontrar ayuda</parameter> page should open correctly</step>
 
-<example keyword="Example:">{mainLinksItem=solicitar asistencia, category=daily}</example>
+<example keyword="Example:">{mainLinksItem=solicitar asistencia, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on <parameter>solicitar asistencia</parameter> within the main links bar</step>
 <step outcome="successful">Then the <parameter>solicitar asistencia</parameter> page should open correctly</step>
 
-<example keyword="Example:">{mainLinksItem=revisar estatus, category=daily}</example>
+<example keyword="Example:">{mainLinksItem=revisar estatus, category=daily, skip=}</example>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I click on <parameter>revisar estatus</parameter> within the main links bar</step>
 <step outcome="successful">Then the <parameter>revisar estatus</parameter> page should open correctly</step>
@@ -252,6 +260,7 @@ Meta:</iWantTo>
 <scenario keyword="Scenario:" title="(Spanish) Homepage - Currently declared disasters - States in the Spanish declared disaster map are clickable">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I am viewing the declared disaster map</step>
@@ -260,6 +269,7 @@ Meta:</iWantTo>
 <scenario keyword="Scenario:" title="(Spanish) Homepage - Currently declared disasters - The declared states on the declared disaster map">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I am viewing the declared disaster map</step>
@@ -269,6 +279,7 @@ Meta:</iWantTo>
 <scenario keyword="Scenario:" title="(Spanish) Homepage - Find Local Resources flows correctly in Spanish">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I am attempting to find local resources</step>
@@ -277,6 +288,7 @@ Meta:</iWantTo>
 <scenario keyword="Scenario:" title="(Spanish) News Feeds - All of the titles on the page">
 <meta>
 <property keyword="@" name="category" value="new"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Spanish Disaster Assistance homepage</step>
 <step outcome="successful">When I am on the Spanish News Feeds landing page node</step>
@@ -285,6 +297,7 @@ Meta:</iWantTo>
 <scenario keyword="Scenario:" title="(Spanish) Community Leaders - Results of the quick search items">
 <meta>
 <property keyword="@" name="category" value="NWD"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <examples keyword="Examples:">
 <step>Given I am on the spanish Community Leaders page on Disaster Assistance</step>
@@ -299,67 +312,52 @@ Meta:</iWantTo>
 <values><value>¿Como puede ayudar?</value></values>
 </parameters>
 
-<example keyword="Example:">{quickSearch=Infraestructura, servicios públicos y otra asistencia pública, category=NWD}</example>
+<example keyword="Example:">{quickSearch=Infraestructura, servicios públicos y otra asistencia pública, category=NWD, skip=}</example>
 <step outcome="successful">Given I am on the spanish Community Leaders page on Disaster Assistance</step>
 <step outcome="successful">When I click on a <parameter>Infraestructura, servicios públicos y otra asistencia pública</parameter> item on the Community Leaders page</step>
 <step outcome="successful">Then the results should include the search words for that item</step>
 
-<example keyword="Example:">{quickSearch=Preparación para la comunidad, category=NWD}</example>
+<example keyword="Example:">{quickSearch=Preparación para la comunidad, category=NWD, skip=}</example>
 <step outcome="successful">Given I am on the spanish Community Leaders page on Disaster Assistance</step>
 <step outcome="successful">When I click on a <parameter>Preparación para la comunidad</parameter> item on the Community Leaders page</step>
-<step outcome="failed" keyword="FAILED">Then the results should include the search words for that item<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Timed out after 2 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
-System info: host: &apos;c02rj1fvfvh8.users.bah.com&apos;, ip: &apos;fe80:0:0:0:18d0:f6d3:d5c8:a0a9%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_101&apos;
-Driver info: driver.version: unknown</failure></step>
+<step outcome="successful">Then the results should include the search words for that item</step>
 
-<example keyword="Example:">{quickSearch=Recursos para recuperación de desastre, category=NWD}</example>
+<example keyword="Example:">{quickSearch=Recursos para recuperación de desastre, category=NWD, skip=}</example>
 <step outcome="successful">Given I am on the spanish Community Leaders page on Disaster Assistance</step>
 <step outcome="successful">When I click on a <parameter>Recursos para recuperación de desastre</parameter> item on the Community Leaders page</step>
-<step outcome="failed" keyword="FAILED">Then the results should include the search words for that item<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Timed out after 2 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
-System info: host: &apos;c02rj1fvfvh8.users.bah.com&apos;, ip: &apos;fe80:0:0:0:18d0:f6d3:d5c8:a0a9%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_101&apos;
-Driver info: driver.version: unknown</failure></step>
+<step outcome="successful">Then the results should include the search words for that item</step>
 
-<example keyword="Example:">{quickSearch=Viviendas y refugios de emergencia, category=NWD}</example>
+<example keyword="Example:">{quickSearch=Viviendas y refugios de emergencia, category=NWD, skip=}</example>
 <step outcome="successful">Given I am on the spanish Community Leaders page on Disaster Assistance</step>
 <step outcome="successful">When I click on a <parameter>Viviendas y refugios de emergencia</parameter> item on the Community Leaders page</step>
-<step outcome="failed" keyword="FAILED">Then the results should include the search words for that item<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Timed out after 2 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
-System info: host: &apos;c02rj1fvfvh8.users.bah.com&apos;, ip: &apos;fe80:0:0:0:18d0:f6d3:d5c8:a0a9%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_101&apos;
-Driver info: driver.version: unknown</failure></step>
+<step outcome="successful">Then the results should include the search words for that item</step>
 
-<example keyword="Example:">{quickSearch=¿Como puede ayudar?, category=NWD}</example>
+<example keyword="Example:">{quickSearch=¿Como puede ayudar?, category=NWD, skip=}</example>
 <step outcome="successful">Given I am on the spanish Community Leaders page on Disaster Assistance</step>
 <step outcome="successful">When I click on a <parameter>¿Como puede ayudar?</parameter> item on the Community Leaders page</step>
 <step outcome="successful">Then the results should include the search words for that item</step>
 </examples>
-<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Timed out after 2 seconds. Element not found
-For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
-Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
-System info: host: &apos;c02rj1fvfvh8.users.bah.com&apos;, ip: &apos;fe80:0:0:0:18d0:f6d3:d5c8:a0a9%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_101&apos;
-Driver info: driver.version: unknown
-	at net.serenitybdd.core.exceptions.SerenityManagedException.detachedCopyOf(SerenityManagedException.java:21)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:394)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:133)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:62)
-	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.quickSearchResults(&lt;generated&gt;)
-	at gov.daip.d8.test.DailyRegressionSteps.thenShouldIncludeSearchWords(DailyRegressionSteps.java:192)
-	(reflection-invoke)
-	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:733)
-	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:346)
-...</failure>
 </scenario>
 <scenario keyword="Scenario:" title="(Spanish) Homepage - Address Look-Up - Declared disasters">
+<meta>
+<property keyword="@" name="skip" value=""/>
+</meta>
 <step outcome="successful">Given I am on the declared disasters DAC page</step>
 <step outcome="successful">When I type the declared disaster into the address look-up bar in Spanish</step>
+<step outcome="successful">Then I should get the results for the given disaster</step>
+</scenario>
+<scenario keyword="Scenario:" title="(Spanish) Address Look-Up - Declared disasters">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the declared disasters DAC page</step>
+<step outcome="successful">When I type the declared disaster into the address look-up bar from the Address Look-Up page in Spanish</step>
 <step outcome="successful">Then I should get the results for the given disaster</step>
 </scenario>
 <scenario keyword="Scenario:" title="(Spanish) Find Assistance - Spanish benefits results display according to use cases">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Find Assistance Spanish page</step>
 <step outcome="successful">When I choose only Employment</step>
@@ -368,6 +366,7 @@ Driver info: driver.version: unknown
 <scenario keyword="Scenario:" title="(Spanish) Find Assistance - Dynamically verify results of the questionnaire">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Find Assistance Spanish page</step>
 <step outcome="successful">When I fully complete the questionnaire</step>
@@ -376,6 +375,7 @@ Driver info: driver.version: unknown
 <scenario keyword="Scenario:" title="(Spanish) Find Assistance - All the functionality of the FOA questionnaire">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Find Assistance Spanish page</step>
 <step outcome="successful">When I fully complete the questionnaire</step>
@@ -388,6 +388,7 @@ Driver info: driver.version: unknown
 <scenario keyword="Scenario:" title="(Spanish) News Feeds - FEMA Twitter feed is present">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">When I am on the Spanish News Feeds landing page node</step>
 <step outcome="successful">When I am viewing the FEMA Twitter feed</step>
@@ -396,6 +397,7 @@ Driver info: driver.version: unknown
 <scenario keyword="Scenario:" title="(Spanish) Forms of Assistance - Category Type filter with the first seven types">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Spanish Forms of Assistance page</step>
 <step outcome="successful">When I click on Category Type to check the first seven category types</step>
@@ -404,6 +406,7 @@ Driver info: driver.version: unknown
 <scenario keyword="Scenario:" title="(Spanish) Forms of Assistance - Category Type filter with the next eight types">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Spanish Forms of Assistance page</step>
 <step outcome="successful">When I click on Category Type to check the next eight category types</step>
@@ -412,40 +415,20 @@ Driver info: driver.version: unknown
 <scenario keyword="Scenario:" title="(Spanish) Forms of Assistance - Federal Agency filter with the first seven types">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Spanish Forms of Assistance page</step>
-<step outcome="failed" keyword="FAILED">When I click on Federal Agency to check the first seven federal agencies<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected enabled element was not enabled</failure></step>
-<step outcome="notPerformed" keyword="NOT PERFORMED">Then 40 spanish results should appear</step>
-<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected enabled element was not enabled
-	at net.serenitybdd.core.exceptions.SerenityManagedException.detachedCopyOf(SerenityManagedException.java:21)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:394)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:133)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:62)
-	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.clickFederalAgency(&lt;generated&gt;)
-	at gov.daip.d8.test.DailyRegressionSteps.when_I_click_on_federal_agency_and_check_first_seven(DailyRegressionSteps.java:356)
-	(reflection-invoke)
-	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:733)
-	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:346)
-...</failure>
+<step outcome="successful">When I click on Federal Agency to check the first seven federal agencies</step>
+<step outcome="successful">Then 40 spanish results should appear</step>
 </scenario>
 <scenario keyword="Scenario:" title="(Spanish) Forms of Assistance - Federal Agency filter with the next seven types">
 <meta>
 <property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
 </meta>
 <step outcome="successful">Given I am on the Spanish Forms of Assistance page</step>
-<step outcome="failed" keyword="FAILED">When I click on Federal Agency to check the next seven federal agencies<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected enabled element was not enabled</failure></step>
-<step outcome="notPerformed" keyword="NOT PERFORMED">Then 37 spanish results should appear</step>
-<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected enabled element was not enabled
-	at net.serenitybdd.core.exceptions.SerenityManagedException.detachedCopyOf(SerenityManagedException.java:21)
-	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:394)
-	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:133)
-	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:62)
-	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.clickNextFederalAgency(&lt;generated&gt;)
-	at gov.daip.d8.test.DailyRegressionSteps.when_i_check_the_next_seven(DailyRegressionSteps.java:371)
-	(reflection-invoke)
-	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:733)
-	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:346)
-...</failure>
+<step outcome="successful">When I click on Federal Agency to check the next seven federal agencies</step>
+<step outcome="successful">Then 37 spanish results should appear</step>
 </scenario>
 </story>
 

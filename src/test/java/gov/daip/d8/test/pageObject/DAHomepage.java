@@ -128,13 +128,13 @@ public class DAHomepage extends PageObject {
 	@FindBy(xpath = "//*[@class='location-item clickable']")
 	private List<WebElementFacade> localResourcesResults;
 
-	@FindBy(xpath = "//*[@id='block-imagelinksblock']/div/div/div[1]/div/a/img")
+	@FindBy(xpath = "//*[@id='block-imagelinksblock']/div/div/div[1]/a/div/div/img")
 	private WebElementFacade assistanceMainLink;
 
-	@FindBy(xpath = "//*[@id='block-imagelinksblock']/div/div/div[2]/div/a/img")
+	@FindBy(xpath = "//*[@id='block-imagelinksblock']/div/div/div[2]/a/div/div/img")
 	private WebElementFacade applyOnlineMainLink;
 
-	@FindBy(xpath = "//*[@id='block-imagelinksblock']/div/div/div[3]/div/a/img")
+	@FindBy(xpath = "//*[@id='block-imagelinksblock']/div/div/div[3]/a/div/div/img")
 	private WebElementFacade checkStatusMainLink;
 
 	@FindBy(xpath = "//*[@id='block-questionnaireblock']")
@@ -454,6 +454,21 @@ public class DAHomepage extends PageObject {
 		addressLookUpButton.click();
 		pause(4000);
 	}
+	
+	/*************************************************************************
+	 * Types the declared disaster state and county into the Address Look-up
+	 * search field from the Address Look-Up page.
+	 * 
+	 *************************************************************************/
+	public void typeAddressLookUpPage() {
+		String state = getDeclaredDisasterState();
+		String county = getDeclaredDisasterCounty();
+		this.openAt("https://www.disasterassistance.gov/get-assistance/address-lookup");
+		addressLookUpTextField.click();
+		addressLookUpTextField.type(county + "," + state);
+		addressLookUpButton.click();
+		pause(4000);
+	}
 
 	/*************************************************************************
 	 * Types the declared disaster state and county into the Spanish Address
@@ -464,6 +479,21 @@ public class DAHomepage extends PageObject {
 		String state = getDeclaredDisasterState();
 		String county = getDeclaredDisasterCounty();
 		this.openAt("https://www.disasterassistance.gov/es");
+		addressLookUpTextField.click();
+		addressLookUpTextField.type(county + "," + state);
+		addressLookUpButton.click();
+		pause(4000);
+	}
+	
+	/*************************************************************************
+	 * Types the declared disaster state and county into the Address Look-up
+	 * search field from the Address Look-Up page.
+	 * 
+	 *************************************************************************/
+	public void typeAddressLookUpPageSpanish() {
+		String state = getDeclaredDisasterState();
+		String county = getDeclaredDisasterCounty();
+		this.openAt("https://www.disasterassistance.gov/es/obtener-asistencia/buscador-de-direcciones");
 		addressLookUpTextField.click();
 		addressLookUpTextField.type(county + "," + state);
 		addressLookUpButton.click();
@@ -501,7 +531,15 @@ public class DAHomepage extends PageObject {
 	public boolean dacPageIsDisplayed() {
 		return dacPage.isDisplayed();
 	}
-
+	
+	public String getUrl() {
+		return getDriver().getCurrentUrl();
+	}
+	
+	public boolean URLMobileFlag() {
+		return getUrl().contains("mobileBrowser=True"); 
+	}
+	
 	public void pause(long time) {
 		try {
 			Thread.sleep(time);

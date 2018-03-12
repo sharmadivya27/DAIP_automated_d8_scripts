@@ -1,14 +1,14 @@
 package gov.daip.d8.test;
 
-import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.Named;
 import org.jbehave.core.annotations.Then;
 import org.jbehave.core.annotations.When;
 
 import gov.daip.d8.test.exceptions.FeedException;
-import gov.daip.d8.test.exceptions.StateException;
 import gov.daip.d8.test.exceptions.LocalResourcesException;
+import gov.daip.d8.test.exceptions.StateException;
+import net.thucydides.core.annotations.Steps;
 
 /*************************************************************************
  * Starting point of the program; more or less. Scenarios from the .story files
@@ -212,6 +212,18 @@ public class DailyRegressionSteps {
 	public void thenShouldGetResultsForGivenDisaster() {
 		user.disasterResults();
 	}
+	
+	// Scenario: Address Look-Up - Declared disasters 
+	
+	@When("I type the declared disaster into the address look-up bar from the Address Look-Up page")
+	public void whenTypeDeclaredDisasterIntoAddressLookUpBarFromAddressPage() {
+		user.declaredDisastersPage();
+	}
+	
+	@When("I type the declared disaster into the address look-up bar from the Address Look-Up page in Spanish")
+	public void whenTypeDeclaredDisasterIntoAddressLookUpBarFromAddressPageSpanish() {
+		user.declaredDisastersPageSpanish();
+	}
 
 	// Scenario: Verify benefits results display according to use cases
 	@Given("I am on the Find Assistance page")
@@ -383,13 +395,39 @@ public class DailyRegressionSteps {
 	
 	// Scenario: Homepage - "Apply Online" DAC page includes mobile string 
 	
-	/*@When("I click on Apply Online")
+	@When("I click on Apply Online")
 	public void click_Apply_Online() {
-		
+		user.clickApplyOnlineMainLink();
 	}
 	
 	@Then("the DAC page with the mobile string should appear")
 	public void dac_page_with_mobile_string() {
-		
-	}*/
+		user.getURL();
+	}
+	
+	// Scenario: Homepage - "Check Status" DAC page includes mobile string
+	
+	@When("I click on Check Status")
+	public void click_Check_Status() {
+		user.clickCheckStatusMainLink();
+	}
+	
+	// Scenario: Community Leaders - Type keyword into search bar
+	
+	@When ("I type a keyword into the search bar")
+	public void type_search_bar() {
+		user.typeSearchBar();
+	}
+	
+	// Scenario: Sitemap - All links in Sitemap point to the right page 
+	
+	@Given("I am on the sitemap")
+	public void on_sitemap() {
+		user.open_page("/sitemap");
+	}
+	
+	@When("I click on a <menuLinks> within the sitemap")
+	public void clickOnSitemapLink(@Named("menuLinks") String menuLinks) {
+		user.clickSiteMap(menuLinks);
+	}
 }

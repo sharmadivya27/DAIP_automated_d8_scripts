@@ -10,4 +10,4 @@ public class DrupalPage extends PageObject {
 	
 	// *************************************************************************************
 	// Functions
-}
+}  

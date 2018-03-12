@@ -9,4 +9,4 @@ private static final long serialVersionUID = 5119297093393050537L;
 	public EmploymentException(String message) {
 		super(message);
 	}
-}
+} 
