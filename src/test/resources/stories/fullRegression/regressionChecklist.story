@@ -229,7 +229,7 @@ When I click on Apply Online
 Then the DAC page with the mobile string should appear    
 
 Scenario: Homepage - "Check Status" DAC page includes mobile flag
-Meta: @skip
+Meta: @skip 
 @category daily 
 
 Given I am on the Disaster Assistance homepage 
@@ -304,3 +304,11 @@ Examples:
 |privacy policy|
 |accessibility|
 |download plug-ins|
+
+Scenario: Verify pre/early feeds within DisasterAssistance.gov
+Meta: @skip
+@category daily
+
+Given I am on the declared disasters pre/early DAC page 
+When I type the declared disaster into the address look-up bar 
+Then I should be able to click on the apply online button

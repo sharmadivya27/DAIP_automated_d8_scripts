@@ -25,7 +25,7 @@ import gov.daip.d8.test.exceptions.StateException;
 
 public class User {
 
-	DAPage dapage; 
+	DAPage dapage;
 	DAHomepage daHomepage;
 	DALandingPage daLanding;
 	DAQuestionnaire daQues;
@@ -95,7 +95,8 @@ public class User {
 			daHomepage.clickImmediateNeeds();
 		} else if ((menuLinks.equals("moving forward")) || (menuLinks.equals("próximo paso"))) {
 			daHomepage.clickMovingForward();
-		} else if ((menuLinks.equals("disabilities or access and functional needs")) || (menuLinks.equals("discapacidades o necesidades funcionales y de acceso"))) {
+		} else if ((menuLinks.equals("disabilities or access and functional needs"))
+				|| (menuLinks.equals("discapacidades o necesidades funcionales y de acceso"))) {
 			daHomepage.clickDisabilities();
 		} else if ((menuLinks.equals("older americans")) || (menuLinks.equals("adultos mayores estadounidenses"))) {
 			daHomepage.clickOlderAmericans();
@@ -298,13 +299,13 @@ public class User {
 
 	@Step
 	public void onCommunityLeadersPage() {
-		//FIXME back to staging
+		// FIXME back to staging
 		drupalPage.openAt("https://www.disasterassistance.gov/get-assistance/community-leaders/?mobile=unL9HuS");
 	}
 
 	@Step
 	public void onSpanishCommunityLeadersPage() {
-		//FIXME back to staging
+		// FIXME back to staging
 		drupalPage.openAt(
 				"https://www.disasterassistance.gov/es/obtener-asistencia/líderes-comunitarios/?mobile=unL9HuS");
 	}
@@ -341,7 +342,7 @@ public class User {
 	public void declaredDisasters() {
 		daHomepage.typeAddressLookUp();
 	}
-	
+
 	@Step
 	public void declaredDisastersPage() {
 		daHomepage.typeAddressLookUpPage();
@@ -351,7 +352,7 @@ public class User {
 	public void declaredSpanishDisasters() {
 		daHomepage.typeSpanishAddressLookUp();
 	}
-	
+
 	@Step
 	public void declaredDisastersPageSpanish() {
 		daHomepage.typeAddressLookUpPageSpanish();
@@ -385,14 +386,14 @@ public class User {
 		daQues.getFOAResultsPage();
 		Assert.assertEquals(i, daQues.getNumQuesResults());
 	}
-	
+
 	@Step
 	public void checkSpanishResults() {
 		int i = daQues.getResultsVal();
 		daQues.getSpanishFOAResultsPage();
 		Assert.assertEquals(i, daQues.getNumQuesResults());
 	}
-	
+
 	@Step
 	public void verifyFOAExpandedContentVisible() {
 		int i = daQues.getResultsVal();
@@ -423,7 +424,7 @@ public class User {
 	public void clicksApplyOnline() {
 		daQues.clickApplyOnline();
 	}
-	
+
 	@Step
 	public void clicksSpanishApplyOnline() {
 		daQues.clickSpanishApplyOnline();
@@ -509,128 +510,139 @@ public class User {
 	public void get37SpanishResults() {
 		Assert.assertEquals("Mostrando 1 - 10 de 37 resultados Ver 10 50 Todos", daLanding.getResults());
 	}
-	
-	@Step 
+
+	@Step
 	public void clickApplyOnlineMainLink() {
 		daHomepage.clickApplyOnlineMainLink();
 	}
-	
-	@Step 
+
+	@Step
 	public void clickCheckStatusMainLink() {
 		daHomepage.clickCheckStatusMainLink();
 	}
-	
+
 	@Step
 	public void getURL() {
 		daHomepage.getUrl();
 		Assert.assertTrue(daHomepage.URLMobileFlag());
 	}
-	
+
 	@Step
 	public void typeSearchBar() {
 		daLanding.typeIntoSearchBar();
 	}
-	
+
 	@Step
 	public void clickSiteMap(String menuLinks) {
-		if (menuLinks.equals("home")) {
+		if ((menuLinks.equals("home")) || (menuLinks.equals("inicio"))) {
 			sitemap.clickOnHome();
-		} else if (menuLinks.equals("address look-up")) {
+		} else if ((menuLinks.equals("address look-up")) || (menuLinks.equals("buscador de direcciónes"))) {
 			sitemap.clickAddresslookUp();
-		} else if (menuLinks.equals("find assistance")) {
+		} else if ((menuLinks.equals("find assistance")) || (menuLinks.equals("encontrar ayuda"))) {
 			sitemap.clickFindAssistance();
-		} else if (menuLinks.equals("apply online")) {
+		} else if ((menuLinks.equals("apply online")) || (menuLinks.equals("solicitar asistencia"))) {
 			sitemap.clickApplyOnline();
-		} else if (menuLinks.equals("check your status")) {
+		} else if ((menuLinks.equals("check your status")) || (menuLinks.equals("revisar estatus"))) {
 			sitemap.clickCheckStatusSitemap();
-		} else if (menuLinks.equals("forms of assistance")) {
+		} else if ((menuLinks.equals("forms of assistance")) || (menuLinks.equals("formas de asistencia"))) {
 			sitemap.clickFormsAssistance();
-		} else if (menuLinks.equals("community leaders")) {
+		} else if ((menuLinks.equals("community leaders")) || (menuLinks.equals("líderes comunitarios"))) {
 			sitemap.clickCommunityLeaders();
-		} else if (menuLinks.equals("other recovery help")) {
+		} else if ((menuLinks.equals("other recovery help")) || (menuLinks.equals("otra ayuda para recuperación"))) {
 			sitemap.clickOtherHelp();
-		} else if (menuLinks.equals("application checklist")) {
+		} else if ((menuLinks.equals("application checklist"))
+				|| (menuLinks.equals("lista de verificación para aplicarse"))) {
 			sitemap.clickApplicationChecklist();
-		} else if (menuLinks.equals("forms")) {
+		} else if ((menuLinks.equals("forms")) || (menuLinks.equals("formularios"))) {
 			sitemap.clickForms();
-		} else if (menuLinks.equals("news feeds")) {
+		} else if ((menuLinks.equals("news feeds")) || (menuLinks.equals("canales de noticias"))) {
 			sitemap.clickNewsFeeds();
-		} else if (menuLinks.equals("immediate needs")) {
+		} else if ((menuLinks.equals("immediate needs")) || (menuLinks.equals("necesidades inmediatas"))) {
 			sitemap.clickImmediateNeeds();
-		} else if (menuLinks.equals("evacuate or stay put")) {
+		} else if ((menuLinks.equals("evacuate or stay put")) || (menuLinks.equals("desaloje o permanezca alerta"))) {
 			sitemap.clickEvacuate();
-		} else if (menuLinks.equals("gathering up loved ones")) {
+		} else if ((menuLinks.equals("gathering up loved ones"))
+				|| (menuLinks.equals("reuniendo a los seres queridos"))) {
 			sitemap.clickLovedOnes();
-		} else if (menuLinks.equals("emergency food and water")) {
+		} else if ((menuLinks.equals("emergency food and water"))
+				|| (menuLinks.equals("comida y agua en una emergencia"))) {
 			sitemap.clickEmergencyFood();
-		} else if (menuLinks.equals("emergency shelter")) {
+		} else if ((menuLinks.equals("emergency shelter")) || (menuLinks.equals("refugios de emergencia"))) {
 			sitemap.clickEmergencyShelter();
-		} else if (menuLinks.equals("moving forward")) {
+		} else if ((menuLinks.equals("emergency medical")) || (menuLinks.equals("emergencia médica"))) {
+			sitemap.emergencyMedical();
+		} else if ((menuLinks.equals("moving forward")) || (menuLinks.equals("próximo paso"))) {
 			sitemap.movingForward();
-		} else if (menuLinks.equals("your home")) {
+		} else if ((menuLinks.equals("your home")) || (menuLinks.equals("su hogar"))) {
 			sitemap.yourHome();
-		} else if (menuLinks.equals("your business or farm")) {
+		} else if ((menuLinks.equals("your business or farm")) || (menuLinks.equals("su negocio o finca"))) {
 			sitemap.clickBusiness();
-		} else if (menuLinks.equals("your finances, job, and insurance")) {
+		} else if ((menuLinks.equals("your finances, job, and insurance"))
+				|| (menuLinks.equals("sus finanzas, trabajo y seguro"))) {
 			sitemap.clickFinance();
-		} else if (menuLinks.equals("your health")) {
+		} else if ((menuLinks.equals("your health")) || (menuLinks.equals("su salud"))) {
 			sitemap.clickHealth();
-		} else if (menuLinks.equals("your official documents")) {
+		} else if ((menuLinks.equals("your official documents")) || (menuLinks.equals("sus documentos oficiales"))) {
 			sitemap.clickOfficialDocs();
-		} else if (menuLinks.equals("disabilities or access and functional needs")) {
+		} else if ((menuLinks.equals("disabilities or access and functional needs"))
+				|| (menuLinks.equals("discapacidades o necesidades funcionales y de acceso"))) {
 			sitemap.clickDisabilities();
-		} else if (menuLinks.equals("older americans")) {
+		} else if ((menuLinks.equals("older americans")) || (menuLinks.equals("adultos mayores estadounidenses"))) {
 			sitemap.clickOlderAmericans();
-		} else if (menuLinks.equals("children and families")) {
+		} else if ((menuLinks.equals("children and families")) || (menuLinks.equals("niños y familias"))) {
 			sitemap.clickChildrenFamilies();
-		} else if (menuLinks.equals("disaster types")) {
+		} else if ((menuLinks.equals("disaster types")) || (menuLinks.equals("los recursos del desastre"))) {
 			sitemap.clickDisasterTypes();
-		} else if (menuLinks.equals("biological threat")) {
+		} else if ((menuLinks.equals("biological threat")) || (menuLinks.equals("amenaza biológica"))) {
 			sitemap.clickBiological();
-		} else if (menuLinks.equals("chemical threat")) {
+		} else if ((menuLinks.equals("chemical threat")) || (menuLinks.equals("amenaza química"))) {
 			sitemap.clickChemical();
-		} else if (menuLinks.equals("drought")) {
+		} else if ((menuLinks.equals("drought")) || (menuLinks.equals("sequía"))) {
 			sitemap.clickDrought();
-		} else if (menuLinks.equals("earthquake")) {
+		} else if ((menuLinks.equals("earthquake")) || (menuLinks.equals("terremoto"))) {
 			sitemap.clickEarthquake();
-		} else if (menuLinks.equals("fire")) {
+		} else if ((menuLinks.equals("fire")) || (menuLinks.equals("incendios"))) {
 			sitemap.clickFire();
-		} else if (menuLinks.equals("flood")) {
+		} else if ((menuLinks.equals("flood")) || (menuLinks.equals("inundaciones"))) {
 			sitemap.clickFlood();
-		} else if (menuLinks.equals("heat")) {
+		} else if ((menuLinks.equals("heat")) || (menuLinks.equals("calor extremo"))) {
 			sitemap.clickHeat();
-		} else if (menuLinks.equals("hurricane")) {
+		} else if ((menuLinks.equals("hurricane")) || (menuLinks.equals("huracanes"))) {
 			sitemap.clickHurricane();
-		} else if (menuLinks.equals("landslide")) {
+		} else if ((menuLinks.equals("landslide")) || (menuLinks.equals("derrumbamiento de tierra"))) {
 			sitemap.clickLandslide();
-		} else if (menuLinks.equals("radiation and nuclear")) {
+		} else if ((menuLinks.equals("radiation and nuclear")) || (menuLinks.equals("radiación y incidente nuclear"))) {
 			sitemap.clickRadiation();
-		} else if (menuLinks.equals("tornado")) {
+		} else if ((menuLinks.equals("tornado")) || (menuLinks.equals("tornados"))) {
 			sitemap.clickTornado();
-		} else if (menuLinks.equals("tsunami")) {
+		} else if ((menuLinks.equals("tsunami")) || (menuLinks.equals("tsunamis"))) {
 			sitemap.clickTsunami();
-		} else if (menuLinks.equals("volcano")) {
+		} else if ((menuLinks.equals("volcano")) || (menuLinks.equals("volcanes"))) {
 			sitemap.clickVolcano();
-		} else if (menuLinks.equals("wildfires")) {
+		} else if ((menuLinks.equals("wildfires")) || (menuLinks.equals("incendios forestales"))) {
 			sitemap.clickWildfires();
-		} else if (menuLinks.equals("winter storm")) {
+		} else if ((menuLinks.equals("winter storm")) || (menuLinks.equals("tormentas invernales"))) {
 			sitemap.clickWinterStorms();
-		} else if (menuLinks.equals("foreign disasters")) {
+		} else if ((menuLinks.equals("foreign disasters")) || (menuLinks.equals("desastres en el extranjero"))) {
 			sitemap.clickForeignDisasters();
-		} else if (menuLinks.equals("fact sheets")) {
+		} else if ((menuLinks.equals("fact sheets")) || (menuLinks.equals("hojas de datos"))) {
 			sitemap.clickFactSheets();
-		} else if (menuLinks.equals("partners")) {
+		} else if ((menuLinks.equals("partners")) || (menuLinks.equals("socios"))) {
 			sitemap.clickPartners();
-		} else if (menuLinks.equals("faqs")) {
+		} else if ((menuLinks.equals("faqs")) || (menuLinks.equals("preguntas Comunes"))) {
 			sitemap.clickFaqs();
-		} else if (menuLinks.equals("contact us")) {
+		} else if ((menuLinks.equals("contact us")) || (menuLinks.equals("contáctenos"))) {
 			sitemap.clickContactUs();
-		} else if (menuLinks.equals("privacy policy")) {
+		} else if ((menuLinks.equals("privacy policy")) || (menuLinks.equals("política de privacidad"))) {
 			sitemap.clickPrivacyPolicy();
-		} else if (menuLinks.equals("accessibility")) {
+		} else if ((menuLinks.equals("accessibility")) || (menuLinks.equals("accesibilidad"))) {
 			sitemap.clickAccessibility();
-		} else if (menuLinks.equals("download plug-ins")) {
+		} else if ((menuLinks.equals("download plug-ins")) || (menuLinks.equals("descargar plug-ins"))) {
 			sitemap.clickDownloadPlugIns();
 		}
+	}
+	
+	public void openPreEarlyDACPage() {
+		daHomepage.openAt("https://www.disasterassistance.gov/DAC/api/v1/disaster/earlyRgsnConfig");
 	}
 }

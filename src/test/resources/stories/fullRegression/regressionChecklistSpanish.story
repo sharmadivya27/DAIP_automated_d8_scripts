@@ -3,7 +3,7 @@ In order to assert that the basic functionality of https://www.disasterassistanc
 As a tester
 I want to run the daily regressions at least twice a day
 
-Meta:
+Meta: @skip
 
 Scenario: (Spanish) Homepage - Header - All the menu links on the "Get Assistance" tab
 Meta: 
@@ -219,3 +219,72 @@ Meta:
 Given I am on the Spanish Forms of Assistance page
 When I click on Federal Agency to check the next seven federal agencies 
 Then 37 spanish results should appear
+
+Scenario: (Spanish) Community Leaders - Type keyword into search bar
+Meta:
+@category daily
+
+Given I am on the spanish Community Leaders page on Disaster Assistance
+When I type a keyword into the search bar
+Then the results should include the search words for that item
+
+Scenario: (Spanish) Sitemap - All links in Sitemap point to the right page 
+Meta: @skip
+@category daily
+
+Given I am on the spanish sitemap
+When I click on a <menuLinks> within the sitemap
+Then the <menuLinks> page should open correctly 
+
+Examples:
+|menuLinks|
+|inicio|
+|buscador de direcciónes|
+|encontrar ayuda|
+|solicitar asistencia|
+|revisar estatus|
+|formas de asistencia|
+|líderes comunitarios|
+|otra ayuda para recuperación|
+|lista de verificación para aplicarse|
+|formularios|
+|canales de noticias|
+|necesidades inmediatas|
+|desaloje o permanezca alerta|
+|reuniendo a los seres queridos|
+|comida y agua en una emergencia|
+|refugios de emergencia|
+|emergencia médica|
+|próximo paso|
+|su hogar|
+|su negocio o finca|
+|sus finanzas, trabajo y seguro|
+|su salud|
+|sus documentos oficiales|
+|discapacidades o necesidades funcionales y de acceso|
+|adultos mayores estadounidenses|
+|niños y familias|
+|los recursos del desastre|
+|amenaza biológica|
+|amenaza química|
+|sequía|
+|terremoto|
+|incendios|
+|inundaciones|
+|calor extremo|
+|huracanes|
+|derrumbamiento de tierra|
+|radiación y incidente nuclear|
+|tornados|
+|tsunamis|
+|volcanes|
+|incendios forestales|
+|tormentas invernales|
+|desastres en el extranjero|
+|hojas de datos|
+|socios|
+|preguntas Comunes|
+|contáctenos|
+|política de privacidad|
+|accesibilidad|
+|descargar plug-ins|

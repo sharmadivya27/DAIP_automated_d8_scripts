@@ -12,10 +12,10 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 
 public class DALandingPage extends PageObject {
-	
+
 	// *************************************************************************
 	// FindBy / private variables section
-	
+
 	@FindBy(xpath = "//*[@id='block-twitterblock']")
 	private WebElementFacade twitterFeedBlock;
 
@@ -30,16 +30,16 @@ public class DALandingPage extends PageObject {
 
 	@FindBy(xpath = "//*[@id='block-drought']/h3")
 	private WebElementFacade drought;
-	
+
 	@FindBy(xpath = "//*[@id='block-communityleadersresultspage']/div[1]/div/div[1]/div[2]")
 	private WebElementFacade quickSearchResult;
-	
+
 	@FindBy(xpath = "//*[@id='block-communityleadersresultspage']/div[2]")
 	private WebElementFacade communityPreparedness;
 
 	@FindBy(xpath = "//*[@id='block-communityleadersresultspage']/div[3]")
 	private WebElementFacade disasterRecoveryResources;
-	
+
 	@FindBy(xpath = "//*[@id='block-communityleadersresultspage']/div[4]")
 	private WebElementFacade emergencyShelterHousing;
 
@@ -48,118 +48,118 @@ public class DALandingPage extends PageObject {
 
 	@FindBy(xpath = "//*[@id='block-communityleadersresultspage']/div[6]")
 	private WebElementFacade infrastructure;
-	
+
 	@FindBy(xpath = "//*[@id='edit-filter-by-1']")
 	private WebElementFacade categoryType;
-	
+
 	@FindBy(xpath = "//*[@id='edit-filter-by-2']")
 	private WebElementFacade federalAgency;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-list-214']")
 	private WebElementFacade careerAssistance;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-list-215']")
 	private WebElementFacade disabilityAssistance;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-list-216']")
 	private WebElementFacade disasterRelief;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-list-217']")
 	private WebElementFacade educationTraining;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-list-218']")
 	private WebElementFacade energyAssistance;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-list-219']")
 	private WebElementFacade foodNutrition;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-list-220']")
 	private WebElementFacade grants;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-list-221']")
 	private WebElementFacade housing;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-list-222']")
 	private WebElementFacade insurance;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-list-223']")
 	private WebElementFacade legalCounsel;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-list-224']")
 	private WebElementFacade livingAssistance;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-list-225']")
 	private WebElementFacade loanRepayment;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-list-226']")
 	private WebElementFacade mentalHealth;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-list-227']")
 	private WebElementFacade socialSecurity;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-list-228']")
 	private WebElementFacade veterans;
-	
+
 	@FindBy(xpath = "//*[@id='edit-agency-title-list-usda']")
 	private WebElementFacade USDA;
-	
+
 	@FindBy(xpath = "//*[@id='edit-agency-title-list-ed']")
 	private WebElementFacade ED;
-	
+
 	@FindBy(xpath = "//*[@id='edit-agency-title-list-hhs']")
 	private WebElementFacade HHS;
-	
+
 	@FindBy(xpath = "//*[@id='edit-agency-title-list-dhs']")
 	private WebElementFacade DHS;
-	
+
 	@FindBy(xpath = "//*[@id='edit-agency-title-list-hud']")
 	private WebElementFacade HUD;
-	
-	@FindBy(xpath = "//*[@id='edit-agency-title-list-doj']") 
+
+	@FindBy(xpath = "//*[@id='edit-agency-title-list-doj']")
 	private WebElementFacade DOJ;
-	
+
 	@FindBy(xpath = "//*[@id='edit-agency-title-list-dol']")
 	private WebElementFacade DOL;
-	
+
 	@FindBy(xpath = "//*[@id='edit-agency-title-list-va']")
 	private WebElementFacade VA;
-	
+
 	@FindBy(xpath = "//*[@id='edit-agency-title-list-doi']")
 	private WebElementFacade DOI;
-	
+
 	@FindBy(xpath = "//*[@id='edit-agency-title-list-treasury']")
 	private WebElementFacade treasury;
-	
+
 	@FindBy(xpath = "//*[@id='edit-agency-title-list-opm']")
 	private WebElementFacade OPM;
-	
+
 	@FindBy(xpath = "//*[@id='edit-agency-title-list-usps']")
 	private WebElementFacade USPS;
-	
+
 	@FindBy(xpath = "//*[@id='edit-agency-title-list-sba']")
 	private WebElementFacade SBA;
-	
+
 	@FindBy(xpath = "//*[@id='edit-agency-title-list-ssa']")
 	private WebElementFacade SSA;
-	
+
 	@FindBy(xpath = "//*[@class='desktop-header']")
 	private WebElementFacade results;
-	
+
 	@FindBy(xpath = "//*[@id='edit-category-select']")
 	private WebElementFacade searchCategoryButton;
-	
+
 	@FindBy(xpath = "//*[@id='edit-agency-select']")
 	private WebElementFacade searchAgencyButton;
-	
+
 	@FindBy(xpath = "//*[@id='edit-elasticsearch-query']")
 	private WebElementFacade searchBar;
-	
+
 	@FindBy(xpath = "//*[@id='edit-submit-desktop']")
 	private WebElementFacade communityLeadersSearch;
-	
+
 	// *************************************************************************
 	// Functions
-	
+
 	/*************************************************************************
 	 * Checks that the twitter feed is visible with the most recent tweets.
 	 * 
@@ -184,7 +184,7 @@ public class DALandingPage extends PageObject {
 			}
 		}
 	}
-	
+
 	/*************************************************************************
 	 * Verifies that the FEMA twitter feed is visible on the homepage.
 	 * 
@@ -192,32 +192,26 @@ public class DALandingPage extends PageObject {
 	public void checkTwitterFeedBlock() throws FeedException {
 		if (!twitterFeedBlock.isVisible()) {
 			throw new FeedException("Twitter feed not visible");
-		}  
+		}
 	}
-	
+
 	/*************************************************************************
 	 * Checks if the Community Leaders search box contains any of these
 	 * keywords.
 	 * 
 	 *************************************************************************/
 	public boolean communityResults() {
-		return quickSearchResult.containsText("Community") || quickSearchResult.containsText("community")
-				|| quickSearchResult.containsText("Preparedness") || quickSearchResult.containsText("recovery")
-				|| quickSearchResult.containsText("leaders") || quickSearchResult.containsText("housing")
-				|| quickSearchResult.containsText("Shelter") || quickSearchResult.containsText("Volunteers")
-				|| quickSearchResult.containsText("Utilities") || quickSearchResult.containsText("Public Assistance")
-				|| quickSearchResult.containsText("checklist") || quickSearchResult.containsText("Infrastructure")
-				|| quickSearchResult.containsText("Governments") || quickSearchResult.containsText("Guide")
-				|| quickSearchResult.containsText("Checklists") || quickSearchResult.containsText("infraestructura")
+		return quickSearchResult.containsText("Community") || quickSearchResult.containsText("Recovery")
+				|| quickSearchResult.containsText("housing") || quickSearchResult.containsText("Volunteers")
+				|| quickSearchResult.containsText("Utilities") || quickSearchResult.containsText("infraestructura")
 				|| quickSearchResult.containsText("comunidad") || quickSearchResult.containsText("gobierno")
-				|| quickSearchResult.containsText("refugio") || quickSearchResult.containsText("Vivienda")
-				|| quickSearchResult.containsText("desastres") || quickSearchResult.containsText("Lista");
+				|| quickSearchResult.containsText("Vivienda"); 
 	}
 
 	public String stormTitle() {
 		return severeStorms.getText();
 	}
- 
+
 	public String wildfireTitle() {
 		return wildfire.getText();
 	}
@@ -229,7 +223,7 @@ public class DALandingPage extends PageObject {
 	public String droughtTitle() {
 		return drought.getText();
 	}
-	
+
 	public void clickCommunityPreparedness() {
 		communityPreparedness.click();
 	}
@@ -249,15 +243,15 @@ public class DALandingPage extends PageObject {
 	public void clickInfrastructure() {
 		infrastructure.click();
 	}
-	
+
 	public void clickCategoryType() {
 		categoryType.click();
 	}
-	
+
 	public void clickFederalAgency() {
 		federalAgency.click();
 	}
-	
+
 	public void clickFirstCategoryTypes() {
 		careerAssistance.click();
 		disabilityAssistance.click();
@@ -268,7 +262,7 @@ public class DALandingPage extends PageObject {
 		grants.click();
 		searchCategoryButton.click();
 	}
-	
+
 	public void clickNextCategoryTypes() {
 		housing.click();
 		insurance.click();
@@ -280,7 +274,7 @@ public class DALandingPage extends PageObject {
 		veterans.click();
 		searchCategoryButton.click();
 	}
-	
+
 	public void clickFirstSevenFederalAgencies() {
 		USDA.click();
 		ED.click();
@@ -293,7 +287,7 @@ public class DALandingPage extends PageObject {
 		this.evaluateJavascript("window.scrollBy(0,500)", "");
 		searchAgencyButton.click();
 	}
-	
+
 	public void clickNextFederalAgencies() {
 		VA.click();
 		SBA.click();
@@ -307,11 +301,11 @@ public class DALandingPage extends PageObject {
 		this.evaluateJavascript("window.scrollBy(0,500)", "");
 		searchAgencyButton.click();
 	}
-	
+
 	public String getResults() {
-		return results.getText(); 
+		return results.getText();
 	}
-	
+
 	public void typeIntoSearchBar() {
 		searchBar.click();
 		searchBar.type("disaster");

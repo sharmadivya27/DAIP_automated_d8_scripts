@@ -170,6 +170,7 @@ public class DAHomepage extends PageObject {
 	}
 
 	public void clickAddressLookUp() {
+		pause(2000);
 		mouseOverGetAssistanceTab();
 		addressLookUpMenu.click();
 	}
@@ -400,6 +401,7 @@ public class DAHomepage extends PageObject {
 					.replaceAll("Select", "").replaceAll("daip_disaster_map_select_desc", "")
 					.replaceAll("daip_disaster_map_select", "");
 		}
+		pause(2000);
 		return editState;
 	}
 
@@ -415,6 +417,7 @@ public class DAHomepage extends PageObject {
 					.replaceAll("Select", "").replaceAll("daip_disaster_map_select_desc", "")
 					.replaceAll("daip_disaster_map_select", "");
 		}
+		pause(2000);
 		return state; 
 	}
 
@@ -538,6 +541,32 @@ public class DAHomepage extends PageObject {
 	
 	public boolean URLMobileFlag() {
 		return getUrl().contains("mobileBrowser=True"); 
+	}
+	
+	/*************************************************************************
+	 * Types the pre/early declared disaster state and county into the Address 
+	 * Look-up search field.
+	 * 
+	 *************************************************************************/
+	public void typePreAddressLookUp() {
+		String state = getDeclaredDisasterState();
+		this.openAt("https://www.disasterassistance.gov");
+		addressLookUpTextField.click();
+		addressLookUpTextField.type(state);
+		addressLookUpButton.click();
+		pause(4000);
+	}
+	
+	/*************************************************************************
+	 * Finds the pre/early declared disaster state on the DAC feed.
+	 * 
+	 *************************************************************************/
+	public String getPreDeclaredDisasterState() {
+		String declaredStates = declaredDisasterDAC.getText();
+		String[] states = declaredStates.split(",");
+		state = states[1].replaceAll("\"", "").replaceAll("]", "");
+		this.openAt("https://www.disasterassistance.gov/drupal_api/declaredCounties/" + state);
+		return state;
 	}
 	
 	public void pause(long time) {

@@ -53,13 +53,13 @@
     <script class="code" type="text/javascript">$(document).ready(function () {
         var test_results_plot = $.jqplot('test_results_pie_chart', [
             [
-                ['Passing', 0.44],
+                ['Passing', 0.445545],
                 
                 ['Pending', 0],
                 
-                ['Ignored/Skipped', 0.5],
+                ['Ignored/Skipped', 0.524752],
                 
-                ['Failing', 0.06],
+                ['Failing', 0.029703],
                 
                 ['Errors',  0],
                 ['Compromised',  0]
@@ -92,24 +92,24 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '44 / 100 tests passed' },
-                {label: '0 / 100 tests pending'},
-                {label: '50 / 100 tests not executed'},
-                {label: '6 / 100 tests failed'},
-                {label: '0 / 100 errors'},
-                {label: '0 / 100 compromised tests'}
+                {label: '45 / 101 tests passed' },
+                {label: '0 / 101 tests pending'},
+                {label: '53 / 101 tests not executed'},
+                {label: '3 / 101 tests failed'},
+                {label: '0 / 101 errors'},
+                {label: '0 / 101 compromised tests'}
             ]
         });
 
         var weighted_test_results_plot = $.jqplot('weighted_test_results_pie_chart', [
             [
-                ['Passing', 0.780029],
+                ['Passing', 0.952243],
                 
                 ['Pending', 0],
                 
-                ['Ignored', 0.15919],
+                ['Ignored', 0.021708],
                 
-                ['Failing', 0.060781],
+                ['Failing', 0.026049],
                 
                 ['Errors', 0],
                 ['Compromised', 0],
@@ -143,11 +143,11 @@
                 marginTop: '15px'
             },
             series: [
-                {label: '44 / 100 tests passed (0.780029% of all test steps)' },
-                {label: '0 / 100 tests pending'},
-                {label: '50 / 100 tests not executed'},
-                {label: '6 / 100 tests failed (0.060781% of all test steps)'},
-                {label: '0 / 100 errors (0% of all test steps)'}
+                {label: '45 / 101 tests passed (0.952243% of all test steps)' },
+                {label: '0 / 101 tests pending'},
+                {label: '53 / 101 tests not executed'},
+                {label: '3 / 101 tests failed (0.026049% of all test steps)'},
+                {label: '0 / 101 errors (0% of all test steps)'}
             ]
         });
 
@@ -219,7 +219,7 @@
             <a href="2a4631d87648e59c428d4cf0e9247f9d286e4679f436ca2ce872e931eb4dfd58.html"><i class="fa fa-comments-o"></i> Stories</a>
         </li>
     </ul>
-    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 09-03-2018 13:21</span>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 26-03-2018 11:49</span>
     <br style="clear:left"/>
 </div>
 <div class="clr"></div>
@@ -233,11 +233,16 @@
     <tr>
         <td width="375px" valign="top">
             <div class="test-count-summary">
-                <span class="test-count-title">24
-                    test scenarios (100 tests in all, including 83
+                <span class="test-count-title">25
+                    test scenarios (101 tests in all, including 83
                     rows of test data)</span>
                 <div>
 
+                    <span class="test-count"> |
+                        20
+                            <a href="5fc804aec591b95c791f30e1cff05feaaf51e02797363402cb583c370b6ac1cb.html">passed</a>
+                        
+                    </span>
                     <span class="test-count"> |
                         1
                             <a href="1371ddc2ecce73c4c70ff723cefe6b36242dae384bcfcdf95bf859153d9b4f0e.html">unsuccessful</a>
@@ -256,7 +261,7 @@ errors
                 
 
                 <span class="test-count"> |
-                    23
+                    4
                         <a href="c3183b9178b80b7901ec2089bb11eadb91db70d61adf991e5bbc6a48403ce88a.html">skipped</a>
                     
                 </span>
@@ -307,11 +312,11 @@ errors
         <body>
         <tr>
             <td class="summary-leading-column">Automated</td>
-            <td>100</td>
-            <td>44 (44%)</td>
-            <td>6 (6%)</td>
+            <td>101</td>
+            <td>45 (45%)</td>
+            <td>3 (3%)</td>
             <td>0 (0%)</td>
-            <td>50 (50%)</td>
+            <td>53 (52%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Manual</td>
@@ -323,15 +328,15 @@ errors
         </tr>
         <tr>
             <td class="summary-leading-column">Total</td>
-            <td>100</td>
-            <td>44 (44%)</td>
-            <td>6 (6%)</td>
+            <td>101</td>
+            <td>45 (45%)</td>
+            <td>3 (3%)</td>
             <td>0 (0%)</td>
-            <td>50 (50%)</td>
+            <td>53 (52%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Total Duration</td>
-                <td colspan="5">13 minutes 46 seconds</td>
+                <td colspan="5">10 minutes 30 seconds</td>
         </tr>
         </body>
     </table>
@@ -362,27 +367,27 @@ errors
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="44 out of 100 tests (0 steps) passing">44%</span></td>
+                                <td class="related-tag-percentage"><span title="45 out of 101 tests (308 steps) passing">44.6%</span></td>
                                 <td width="150px">
                                     <a href="189c0b0e1c689dfa25d6dd43aa51f7213ad972ead7c542b6611e00b8fc82a5d6.html">
                                         <div class="pendingbar"
-                                             title="0 out of 100 tests (0 steps) pending"
+                                             title="0 out of 101 tests (0 steps) pending"
                                              style="width: 150px;">
                                             <div class="ignoredbar"
                                                  style="width: 150px;"
-                                                 title="50 out of 100 tests (341 steps) skipped or ignored">
+                                                 title="53 out of 101 tests (365 steps) skipped or ignored">
                                                 <div class="compromisedbar"
-                                                     style="width: 75px;"
-                                                     title="0 out of 100 tests (0 steps) compromised">
+                                                     style="width: 71px;"
+                                                     title="0 out of 101 tests (0 steps) compromised">
                                                     <div class="errorbar"
-                                                         style="width: 75px;"
-                                                         title="0 out of 100 tests (0 steps) broken">
+                                                         style="width: 71px;"
+                                                         title="0 out of 101 tests (0 steps) broken">
                                                         <div class="failingbar"
-                                                             style="width: 75px;"
-                                                             title="6 out of 100 tests (350 steps) failing">
+                                                             style="width: 71px;"
+                                                             title="3 out of 101 tests (18 steps) failing">
                                                             <div class="passingbar"
-                                                                 style="width: 66px;"
-                                                                 title="44 out of 100 tests (0 steps) passing">
+                                                                 style="width: 67px;"
+                                                                 title="45 out of 101 tests (308 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -391,7 +396,7 @@ errors
                                         </div>
                                     </a>
                                 </td>
-                                <td class="related-tag-count"><span class="result-test-count" title="100 tests">100</span></td>
+                                <td class="related-tag-count"><span class="result-test-count" title="101 tests">101</span></td>
                             </tr>
                         </table>
                     </td>
@@ -438,11 +443,11 @@ errors
         <body>
         <tr>
             <td class="summary-leading-column">Automated</td>
-            <td>100</td>
-            <td>44 (44%)</td>
-            <td>6 (6%)</td>
+            <td>101</td>
+            <td>45 (45%)</td>
+            <td>3 (3%)</td>
             <td>0 (0%)</td>
-            <td>50 (50%)</td>
+            <td>53 (52%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Manual</td>
@@ -454,15 +459,15 @@ errors
         </tr>
         <tr>
             <td class="summary-leading-column">Total</td>
-            <td>100</td>
-            <td>44 (44%)</td>
-            <td>6 (6%)</td>
+            <td>101</td>
+            <td>45 (45%)</td>
+            <td>3 (3%)</td>
             <td>0 (0%)</td>
-            <td>50 (50%)</td>
+            <td>53 (52%)</td>
         </tr>
         <tr>
             <td class="summary-leading-column">Total Duration</td>
-                <td colspan="5">13 minutes 46 seconds</td>
+                <td colspan="5">10 minutes 30 seconds</td>
         </tr>
         </body>
     </table>
@@ -493,27 +498,27 @@ errors
 
                         <table>
                             <tr>
-                                <td class="related-tag-percentage"><span title="44 out of 100 tests (0 steps) passing">78%</span></td>
+                                <td class="related-tag-percentage"><span title="45 out of 101 tests (308 steps) passing">95.2%</span></td>
                                 <td width="150px">
                                     <a href="189c0b0e1c689dfa25d6dd43aa51f7213ad972ead7c542b6611e00b8fc82a5d6.html">
                                         <div class="pendingbar"
-                                             title="0 out of 100 tests (0 steps) pending"
+                                             title="0 out of 101 tests (0 steps) pending"
                                              style="width: 150px;">
                                             <div class="ignoredbar"
                                                  style="width: 150px;"
-                                                 title="50 out of 100 tests (341 steps) skipped or ignored">
+                                                 title="53 out of 101 tests (365 steps) skipped or ignored">
                                                 <div class="compromisedbar"
-                                                     style="width: 126px;"
-                                                     title="0 out of 100 tests (0 steps) compromised">
+                                                     style="width: 147px;"
+                                                     title="0 out of 101 tests (0 steps) compromised">
                                                     <div class="errorbar"
-                                                         style="width: 126px;"
-                                                         title="0 out of 100 tests (0 steps) broken">
+                                                         style="width: 147px;"
+                                                         title="0 out of 101 tests (0 steps) broken">
                                                         <div class="failingbar"
-                                                             style="width: 126px;"
-                                                             title="6 out of 100 tests (350 steps) failing">
+                                                             style="width: 147px;"
+                                                             title="3 out of 101 tests (18 steps) failing">
                                                             <div class="passingbar"
-                                                                 style="width: 117px;"
-                                                                 title="44 out of 100 tests (0 steps) passing">
+                                                                 style="width: 143px;"
+                                                                 title="45 out of 101 tests (308 steps) passing">
                                                             </div>
                                                         </div>
                                                     </div>
@@ -522,7 +527,7 @@ errors
                                         </div>
                                     </a>
                                 </td>
-                                <td class="related-tag-count"><span class="result-test-count" title="100 tests">100</span></td>
+                                <td class="related-tag-count"><span class="result-test-count" title="101 tests">101</span></td>
                             </tr>
                         </table>
                     </td>
@@ -558,11 +563,11 @@ errors
                         </thead>
                         <tbody>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="7a97281980274e1552b877e081d7916f5a8e0ec2f507963c1e9870a838214187.html" class="ellipsis"
@@ -573,19 +578,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">63</td>
+                                <td class="SUCCESS-text">63</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:00:03">13:00:03</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:28:30">11:28:30</td>
 
-                                <td class="SKIPPED-text">53.42</td>
+                                <td class="SUCCESS-text">74.7</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="38de936727abdba4964e960c8c8ce9ce6a8741cbb8fb1fc7355baff6a8348bce.html" class="ellipsis"
@@ -596,19 +601,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">63</td>
+                                <td class="SUCCESS-text">63</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:00:57">13:00:57</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:29:45">11:29:45</td>
 
-                                <td class="SKIPPED-text">52.77</td>
+                                <td class="SUCCESS-text">51.63</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="e253b673fb7100ccd415ff1f4aef581dc7a40311ddda6364b8e99136e2dbb45b.html" class="ellipsis"
@@ -619,19 +624,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">14</td>
+                                <td class="SUCCESS-text">14</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:01:50">13:01:50</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:30:37">11:30:37</td>
 
-                                <td class="SKIPPED-text">24.34</td>
+                                <td class="SUCCESS-text">14.49</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="5944444f5058fd2bf1a7fec80cafc57cd1051634fa3e50fb92a7b3f3f84fb1dd.html" class="ellipsis"
@@ -642,42 +647,42 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">35</td>
+                                <td class="SUCCESS-text">35</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:02:14">13:02:14</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:30:51">11:30:51</td>
 
-                                <td class="SKIPPED-text">36.56</td>
+                                <td class="SUCCESS-text">32.31</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-FAILURE">
+                                <td><span class="summary-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">FAILURE</span></td>
+                                <td class="FAILURE-text">
                                     <div class="ellipsis">
 
                                         <a href="d2811a0b586a1c7b7f30469dc6d8e09a5254ae5c6616c72d2fc57a00cbb59e22.html" class="ellipsis"
-                                           title="Homepage - Key Links - Main links on homepage to assert that the pages open correctly ">
+                                           title="Homepage - Key Links - Main links on homepage to assert that the pages open correctly Element should be enabled exception: ...">
                                             Homepage - Key Links - Main links on homepage to assert that the pages open correctly&nbsp;(3  examples)
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">21</td>
+                                <td class="FAILURE-text">18</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:02:51">13:02:51</td>
+                                <td class="FAILURE-text" data-sort="2018-03-26 11:31:23">11:31:23</td>
 
-                                <td class="SKIPPED-text">26.37</td>
+                                <td class="FAILURE-text">42.33</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="26ac54ecd91923364e2eab15f56c2698910af0c8c6c523a5193dabfc2373e9d6.html" class="ellipsis"
@@ -688,19 +693,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">6</td>
+                                <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:03:17">13:03:17</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:32:06">11:32:06</td>
 
-                                <td class="SKIPPED-text">10.15</td>
+                                <td class="SUCCESS-text">6.54</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="866c4142c25c1dd7fb30260060165b483447c5e53c3889e02b77ed3b71a1ccf9.html" class="ellipsis"
@@ -711,19 +716,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">8</td>
+                                <td class="SUCCESS-text">8</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:03:27">13:03:27</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:32:13">11:32:13</td>
 
-                                <td class="SKIPPED-text">10.13</td>
+                                <td class="SUCCESS-text">22.15</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="f21019f352539866f02dc1f94626ef864189d52e2539f8b603b1772ff57e5ec0.html" class="ellipsis"
@@ -734,19 +739,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">6</td>
+                                <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:03:37">13:03:37</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:32:35">11:32:35</td>
 
-                                <td class="SKIPPED-text">14.12</td>
+                                <td class="SUCCESS-text">10.47</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="62f10a7ae3261f5a455c268dc319cc5e8ea060ac69345482a24133a26e75d32b.html" class="ellipsis"
@@ -757,19 +762,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">4</td>
+                                <td class="SUCCESS-text">4</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:03:51">13:03:51</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:32:45">11:32:45</td>
 
-                                <td class="SKIPPED-text">10.12</td>
+                                <td class="SUCCESS-text">4.06</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="80d55cb57c731780080b2fb58c8bb91d9004dc1a432c0e93ed1ec33559c308bd.html" class="ellipsis"
@@ -780,19 +785,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">35</td>
+                                <td class="SUCCESS-text">35</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:04:02">13:04:02</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:32:49">11:32:49</td>
 
-                                <td class="SKIPPED-text">36.53</td>
+                                <td class="SUCCESS-text">33.11</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="31b104b6e79d4a598c9823eee4af1786d2ce2c3007432b31a838d05753b28126.html" class="ellipsis"
@@ -803,19 +808,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">6</td>
+                                <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:04:38">13:04:38</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:33:23">11:33:23</td>
 
-                                <td class="SKIPPED-text">20.25</td>
+                                <td class="SUCCESS-text">14.98</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="06d90e259ca47506a1c43a67b5aa6af9d8c94164fedfcca2bf07e2b57715c8f4.html" class="ellipsis"
@@ -826,19 +831,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">6</td>
+                                <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:04:58">13:04:58</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:33:38">11:33:38</td>
 
-                                <td class="SKIPPED-text">20.27</td>
+                                <td class="SUCCESS-text">12.3</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="9cbc9d8eebc1e3e532592937491ff026754cd8e00aab04748dfed952107abdee.html" class="ellipsis"
@@ -849,19 +854,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">6</td>
+                                <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:05:19">13:05:19</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:33:50">11:33:50</td>
 
-                                <td class="SKIPPED-text">13.15</td>
+                                <td class="SUCCESS-text">16.65</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="5d0e119e1a9e113d2275be0f71b3e3c6804a244bea999ac6ca1135449c747c0e.html" class="ellipsis"
@@ -872,19 +877,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">6</td>
+                                <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:05:32">13:05:32</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:34:07">11:34:07</td>
 
-                                <td class="SKIPPED-text">28.26</td>
+                                <td class="SUCCESS-text">25.02</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="a17dc0f43ca35d84de0a15886ae9ce07b32b9e93e30d26ee885786a1df44c613.html" class="ellipsis"
@@ -895,19 +900,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">14</td>
+                                <td class="SUCCESS-text">14</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:06:00">13:06:00</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:34:32">11:34:32</td>
 
-                                <td class="SKIPPED-text">50.5</td>
+                                <td class="SUCCESS-text">34.81</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="13e7b4006472f3adedda20edbd6bc03465fafc7b171616537111804f1e63c15d.html" class="ellipsis"
@@ -918,19 +923,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">6</td>
+                                <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:06:51">13:06:51</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:35:07">11:35:07</td>
 
-                                <td class="SKIPPED-text">10.16</td>
+                                <td class="SUCCESS-text">5.42</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="3c3b14e2de342800ec144e5c4760a31a1bb41fe6d70d0c861a0b79fb838c8678.html" class="ellipsis"
@@ -941,19 +946,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">6</td>
+                                <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:07:01">13:07:01</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:35:12">11:35:12</td>
 
-                                <td class="SKIPPED-text">20.23</td>
+                                <td class="SUCCESS-text">8.16</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="c9c14038f888b201e58a5e6ed8ff4b2b142540947574e4bf8a1a2521d3b1c36f.html" class="ellipsis"
@@ -964,19 +969,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">6</td>
+                                <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:07:21">13:07:21</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:35:20">11:35:20</td>
 
-                                <td class="SKIPPED-text">20.24</td>
+                                <td class="SUCCESS-text">9.56</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="869f9808e01b0919021322359a78a5f98f714c27399e3db772352d992958dd59.html" class="ellipsis"
@@ -987,19 +992,19 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">6</td>
+                                <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:07:41">13:07:41</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:35:30">11:35:30</td>
 
-                                <td class="SKIPPED-text">20.28</td>
+                                <td class="SUCCESS-text">8.35</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="741ff53f964d7c299114e9ec06e89a914422be764d19b8ba058e33979eccc860.html" class="ellipsis"
@@ -1010,12 +1015,12 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">6</td>
+                                <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:08:01">13:08:01</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:35:38">11:35:38</td>
 
-                                <td class="SKIPPED-text">20.28</td>
+                                <td class="SUCCESS-text">7.12</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -1036,9 +1041,9 @@ errors
                                 <td class="SKIPPED-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:08:22">13:08:22</td>
+                                <td class="SKIPPED-text" data-sort="2018-03-26 11:35:46">11:35:46</td>
 
-                                <td class="SKIPPED-text">10.11</td>
+                                <td class="SKIPPED-text">10.16</td>
                             </tr>
 
                             <tr class="test-SKIPPED">
@@ -1059,16 +1064,16 @@ errors
                                 <td class="SKIPPED-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:08:32">13:08:32</td>
+                                <td class="SKIPPED-text" data-sort="2018-03-26 11:35:56">11:35:56</td>
 
-                                <td class="SKIPPED-text">10.11</td>
+                                <td class="SKIPPED-text">10.12</td>
                             </tr>
 
-                            <tr class="test-SKIPPED">
-                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                            <tr class="test-SUCCESS">
+                                <td><span class="summary-icon"><i class='fa fa-check-square-o success-icon ' title='SUCCESS'></i></span>
                                     
-                                    <span style="display:none">SKIPPED</span></td>
-                                <td class="SKIPPED-text">
+                                    <span style="display:none">SUCCESS</span></td>
+                                <td class="SUCCESS-text">
                                     <div class="ellipsis">
 
                                         <a href="00e5d0131c738631578be9bbf07c6e0bf3db09ec0fbc9356a14e793e7ef4e743.html" class="ellipsis"
@@ -1079,35 +1084,58 @@ errors
                                     </div>
                                 </td>
 
-                                <td class="SKIPPED-text">6</td>
+                                <td class="SUCCESS-text">6</td>
 
 
-                                <td class="SKIPPED-text" data-sort="2018-03-09 13:08:42">13:08:42</td>
+                                <td class="SUCCESS-text" data-sort="2018-03-26 11:36:06">11:36:06</td>
 
-                                <td class="SKIPPED-text">20.29</td>
+                                <td class="SUCCESS-text">7.76</td>
                             </tr>
 
-                            <tr class="test-FAILURE">
-                                <td><span class="summary-icon"><i class='fa fa-times-circle failure-icon ' title='FAILURE'></i></span>
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
                                     
-                                    <span style="display:none">FAILURE</span></td>
-                                <td class="FAILURE-text">
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
                                     <div class="ellipsis">
 
                                         <a href="f18a1b513f0d9012ea49ca3527dd1e51d9ffd5d468b9d21d5e52adb6540fad85.html" class="ellipsis"
-                                           title="Sitemap - All links in Sitemap point to the right page Comparison failure: expected:([immedi...">
+                                           title="Sitemap - All links in Sitemap point to the right page ">
                                             Sitemap - All links in Sitemap point to the right page&nbsp;(50  examples)
                                                 <span class="related-issue-title"></span>
                                         </a>
                                     </div>
                                 </td>
 
-                                <td class="FAILURE-text">350</td>
+                                <td class="SKIPPED-text">350</td>
 
 
-                                <td class="FAILURE-text" data-sort="2018-03-09 13:09:02">13:09:02</td>
+                                <td class="SKIPPED-text" data-sort="2018-03-26 11:36:14">11:36:14</td>
 
-                                <td class="FAILURE-text">288.02</td>
+                                <td class="SKIPPED-text">168.61</td>
+                            </tr>
+
+                            <tr class="test-SKIPPED">
+                                <td><span class="summary-icon"><i class='fa fa-fast-forward skipped-icon ' title='SKIPPED'></i></span>
+                                    
+                                    <span style="display:none">SKIPPED</span></td>
+                                <td class="SKIPPED-text">
+                                    <div class="ellipsis">
+
+                                        <a href="8f1e04490bd2bce10c4901bae2b5afcc09e7c3a83beabced3f61b3343bbdf1af.html" class="ellipsis"
+                                           title="Verify external feeds within DisasterAssistance.gov ">
+                                            Verify external feeds within DisasterAssistance.gov
+                                                <span class="related-issue-title"></span>
+                                        </a>
+                                    </div>
+                                </td>
+
+                                <td class="SKIPPED-text">3</td>
+
+
+                                <td class="SKIPPED-text" data-sort="2018-03-26 11:39:02">11:39:02</td>
+
+                                <td class="SKIPPED-text">0.01</td>
                             </tr>
                         </tbody>
                     </table>
