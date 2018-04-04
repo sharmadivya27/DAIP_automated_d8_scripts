@@ -43,7 +43,7 @@ public class DAPage extends PageObject {
 
 	public DAPage(WebDriver driver) {
 		super(driver);
-		driver.manage().window().maximize(); 
+		//driver.manage().window().maximize(); 
 		this.setImplicitTimeout(10, TimeUnit.SECONDS); 
 	} 
 	

@@ -37,6 +37,7 @@ public class User {
 	@Step
 	public void home() {
 		daHomepage.getDriver().get("https://www.disasterassistance.gov");
+		//daHomepage.pause(10000);
 	}
 
 	@Step

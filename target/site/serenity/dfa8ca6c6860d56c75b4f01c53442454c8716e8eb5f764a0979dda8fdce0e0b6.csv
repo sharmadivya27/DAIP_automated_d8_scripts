@@ -1,4 +1,0 @@
-"Story","Title","Result","Date","Stability","Duration (s)"
-"Regression checklist spanish","(Spanish) Homepage - Key Links - Main links on homepage to assert that the Spanish pages open correctly","FAILURE","2018-03-26T11:41:37.744-04:00[America/New_York]","0.0","38.0"
-"Regression checklist spanish","(Spanish) Find Assistance - Spanish benefits results display according to use cases","FAILURE","2018-03-26T11:44:22.046-04:00[America/New_York]","0.0","17.58"
-"Regression checklist spanish","(Spanish) Find Assistance - All the functionality of the FOA questionnaire","FAILURE","2018-03-26T11:45:06.541-04:00[America/New_York]","0.0","29.66"

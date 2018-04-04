@@ -158,7 +158,10 @@ public class DAHomepage extends PageObject {
 	@FindBy(xpath = "//*[@id='desktop-disaster-table']/table/tbody/tr/td[2]/a")
 	private WebElementFacade disasterName;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][1]")
+	//@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][1]")
+	//private WebElementFacade accountability;
+	
+	@FindBy(xpath = "//*[@id=“block-footer”]/nav/ul/li[1]/a")
 	private WebElementFacade accountability;
 	
 	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][2]")
