@@ -33,7 +33,7 @@ public class User {
 	DASitemap sitemap;
 
 	/*********************************************/
-
+	
 	@Step
 	public void home() {
 		daHomepage.getDriver().get("https://www.disasterassistance.gov");
@@ -51,6 +51,46 @@ public class User {
 	}
 
 	/*********************************************/
+	
+	@Step
+	public void clickGetAdditionalLinks(String footerLinks) {
+		if ((footerLinks.equals("accountability")) || (footerLinks.equals("responsibilidad"))) {
+			daHomepage.clickAccountability();
+		} else if ((footerLinks.equals("femaGov")) || (footerLinks.equals("femaGovEs"))) {
+			daHomepage.clickFemaGov();
+		} else if ((footerLinks.equals("usaGov")) || (footerLinks.equals("gobierno usa"))) {
+			daHomepage.clickUsaGov();
+		} else if ((footerLinks.equals("inspectorGeneral"))) {
+			daHomepage.clickInspectorGeneral();
+		} else if ((footerLinks.equals("privacy")) || (footerLinks.equals("privacidad"))) {
+			daHomepage.clickPrivacy();
+		} else if ((footerLinks.equals("femaMobileApp")) || (footerLinks.equals("la aplicacion de fema"))) {
+			daHomepage.clickFemaMobileApp();
+		} else if ((footerLinks.equals("usaGovBus")) || (footerLinks.equals("usa.gov negocios"))) {
+			daHomepage.clickUsaGovBus();
+		} else if ((footerLinks.equals("noFearAct")) || (footerLinks.equals("acta no fear"))) {
+			daHomepage.clickNoFearAct();
+		} else if ((footerLinks.equals("foia"))) {
+			daHomepage.clickFoia();
+		} else if ((footerLinks.equals("readyGov")) || (footerLinks.equals("readyGovEs"))) {
+			daHomepage.clickReadyGov();
+		} else if ((footerLinks.equals("cfdaGov"))) {
+			daHomepage.clickCfdaGov();
+		} else if ((footerLinks.equals("budgetPerformance")) || (footerLinks.equals("presupuesto y rendimiento"))) {
+			daHomepage.clickBudgetPerformance();
+		} else if ((footerLinks.equals("accessibilityFooter")) || (footerLinks.equals("accesibilidad"))) {
+			daHomepage.clickAccessibilityFooter();
+		} else if ((footerLinks.equals("dhsGov")) || (footerLinks.equals("dhsGovEs"))) {
+			daHomepage.clickDhsGov();
+		} else if ((footerLinks.equals("whiteHouse"))) {
+			daHomepage.clickWhiteHouse();
+		} else if ((footerLinks.equals("siteMap")) || (footerLinks.equals("mapa del sitio"))) {
+			daHomepage.clickSiteMap();
+		} else if ((footerLinks.equals("plainWriting")) || (footerLinks.equals("escritura simple"))) {
+			daHomepage.clickPlanWriting();
+		}
+	}
+	
 
 	@Step
 	public void open_page(String directoryPath) {
@@ -211,8 +251,97 @@ public class User {
 		case "privacy policy":
 		case "política de privacidad":
 		case "accessibility":
-		case "accesibilidad":
 		case "download plug-ins":
+		case "accountability":
+			Assert.assertEquals("https://www.dhs.gov/previous-performance-and-accountability-reports", dapage.processWindows());
+			break;
+		case "responsibilidad":
+			Assert.assertEquals("https://www.dhs.gov/previous-performance-and-accountability-reports", dapage.processWindows());
+			break;
+		case "privacy":
+			Assert.assertEquals("Privacy Policy", daHomepage.pullPageSubTitle());
+			break;
+		case "privacidad":
+			Assert.assertEquals("Política de Privacidad", daHomepage.pullPageSubTitle());
+			break;
+		case "foia":
+			Assert.assertEquals("https://www.fema.gov/foia", dapage.processWindows());
+			break;
+		case "accessibilityFooter":
+			Assert.assertEquals("https://www.fema.gov/accessibility", dapage.processWindows());
+			break;
+		case "accesibilidad":
+			Assert.assertEquals("https://www.fema.gov/es/accesibilidad-0", dapage.processWindows());
+			break;
+		case "plainWriting":
+			Assert.assertEquals("https://www.dhs.gov/plain-writing-dhs", dapage.processWindows());
+			break;
+		case "escritura simple":
+			Assert.assertEquals("https://www.dhs.gov/plain-writing-dhs", dapage.processWindows());
+			break;
+		case "femaGov":
+			Assert.assertEquals("https://www.fema.gov/", dapage.processWindows());
+			break;
+		case "femaGovEs":
+			Assert.assertEquals("https://www.fema.gov/es", dapage.processWindows());
+			break;
+		case "femaMobileApp":
+			Assert.assertEquals("https://www.fema.gov/mobile-app", dapage.processWindows());
+			break;
+		case "la aplicacion de fema":
+			Assert.assertEquals("https://www.fema.gov/es/aplicacion", dapage.processWindows());
+			break;
+		case "readyGov":
+			Assert.assertEquals("https://www.ready.gov/", dapage.processWindows());
+			break;
+		case "readyGovEs":
+			Assert.assertEquals("https://www.ready.gov/es", dapage.processWindows());
+			break;
+		case "dhsGov":
+			Assert.assertEquals("https://www.dhs.gov/", dapage.processWindows());
+			break;
+		case "dhsGovEs":
+			Assert.assertEquals("https://www.dhs.gov/en-esp", dapage.processWindows());
+			break;
+		case "usaGov":
+			Assert.assertEquals("https://www.usa.gov/", dapage.processWindows());
+			break;
+		case "gobierno usa":
+			Assert.assertEquals("https://gobierno.usa.gov/", dapage.processWindows());
+			break;
+		case "usaGovBus":
+			Assert.assertEquals("https://www.usa.gov/business", dapage.processWindows());
+			break;
+		case "usa.gov negocios":
+			Assert.assertEquals("https://gobierno.usa.gov/negocios-y-organizaciones-ONG", dapage.processWindows());
+			break;
+		case "cfdaGov":
+			Assert.assertEquals("https://www.cfda.gov/", dapage.processWindows());
+			break;
+		case "whiteHouse":
+			Assert.assertEquals("https://www.whitehouse.gov/", dapage.processWindows());
+			break;
+		case "inspectorGeneral":
+			Assert.assertEquals("https://www.oig.dhs.gov/", dapage.processWindows());
+			break;
+		case "noFearAct":
+			Assert.assertEquals("https://www.fema.gov/no-fear-act", dapage.processWindows());
+			break;
+		case "acta no fear":
+			Assert.assertEquals("https://www.fema.gov/no-fear-act", dapage.processWindows());
+			break;
+		case "budgetPerformance":
+			Assert.assertEquals("https://www.dhs.gov/budget-performance", dapage.processWindows());
+			break;
+		case "presupuesto y redimiento":
+			Assert.assertEquals("https://www.dhs.gov/budget-performance", dapage.processWindows());
+			break;
+		case "siteMap":
+			Assert.assertEquals("Sitemap", daHomepage.pullPageTitle());
+			break;
+		case "mapa del sitio":
+			Assert.assertEquals("Mapa del Sitio", daHomepage.pullPageTitle());
+			break;
 		case "descargar plug-ins":
 			Assert.assertEquals(expectedPageName.toLowerCase(), daHomepage.pullPageSubTitle().toLowerCase());
 			break;
