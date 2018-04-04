@@ -289,7 +289,7 @@ Examples:
 |accesibilidad|
 |descargar plug-ins|
 
-Scenario: Spanish Homepage - Footer - All the links in "Additional Links"
+Scenario: (Spanish) Homepage - Footer - All the links in "Additional Links"
 Meta:
 @category daily
 
@@ -316,3 +316,11 @@ Examples:
 |whiteHouse|
 |mapa del sitio|
 |escritura simple|
+
+Scenario: (Spanish) Homepage - USA search feeds display results
+Meta: 
+@category daily
+
+Given I am on the Spanish Disaster Assistance homepage
+When I type into the USA search box
+Then I should be able to see results for that search

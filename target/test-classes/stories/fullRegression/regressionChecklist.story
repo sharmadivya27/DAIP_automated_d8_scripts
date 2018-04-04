@@ -332,3 +332,11 @@ Examples:
 |whiteHouse|
 |siteMap|
 |plainWriting|
+
+Scenario: Homepage - USA search feeds display results
+Meta: 
+@category daily
+
+Given I am on the Disaster Assistance homepage
+When I type into the USA search box
+Then I should be able to see results for that search

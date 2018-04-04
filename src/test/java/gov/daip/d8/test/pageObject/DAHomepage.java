@@ -209,6 +209,19 @@ public class DAHomepage extends PageObject {
 	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][17]")
 	private WebElementFacade siteMap;
 	
+	@FindBy(xpath = "/html/body/nav/div/div[2]/div[1]/button")
+	private WebElementFacade USASearch;
+	
+	@FindBy(xpath = "//*[@class='desktop-usa-search-input form-control popover-content']")
+	private WebElementFacade USASearchTextField;
+	
+	@FindBy(xpath = "//*[@class='desktop-usa-search-btn btn']")
+	private WebElementFacade USASearchSubmit;
+	
+	@FindBy(xpath = "//*[@id='result-1']/span")
+	private WebElementFacade USASearchResult;
+
+	
 	// *************************************************************************
 	// Functions
 
@@ -686,6 +699,17 @@ public class DAHomepage extends PageObject {
 		state = states[1].replaceAll("\"", "").replaceAll("]", "");
 		this.openAt("https://www.disasterassistance.gov/drupal_api/declaredCounties/" + state);
 		return state;
+	}
+	
+	public void typeIntoUSASearch() {
+		USASearch.click();
+		USASearchTextField.click();
+		USASearchTextField.type("disaster");
+		USASearchSubmit.click();
+	}
+	
+	public boolean viewUSASearchResults() {
+		return USASearchResult.isCurrentlyVisible();  
 	}
 	
 	public void pause(long time) {

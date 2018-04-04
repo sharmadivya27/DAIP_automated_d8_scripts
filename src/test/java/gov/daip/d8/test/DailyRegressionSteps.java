@@ -453,4 +453,16 @@ public class DailyRegressionSteps {
 		user.shouldSeePage(footerLinks);
 	}
 	
+	// Scenario: Verify USA search feeds within DisasterAssistance.gov
+	
+	@When("I type into the USA search box")
+	public void when_type_into_USA_search() {
+		user.typeIntoUSASearch();
+	}
+	
+	@Then("I should be able to see results for that search")
+	public void then_be_able_see_results_for_search() {
+		user.USASearchResultsAppear();
+	}
+	
 }

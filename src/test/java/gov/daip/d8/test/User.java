@@ -769,4 +769,12 @@ public class User {
 			daHomepage.clickPlanWriting();
 		}
 	}
+	
+	public void typeIntoUSASearch() {
+		daHomepage.typeIntoUSASearch();
+	}
+	
+	public void USASearchResultsAppear() {
+		Assert.assertTrue(daHomepage.viewUSASearchResults());
+	}
 }
