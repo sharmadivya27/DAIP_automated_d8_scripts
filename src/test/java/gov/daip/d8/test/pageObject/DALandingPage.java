@@ -159,6 +159,8 @@ public class DALandingPage extends PageObject {
 
 	// *************************************************************************
 	// Functions
+	
+	DAHomepage daHomepage;
 
 	/*************************************************************************
 	 * Checks that the twitter feed is visible with the most recent tweets.
@@ -310,5 +312,6 @@ public class DALandingPage extends PageObject {
 		searchBar.click();
 		searchBar.type("disaster");
 		communityLeadersSearch.click();
+		daHomepage.pause(2000);
 	}
 }

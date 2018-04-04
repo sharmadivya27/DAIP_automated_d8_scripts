@@ -212,6 +212,10 @@ public class User {
 		case "política de privacidad":
 		case "accessibility":
 		case "download plug-ins":
+		case "descargar plug-ins":
+			Assert.assertEquals(expectedPageName.toLowerCase(), daHomepage.pullPageSubTitle().toLowerCase());
+			break;
+			
 		case "accountability":
 			Assert.assertEquals("https://www.dhs.gov/previous-performance-and-accountability-reports", dapage.processWindows());
 			break;
@@ -301,9 +305,6 @@ public class User {
 			break;
 		case "mapa del sitio":
 			Assert.assertEquals("Mapa del Sitio", daHomepage.pullPageTitle());
-			break;
-		case "descargar plug-ins":
-			Assert.assertEquals(expectedPageName.toLowerCase(), daHomepage.pullPageSubTitle().toLowerCase());
 			break;
 
 		case "faqs":

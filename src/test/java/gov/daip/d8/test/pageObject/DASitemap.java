@@ -12,153 +12,151 @@ public class DASitemap extends PageObject {
 	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/li[1]/a")
 	private WebElementFacade home;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[1]/li[1]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[1]/li[1]/a")
 	private WebElementFacade addressSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[1]/li[2]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[1]/li[2]/a")
 	private WebElementFacade findAssistanceSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[1]/li[3]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[1]/li[3]/a")
 	private WebElementFacade applyOnlineSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[1]/li[4]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[1]/li[4]/a")
 	private WebElementFacade checkStatusSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[1]/li[5]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[1]/li[5]/a")
 	private WebElementFacade formsOfAssistanceSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[1]/li[6]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[1]/li[6]/a")
 	private WebElementFacade communityLeadersSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[1]/li[7]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[1]/li[7]/a")
 	private WebElementFacade otherHelpSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[1]/li[8]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[1]/li[8]/a")
 	private WebElementFacade applicationChecklistSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[1]/li[9]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[1]/li[9]/a")
 	private WebElementFacade formsSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/li[1]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/li[1]/a")
 	private WebElementFacade newsFeedsSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/li[2]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/li[2]/a")
 	private WebElementFacade immediateNeedsSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[1]/li[1]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[1]/li[1]/a")
 	private WebElementFacade evacuateSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[1]/li[2]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[1]/li[2]/a")
 	private WebElementFacade lovedOnesSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[1]/li[3]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[1]/li[3]/a")
 	private WebElementFacade emergencyFoodSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[1]/li[4]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[1]/li[4]/a")
 	private WebElementFacade shelterSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[1]/li[5]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[1]/li[5]/a")
 	private WebElementFacade medicalSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/li[3]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/li[3]/a")
 	private WebElementFacade movingForwardSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[2]/li[1]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[2]/li[1]/a")
 	private WebElementFacade yourHomeSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[2]/li[2]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[2]/li[2]/a")
 	private WebElementFacade businessSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[2]/li[3]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[2]/li[3]/a")
 	private WebElementFacade financesSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[2]/li[4]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[2]/li[4]/a")
 	private WebElementFacade healthSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[2]/li[5]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[2]/li[5]/a")
 	private WebElementFacade officialDocumentsSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/li[4]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/li[4]/a")
 	private WebElementFacade disabilitiesSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/li[5]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/li[5]/a")
 	private WebElementFacade olderAmericansSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/li[6]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/li[6]/a")
 	private WebElementFacade childrenSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/li[7]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/li[7]/a")
 	private WebElementFacade disasterTypesSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[6]/li[2]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[2]/a")
 	private WebElementFacade biologicalSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a")
 	private WebElementFacade chemicalSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[6]/li[4]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[4]/a")
 	private WebElementFacade droughtSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[6]/li[5]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[5]/a")
 	private WebElementFacade earthquakeSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[6]/li[6]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[6]/a")
 	private WebElementFacade fireSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[6]/li[7]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[7]/a")
 	private WebElementFacade floodSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[6]/li[8]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[8]/a")
 	private WebElementFacade heatSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[6]/li[9]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[9]/a")
 	private WebElementFacade hurricaneSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[6]/li[10]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[10]/a")
 	private WebElementFacade landslideSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[6]/li[11]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[11]/a")
 	private WebElementFacade radiationSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[6]/li[12]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[12]/a")
 	private WebElementFacade tornadoSitemap;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[6]/li[13]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[13]/a")
 	private WebElementFacade tsunami;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[6]/li[14]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[14]/a")
 	private WebElementFacade volcano;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[6]/li[15]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[15]/a")
 	private WebElementFacade wildfires;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/ul[6]/li[16]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[16]/a")
 	private WebElementFacade winterStorm;
 
-	// /html/body/div[3]/div/section/ul[1]/ul[2]/li[8]/a
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/li[8]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/li[8]/a")
 	private WebElementFacade foreignDisasters;
 
-	//STG /html/body/div[3]/div/section/ul[1]/ul[2]/li[9]/a
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[2]/li[9]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/li[9]/a")
 	private WebElementFacade factSheets;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[3]/li[2]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[3]/li[2]/a")
 	private WebElementFacade partners;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[4]/li[1]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[4]/li[1]/a")
 	private WebElementFacade faqs;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[4]/li[2]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[4]/li[2]/a")
 	private WebElementFacade contactUs;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[4]/li[3]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[4]/li[3]/a")
 	private WebElementFacade privacyPolicy;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[4]/li[4]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[4]/li[4]/a")
 	private WebElementFacade accessibility;
 
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/ul[4]/li[5]/a")
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[4]/li[5]/a")
 	private WebElementFacade downloadPlugIns;
 
 	// *************************************************************************

@@ -229,7 +229,7 @@ When I type a keyword into the search bar
 Then the results should include the search words for that item
 
 Scenario: (Spanish) Sitemap - All links in Sitemap point to the right page 
-Meta: @skip
+Meta: 
 @category daily
 
 Given I am on the spanish sitemap

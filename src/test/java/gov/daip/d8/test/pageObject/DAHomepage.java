@@ -128,13 +128,13 @@ public class DAHomepage extends PageObject {
 	@FindBy(xpath = "//*[@class='location-item clickable']")
 	private List<WebElementFacade> localResourcesResults;
 
-	@FindBy(xpath = "//*[@id='block-imagelinksblock']/div/div/div[1]/a/div/div/img")
+	@FindBy(xpath = "//*[@id='block-imagelinksblock']/div/div/a[1]/div/div/img")
 	private WebElementFacade assistanceMainLink;
 
-	@FindBy(xpath = "//*[@id='block-imagelinksblock']/div/div/div[2]/a/div/div/img")
+	@FindBy(xpath = "//*[@id='block-imagelinksblock']/div/div/a[2]/div/div/img")
 	private WebElementFacade applyOnlineMainLink;
 
-	@FindBy(xpath = "//*[@id='block-imagelinksblock']/div/div/div[3]/a/div/div/img")
+	@FindBy(xpath = "//*[@id='block-imagelinksblock']/div/div/a[3]/div/div/img")
 	private WebElementFacade checkStatusMainLink;
 
 	@FindBy(xpath = "//*[@id='block-questionnaireblock']")
