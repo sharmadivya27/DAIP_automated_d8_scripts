@@ -157,7 +157,58 @@ public class DAHomepage extends PageObject {
 
 	@FindBy(xpath = "//*[@id='desktop-disaster-table']/table/tbody/tr/td[2]/a")
 	private WebElementFacade disasterName;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][1]")
+	private WebElementFacade accountability;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][2]")
+	private WebElementFacade privacy;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][3]")
+	private WebElementFacade foia;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][4]")
+	private WebElementFacade accessibilityFooter;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][5]")
+	private WebElementFacade planWriting;
 
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][6]")
+	private WebElementFacade femaGov;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][7]")
+	private WebElementFacade femaMobileApp;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][8]")
+	private WebElementFacade readyGov;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][9]")
+	private WebElementFacade dhsGov;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][10]")
+	private WebElementFacade usaGov;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][11]")
+	private WebElementFacade usaGovBus;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][12]")
+	private WebElementFacade cfdaGov;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][13]")
+	private WebElementFacade whiteHouse;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][14]")
+	private WebElementFacade inspectorGeneral;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][15]")
+	private WebElementFacade noFearAct;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][16]")
+	private WebElementFacade budgetPerformance;
+	
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][17]")
+	private WebElementFacade siteMap;
+	
 	// *************************************************************************
 	// Functions
 
@@ -324,7 +375,75 @@ public class DAHomepage extends PageObject {
 		localResourcesTextbox.sendKeys("New York, NY");
 		localResourcesSearch.click();
 	}
+	
+	public void clickAccountability() {
+		accountability.click();
+	}
+	
+	public void clickFemaGov() {
+		femaGov.click();
+	}
+	
+	public void clickUsaGov() {
+		usaGov.click();
+	}
+	
+	public void clickInspectorGeneral() {
+		inspectorGeneral.click();
+	}
+	
+	public void clickPrivacy() {
+		privacy.click();
+	}
 
+	public void clickFemaMobileApp() {
+		femaMobileApp.click();
+	}
+	
+	public void clickUsaGovBus() {
+		usaGovBus.click();
+	}
+	
+	public void clickNoFearAct() {
+		noFearAct.click();
+	}
+	
+	public void clickFoia() {
+		foia.click();
+	}
+	
+	public void clickReadyGov() {
+		readyGov.click();
+	}
+	
+	public void clickCfdaGov() {
+		cfdaGov.click();
+	}
+	
+	public void clickBudgetPerformance() {
+		budgetPerformance.click();
+	}
+	
+	public void clickAccessibilityFooter() {
+		accessibilityFooter.click();
+	}
+	
+	public void clickDhsGov() {
+		dhsGov.click();
+	}
+	
+	public void clickWhiteHouse() {
+		whiteHouse.click();
+	}
+	
+	public void clickSiteMap() {
+		siteMap.click();
+	}
+	
+	public void clickPlanWriting() {
+		planWriting.click();
+	}
+	
 	/*************************************************************************
 	 * Verifies that local resources results are visible and appear on the
 	 * homepage.

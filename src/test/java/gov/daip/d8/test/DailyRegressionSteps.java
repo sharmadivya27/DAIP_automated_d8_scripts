@@ -10,6 +10,7 @@ import gov.daip.d8.test.exceptions.LocalResourcesException;
 import gov.daip.d8.test.exceptions.StateException;
 import net.thucydides.core.annotations.Steps;
 
+
 /*************************************************************************
  * Starting point of the program; more or less. Scenarios from the .story files
  * are matched with the annotation in this file.
@@ -54,7 +55,7 @@ public class DailyRegressionSteps {
 	public void given_I_am_on_the_Spanish_disaster_assistance_homepage() {
 		user.open_page("/es");
 	}
-
+	
 	@When("I click on the <menuLinks> in the Get Assistance tab")
 	public void click_on_menu_links_in_get_assistance_tab(@Named("menuLinks") String menuLinks) {
 		user.clickGetAssistanceMenuLinks(menuLinks);
@@ -451,4 +452,17 @@ public class DailyRegressionSteps {
 	public void then_click_apply_online_button() {
 		
 	}
+	
+	// Scenario: Homepage - Footer - All the links in "Additional Links"
+	
+	@When("I click on the <footerLinks> link under Additional Links")
+	public void click_on_link_in_additional_links(@Named("footerLinks") String footerLinks) {
+		user.clickGetAdditionalLinks(footerLinks);
+	}
+	
+	@Then("the <footerLinks> page should open correctly")
+	public void then_the_additional_link_page_should_open_correctly(@Named("footerLinks") String footerLinks) {
+		user.shouldSeePage(footerLinks);
+	}
+	
 }
