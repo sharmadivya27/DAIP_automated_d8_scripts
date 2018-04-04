@@ -53,46 +53,6 @@ public class User {
 	/*********************************************/
 	
 	@Step
-	public void clickGetAdditionalLinks(String footerLinks) {
-		if ((footerLinks.equals("accountability")) || (footerLinks.equals("responsibilidad"))) {
-			daHomepage.clickAccountability();
-		} else if ((footerLinks.equals("femaGov")) || (footerLinks.equals("femaGovEs"))) {
-			daHomepage.clickFemaGov();
-		} else if ((footerLinks.equals("usaGov")) || (footerLinks.equals("gobierno usa"))) {
-			daHomepage.clickUsaGov();
-		} else if ((footerLinks.equals("inspectorGeneral"))) {
-			daHomepage.clickInspectorGeneral();
-		} else if ((footerLinks.equals("privacy")) || (footerLinks.equals("privacidad"))) {
-			daHomepage.clickPrivacy();
-		} else if ((footerLinks.equals("femaMobileApp")) || (footerLinks.equals("la aplicacion de fema"))) {
-			daHomepage.clickFemaMobileApp();
-		} else if ((footerLinks.equals("usaGovBus")) || (footerLinks.equals("usa.gov negocios"))) {
-			daHomepage.clickUsaGovBus();
-		} else if ((footerLinks.equals("noFearAct")) || (footerLinks.equals("acta no fear"))) {
-			daHomepage.clickNoFearAct();
-		} else if ((footerLinks.equals("foia"))) {
-			daHomepage.clickFoia();
-		} else if ((footerLinks.equals("readyGov")) || (footerLinks.equals("readyGovEs"))) {
-			daHomepage.clickReadyGov();
-		} else if ((footerLinks.equals("cfdaGov"))) {
-			daHomepage.clickCfdaGov();
-		} else if ((footerLinks.equals("budgetPerformance")) || (footerLinks.equals("presupuesto y rendimiento"))) {
-			daHomepage.clickBudgetPerformance();
-		} else if ((footerLinks.equals("accessibilityFooter")) || (footerLinks.equals("accesibilidad"))) {
-			daHomepage.clickAccessibilityFooter();
-		} else if ((footerLinks.equals("dhsGov")) || (footerLinks.equals("dhsGovEs"))) {
-			daHomepage.clickDhsGov();
-		} else if ((footerLinks.equals("whiteHouse"))) {
-			daHomepage.clickWhiteHouse();
-		} else if ((footerLinks.equals("siteMap")) || (footerLinks.equals("mapa del sitio"))) {
-			daHomepage.clickSiteMap();
-		} else if ((footerLinks.equals("plainWriting")) || (footerLinks.equals("escritura simple"))) {
-			daHomepage.clickPlanWriting();
-		}
-	}
-	
-
-	@Step
 	public void open_page(String directoryPath) {
 		dapage.clearCookies();
 		String url = dapage.defaultUrl + directoryPath;
@@ -771,7 +731,42 @@ public class User {
 		}
 	}
 	
-	public void openPreEarlyDACPage() {
-		daHomepage.openAt("https://www.disasterassistance.gov/DAC/api/v1/disaster/earlyRgsnConfig");
+	@Step
+	public void clickGetAdditionalLinks(String footerLinks) {
+		if ((footerLinks.equals("accountability")) || (footerLinks.equals("responsibilidad"))) {
+			daHomepage.clickAccountability();
+		} else if ((footerLinks.equals("femaGov")) || (footerLinks.equals("femaGovEs"))) {
+			daHomepage.clickFemaGov();
+		} else if ((footerLinks.equals("usaGov")) || (footerLinks.equals("gobierno usa"))) {
+			daHomepage.clickUsaGov();
+		} else if ((footerLinks.equals("inspectorGeneral"))) {
+			daHomepage.clickInspectorGeneral();
+		} else if ((footerLinks.equals("privacy")) || (footerLinks.equals("privacidad"))) {
+			daHomepage.clickPrivacy();
+		} else if ((footerLinks.equals("femaMobileApp")) || (footerLinks.equals("la aplicacion de fema"))) {
+			daHomepage.clickFemaMobileApp();
+		} else if ((footerLinks.equals("usaGovBus")) || (footerLinks.equals("usa.gov negocios"))) {
+			daHomepage.clickUsaGovBus();
+		} else if ((footerLinks.equals("noFearAct")) || (footerLinks.equals("acta no fear"))) {
+			daHomepage.clickNoFearAct();
+		} else if ((footerLinks.equals("foia"))) {
+			daHomepage.clickFoia();
+		} else if ((footerLinks.equals("readyGov")) || (footerLinks.equals("readyGovEs"))) {
+			daHomepage.clickReadyGov();
+		} else if ((footerLinks.equals("cfdaGov"))) {
+			daHomepage.clickCfdaGov();
+		} else if ((footerLinks.equals("budgetPerformance")) || (footerLinks.equals("presupuesto y rendimiento"))) {
+			daHomepage.clickBudgetPerformance();
+		} else if ((footerLinks.equals("accessibilityFooter")) || (footerLinks.equals("accesibilidad"))) {
+			daHomepage.clickAccessibilityFooter();
+		} else if ((footerLinks.equals("dhsGov")) || (footerLinks.equals("dhsGovEs"))) {
+			daHomepage.clickDhsGov();
+		} else if ((footerLinks.equals("whiteHouse"))) {
+			daHomepage.clickWhiteHouse();
+		} else if ((footerLinks.equals("siteMap")) || (footerLinks.equals("mapa del sitio"))) {
+			daHomepage.clickSiteMap();
+		} else if ((footerLinks.equals("plainWriting")) || (footerLinks.equals("escritura simple"))) {
+			daHomepage.clickPlanWriting();
+		}
 	}
 }

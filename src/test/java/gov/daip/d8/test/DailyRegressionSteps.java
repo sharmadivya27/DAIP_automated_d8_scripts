@@ -441,18 +441,6 @@ public class DailyRegressionSteps {
 		user.clickSiteMap(menuLinks);
 	}
 	
-	// Scenario: Verify pre/early feeds within DisasterAssistance.gov
-	
-	@Given("I am on the declared disasters pre/early DAC page")
-	public void given_on_pre_early_dac_page() {
-		user.openPreEarlyDACPage();
-	}
-	
-	@Then("I should be able to click on the apply online button")
-	public void then_click_apply_online_button() {
-		
-	}
-	
 	// Scenario: Homepage - Footer - All the links in "Additional Links"
 	
 	@When("I click on the <footerLinks> link under Additional Links")

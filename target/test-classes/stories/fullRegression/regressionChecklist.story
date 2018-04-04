@@ -3,7 +3,7 @@ In order to assure that the basic functionality of disasterassistance.gov is wor
 As a tester
 I want to run the daily regressions at least twice a day
 
-Meta: 
+Meta:
 
 Scenario: Homepage - Header - All the menu links on the "Get Assistance" tab
 Meta: 
@@ -305,10 +305,30 @@ Examples:
 |accessibility|
 |download plug-ins|
 
-Scenario: Verify pre/early feeds within DisasterAssistance.gov
-Meta: @skip
+Scenario: Homepage - Footer - All the links in "Additional Links"
+Meta:
 @category daily
 
-Given I am on the declared disasters pre/early DAC page 
-When I type the declared disaster into the address look-up bar 
-Then I should be able to click on the apply online button
+Given I am on the Disaster Assistance homepage
+When I click on the <footerLinks> link under Additional Links
+Then the <footerLinks> page should open correctly
+
+Examples:
+|footerLinks|
+|accountability|
+|femaGov|
+|usaGov|
+|inspectorGeneral|
+|privacy|
+|femaMobileApp|
+|usaGovBus|
+|noFearAct|
+|foia|
+|readyGov|
+|cfdaGov|
+|budgetPerformance|
+|accessibilityFooter|
+|dhsGov|
+|whiteHouse|
+|siteMap|
+|plainWriting|

@@ -3,7 +3,7 @@ In order to assert that the basic functionality of https://www.disasterassistanc
 As a tester
 I want to run the daily regressions at least twice a day
 
-Meta: @skip
+Meta: 
 
 Scenario: (Spanish) Homepage - Header - All the menu links on the "Get Assistance" tab
 Meta: 
@@ -288,3 +288,31 @@ Examples:
 |política de privacidad|
 |accesibilidad|
 |descargar plug-ins|
+
+Scenario: Spanish Homepage - Footer - All the links in "Additional Links"
+Meta:
+@category daily
+
+Given I am on the Spanish Disaster Assistance homepage
+When I click on the <footerLinks> link under Additional Links
+Then the <footerLinks> page should open correctly
+
+Examples:
+|footerLinks|
+|responsibilidad|
+|femaGovEs|
+|gobierno usa|
+|inspectorGeneral|
+|privacidad|
+|la aplicacion de fema|
+|usa.gov negocios|
+|acta no fear|
+|foia|
+|readyGovEs|
+|cfdaGov|
+|presupuesto y rendimiento|
+|accesibilidad|
+|dhsGovEs|
+|whiteHouse|
+|mapa del sitio|
+|escritura simple|
