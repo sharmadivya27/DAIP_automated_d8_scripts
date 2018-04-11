@@ -10,7 +10,6 @@ import gov.daip.d8.test.exceptions.LocalResourcesException;
 import gov.daip.d8.test.exceptions.StateException;
 import net.thucydides.core.annotations.Steps;
 
-
 /*************************************************************************
  * Starting point of the program; more or less. Scenarios from the .story files
  * are matched with the annotation in this file.
@@ -55,7 +54,7 @@ public class DailyRegressionSteps {
 	public void given_I_am_on_the_Spanish_disaster_assistance_homepage() {
 		user.open_page("/es");
 	}
-	
+
 	@When("I click on the <menuLinks> in the Get Assistance tab")
 	public void click_on_menu_links_in_get_assistance_tab(@Named("menuLinks") String menuLinks) {
 		user.clickGetAssistanceMenuLinks(menuLinks);
@@ -206,7 +205,7 @@ public class DailyRegressionSteps {
 	public void whenTypeDeclaredDisasterIntoAddressLookUpBar() {
 		user.declaredDisasters();
 	}
- 
+
 	@When("I type the declared disaster into the address look-up bar in Spanish")
 	public void whenTypeDeclaredDisasterIntoSpanishAddressLookUpBar() {
 		user.declaredSpanishDisasters();
@@ -440,29 +439,41 @@ public class DailyRegressionSteps {
 	public void clickOnSitemapLink(@Named("menuLinks") String menuLinks) {
 		user.clickSiteMap(menuLinks);
 	}
-	
+
 	// Scenario: Homepage - Footer - All the links in "Additional Links"
-	
+
 	@When("I click on the <footerLinks> link under Additional Links")
 	public void click_on_link_in_additional_links(@Named("footerLinks") String footerLinks) {
 		user.clickGetAdditionalLinks(footerLinks);
 	}
-	
+
 	@Then("the <footerLinks> page should open correctly")
 	public void then_the_additional_link_page_should_open_correctly(@Named("footerLinks") String footerLinks) {
 		user.shouldSeePage(footerLinks);
 	}
-	
+
 	// Scenario: Verify USA search feeds within DisasterAssistance.gov
-	
+
 	@When("I type into the USA search box")
 	public void when_type_into_USA_search() {
 		user.typeIntoUSASearch();
 	}
-	
+
 	@Then("I should be able to see results for that search")
 	public void then_be_able_see_results_for_search() {
 		user.USASearchResultsAppear();
 	}
-	
+
+	// Scenario: Homepage - Apply Online - Verify the redirection from DAC when
+	// RI is cancelled
+
+	@Then("I click on cancel and I should be redirected to the correct environment")
+	public void then_click_on_cancel_redirect_to_right_env() {
+		user.redirectCorrectEnv();
+	}
+
+	@Then("I click on cancel and I should be redirected to the correct spanish environment")
+	public void then_click_on_cancel_redirect_to_right_spanish_env() {
+		user.redirectCorrectSpanishEnv();
+	}
 }

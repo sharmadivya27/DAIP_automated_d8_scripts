@@ -202,7 +202,7 @@ public class DAHomepage extends PageObject {
 	
 	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][15]")
 	private WebElementFacade noFearAct;
-	
+
 	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][16]")
 	private WebElementFacade budgetPerformance;
 	
@@ -221,6 +221,8 @@ public class DAHomepage extends PageObject {
 	@FindBy(xpath = "//*[@id='result-1']/span")
 	private WebElementFacade USASearchResult;
 
+	@FindBy(xpath = "//*[@id='btnCancel']")
+	private WebElementFacade captchaCancel;
 	
 	// *************************************************************************
 	// Functions
@@ -710,6 +712,10 @@ public class DAHomepage extends PageObject {
 	
 	public boolean viewUSASearchResults() {
 		return USASearchResult.isCurrentlyVisible();  
+	}
+	
+	public void clickCancel() {
+		captchaCancel.click();
 	}
 	
 	public void pause(long time) {

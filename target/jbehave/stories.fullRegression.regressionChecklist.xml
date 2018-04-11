@@ -749,7 +749,7 @@ Meta:</iWantTo>
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:133)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:62)
 	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.shouldSeePage(&lt;generated&gt;)
-	at gov.daip.d8.test.DailyRegressionSteps.then_the_menu_links_page_should_open_correctly(DailyRegressionSteps.java:73)
+	at gov.daip.d8.test.DailyRegressionSteps.then_the_menu_links_page_should_open_correctly(DailyRegressionSteps.java:72)
 	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
@@ -794,83 +794,110 @@ Meta:</iWantTo>
 <example keyword="Example:">{footerLinks=femaGov, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>femaGov</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>femaGov</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>femaGov</parameter> page should open correctly<failure>org.junit.ComparisonFailure: expected:&lt;...ttps://www.fema.gov/[]&gt; but was:&lt;...ttps://www.fema.gov/[mobile-app]&gt;</failure></step>
 
 <example keyword="Example:">{footerLinks=usaGov, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>usaGov</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>usaGov</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>usaGov</parameter> page should open correctly<failure>org.junit.ComparisonFailure: expected:&lt;https://www.[usa].gov/&gt; but was:&lt;https://www.[ready].gov/&gt;</failure></step>
 
 <example keyword="Example:">{footerLinks=inspectorGeneral, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>inspectorGeneral</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>inspectorGeneral</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>inspectorGeneral</parameter> page should open correctly<failure>org.junit.ComparisonFailure: expected:&lt;https://www.[oig.]dhs.gov/&gt; but was:&lt;https://www.[]dhs.gov/&gt;</failure></step>
 
 <example keyword="Example:">{footerLinks=privacy, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>privacy</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>privacy</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>privacy</parameter> page should open correctly<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected condition failed: waiting for DAHomepage.pageSubtitle to be displayed (tried for 5 second(s) with 100 MILLISECONDS interval)
+Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
+System info: host: &apos;c02rj1fvfvh8.users.bah.com&apos;, ip: &apos;fe80:0:0:0:d8:72cc:b6ab:23dd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: driver.version: unknown</failure></step>
 
 <example keyword="Example:">{footerLinks=femaMobileApp, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>femaMobileApp</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>femaMobileApp</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>femaMobileApp</parameter> page should open correctly<failure>org.junit.ComparisonFailure: expected:&lt;https://www.[fema.gov/mobile-app]&gt; but was:&lt;https://www.[usa.gov/business]&gt;</failure></step>
 
 <example keyword="Example:">{footerLinks=usaGovBus, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>usaGovBus</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>usaGovBus</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>usaGovBus</parameter> page should open correctly<failure>org.junit.ComparisonFailure: expected:&lt;https://www.[usa.gov/business]&gt; but was:&lt;https://www.[cfda.gov/]&gt;</failure></step>
 
 <example keyword="Example:">{footerLinks=noFearAct, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>noFearAct</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>noFearAct</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>noFearAct</parameter> page should open correctly<failure>org.junit.ComparisonFailure: expected:&lt;https://www.[fema.gov/no-fear-act]&gt; but was:&lt;https://www.[whitehouse.gov/]&gt;</failure></step>
 
 <example keyword="Example:">{footerLinks=foia, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>foia</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>foia</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>foia</parameter> page should open correctly<failure>org.junit.ComparisonFailure: expected:&lt;https://www.[fema.gov/foia]&gt; but was:&lt;https://www.[usa.gov/]&gt;</failure></step>
 
 <example keyword="Example:">{footerLinks=readyGov, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>readyGov</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>readyGov</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>readyGov</parameter> page should open correctly<failure>org.junit.ComparisonFailure: expected:&lt;https://www.[ready.gov/]&gt; but was:&lt;https://www.[fema.gov/no-fear-act]&gt;</failure></step>
 
 <example keyword="Example:">{footerLinks=cfdaGov, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>cfdaGov</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>cfdaGov</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>cfdaGov</parameter> page should open correctly<failure>org.junit.ComparisonFailure: expected:&lt;https://www.[cfda.gov/]&gt; but was:&lt;https://www.[dhs.gov/budget-performance]&gt;</failure></step>
 
 <example keyword="Example:">{footerLinks=budgetPerformance, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>budgetPerformance</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>budgetPerformance</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>budgetPerformance</parameter> page should open correctly<failure>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1</failure></step>
 
 <example keyword="Example:">{footerLinks=accessibilityFooter, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>accessibilityFooter</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>accessibilityFooter</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>accessibilityFooter</parameter> page should open correctly<failure>org.junit.ComparisonFailure: expected:&lt;https://www.[fema.gov/accessibility]&gt; but was:&lt;https://www.[oig.dhs.gov/]&gt;</failure></step>
 
 <example keyword="Example:">{footerLinks=dhsGov, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>dhsGov</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>dhsGov</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>dhsGov</parameter> page should open correctly<failure>org.junit.ComparisonFailure: expected:&lt;https://www.[dhs.gov/]&gt; but was:&lt;https://www.[fema.gov/foia]&gt;</failure></step>
 
 <example keyword="Example:">{footerLinks=whiteHouse, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>whiteHouse</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>whiteHouse</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>whiteHouse</parameter> page should open correctly<failure>org.junit.ComparisonFailure: expected:&lt;https://www.[whitehouse.gov/]&gt; but was:&lt;https://www.[fema.gov/accessibility]&gt;</failure></step>
 
 <example keyword="Example:">{footerLinks=siteMap, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>siteMap</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>siteMap</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>siteMap</parameter> page should open correctly<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected condition failed: waiting for DAHomepage.pageTitle to be displayed (tried for 5 second(s) with 100 MILLISECONDS interval)
+Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
+System info: host: &apos;c02rj1fvfvh8.users.bah.com&apos;, ip: &apos;fe80:0:0:0:d8:72cc:b6ab:23dd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: driver.version: unknown</failure></step>
 
 <example keyword="Example:">{footerLinks=plainWriting, category=daily}</example>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I click on the <parameter>plainWriting</parameter> link under Additional Links</step>
-<step outcome="successful">Then the <parameter>plainWriting</parameter> page should open correctly</step>
+<step outcome="failed" keyword="FAILED">Then the <parameter>plainWriting</parameter> page should open correctly<failure>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1</failure></step>
 </examples>
+<failure>java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at gov.daip.d8.test.pageObject.DAPage.processWindows(DAPage.java:66)
+	at gov.daip.d8.test.User.shouldSeePage(User.java:244)
+	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.CGLIB$shouldSeePage$6(&lt;generated&gt;)
+	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141$$FastClassByCGLIB$$f81e77a4.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:425)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:410)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:385)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:133)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:62)
+	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.shouldSeePage(&lt;generated&gt;)
+	at gov.daip.d8.test.DailyRegressionSteps.then_the_additional_link_page_should_open_correctly(DailyRegressionSteps.java:452)
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:733)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:346)
+...</failure>
 </scenario>
 <scenario keyword="Scenario:" title="Homepage - USA search feeds display results">
 <meta>
@@ -879,5 +906,21 @@ Meta:</iWantTo>
 <step outcome="successful">Given I am on the Disaster Assistance homepage</step>
 <step outcome="successful">When I type into the USA search box</step>
 <step outcome="successful">Then I should be able to see results for that search</step>
+</scenario>
+<scenario keyword="Scenario:" title="Homepage - Apply Online - Verify the redirection from DAC when RI is cancelled">
+<examples keyword="Examples:">
+<step>Given I am on the Disaster Assistance homepage</step>
+<step>When I click on &lt;mainLinksItem&gt; within the main links bar</step>
+<step>Then I click on cancel and I should be redirected to the correct environment</step>
+<parameters>
+<names><name>mainLinksItem</name></names>
+<values><value>apply online</value></values>
+</parameters>
+
+<example keyword="Example:">{mainLinksItem=apply online}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on <parameter>apply online</parameter> within the main links bar</step>
+<step outcome="successful">Then I click on cancel and I should be redirected to the correct environment</step>
+</examples>
 </scenario>
 </story>

@@ -33,7 +33,7 @@ public class User {
 	DASitemap sitemap;
 
 	/*********************************************/
-	
+
 	@Step
 	public void home() {
 		daHomepage.getDriver().get("https://www.disasterassistance.gov");
@@ -51,7 +51,7 @@ public class User {
 	}
 
 	/*********************************************/
-	
+
 	@Step
 	public void open_page(String directoryPath) {
 		dapage.clearCookies();
@@ -211,16 +211,19 @@ public class User {
 		case "privacy policy":
 		case "política de privacidad":
 		case "accessibility":
+		case "accesibilidad":
 		case "download plug-ins":
 		case "descargar plug-ins":
 			Assert.assertEquals(expectedPageName.toLowerCase(), daHomepage.pullPageSubTitle().toLowerCase());
 			break;
-			
+
 		case "accountability":
-			Assert.assertEquals("https://www.dhs.gov/previous-performance-and-accountability-reports", dapage.processWindows());
+			Assert.assertEquals("https://www.dhs.gov/previous-performance-and-accountability-reports",
+					dapage.processWindows());
 			break;
 		case "responsibilidad":
-			Assert.assertEquals("https://www.dhs.gov/previous-performance-and-accountability-reports", dapage.processWindows());
+			Assert.assertEquals("https://www.dhs.gov/previous-performance-and-accountability-reports",
+					dapage.processWindows());
 			break;
 		case "privacy":
 			Assert.assertEquals("Privacy Policy", daHomepage.pullPageSubTitle());
@@ -234,7 +237,7 @@ public class User {
 		case "accessibilityFooter":
 			Assert.assertEquals("https://www.fema.gov/accessibility", dapage.processWindows());
 			break;
-		case "accesibilidad":
+		case "accesibilidadFooter":
 			Assert.assertEquals("https://www.fema.gov/es/accesibilidad-0", dapage.processWindows());
 			break;
 		case "plainWriting":
@@ -731,7 +734,7 @@ public class User {
 			sitemap.clickDownloadPlugIns();
 		}
 	}
-	
+
 	@Step
 	public void clickGetAdditionalLinks(String footerLinks) {
 		if ((footerLinks.equals("accountability")) || (footerLinks.equals("responsibilidad"))) {
@@ -758,7 +761,7 @@ public class User {
 			daHomepage.clickCfdaGov();
 		} else if ((footerLinks.equals("budgetPerformance")) || (footerLinks.equals("presupuesto y rendimiento"))) {
 			daHomepage.clickBudgetPerformance();
-		} else if ((footerLinks.equals("accessibilityFooter")) || (footerLinks.equals("accesibilidad"))) {
+		} else if ((footerLinks.equals("accessibilityFooter")) || (footerLinks.equals("accesibilidadFooter"))) {
 			daHomepage.clickAccessibilityFooter();
 		} else if ((footerLinks.equals("dhsGov")) || (footerLinks.equals("dhsGovEs"))) {
 			daHomepage.clickDhsGov();
@@ -770,12 +773,30 @@ public class User {
 			daHomepage.clickPlanWriting();
 		}
 	}
-	
+
 	public void typeIntoUSASearch() {
 		daHomepage.typeIntoUSASearch();
 	}
-	
+
 	public void USASearchResultsAppear() {
 		Assert.assertTrue(daHomepage.viewUSASearchResults());
+	}
+
+	public void redirectCorrectEnv() {
+		daHomepage.clickCancel();
+		if (daHomepage.getUrl().contains("staging")) {
+			Assert.assertEquals("https://staging.disasterassistance.gov/", daHomepage.getUrl());
+		} else {
+			Assert.assertEquals("https://www.disasterassistance.gov/", daHomepage.getUrl());
+		}
+	}
+
+	public void redirectCorrectSpanishEnv() {
+		daHomepage.clickCancel();
+		if (daHomepage.getUrl().contains("staging")) {
+			Assert.assertEquals("https://staging.disasterassistance.gov/es", daHomepage.getUrl());
+		} else {
+			Assert.assertEquals("https://www.disasterassistance.gov/es", daHomepage.getUrl());
+		}
 	}
 }

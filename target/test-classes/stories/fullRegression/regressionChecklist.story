@@ -3,7 +3,7 @@ In order to assure that the basic functionality of disasterassistance.gov is wor
 As a tester
 I want to run the daily regressions at least twice a day
 
-Meta:
+Meta: 
 
 Scenario: Homepage - Header - All the menu links on the "Get Assistance" tab
 Meta: 
@@ -229,7 +229,7 @@ When I click on Apply Online
 Then the DAC page with the mobile string should appear    
 
 Scenario: Homepage - "Check Status" DAC page includes mobile flag
-Meta: @skip 
+Meta: @skip
 @category daily 
 
 Given I am on the Disaster Assistance homepage 
@@ -340,3 +340,14 @@ Meta:
 Given I am on the Disaster Assistance homepage
 When I type into the USA search box
 Then I should be able to see results for that search
+
+Scenario: Homepage - Apply Online - Verify the redirection from DAC when RI is cancelled
+Meta: 
+
+Given I am on the Disaster Assistance homepage
+When I click on <mainLinksItem> within the main links bar
+Then I click on cancel and I should be redirected to the correct environment
+
+Examples:
+|mainLinksItem|
+|apply online|

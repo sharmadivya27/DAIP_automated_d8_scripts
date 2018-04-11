@@ -311,7 +311,7 @@ Examples:
 |readyGovEs|
 |cfdaGov|
 |presupuesto y rendimiento|
-|accesibilidad|
+|accesibilidadFooter|
 |dhsGovEs|
 |whiteHouse|
 |mapa del sitio|
@@ -324,3 +324,14 @@ Meta:
 Given I am on the Spanish Disaster Assistance homepage
 When I type into the USA search box
 Then I should be able to see results for that search
+
+Scenario: (Spanish) Homepage - Apply Online - Verify the redirection from DAC when RI is cancelled
+Meta: 
+
+Given I am on the Spanish Disaster Assistance homepage
+When I click on <mainLinksItem> within the main links bar
+Then I click on cancel and I should be redirected to the correct spanish environment
+
+Examples:
+|mainLinksItem|
+|apply online|

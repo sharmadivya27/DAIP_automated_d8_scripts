@@ -924,7 +924,7 @@ Meta:</div>
 	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:133)
 	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:62)
 	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.shouldSeePage(&lt;generated&gt;)
-	at gov.daip.d8.test.DailyRegressionSteps.then_the_menu_links_page_should_open_correctly(DailyRegressionSteps.java:73)
+	at gov.daip.d8.test.DailyRegressionSteps.then_the_menu_links_page_should_open_correctly(DailyRegressionSteps.java:72)
 	at sun.reflect.GeneratedMethodAccessor5.invoke(Unknown Source)
 	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
 	at java.lang.reflect.Method.invoke(Method.java:498)
@@ -994,83 +994,110 @@ Meta:</div>
 <h3 class="example">Example: {footerLinks=femaGov, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">femaGov</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">femaGov</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">femaGov</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;...ttps://www.fema.gov/[]&gt; but was:&lt;...ttps://www.fema.gov/[mobile-app]&gt;</span></div>
 
 <h3 class="example">Example: {footerLinks=usaGov, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">usaGov</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">usaGov</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">usaGov</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;https://www.[usa].gov/&gt; but was:&lt;https://www.[ready].gov/&gt;</span></div>
 
 <h3 class="example">Example: {footerLinks=inspectorGeneral, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">inspectorGeneral</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">inspectorGeneral</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">inspectorGeneral</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;https://www.[oig.]dhs.gov/&gt; but was:&lt;https://www.[]dhs.gov/&gt;</span></div>
 
 <h3 class="example">Example: {footerLinks=privacy, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">privacy</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">privacy</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">privacy</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected condition failed: waiting for DAHomepage.pageSubtitle to be displayed (tried for 5 second(s) with 100 MILLISECONDS interval)
+Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
+System info: host: 'c02rj1fvfvh8.users.bah.com', ip: 'fe80:0:0:0:d8:72cc:b6ab:23dd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_101'
+Driver info: driver.version: unknown</span></div>
 
 <h3 class="example">Example: {footerLinks=femaMobileApp, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">femaMobileApp</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">femaMobileApp</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">femaMobileApp</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;https://www.[fema.gov/mobile-app]&gt; but was:&lt;https://www.[usa.gov/business]&gt;</span></div>
 
 <h3 class="example">Example: {footerLinks=usaGovBus, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">usaGovBus</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">usaGovBus</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">usaGovBus</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;https://www.[usa.gov/business]&gt; but was:&lt;https://www.[cfda.gov/]&gt;</span></div>
 
 <h3 class="example">Example: {footerLinks=noFearAct, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">noFearAct</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">noFearAct</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">noFearAct</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;https://www.[fema.gov/no-fear-act]&gt; but was:&lt;https://www.[whitehouse.gov/]&gt;</span></div>
 
 <h3 class="example">Example: {footerLinks=foia, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">foia</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">foia</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">foia</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;https://www.[fema.gov/foia]&gt; but was:&lt;https://www.[usa.gov/]&gt;</span></div>
 
 <h3 class="example">Example: {footerLinks=readyGov, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">readyGov</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">readyGov</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">readyGov</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;https://www.[ready.gov/]&gt; but was:&lt;https://www.[fema.gov/no-fear-act]&gt;</span></div>
 
 <h3 class="example">Example: {footerLinks=cfdaGov, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">cfdaGov</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">cfdaGov</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">cfdaGov</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;https://www.[cfda.gov/]&gt; but was:&lt;https://www.[dhs.gov/budget-performance]&gt;</span></div>
 
 <h3 class="example">Example: {footerLinks=budgetPerformance, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">budgetPerformance</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">budgetPerformance</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">budgetPerformance</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">java.lang.IndexOutOfBoundsException: Index: 1, Size: 1</span></div>
 
 <h3 class="example">Example: {footerLinks=accessibilityFooter, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">accessibilityFooter</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">accessibilityFooter</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">accessibilityFooter</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;https://www.[fema.gov/accessibility]&gt; but was:&lt;https://www.[oig.dhs.gov/]&gt;</span></div>
 
 <h3 class="example">Example: {footerLinks=dhsGov, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">dhsGov</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">dhsGov</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">dhsGov</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;https://www.[dhs.gov/]&gt; but was:&lt;https://www.[fema.gov/foia]&gt;</span></div>
 
 <h3 class="example">Example: {footerLinks=whiteHouse, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">whiteHouse</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">whiteHouse</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">whiteHouse</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">org.junit.ComparisonFailure: expected:&lt;https://www.[whitehouse.gov/]&gt; but was:&lt;https://www.[fema.gov/accessibility]&gt;</span></div>
 
 <h3 class="example">Example: {footerLinks=siteMap, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">siteMap</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">siteMap</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">siteMap</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected condition failed: waiting for DAHomepage.pageTitle to be displayed (tried for 5 second(s) with 100 MILLISECONDS interval)
+Build info: version: '3.7.0', revision: '2321c73', time: '2017-11-02T22:22:35.584Z'
+System info: host: 'c02rj1fvfvh8.users.bah.com', ip: 'fe80:0:0:0:d8:72cc:b6ab:23dd%en0', os.name: 'Mac OS X', os.arch: 'x86_64', os.version: '10.12.6', java.version: '1.8.0_101'
+Driver info: driver.version: unknown</span></div>
 
 <h3 class="example">Example: {footerLinks=plainWriting, category=daily}</h3>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I click on the <span class="step parameter">plainWriting</span> link under Additional Links</div>
-<div class="step successful">Then the <span class="step parameter">plainWriting</span> page should open correctly</div>
+<div class="step failed">Then the <span class="step parameter">plainWriting</span> page should open correctly <span class="keyword failed">(FAILED)</span><br/><span class="message failed">java.lang.IndexOutOfBoundsException: Index: 1, Size: 1</span></div>
 </div>
+<pre class="failure">java.lang.IndexOutOfBoundsException: Index: 1, Size: 1
+	at java.util.ArrayList.rangeCheck(ArrayList.java:653)
+	at java.util.ArrayList.get(ArrayList.java:429)
+	at gov.daip.d8.test.pageObject.DAPage.processWindows(DAPage.java:66)
+	at gov.daip.d8.test.User.shouldSeePage(User.java:244)
+	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.CGLIB$shouldSeePage$6(&lt;generated&gt;)
+	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141$$FastClassByCGLIB$$f81e77a4.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:425)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:410)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:385)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:133)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:62)
+	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.shouldSeePage(&lt;generated&gt;)
+	at gov.daip.d8.test.DailyRegressionSteps.then_the_additional_link_page_should_open_correctly(DailyRegressionSteps.java:452)
+	at sun.reflect.GeneratedMethodAccessor13.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:498)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:733)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:346)
+...</pre>
 </div>
 <div class="scenario">
 <h2>Scenario: Homepage - USA search feeds display results</h2>
@@ -1081,5 +1108,29 @@ Meta:</div>
 <div class="step successful">Given I am on the Disaster Assistance homepage</div>
 <div class="step successful">When I type into the USA search box</div>
 <div class="step successful">Then I should be able to see results for that search</div>
+</div>
+<div class="scenario">
+<h2>Scenario: Homepage - Apply Online - Verify the redirection from DAC when RI is cancelled</h2>
+<div class="examples">
+<h3>Examples:</h3>
+<div class="step">Given I am on the Disaster Assistance homepage</div>
+<div class="step">When I click on &lt;mainLinksItem&gt; within the main links bar</div>
+<div class="step">Then I click on cancel and I should be redirected to the correct environment</div>
+<table>
+<thead>
+<tr>
+<th>mainLinksItem</th></tr>
+</thead>
+<tbody>
+<tr>
+<td>apply online</td></tr>
+</tbody>
+</table>
+
+<h3 class="example">Example: {mainLinksItem=apply online}</h3>
+<div class="step successful">Given I am on the Disaster Assistance homepage</div>
+<div class="step successful">When I click on <span class="step parameter">apply online</span> within the main links bar</div>
+<div class="step successful">Then I click on cancel and I should be redirected to the correct environment</div>
+</div>
 </div>
 </div>
