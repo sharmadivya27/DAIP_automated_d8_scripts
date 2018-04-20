@@ -13,7 +13,7 @@ import net.thucydides.core.util.SystemEnvironmentVariables;
 
 public class BrowserStackSerenityTest {
     static Local bsLocal;
-
+    
     @BeforeClass
     public static void setUp() throws Exception {
         EnvironmentVariables environmentVariables = SystemEnvironmentVariables.createEnvironmentVariables();

@@ -1,9 +1,10 @@
+Meta: @skip
+
 Narrative:
 In order to assert that the basic functionality of https://www.disasterassistance.gov/es/ is working
 As a tester
 I want to run the daily regressions at least twice a day
 
-Meta: 
 
 Scenario: (Spanish) Homepage - Header - All the menu links on the "Get Assistance" tab
 Meta: 

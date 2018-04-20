@@ -13,13 +13,13 @@ public class DAHomepage extends PageObject {
 
 	// *************************************************************************
 	// FindBy / private variables section
-
+	
 	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][1]/a")
 	private WebElementFacade getAssistanceTab;
-
+	
 	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][1]/ul/li[1]/a")
 	private WebElementFacade addressLookUpMenu;
-
+	
 	@FindBy(xpath = "//*[@class='desktop-main-menu-dropdown dropdown'][1]/ul/li[2]/a")
 	private WebElementFacade findAssistance;
 
@@ -158,55 +158,58 @@ public class DAHomepage extends PageObject {
 	@FindBy(xpath = "//*[@id='desktop-disaster-table']/table/tbody/tr/td[2]/a")
 	private WebElementFacade disasterName;
 	
+	@FindBy(xpath = "//*[@id='mobile-disaster-table']/tbody/tr[3]/td/a")
+	private WebElementFacade disasterMobileName;
+	
 	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][1]")
 	private WebElementFacade accountability;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][2]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][5]")
 	private WebElementFacade privacy;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][3]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][9]")
 	private WebElementFacade foia;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][4]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][13]")
 	private WebElementFacade accessibilityFooter;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][5]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][17]")
 	private WebElementFacade planWriting;
 
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][6]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][2]")
 	private WebElementFacade femaGov;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][7]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][6]")
 	private WebElementFacade femaMobileApp;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][8]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][10]")
 	private WebElementFacade readyGov;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][9]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][14]")
 	private WebElementFacade dhsGov;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][10]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][3]")
 	private WebElementFacade usaGov;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][11]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][7]")
 	private WebElementFacade usaGovBus;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][12]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][11]")
 	private WebElementFacade cfdaGov;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][13]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][15]")
 	private WebElementFacade whiteHouse;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][14]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][4]")
 	private WebElementFacade inspectorGeneral;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][15]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][8]")
 	private WebElementFacade noFearAct;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][16]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][12]")
 	private WebElementFacade budgetPerformance;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][17]")
+	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][16]")
 	private WebElementFacade siteMap;
 	
 	@FindBy(xpath = "/html/body/nav/div/div[2]/div[1]/button")
@@ -220,7 +223,113 @@ public class DAHomepage extends PageObject {
 	
 	@FindBy(xpath = "//*[@id='result-1']/span")
 	private WebElementFacade USASearchResult;
+	
+	/***********Mobile Code****************/
+	              
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[1]/button")
+	private WebElementFacade navMenu;
+	                  
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[1]/a")
+	private WebElementFacade getMobileHomeTab;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[2]/a")
+	private WebElementFacade getMobileAssistanceTab;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[2]/ul/li[1]/a")
+	private WebElementFacade getMobileAddressLookUp;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[2]/ul/li[2]/a")
+	private WebElementFacade getMobileFindAssistance;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[2]/ul/li[3]/a")
+	private WebElementFacade getMobileApplyOnline;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[2]/ul/li[4]/a")
+	private WebElementFacade getMobileCheckYourStatus;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[2]/ul/li[5]/a")
+	private WebElementFacade getMobileFormsOfAssistance;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[2]/ul/li[6]/a")
+	private WebElementFacade getMobileCommunityLeaders;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[2]/ul/li[7]/a")
+	private WebElementFacade getMobileOtherRecoveryHelp;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[2]/ul/li[8]/a")
+	private WebElementFacade getMobileApplicationChecklist;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[2]/ul/li[9]/a")
+	private WebElementFacade getMobileForms;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[3]/a")
+	private WebElementFacade getMobileInformationTab;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[3]/ul/li[1]/a")
+	private WebElementFacade getMobileNewsFeeds;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[3]/ul/li[2]/a")
+	private WebElementFacade getMobileImmediateNeeds;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[3]/ul/li[3]/a")
+	private WebElementFacade getMobileMovingForward;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[3]/ul/li[4]/a")
+	private WebElementFacade getMobileDisabilitiesOrAccess;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[3]/ul/li[5]/a")
+	private WebElementFacade getMobileOlderAmericans;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[3]/ul/li[6]/a")
+	private WebElementFacade getMobileChildrenAndFamilies;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[3]/ul/li[7]/a")
+	private WebElementFacade getMobileDisasterTypes;
 
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[3]/ul/li[8]/a")
+	private WebElementFacade getMobileForeignDisasters;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[3]/ul/li[9]/a")
+	private WebElementFacade getMobileFactSheets;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[4]/a")
+	private WebElementFacade getMobileAboutUsTab;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[4]/ul/li[1]/a")
+	private WebElementFacade getMobileOverview;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[4]/ul/li[2]/a")
+	private WebElementFacade getMobilePartners;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[5]/a")
+	private WebElementFacade getMobileHelpTab;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[5]/ul/li[1]/a")
+	private WebElementFacade getMobileFaqs;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[5]/ul/li[2]/a")
+	private WebElementFacade getMobileContactUs;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[5]/ul/li[3]/a")
+	private WebElementFacade getMobilePrivacyPolicy;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[5]/ul/li[4]/a")
+	private WebElementFacade getMobileAccessibility;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[5]/ul/li[5]/a")
+	private WebElementFacade getMobileDownloadPlugins;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/div[2]/a")
+	private WebElementFacade getMobileSpanish;
+	
+	@FindBy(xpath = "//*[@id=\"logo\"]")
+	private WebElementFacade disasterAssistanceLogo;
+	
+	@FindBy(xpath = "//*[@id=\"addressLookupSearchHelpBlock\"]/label")
+	private WebElementFacade addressBody;
+	
+	@FindBy(xpath = "//*[@id=\"disaster-lookup-submit\"]")
+	private WebElementFacade mobileSearchButton;
 	
 	// *************************************************************************
 	// Functions
@@ -457,6 +566,141 @@ public class DAHomepage extends PageObject {
 		planWriting.click();
 	}
 	
+	
+	/*********** Mobile code************/
+	
+	public void clickNavMenu() {
+		navMenu.click();
+	}
+	
+	public void clickMobileHome() {
+		getMobileHomeTab.click();
+	}
+	
+	public void clickMobileAssistance() {
+		getMobileAssistanceTab.click();
+	}
+	
+	public void clickMobileInformation() {
+		getMobileInformationTab.click();
+	}
+	
+	public void clickMobileAboutUs() {
+		getMobileAboutUsTab.click();
+	}
+	
+	public void clickMobileHelp() {
+		getMobileHelpTab.click();
+	}
+	
+	public void clickMobileAddressLookUp() {
+		getMobileAddressLookUp.click();
+	}
+	
+	public void clickMobileFindAssistance() {
+		getMobileFindAssistance.click();
+	}
+	
+	public void clickMobileApplyOnline() {
+		getMobileApplyOnline.click();
+	}
+	
+	public void clickMobileCheckYourStatus() {
+		getMobileCheckYourStatus.click();
+	}
+	
+	public void clickMobileFormsOfAssistance() {
+		getMobileFormsOfAssistance.click();
+	}
+	
+	public void clickMobileCommunityLeaders() {
+		getMobileCommunityLeaders.click();
+	}
+	
+	public void clickMobileOtherRecoveryHelp() {
+		getMobileOtherRecoveryHelp.click();
+	}
+	
+	public void clickMobileApplicationChecklist() {
+		getMobileApplicationChecklist.click();
+	}
+	
+	public void clickMobileForms() {
+		getMobileForms.click();
+	}
+	
+	public void clickMobileNewsFeeds() {
+		getMobileNewsFeeds.click();
+	}
+	
+	public void clickMobileImmediateNeeds() {
+		getMobileImmediateNeeds.click();
+	}
+	
+	public void clickMobileMovingFoward() {
+		getMobileMovingForward.click();
+	}
+	
+	public void clickMobileDiabilitiesorAccess() {
+		getMobileDisabilitiesOrAccess.click();
+	}
+	
+	public void clickMobileOlderAmericans() {
+		getMobileOlderAmericans.click();
+	}
+	
+	public void clickMobileChildrenAndFamilies() {
+		getMobileChildrenAndFamilies.click();
+	}
+	
+	public void clickMobileDisasterTypes() {
+		getMobileDisasterTypes.click();
+	}
+	
+	public void clickMobileForeignDisasters() {
+		getMobileForeignDisasters.click();
+	}
+	
+	public void clickMobileFactSheets() {
+		getMobileFactSheets.click();
+	}
+	
+	public void clickMobileOverview() {
+		getMobileOverview.click();
+	}
+	
+	public void clickMobilePartners() {
+		getMobilePartners.click();
+	}
+	
+	public void clickMobileFaqs() {
+		getMobileFaqs.click();
+	}
+	
+	public void clickMobileContactUs() {
+		getMobileContactUs.click();
+	}
+	
+	public void clickMobilePrivacyPolicy() {
+		getMobilePrivacyPolicy.click();
+	}
+	
+	public void clickMobileAccessibility() {
+		getMobileAccessibility.click();
+	}
+	
+	public void clickMobileDownloadPlugins() {
+		getMobileDownloadPlugins.click();
+	}
+	
+	public void clickMobileSpanish() {
+		getMobileSpanish.click();
+	}
+	
+	public void clickMobileSearch() {
+		mobileSearchButton.click();
+	}
+	
 	/*************************************************************************
 	 * Verifies that local resources results are visible and appear on the
 	 * homepage.
@@ -604,6 +848,22 @@ public class DAHomepage extends PageObject {
 		addressLookUpButton.click();
 		pause(4000);
 	}
+	
+	/*************************************************************************
+	 * Types the declared disaster state and county into the Address Look-up
+	 * search field from the Address Look-Up page.
+	 * 
+	 *************************************************************************/
+	public void typeMobileAddressLookUpPage() {
+		String state = getDeclaredDisasterState();
+		String county = getDeclaredDisasterCounty();
+		this.openAt("https://www.disasterassistance.gov/get-assistance/address-lookup");
+		addressLookUpTextField.click();
+		addressLookUpTextField.type(county + "," + state);
+		addressBody.click();
+		mobileSearchButton.click();
+		pause(4000);
+	}
 
 	/*************************************************************************
 	 * Types the declared disaster state and county into the Spanish Address
@@ -642,6 +902,10 @@ public class DAHomepage extends PageObject {
 	public boolean disasterAppears() {
 		return disasterName.isDisplayed();
 	}
+	
+	public boolean disasterMobileAppears() {
+		return disasterMobileName.isDisplayed();
+	}
 
 	public void clickAssistanceMainLink() {
 		assistanceMainLink.click();
@@ -665,6 +929,10 @@ public class DAHomepage extends PageObject {
 
 	public boolean dacPageIsDisplayed() {
 		return dacPage.isDisplayed();
+	}
+	
+	public boolean disasterAssistanceIsDisplayed() {
+		return disasterAssistanceLogo.isDisplayed();
 	}
 	
 	public String getUrl() {
@@ -718,5 +986,132 @@ public class DAHomepage extends PageObject {
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
+	}
+	/*************************************************************************
+	 * Finds if nav menu items are visible in mobile.
+	 * 
+	 *************************************************************************/
+	public boolean getHomeTabVisible() {
+		return getMobileHomeTab.isVisible();
+	}
+	
+	public boolean getAssistanceTabVisible() {
+		return getMobileAssistanceTab.isVisible();
+	}
+	
+	public boolean getInformationTabVisible() {
+		return getMobileInformationTab.isVisible();
+	}
+	
+	public boolean getAboutUsTabVisible() {
+		return getMobileAboutUsTab.isVisible();
+	}
+	
+	public boolean getHelpTabVisible() {
+		return getMobileHelpTab.isVisible();
+	}
+	
+	public boolean getAddressLookUpVisible() {
+		return getMobileAddressLookUp.isVisible();
+	}
+	
+	public boolean getFindAssistanceVisible() {
+		return getMobileFindAssistance.isVisible();
+	}
+	
+	public boolean getApplyOnlineVisible() {
+		return getMobileApplyOnline.isVisible();
+	}
+	
+	public boolean getCheckYourStatusVisible() {
+		return getMobileCheckYourStatus.isVisible();
+	}
+	
+	public boolean getFormsOfAssistanceVisible() {
+		return getMobileFormsOfAssistance.isVisible();
+	}
+	
+	public boolean getCommunityLeadersVisible() {
+		return getMobileCommunityLeaders.isVisible();
+	}
+	
+	public boolean getOtherRecoveryHelpVisible() {
+		return getMobileOtherRecoveryHelp.isVisible();
+	}
+	
+	public boolean getApplicationChecklistVisible() {
+		return getMobileApplicationChecklist.isVisible();
+	}
+	
+	public boolean getFormsVisible() {
+		return getMobileForms.isVisible();
+	}
+	
+	public boolean getNewsFeedsVisible() {
+		return getMobileNewsFeeds.isVisible();
+	}
+	
+	public boolean getImmediateNeedsVisible() {
+		return getMobileImmediateNeeds.isVisible();
+	}
+	
+	public boolean getMovingForwardVisible() {
+		return getMobileMovingForward.isVisible();
+	}
+	
+	public boolean getDisabilitiesOrAccessVisible() {
+		return getMobileDisabilitiesOrAccess.isVisible();
+	}
+	
+	public boolean getOlderAmericansVisible() {
+		return getMobileOlderAmericans.isVisible();
+	}
+	
+	public boolean getChildrenAndFamiliesVisible() {
+		return getMobileChildrenAndFamilies.isVisible();
+	}
+	
+	public boolean getDisasterTypesVisible() {
+		return getMobileDisasterTypes.isVisible();
+	}
+	
+	public boolean getForeignDisastersVisible() {
+		return getMobileForeignDisasters.isVisible();
+	}
+	
+	public boolean getFactSheetsVisible() {
+		return getMobileFactSheets.isVisible();
+	}
+	
+	public boolean getOverviewVisible() {
+		return getMobileOverview.isVisible();
+	}
+	
+	public boolean getPartnersVisible() {
+		return getMobilePartners.isVisible();
+	}
+	
+	public boolean getFaqsVisible() {
+		return getMobileFaqs.isVisible();
+	}
+	
+	public boolean getContactUsVisible() {
+		return getMobileContactUs.isVisible();
+	}
+	
+	public boolean getPrivacyPolicyVisible() {
+		return getMobilePrivacyPolicy.isVisible();
+	}
+	
+	public boolean getAccessibilityVisible() {
+		return getMobileAccessibility.isVisible();
+	}
+	
+	public boolean getDownloadPluginsVisible() {
+		return getMobileDownloadPlugins.isVisible();
+	}
+	
+	public boolean getSpanishVisible() {
+		return getMobileSpanish.isVisible();
 	}
 }

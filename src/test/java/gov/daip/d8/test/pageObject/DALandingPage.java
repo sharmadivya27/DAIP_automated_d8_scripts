@@ -1,8 +1,10 @@
 package gov.daip.d8.test.pageObject;
 
+import java.awt.AWTException;
 import java.util.Iterator;
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import gov.daip.d8.test.exceptions.FeedException;
@@ -18,6 +20,9 @@ public class DALandingPage extends PageObject {
 
 	@FindBy(xpath = "//*[@id='block-twitterblock']")
 	private WebElementFacade twitterFeedBlock;
+	
+	@FindBy(xpath = "//*[@id=\"block-twitterblock-2\"]")
+	private WebElementFacade mobileTwitterFeedBlock;
 
 	@FindBy(xpath = "//*[@id='block-severe-storms']/h3")
 	private WebElementFacade severeStorms;
@@ -31,9 +36,9 @@ public class DALandingPage extends PageObject {
 	@FindBy(xpath = "//*[@id='block-drought']/h3")
 	private WebElementFacade drought;
 
-	@FindBy(xpath = "//*[@id='block-communityleadersresultspage']/div[1]/div/div[1]/div[2]")
+	@FindBy(xpath = "//*[@id='block-communityleadersresultspage']/div[1]/div/div/div[2]")
 	private WebElementFacade quickSearchResult;
-
+	
 	@FindBy(xpath = "//*[@id='block-communityleadersresultspage']/div[2]")
 	private WebElementFacade communityPreparedness;
 
@@ -57,7 +62,7 @@ public class DALandingPage extends PageObject {
 
 	@FindBy(xpath = "//*[@id='edit-category-list-214']")
 	private WebElementFacade careerAssistance;
-
+	
 	@FindBy(xpath = "//*[@id='edit-category-list-215']")
 	private WebElementFacade disabilityAssistance;
 
@@ -144,6 +149,9 @@ public class DALandingPage extends PageObject {
 
 	@FindBy(xpath = "//*[@class='desktop-header']")
 	private WebElementFacade results;
+	
+	@FindBy(xpath = "/html/body/div[3]/div/section/div/div/div[1]/div[2]/div")
+	private WebElementFacade mobileResults;
 
 	@FindBy(xpath = "//*[@id='edit-category-select']")
 	private WebElementFacade searchCategoryButton;
@@ -156,7 +164,112 @@ public class DALandingPage extends PageObject {
 
 	@FindBy(xpath = "//*[@id='edit-submit-desktop']")
 	private WebElementFacade communityLeadersSearch;
+	
+	/********************Mobile***********************/
+	@FindBy(xpath = "//*[@id='drupal-modal']/div/div/div[3]/button")
+	private WebElementFacade searchMobileCategoryButton;
+	
+	@FindBy(xpath = "//*[@id='edit-submit-mobile']")
+	private WebElementFacade communityLeadersMobileSearch;
 
+	@FindBy(xpath = "/html/body/div[3]/div/section/div/div/div[1]/div[2]/div/div/a")
+	private WebElementFacade refineSearch;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-filter-by-mobile')]/div[1]/label")
+	private WebElementFacade mobileCategoryType;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-category-list-214')]")
+	private WebElementFacade mobileCareerDev;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-category-list-215')]")
+	private WebElementFacade mobileDisability;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-category-list-216')]")
+	private WebElementFacade mobileDisaster;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-category-list-217')]")
+	private WebElementFacade mobileEducation;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-category-list-218')]")
+	private WebElementFacade mobileEnergy;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-category-list-219')]")
+	private WebElementFacade mobileFood;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-category-list-220')]")
+	private WebElementFacade mobileGrants;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-category-list-221')]")
+	private WebElementFacade mobileHousing;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-category-list-222')]")
+	private WebElementFacade mobileInsurance;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-category-list-223')]")
+	private WebElementFacade mobileLegal;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-category-list-224')]")
+	private WebElementFacade mobileLiving;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-category-list-225')]")
+	private WebElementFacade mobileLoan;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-category-list-226')]")
+	private WebElementFacade mobileMental;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-category-list-227')]")
+	private WebElementFacade mobileSocial;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-category-list-228')]")
+	private WebElementFacade mobileVeterans;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-filter-by-mobile')]/div[2]/label")
+	private WebElementFacade mobileFederalAgency;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-agency-title-list')]/div[1]/label")
+	private WebElementFacade mobileDOL;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-agency-title-list')]/div[2]/label")
+	private WebElementFacade mobileDOA;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-agency-title-list')]/div[3]/label")
+	private WebElementFacade mobileDHS;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-agency-title-list')]/div[4]/label")
+	private WebElementFacade mobileDHHS;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-agency-title-list')]/div[5]/label")
+	private WebElementFacade mobileDHUD;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-agency-title-list')]/div[6]/label")
+	private WebElementFacade mobileDOI;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-agency-title-list')]/div[7]/label")
+	private WebElementFacade mobileDOJ;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-agency-title-list')]/div[8]/label")
+	private WebElementFacade mobileSBA;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-agency-title-list')]/div[9]/label")
+	private WebElementFacade mobileSSA;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-agency-title-list')]/div[10]/label")
+	private WebElementFacade mobileDOE;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-agency-title-list')]/div[11]/label")
+	private WebElementFacade mobileDOT;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-agency-title-list')]/div[12]/label")
+	private WebElementFacade mobileOPM;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-agency-title-list')]/div[13]/label")
+	private WebElementFacade mobileVA;
+	
+	@FindBy(xpath = "//*[contains(@id,'edit-mobile-agency-title-list')]/div[14]/label")
+	private WebElementFacade mobileUSPS;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[3]/div/section/article/div/div/p")
+	private WebElementFacade clbody;
 	// *************************************************************************
 	// Functions
 	
@@ -186,13 +299,34 @@ public class DALandingPage extends PageObject {
 			}
 		}
 	}
+	
+	public void checkMobileTwitterFeed() throws FeedException {
+		this.evaluateJavascript("window.scrollTo(0,document.body.scrollHeight)");
+
+		int expected = 3;
+
+		// NOTE(Chris):
+		// Have to switch iframe to see element could cause other issues (maybe)
+		List<WebElement> recentTweets = this.getDriver().switchTo().frame("twitter-widget-1")
+				.findElements(By.xpath("//ol[@class='timeline-TweetList']/li"));
+		Iterator<WebElement> twiterator = recentTweets.iterator();
+
+		if (recentTweets.size() != expected) {
+			throw new FeedException("Expected: <" + expected + ">, actual value: <" + recentTweets.size() + ">");
+		}
+		while (twiterator.hasNext()) {
+			if (!twiterator.next().isDisplayed()) {
+				throw new FeedException("Twitter feed not visible");
+			}
+		}
+	}
 
 	/*************************************************************************
 	 * Verifies that the FEMA twitter feed is visible on the homepage.
 	 * 
 	 *************************************************************************/
 	public void checkTwitterFeedBlock() throws FeedException {
-		if (!twitterFeedBlock.isVisible()) {
+		if (!twitterFeedBlock.isVisible() && !mobileTwitterFeedBlock.isVisible()) {
 			throw new FeedException("Twitter feed not visible");
 		}
 	}
@@ -207,7 +341,7 @@ public class DALandingPage extends PageObject {
 				|| quickSearchResult.containsText("housing") || quickSearchResult.containsText("Volunteers")
 				|| quickSearchResult.containsText("Utilities") || quickSearchResult.containsText("infraestructura")
 				|| quickSearchResult.containsText("comunidad") || quickSearchResult.containsText("gobierno")
-				|| quickSearchResult.containsText("Vivienda"); 
+				|| quickSearchResult.containsText("Vivienda") || quickSearchResult.containsText("Disaster");  
 	}
 
 	public String stormTitle() {
@@ -241,19 +375,55 @@ public class DALandingPage extends PageObject {
 	public void clickHowCanYouHelp() {
 		howCanYouHelp.click();
 	}
+	
+	public void clickMobileHowCanYouHelp() {
+		this.evaluateJavascript("window.scrollBy(0,200)", "");
+		howCanYouHelp.click();
+	}
 
 	public void clickInfrastructure() {
+		infrastructure.click();
+	}
+	
+	public void clickMobileInfrastructure() {
+		this.evaluateJavascript("window.scrollBy(0,200)", "");
 		infrastructure.click();
 	}
 
 	public void clickCategoryType() {
 		categoryType.click();
 	}
+	
+	public void clickRefineSearch() {
+		refineSearch.click();
+	}
+	
+	public void clickMobileCategoryType() {
+		clickRefineSearch();
+		mobileCategoryType.click();
+	}
 
 	public void clickFederalAgency() {
 		federalAgency.click();
 	}
+	
+	public void clickMobileFederalAgency() {
+		daHomepage.pause(3000);
+		clickRefineSearch();
+		mobileFederalAgency.click();
+	}
 
+	public void clickMobileFirstCategoryTypes() {
+		mobileCareerDev.click();
+		mobileDisability.click();
+		mobileDisaster.click();
+		mobileEducation.click();
+		mobileEnergy.click();
+		mobileFood.click();
+		mobileGrants.click();
+		searchMobileCategoryButton.click();
+	}
+	
 	public void clickFirstCategoryTypes() {
 		careerAssistance.click();
 		disabilityAssistance.click();
@@ -265,6 +435,26 @@ public class DALandingPage extends PageObject {
 		searchCategoryButton.click();
 	}
 
+	public void clickMobileNextCategoryTypes() {
+		mobileHousing.click();
+		mobileInsurance.click();
+		mobileLegal.click();
+		mobileLiving.click();
+		WebElement element = getDriver().findElement(By.xpath("//*[contains(@id,'edit-mobile-category-list-224')]"));
+		((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		mobileLoan.click();
+		mobileMental.click();
+		mobileSocial.click();
+		mobileVeterans.click();
+		searchMobileCategoryButton.click();
+	}
+	
 	public void clickNextCategoryTypes() {
 		housing.click();
 		insurance.click();
@@ -277,6 +467,17 @@ public class DALandingPage extends PageObject {
 		searchCategoryButton.click();
 	}
 
+	public void clickMobileFirstSevenFederalAgencies() {
+		mobileDOL.click();
+		mobileDOA.click();
+		mobileDHS.click();
+		mobileDHHS.click();
+		mobileDHUD.click();
+		mobileDOI.click();
+		mobileDOJ.click();
+		searchMobileCategoryButton.click();
+	}
+	
 	public void clickFirstSevenFederalAgencies() {
 		USDA.click();
 		ED.click();
@@ -290,6 +491,25 @@ public class DALandingPage extends PageObject {
 		searchAgencyButton.click();
 	}
 
+	public void clickMobileNextFederalAgencies() {
+		mobileSBA.click();
+		mobileSSA.click();
+		mobileDOE.click();
+		WebElement element = getDriver().findElement(By.xpath("//*[contains(@id,'edit-mobile-agency-title-list')]/div[13]/label"));
+		((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		mobileDOT.click();
+		mobileOPM.click();
+		mobileVA.click();
+		mobileUSPS.click();
+		searchMobileCategoryButton.click();
+	}
+	
 	public void clickNextFederalAgencies() {
 		VA.click();
 		SBA.click();
@@ -307,11 +527,23 @@ public class DALandingPage extends PageObject {
 	public String getResults() {
 		return results.getText();
 	}
+	
+	public String getMobileResults() {
+		return mobileResults.getText();
+	}
 
 	public void typeIntoSearchBar() {
 		searchBar.click();
 		searchBar.type("disaster");
 		communityLeadersSearch.click();
 		daHomepage.pause(2000);
+	}
+	
+	public void typeIntoMobileSearchBar() throws AWTException {
+		searchBar.click();
+		searchBar.type("disaster");
+		//clbody.click();
+		communityLeadersMobileSearch.click();
+		daHomepage.pause(5000);
 	}
 }

@@ -1,9 +1,10 @@
+Meta: @skip
+
 Narrative:
 In order to assure that the basic functionality of disasterassistance.gov is working
 As a tester
 I want to run the daily regressions at least twice a day
 
-Meta:
 
 Scenario: Homepage - Header - All the menu links on the "Get Assistance" tab
 Meta: 
@@ -45,7 +46,7 @@ Examples:
 |foreign disasters|
 |fact sheets|
 
-Scenario: Homepage - Header - All the menu links on the "About Us" tab
+Scenario:  (Mobile) Homepage - Header - All the menu links on the "About Us" tab
 Meta: 
 @category daily
 
@@ -75,7 +76,7 @@ Examples:
 |download plug-ins|
 
 Scenario: Homepage - Key Links - Main links on homepage to assert that the pages open correctly
-Meta:
+Meta: 
 @category daily 
 
 Given I am on the Disaster Assistance homepage
@@ -97,7 +98,7 @@ When I am viewing the declared disaster map
 Then states with disasters should be clickable
 
 Scenario: Homepage - Currently declared disasters - The declared states on the declared disaster map 
-Meta: 
+Meta: @skp
 @category daily 
 
 Given I am on the Disaster Assistance homepage
@@ -221,7 +222,7 @@ When I click on Federal Agency to check the next seven federal agencies
 Then 37 results should appear
 
 Scenario: Homepage - "Apply Online" DAC page includes mobile flag 
-Meta: @skip
+Meta: 
 @category daily 
 
 Given I am on the Disaster Assistance homepage 
@@ -229,7 +230,7 @@ When I click on Apply Online
 Then the DAC page with the mobile string should appear    
 
 Scenario: Homepage - "Check Status" DAC page includes mobile flag
-Meta: @skip 
+Meta:  
 @category daily 
 
 Given I am on the Disaster Assistance homepage 
@@ -237,7 +238,7 @@ When I click on Check Status
 Then the DAC page with the mobile string should appear 
 
 Scenario: Community Leaders - Type keyword into search bar
-Meta:
+Meta: 
 @category daily
 
 Given I am on the Community Leaders page on Disaster Assistance

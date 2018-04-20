@@ -5,6 +5,7 @@ import net.serenitybdd.core.pages.WebElementFacade;
 import java.util.Iterator;
 import java.util.List;
 
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebElement;
 
 import net.serenitybdd.core.annotations.findby.By;
@@ -43,11 +44,24 @@ public class DAQuestionnaire extends PageObject {
 	@FindBy(xpath = "//*[@id='pageContent']")
 	private WebElementFacade checkStatusPageContent;
 	
+	@FindBy(xpath = "/html/body/table/tbody/tr[6]/td/a")
+	private WebElementFacade checkContactUs;
+	
 	@FindBy(xpath = "//span[contains(., 'Disaster Assistance Center') or contains(.,'Centro de Asistencia por Desastre')]")
 	private WebElementFacade dacPage;
 	
 	@FindBy(xpath = "//*[@id='apply_now']")
 	private WebElementFacade applyNow;
+	
+	@FindBy(xpath = "//*[@id=\"results_next\"]")
+	private WebElementFacade foaMobileNext;
+	
+	@FindBy(xpath = "//*[@id=\"foa_submit\"]")
+	private WebElementFacade getResultsButton;
+	
+	@FindBy(xpath="//*[@id=\"category_select\"]")
+	private WebElementFacade mobileBenefitCounter;
+	
 
 	// *************************************************************************
 	// Functions
@@ -65,6 +79,19 @@ public class DAQuestionnaire extends PageObject {
 		this.evaluateJavascript("window.scrollBy(0,500)", "");
 		daHomepage.pause(3000);
 		benefitCounter.click();
+	}
+	
+	public void getMobileFOAResultsPage() {
+		daHomepage.pause(3000);
+		this.evaluateJavascript("window.scrollBy(0,500)", "");
+		daHomepage.pause(1000);
+		this.evaluateJavascript("window.scrollBy(0,500)", "");
+		daHomepage.pause(1000);
+		this.evaluateJavascript("window.scrollBy(0,500)", "");
+		daHomepage.pause(3000);
+		this.evaluateJavascript("window.scrollBy(0,-1500)", "");
+		mobileBenefitCounter.click();
+		mobileBenefitCounter.click();
 	}
 	
 	public void getSpanishFOAResultsPage() {
@@ -99,7 +126,7 @@ public class DAQuestionnaire extends PageObject {
 		}
 		stateSelector.sendKeys("Alabama");
 		this.evaluateJavascript("window.scrollBy(0,50)", "");
-		//////////// getResultsButton.click();
+		//getResultsButton.click();
 	} 
 	
 	/*************************************************************************
@@ -134,6 +161,16 @@ public class DAQuestionnaire extends PageObject {
 		return i;
 	}
 	
+	public int getMobileResultsVal() {
+		//String x = getResultsButton.getText().replace("Get 63 Results", "63");
+		String x = getResultsButton.getText().replaceAll("\\D+","");
+		int i = Integer.parseInt(x);
+		System.out.println(x);
+		getResultsButton.click();
+		return i;
+		
+	}
+	
 	public int getNumEmploymentResults() {
 		return FOAExpandedResults.size();
 	}
@@ -148,7 +185,25 @@ public class DAQuestionnaire extends PageObject {
 		footer.get(footer.size() - 1).click();
 	}
 	
+	public void clickMobileNextFOA() {
+		WebElement element = getDriver().findElement(By.xpath("//*[@id=\"results_next\"]"));
+		((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);
+		try {
+			Thread.sleep(500);
+		} catch (InterruptedException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		this.evaluateJavascript("window.scrollBy(0,-200)", "");
+		foaMobileNext.click();
+	}
+	
 	public void clickApplyOnline() {
+		applyNow.click();
+	}
+	
+	public void clickMobileApplyOnline() {
+		this.evaluateJavascript("window.scrollBy(0,-500)", "");
 		applyNow.click();
 	}
 	
@@ -164,5 +219,9 @@ public class DAQuestionnaire extends PageObject {
 	
 	public boolean dacPageIsDisplayed() {
 		return dacPage.isDisplayed();
+	}
+	
+	public boolean contactUsIsDisplayed() {
+		return checkContactUs.isDisplayed();
 	}
 }

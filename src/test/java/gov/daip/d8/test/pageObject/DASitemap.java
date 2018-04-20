@@ -8,8 +8,11 @@ public class DASitemap extends PageObject {
 
 	// *************************************************************************
 	// FindBy / private variables section
-
-	@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/li[1]/a")
+	
+	//@FindBy(xpath = "/html/body/div[4]/div/section/ul[1]/li[1]/a")
+	//private WebElementFacade home;
+	
+	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/li[1]/a")
 	private WebElementFacade home;
 
 	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[1]/li[1]/a")
@@ -44,7 +47,7 @@ public class DASitemap extends PageObject {
 
 	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/li[2]/a")
 	private WebElementFacade immediateNeedsSitemap;
-
+	
 	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/ul[1]/li[1]/a")
 	private WebElementFacade evacuateSitemap;
 

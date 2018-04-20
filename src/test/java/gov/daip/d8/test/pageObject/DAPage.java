@@ -44,6 +44,7 @@ public class DAPage extends PageObject {
 	public DAPage(WebDriver driver) {
 		super(driver);
 		//driver.manage().window().maximize(); 
+		//driver.manage().window().setSize(new Dimension(400, 784));
 		this.setImplicitTimeout(10, TimeUnit.SECONDS); 
 	} 
 	
@@ -56,6 +57,7 @@ public class DAPage extends PageObject {
 	}
 	
 	public String processWindows() {
+		
         // Store the current window handle
         String winHandleBefore = getDriver().getWindowHandle();
         

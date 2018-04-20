@@ -7,6 +7,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
+import io.appium.java_client.remote.IOSMobileCapabilityType;
 import net.thucydides.core.util.EnvironmentVariables;
 import net.thucydides.core.util.SystemEnvironmentVariables;
 import net.thucydides.core.webdriver.DriverSource;
@@ -28,6 +29,11 @@ public class BrowserStackSerenityDriver implements DriverSource {
 
 		String environment = System.getProperty("environment");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
+		
+		capabilities.setCapability("nativeWebTap", "true");
+		capabilities.setCapability("browserName", "Safari");
+		capabilities.setCapability("safariAllowPopups", "true");
+		capabilities.setCapability("unexpectedAlertBehaviour", "accept");
 		
 		Iterator<?> it = environmentVariables.getKeys().iterator();
 		while (it.hasNext()) {
@@ -53,6 +59,7 @@ public class BrowserStackSerenityDriver implements DriverSource {
 		try {
 			return new RemoteWebDriver(new URL("http://" + username + ":" + accessKey + "@"
 					+ environmentVariables.getProperty("browserstack.server") + "/wd/hub"), capabilities);
+			
 		} catch (Exception e) {
 			System.out.println(e);
 			return null;
