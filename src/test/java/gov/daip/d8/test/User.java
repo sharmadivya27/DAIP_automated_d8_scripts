@@ -470,7 +470,7 @@ public class User {
 	@Step
 	public void completeQuestionnaire() {
 		daQues.completeFullQuestionnaire();
-		daHomepage.pause(1000);
+		daHomepage.pause(10000);
 	}
 
 	@Step
@@ -482,6 +482,7 @@ public class User {
 
 	@Step
 	public void checkSpanishResults() {
+		daHomepage.pause(3000);
 		int i = daQues.getResultsVal();
 		daQues.getSpanishFOAResultsPage();
 		Assert.assertEquals(i, daQues.getNumQuesResults());
@@ -650,8 +651,6 @@ public class User {
 			sitemap.clickForms();
 		} else if ((menuLinks.equals("news feeds")) || (menuLinks.equals("canales de noticias"))) {
 			sitemap.clickNewsFeeds();
-		} else if ((menuLinks.equals("immediate needs")) || (menuLinks.equals("necesidades inmediatas"))) {
-			sitemap.clickImmediateNeeds();
 		} else if ((menuLinks.equals("evacuate or stay put")) || (menuLinks.equals("desaloje o permanezca alerta"))) {
 			sitemap.clickEvacuate();
 		} else if ((menuLinks.equals("gathering up loved ones"))
@@ -664,8 +663,6 @@ public class User {
 			sitemap.clickEmergencyShelter();
 		} else if ((menuLinks.equals("emergency medical")) || (menuLinks.equals("emergencia médica"))) {
 			sitemap.emergencyMedical();
-		} else if ((menuLinks.equals("moving forward")) || (menuLinks.equals("próximo paso"))) {
-			sitemap.movingForward();
 		} else if ((menuLinks.equals("your home")) || (menuLinks.equals("su hogar"))) {
 			sitemap.yourHome();
 		} else if ((menuLinks.equals("your business or farm")) || (menuLinks.equals("su negocio o finca"))) {
@@ -677,15 +674,6 @@ public class User {
 			sitemap.clickHealth();
 		} else if ((menuLinks.equals("your official documents")) || (menuLinks.equals("sus documentos oficiales"))) {
 			sitemap.clickOfficialDocs();
-		} else if ((menuLinks.equals("disabilities or access and functional needs"))
-				|| (menuLinks.equals("discapacidades o necesidades funcionales y de acceso"))) {
-			sitemap.clickDisabilities();
-		} else if ((menuLinks.equals("older americans")) || (menuLinks.equals("adultos mayores estadounidenses"))) {
-			sitemap.clickOlderAmericans();
-		} else if ((menuLinks.equals("children and families")) || (menuLinks.equals("niños y familias"))) {
-			sitemap.clickChildrenFamilies();
-		} else if ((menuLinks.equals("disaster types")) || (menuLinks.equals("los recursos del desastre"))) {
-			sitemap.clickDisasterTypes();
 		} else if ((menuLinks.equals("biological threat")) || (menuLinks.equals("amenaza biológica"))) {
 			sitemap.clickBiological();
 		} else if ((menuLinks.equals("chemical threat")) || (menuLinks.equals("amenaza química"))) {

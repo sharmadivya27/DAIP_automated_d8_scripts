@@ -249,22 +249,16 @@ Examples:
 |lista de verificación para aplicarse|
 |formularios|
 |canales de noticias|
-|necesidades inmediatas|
 |desaloje o permanezca alerta|
 |reuniendo a los seres queridos|
 |comida y agua en una emergencia|
 |refugios de emergencia|
 |emergencia médica|
-|próximo paso|
 |su hogar|
 |su negocio o finca|
 |sus finanzas, trabajo y seguro|
 |su salud|
 |sus documentos oficiales|
-|discapacidades o necesidades funcionales y de acceso|
-|adultos mayores estadounidenses|
-|niños y familias|
-|los recursos del desastre|
 |amenaza biológica|
 |amenaza química|
 |sequía|
@@ -290,7 +284,7 @@ Examples:
 |descargar plug-ins|
 
 Scenario: (Spanish) Homepage - Footer - All the links in "Additional Links"
-Meta:
+Meta: 
 @category daily
 
 Given I am on the Spanish Disaster Assistance homepage

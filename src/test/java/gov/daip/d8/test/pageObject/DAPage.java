@@ -22,9 +22,9 @@ import java.util.concurrent.TimeUnit;
  *************************************************************************/
 
 public class DAPage extends PageObject {
-	
-	/*********************************************/ 
- 
+
+	/*********************************************/
+
 	@FindBy(xpath = "logo")
 	private WebElementFacade homeLogo;
 
@@ -40,57 +40,56 @@ public class DAPage extends PageObject {
 	private String env = System.getProperty("environment");
 	public String defaultUrl = "http://" + env + ".disasterassistance.gov";
 
-
 	public DAPage(WebDriver driver) {
 		super(driver);
-		//driver.manage().window().maximize(); 
-		this.setImplicitTimeout(10, TimeUnit.SECONDS); 
-	} 
-	
+		// driver.manage().window().maximize();
+		this.setImplicitTimeout(10, TimeUnit.SECONDS);
+	}
+
 	public void mobilePage() {
 		getDriver().manage().window().setSize(new Dimension(500, 500));
-	}    
+	}
 
 	public void clearCookies() {
 		this.getDriver().manage().deleteAllCookies();
 	}
-	
+
 	public String processWindows() {
-        // Store the current window handle
-        String winHandleBefore = getDriver().getWindowHandle();
-        
-        // Perform the click operation that opens new window
+		// Store the current window handle
+		String winHandleBefore = getDriver().getWindowHandle();
 
-        // Switch to new window opened
-        List<String> browserTabs = new ArrayList<String>(getDriver().getWindowHandles());
-        getDriver().switchTo().window(browserTabs.get(1));
-    
-        for (int i = 0; i < 10; i++) {
-            try {
-                Thread.sleep(1000);
-                System.out.println("page loading");
-            } catch (InterruptedException e) {
-            }
-            // To check page ready state.
-            if (!getDriver().getCurrentUrl().equals("about:blank")) {
-                System.out.println("done");
-                break;    
-            }
-        }
-    
-        // Perform the actions on new window
-        Serenity.takeScreenshot();
-        String windowUrl = getDriver().getCurrentUrl();
-        System.out.println(windowUrl);
+		// Perform the click operation that opens new window
 
-        // Close the new window, if that window no more required
-        getDriver().close();
-        
-        // Switch back to original browser (first window)
-        getDriver().switchTo().window(winHandleBefore);
+		// Switch to new window opened
+		List<String> browserTabs = new ArrayList<String>(getDriver().getWindowHandles());
+		getDriver().switchTo().window(browserTabs.get(1));
 
-        // Continue with original browser (first window)
-        return windowUrl;
-        
-    }
+		for (int i = 0; i < 10; i++) {
+			try {
+				Thread.sleep(1000);
+				System.out.println("page loading");
+			} catch (InterruptedException e) {
+			}
+			// To check page ready state.
+			if (!getDriver().getCurrentUrl().equals("about:blank")) {
+				System.out.println("done");
+				break;
+			}
+		}
+
+		// Perform the actions on new window
+		Serenity.takeScreenshot();
+		String windowUrl = getDriver().getCurrentUrl();
+		System.out.println(windowUrl);
+
+		// Close the new window, if that window no more required
+		getDriver().close();
+
+		// Switch back to original browser (first window)
+		getDriver().switchTo().window(winHandleBefore);
+
+		// Continue with original browser (first window)
+		return windowUrl;
+
+	}
 }

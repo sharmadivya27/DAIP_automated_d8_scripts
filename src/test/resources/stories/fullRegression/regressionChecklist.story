@@ -213,7 +213,7 @@ When I click on Federal Agency to check the first seven federal agencies
 Then 40 results should appear
 
 Scenario: Forms of Assistance - Federal Agency filter with the next seven types 
-Meta: 
+Meta: @skip
 @category daily 
 
 Given I am on the Forms of Assistance page 
@@ -252,7 +252,7 @@ Given I am on the sitemap
 When I click on a <menuLinks> within the sitemap
 Then the <menuLinks> page should open correctly 
 
-Examples:
+Examples: 
 |menuLinks|
 |home|
 |address look-up|
@@ -265,22 +265,16 @@ Examples:
 |application checklist|
 |forms|
 |news feeds|
-|immediate needs|
 |evacuate or stay put|
 |gathering up loved ones|
 |emergency food and water|
 |emergency shelter|
 |emergency medical|
-|moving forward|
 |your home|
 |your business or farm|
 |your finances, job, and insurance|
 |your health|
 |your official documents|
-|disabilities or access and functional needs|
-|older americans|
-|children and families|
-|disaster types|
 |biological threat|
 |chemical threat|
 |drought|
@@ -306,7 +300,7 @@ Examples:
 |download plug-ins|
 
 Scenario: Homepage - Footer - All the links in "Additional Links"
-Meta:
+Meta:  
 @category daily
 
 Given I am on the Disaster Assistance homepage

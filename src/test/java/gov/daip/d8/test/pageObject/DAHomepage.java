@@ -158,58 +158,58 @@ public class DAHomepage extends PageObject {
 	@FindBy(xpath = "//*[@id='desktop-disaster-table']/table/tbody/tr/td[2]/a")
 	private WebElementFacade disasterName;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][1]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[1]/a")
 	private WebElementFacade accountability;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][2]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[5]/a")
 	private WebElementFacade privacy;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][3]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[9]/a")
 	private WebElementFacade foia;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][4]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[13]/a")
 	private WebElementFacade accessibilityFooter;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][5]")
-	private WebElementFacade planWriting;
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[17]/a")
+	private WebElementFacade plainWriting;
 
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][6]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[2]/a")
 	private WebElementFacade femaGov;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][7]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[6]/a")
 	private WebElementFacade femaMobileApp;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][8]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[10]/a")
 	private WebElementFacade readyGov;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][9]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[14]/a")
 	private WebElementFacade dhsGov;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][10]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[3]/a")
 	private WebElementFacade usaGov;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][11]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[7]/a")
 	private WebElementFacade usaGovBus;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][12]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[11]/a")
 	private WebElementFacade cfdaGov;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][13]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[15]/a")
 	private WebElementFacade whiteHouse;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][14]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[4]/a")
 	private WebElementFacade inspectorGeneral;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][15]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[8]/a")
 	private WebElementFacade noFearAct;
 
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][16]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[12]/a")
 	private WebElementFacade budgetPerformance;
 	
-	@FindBy(xpath = "//*[@class='footer-menu-item col-md-3'][17]")
+	@FindBy(xpath = "//*[@id='block-footer']/nav/ul/li[16]/a")
 	private WebElementFacade siteMap;
 	
-	@FindBy(xpath = "/html/body/nav/div/div[2]/div[1]/button")
+	@FindBy(xpath = "/html/body/div[1]/nav/div/div[2]/div[1]/button")
 	private WebElementFacade USASearch;
 	
 	@FindBy(xpath = "//*[@class='desktop-usa-search-input form-control popover-content']")
@@ -456,7 +456,7 @@ public class DAHomepage extends PageObject {
 	}
 	
 	public void clickPlanWriting() {
-		planWriting.click();
+		plainWriting.click();
 	}
 	
 	/*************************************************************************

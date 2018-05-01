@@ -207,7 +207,7 @@ public class DALandingPage extends PageObject {
 				|| quickSearchResult.containsText("housing") || quickSearchResult.containsText("Volunteers")
 				|| quickSearchResult.containsText("Utilities") || quickSearchResult.containsText("infraestructura")
 				|| quickSearchResult.containsText("comunidad") || quickSearchResult.containsText("gobierno")
-				|| quickSearchResult.containsText("Vivienda"); 
+				|| quickSearchResult.containsText("Vivienda") || quickSearchResult.containsText("Disaster"); 
 	}
 
 	public String stormTitle() {
@@ -298,6 +298,7 @@ public class DALandingPage extends PageObject {
 		treasury.click();
 		this.evaluateJavascript("window.scrollBy(0,500)", "");
 		OPM.click();
+		daHomepage.pause(2000);
 		USPS.click();
 		this.evaluateJavascript("window.scrollBy(0,500)", "");
 		this.evaluateJavascript("window.scrollBy(0,500)", "");
