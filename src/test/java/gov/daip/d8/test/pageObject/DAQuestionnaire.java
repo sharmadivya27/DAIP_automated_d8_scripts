@@ -99,6 +99,7 @@ public class DAQuestionnaire extends PageObject {
 		}
 		stateSelector.sendKeys("Alabama");
 		this.evaluateJavascript("window.scrollBy(0,50)", "");
+		daHomepage.pause(4000);
 		//////////// getResultsButton.click();
 	} 
 	

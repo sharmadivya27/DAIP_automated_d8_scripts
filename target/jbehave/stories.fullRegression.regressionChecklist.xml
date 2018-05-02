@@ -33,3 +33,885 @@ Meta:</iWantTo>
 <step outcome="successful">Then the <parameter>address look-up</parameter> page should open correctly</step>
 
 <example keyword="Example:">{menuLinks=find assistance, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>find assistance</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>find assistance</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=apply online, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>apply online</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>apply online</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=check your status, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>check your status</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>check your status</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=forms of assistance, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>forms of assistance</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>forms of assistance</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=community leaders, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>community leaders</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>community leaders</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=other recovery help, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>other recovery help</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>other recovery help</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=application checklist, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>application checklist</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>application checklist</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=forms, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>forms</parameter> in the Get Assistance tab</step>
+<step outcome="successful">Then the <parameter>forms</parameter> page should open correctly</step>
+</examples>
+</scenario>
+<scenario keyword="Scenario:" title="Homepage - Header - All the menu links on the &quot;Information&quot; tab">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<examples keyword="Examples:">
+<step>Given I am on the Disaster Assistance homepage</step>
+<step>When I click on the &lt;menuLinks&gt; in the Information tab</step>
+<step>Then the &lt;menuLinks&gt; page should open correctly</step>
+<parameters>
+<names><name>menuLinks</name></names>
+<values><value>news feeds</value></values>
+<values><value>immediate needs</value></values>
+<values><value>moving forward</value></values>
+<values><value>disabilities or access and functional needs</value></values>
+<values><value>older americans</value></values>
+<values><value>children and families</value></values>
+<values><value>disaster types</value></values>
+<values><value>foreign disasters</value></values>
+<values><value>fact sheets</value></values>
+</parameters>
+
+<example keyword="Example:">{menuLinks=news feeds, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>news feeds</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>news feeds</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=immediate needs, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>immediate needs</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>immediate needs</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=moving forward, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>moving forward</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>moving forward</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=disabilities or access and functional needs, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>disabilities or access and functional needs</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>disabilities or access and functional needs</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=older americans, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>older americans</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>older americans</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=children and families, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>children and families</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>children and families</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=disaster types, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>disaster types</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>disaster types</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=foreign disasters, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>foreign disasters</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>foreign disasters</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=fact sheets, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>fact sheets</parameter> in the Information tab</step>
+<step outcome="successful">Then the <parameter>fact sheets</parameter> page should open correctly</step>
+</examples>
+</scenario>
+<scenario keyword="Scenario:" title="Homepage - Header - All the menu links on the &quot;About Us&quot; tab">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<examples keyword="Examples:">
+<step>Given I am on the Disaster Assistance homepage</step>
+<step>When I click on the &lt;menuLinks&gt; in the About Us tab</step>
+<step>Then the &lt;menuLinks&gt; page should open correctly</step>
+<parameters>
+<names><name>menuLinks</name></names>
+<values><value>overview</value></values>
+<values><value>partners</value></values>
+</parameters>
+
+<example keyword="Example:">{menuLinks=overview, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>overview</parameter> in the About Us tab</step>
+<step outcome="successful">Then the <parameter>overview</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=partners, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>partners</parameter> in the About Us tab</step>
+<step outcome="successful">Then the <parameter>partners</parameter> page should open correctly</step>
+</examples>
+</scenario>
+<scenario keyword="Scenario:" title="Homepage - Header - All the menu links on the &quot;Help&quot; tab">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<examples keyword="Examples:">
+<step>Given I am on the Disaster Assistance homepage</step>
+<step>When I click on the &lt;menuLinks&gt; in the Help tab</step>
+<step>Then the &lt;menuLinks&gt; page should open correctly</step>
+<parameters>
+<names><name>menuLinks</name></names>
+<values><value>faqs</value></values>
+<values><value>contact us</value></values>
+<values><value>privacy policy</value></values>
+<values><value>accessibility</value></values>
+<values><value>download plug-ins</value></values>
+</parameters>
+
+<example keyword="Example:">{menuLinks=faqs, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>faqs</parameter> in the Help tab</step>
+<step outcome="successful">Then the <parameter>faqs</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=contact us, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>contact us</parameter> in the Help tab</step>
+<step outcome="successful">Then the <parameter>contact us</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=privacy policy, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>privacy policy</parameter> in the Help tab</step>
+<step outcome="successful">Then the <parameter>privacy policy</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=accessibility, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>accessibility</parameter> in the Help tab</step>
+<step outcome="successful">Then the <parameter>accessibility</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=download plug-ins, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>download plug-ins</parameter> in the Help tab</step>
+<step outcome="successful">Then the <parameter>download plug-ins</parameter> page should open correctly</step>
+</examples>
+</scenario>
+<scenario keyword="Scenario:" title="Homepage - Key Links - Main links on homepage to assert that the pages open correctly">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<examples keyword="Examples:">
+<step>Given I am on the Disaster Assistance homepage</step>
+<step>When I click on &lt;mainLinksItem&gt; within the main links bar</step>
+<step>Then the &lt;mainLinksItem&gt; page should open correctly</step>
+<parameters>
+<names><name>mainLinksItem</name></names>
+<values><value>find assistance</value></values>
+<values><value>apply online</value></values>
+<values><value>check status</value></values>
+</parameters>
+
+<example keyword="Example:">{mainLinksItem=find assistance, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on <parameter>find assistance</parameter> within the main links bar</step>
+<step outcome="successful">Then the <parameter>find assistance</parameter> page should open correctly</step>
+
+<example keyword="Example:">{mainLinksItem=apply online, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on <parameter>apply online</parameter> within the main links bar</step>
+<step outcome="successful">Then the <parameter>apply online</parameter> page should open correctly</step>
+
+<example keyword="Example:">{mainLinksItem=check status, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on <parameter>check status</parameter> within the main links bar</step>
+<step outcome="successful">Then the <parameter>check status</parameter> page should open correctly</step>
+</examples>
+</scenario>
+<scenario keyword="Scenario:" title="Homepage - Currently declared disasters - States in the declared disaster map are clickable">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I am viewing the declared disaster map</step>
+<step outcome="successful">Then states with disasters should be clickable</step>
+</scenario>
+<scenario keyword="Scenario:" title="Homepage - Currently declared disasters - The declared states on the declared disaster map">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I am viewing the declared disaster map</step>
+<step outcome="successful">Then states with disasters should be clickable</step>
+<step outcome="successful">Then I should be able to view the list of the declared states</step>
+</scenario>
+<scenario keyword="Scenario:" title="Homepage - Find Local Resources flows correctly">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I am attempting to find local resources</step>
+<step outcome="successful">Then information on resources should be visible</step>
+</scenario>
+<scenario keyword="Scenario:" title="News Feeds - All of the titles on the page">
+<meta>
+<property keyword="@" name="category" value="new"/>
+</meta>
+<step outcome="successful">When I am on the News Feeds landing page node</step>
+<step outcome="successful">Then all of the sub-titles should show on the page</step>
+</scenario>
+<scenario keyword="Scenario:" title="Community Leaders - Results of the quick search items">
+<meta>
+<property keyword="@" name="category" value="NWD"/>
+</meta>
+<examples keyword="Examples:">
+<step>Given I am on the Community Leaders page on Disaster Assistance</step>
+<step>When I click on a &lt;quickSearch&gt; item on the Community Leaders page</step>
+<step>Then the results should include the search words for that item</step>
+<parameters>
+<names><name>quickSearch</name></names>
+<values><value>Community Preparedness</value></values>
+<values><value>Disaster Recovery Resources</value></values>
+<values><value>Emergency Shelter and Housing</value></values>
+<values><value>How Can You Help?</value></values>
+<values><value>Infrastructure, Utilities, and Other Public Assistance</value></values>
+</parameters>
+
+<example keyword="Example:">{quickSearch=Community Preparedness, category=NWD}</example>
+<step outcome="successful">Given I am on the Community Leaders page on Disaster Assistance</step>
+<step outcome="successful">When I click on a <parameter>Community Preparedness</parameter> item on the Community Leaders page</step>
+<step outcome="successful">Then the results should include the search words for that item</step>
+
+<example keyword="Example:">{quickSearch=Disaster Recovery Resources, category=NWD}</example>
+<step outcome="successful">Given I am on the Community Leaders page on Disaster Assistance</step>
+<step outcome="successful">When I click on a <parameter>Disaster Recovery Resources</parameter> item on the Community Leaders page</step>
+<step outcome="successful">Then the results should include the search words for that item</step>
+
+<example keyword="Example:">{quickSearch=Emergency Shelter and Housing, category=NWD}</example>
+<step outcome="successful">Given I am on the Community Leaders page on Disaster Assistance</step>
+<step outcome="successful">When I click on a <parameter>Emergency Shelter and Housing</parameter> item on the Community Leaders page</step>
+<step outcome="successful">Then the results should include the search words for that item</step>
+
+<example keyword="Example:">{quickSearch=How Can You Help?, category=NWD}</example>
+<step outcome="successful">Given I am on the Community Leaders page on Disaster Assistance</step>
+<step outcome="successful">When I click on a <parameter>How Can You Help?</parameter> item on the Community Leaders page</step>
+<step outcome="successful">Then the results should include the search words for that item</step>
+
+<example keyword="Example:">{quickSearch=Infrastructure, Utilities, and Other Public Assistance, category=NWD}</example>
+<step outcome="successful">Given I am on the Community Leaders page on Disaster Assistance</step>
+<step outcome="successful">When I click on a <parameter>Infrastructure, Utilities, and Other Public Assistance</parameter> item on the Community Leaders page</step>
+<step outcome="successful">Then the results should include the search words for that item</step>
+</examples>
+</scenario>
+<scenario keyword="Scenario:" title="Homepage - Address Look-Up - Declared disasters">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the declared disasters DAC page</step>
+<step outcome="failed" keyword="FAILED">When I type the declared disaster into the address look-up bar<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected condition failed: waiting for DAHomepage.declaredDisasterDAC to be displayed (tried for 5 second(s) with 100 MILLISECONDS interval)
+Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
+System info: host: &apos;c02rj1fvfvh8.users.bah.com&apos;, ip: &apos;fe80:0:0:0:10f0:e9c8:41af:1abd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: driver.version: unknown</failure></step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then I should get the results for the given disaster</step>
+<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected condition failed: waiting for DAHomepage.declaredDisasterDAC to be displayed (tried for 5 second(s) with 100 MILLISECONDS interval)
+Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
+System info: host: &apos;c02rj1fvfvh8.users.bah.com&apos;, ip: &apos;fe80:0:0:0:10f0:e9c8:41af:1abd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: driver.version: unknown
+	at net.serenitybdd.core.exceptions.SerenityManagedException.detachedCopyOf(SerenityManagedException.java:21)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:394)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:133)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:62)
+	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.declaredDisasters(&lt;generated&gt;)
+	at gov.daip.d8.test.DailyRegressionSteps.whenTypeDeclaredDisasterIntoAddressLookUpBar(DailyRegressionSteps.java:206)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:733)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:346)
+...</failure>
+</scenario>
+<scenario keyword="Scenario:" title="Address Look-Up - Declared disasters">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the declared disasters DAC page</step>
+<step outcome="failed" keyword="FAILED">When I type the declared disaster into the address look-up bar from the Address Look-Up page<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected condition failed: waiting for DAHomepage.declaredDisasterDAC to be displayed (tried for 5 second(s) with 100 MILLISECONDS interval)
+Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
+System info: host: &apos;c02rj1fvfvh8.users.bah.com&apos;, ip: &apos;fe80:0:0:0:10f0:e9c8:41af:1abd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: driver.version: unknown</failure></step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then I should get the results for the given disaster</step>
+<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Expected condition failed: waiting for DAHomepage.declaredDisasterDAC to be displayed (tried for 5 second(s) with 100 MILLISECONDS interval)
+Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
+System info: host: &apos;c02rj1fvfvh8.users.bah.com&apos;, ip: &apos;fe80:0:0:0:10f0:e9c8:41af:1abd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: driver.version: unknown
+	at net.serenitybdd.core.exceptions.SerenityManagedException.detachedCopyOf(SerenityManagedException.java:21)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:394)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:133)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:62)
+	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.declaredDisastersPage(&lt;generated&gt;)
+	at gov.daip.d8.test.DailyRegressionSteps.whenTypeDeclaredDisasterIntoAddressLookUpBarFromAddressPage(DailyRegressionSteps.java:223)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:733)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:346)
+...</failure>
+</scenario>
+<scenario keyword="Scenario:" title="Find Assistance - Benefits results display according to use cases">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the Find Assistance page</step>
+<step outcome="successful">When I choose only Employment</step>
+<step outcome="successful">Then I should obtain 9 results and see all the content under the accordions</step>
+</scenario>
+<scenario keyword="Scenario:" title="Find Assistance - Dynamically verify results of the questionnaire">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the Find Assistance page</step>
+<step outcome="successful">When I fully complete the questionnaire</step>
+<step outcome="successful">Then I should accumulate the same number of results as the text on the Get Results button</step>
+</scenario>
+<scenario keyword="Scenario:" title="Find Assistance - All the functionality of the FOA questionnaire">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the Find Assistance page</step>
+<step outcome="successful">When I fully complete the questionnaire</step>
+<step outcome="failed" keyword="FAILED">Then I should be able to see all of the content<failure>java.lang.AssertionError: expected:&lt;62&gt; but was:&lt;0&gt;</failure></step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">When I click next</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then the 3 accordions should have content visible</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">When I click apply now</step>
+<step outcome="notPerformed" keyword="NOT PERFORMED">Then the DAC page should load</step>
+<failure>java.lang.AssertionError: expected:&lt;62&gt; but was:&lt;0&gt;
+	at org.junit.Assert.fail(Assert.java:88)
+	at org.junit.Assert.failNotEquals(Assert.java:834)
+	at org.junit.Assert.assertEquals(Assert.java:645)
+	at org.junit.Assert.assertEquals(Assert.java:631)
+	at gov.daip.d8.test.User.verifyFOAExpandedContentVisible(User.java:496)
+	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.CGLIB$verifyFOAExpandedContentVisible$34(&lt;generated&gt;)
+	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141$$FastClassByCGLIB$$f81e77a4.invoke(&lt;generated&gt;)
+	at net.sf.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:228)
+	at net.thucydides.core.steps.StepInterceptor.invokeMethod(StepInterceptor.java:425)
+	at net.thucydides.core.steps.StepInterceptor.executeTestStepMethod(StepInterceptor.java:410)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:385)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:133)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:62)
+	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.verifyFOAExpandedContentVisible(&lt;generated&gt;)
+	at gov.daip.d8.test.DailyRegressionSteps.then_i_should_be_able_to_see_all_the_content(DailyRegressionSteps.java:276)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:733)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:346)
+...</failure>
+</scenario>
+<scenario keyword="Scenario:" title="News Feeds - FEMA Twitter feed is present">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the News Feed page</step>
+<step outcome="successful">When I am viewing the FEMA Twitter feed</step>
+<step outcome="successful">Then the most recent tweets should be displayed</step>
+</scenario>
+<scenario keyword="Scenario:" title="Forms of Assistance - Category Type filter with the first seven types">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the Forms of Assistance page</step>
+<step outcome="successful">When I click on Category Type to check the first seven category types</step>
+<step outcome="successful">Then 42 results should appear</step>
+</scenario>
+<scenario keyword="Scenario:" title="Forms of Assistance - Category Type filter with the next eight types">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the Forms of Assistance page</step>
+<step outcome="successful">When I click on Category Type to check the next eight category types</step>
+<step outcome="successful">Then 53 results should appear</step>
+</scenario>
+<scenario keyword="Scenario:" title="Forms of Assistance - Federal Agency filter with the first seven types">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the Forms of Assistance page</step>
+<step outcome="successful">When I click on Federal Agency to check the first seven federal agencies</step>
+<step outcome="successful">Then 40 results should appear</step>
+</scenario>
+<scenario keyword="Scenario:" title="Forms of Assistance - Federal Agency filter with the next seven types">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">Given I am on the Forms of Assistance page</step>
+<step outcome="successful">When I click on Federal Agency to check the next seven federal agencies</step>
+<step outcome="successful">Then 37 results should appear</step>
+</scenario>
+<scenario keyword="Scenario:" title="Homepage - &quot;Apply Online&quot; DAC page includes mobile flag">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on Apply Online</step>
+<step outcome="successful">Then the DAC page with the mobile string should appear</step>
+</scenario>
+<scenario keyword="Scenario:" title="Homepage - &quot;Check Status&quot; DAC page includes mobile flag">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+<property keyword="@" name="skip" value=""/>
+</meta>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on Check Status</step>
+<step outcome="successful">Then the DAC page with the mobile string should appear</step>
+</scenario>
+<scenario keyword="Scenario:" title="Community Leaders - Type keyword into search bar">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the Community Leaders page on Disaster Assistance</step>
+<step outcome="successful">When I type a keyword into the search bar</step>
+<step outcome="failed" keyword="FAILED">Then the results should include the search words for that item<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Timed out after 2 seconds. Element not found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
+System info: host: &apos;c02rj1fvfvh8.users.bah.com&apos;, ip: &apos;fe80:0:0:0:10f0:e9c8:41af:1abd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: driver.version: unknown</failure></step>
+<failure>net.serenitybdd.core.exceptions.SerenityManagedException: The following error occurred: Timed out after 2 seconds. Element not found
+For documentation on this error, please visit: http://seleniumhq.org/exceptions/no_such_element.html
+Build info: version: &apos;3.7.0&apos;, revision: &apos;2321c73&apos;, time: &apos;2017-11-02T22:22:35.584Z&apos;
+System info: host: &apos;c02rj1fvfvh8.users.bah.com&apos;, ip: &apos;fe80:0:0:0:10f0:e9c8:41af:1abd%en0&apos;, os.name: &apos;Mac OS X&apos;, os.arch: &apos;x86_64&apos;, os.version: &apos;10.12.6&apos;, java.version: &apos;1.8.0_101&apos;
+Driver info: driver.version: unknown
+	at net.serenitybdd.core.exceptions.SerenityManagedException.detachedCopyOf(SerenityManagedException.java:21)
+	at net.thucydides.core.steps.StepInterceptor.runTestStep(StepInterceptor.java:394)
+	at net.thucydides.core.steps.StepInterceptor.testStepResult(StepInterceptor.java:133)
+	at net.thucydides.core.steps.StepInterceptor.intercept(StepInterceptor.java:62)
+	at gov.daip.d8.test.User$$EnhancerByCGLIB$$d3c05141.quickSearchResults(&lt;generated&gt;)
+	at gov.daip.d8.test.DailyRegressionSteps.thenShouldIncludeSearchWords(DailyRegressionSteps.java:195)
+	(reflection-invoke)
+	at org.jbehave.core.steps.StepCreator$ParametrisedStep.perform(StepCreator.java:733)
+	at org.jbehave.core.embedder.PerformableTree$FineSoFar.run(PerformableTree.java:346)
+...</failure>
+</scenario>
+<scenario keyword="Scenario:" title="Sitemap - All links in Sitemap point to the right page">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<examples keyword="Examples:">
+<step>Given I am on the sitemap</step>
+<step>When I click on a &lt;menuLinks&gt; within the sitemap</step>
+<step>Then the &lt;menuLinks&gt; page should open correctly</step>
+<parameters>
+<names><name>menuLinks</name></names>
+<values><value>home</value></values>
+<values><value>address look-up</value></values>
+<values><value>find assistance</value></values>
+<values><value>apply online</value></values>
+<values><value>check your status</value></values>
+<values><value>forms of assistance</value></values>
+<values><value>community leaders</value></values>
+<values><value>other recovery help</value></values>
+<values><value>application checklist</value></values>
+<values><value>forms</value></values>
+<values><value>news feeds</value></values>
+<values><value>evacuate or stay put</value></values>
+<values><value>gathering up loved ones</value></values>
+<values><value>emergency food and water</value></values>
+<values><value>emergency shelter</value></values>
+<values><value>emergency medical</value></values>
+<values><value>your home</value></values>
+<values><value>your business or farm</value></values>
+<values><value>your finances, job, and insurance</value></values>
+<values><value>your health</value></values>
+<values><value>your official documents</value></values>
+<values><value>biological threat</value></values>
+<values><value>chemical threat</value></values>
+<values><value>drought</value></values>
+<values><value>earthquake</value></values>
+<values><value>fire</value></values>
+<values><value>flood</value></values>
+<values><value>heat</value></values>
+<values><value>hurricane</value></values>
+<values><value>landslide</value></values>
+<values><value>radiation and nuclear</value></values>
+<values><value>tornado</value></values>
+<values><value>tsunami</value></values>
+<values><value>volcano</value></values>
+<values><value>wildfires</value></values>
+<values><value>winter storm</value></values>
+<values><value>foreign disasters</value></values>
+<values><value>fact sheets</value></values>
+<values><value>partners</value></values>
+<values><value>faqs</value></values>
+<values><value>contact us</value></values>
+<values><value>privacy policy</value></values>
+<values><value>accessibility</value></values>
+<values><value>download plug-ins</value></values>
+</parameters>
+
+<example keyword="Example:">{menuLinks=home, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>home</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>home</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=address look-up, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>address look-up</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>address look-up</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=find assistance, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>find assistance</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>find assistance</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=apply online, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>apply online</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>apply online</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=check your status, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>check your status</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>check your status</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=forms of assistance, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>forms of assistance</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>forms of assistance</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=community leaders, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>community leaders</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>community leaders</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=other recovery help, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>other recovery help</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>other recovery help</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=application checklist, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>application checklist</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>application checklist</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=forms, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>forms</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>forms</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=news feeds, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>news feeds</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>news feeds</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=evacuate or stay put, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>evacuate or stay put</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>evacuate or stay put</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=gathering up loved ones, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>gathering up loved ones</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>gathering up loved ones</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=emergency food and water, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>emergency food and water</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>emergency food and water</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=emergency shelter, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>emergency shelter</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>emergency shelter</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=emergency medical, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>emergency medical</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>emergency medical</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=your home, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>your home</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>your home</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=your business or farm, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>your business or farm</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>your business or farm</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=your finances, job, and insurance, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>your finances, job, and insurance</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>your finances, job, and insurance</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=your health, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>your health</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>your health</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=your official documents, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>your official documents</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>your official documents</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=biological threat, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>biological threat</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>biological threat</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=chemical threat, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>chemical threat</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>chemical threat</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=drought, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>drought</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>drought</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=earthquake, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>earthquake</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>earthquake</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=fire, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>fire</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>fire</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=flood, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>flood</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>flood</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=heat, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>heat</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>heat</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=hurricane, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>hurricane</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>hurricane</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=landslide, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>landslide</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>landslide</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=radiation and nuclear, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>radiation and nuclear</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>radiation and nuclear</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=tornado, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>tornado</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>tornado</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=tsunami, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>tsunami</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>tsunami</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=volcano, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>volcano</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>volcano</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=wildfires, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>wildfires</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>wildfires</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=winter storm, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>winter storm</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>winter storm</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=foreign disasters, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>foreign disasters</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>foreign disasters</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=fact sheets, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>fact sheets</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>fact sheets</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=partners, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>partners</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>partners</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=faqs, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>faqs</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>faqs</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=contact us, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>contact us</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>contact us</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=privacy policy, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>privacy policy</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>privacy policy</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=accessibility, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>accessibility</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>accessibility</parameter> page should open correctly</step>
+
+<example keyword="Example:">{menuLinks=download plug-ins, category=daily}</example>
+<step outcome="successful">Given I am on the sitemap</step>
+<step outcome="successful">When I click on a <parameter>download plug-ins</parameter> within the sitemap</step>
+<step outcome="successful">Then the <parameter>download plug-ins</parameter> page should open correctly</step>
+</examples>
+</scenario>
+<scenario keyword="Scenario:" title="Homepage - Footer - All the links in &quot;Additional Links&quot;">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<examples keyword="Examples:">
+<step>Given I am on the Disaster Assistance homepage</step>
+<step>When I click on the &lt;footerLinks&gt; link under Additional Links</step>
+<step>Then the &lt;footerLinks&gt; page should open correctly</step>
+<parameters>
+<names><name>footerLinks</name></names>
+<values><value>accountability</value></values>
+<values><value>femaGov</value></values>
+<values><value>usaGov</value></values>
+<values><value>inspectorGeneral</value></values>
+<values><value>privacy</value></values>
+<values><value>femaMobileApp</value></values>
+<values><value>usaGovBus</value></values>
+<values><value>noFearAct</value></values>
+<values><value>foia</value></values>
+<values><value>readyGov</value></values>
+<values><value>cfdaGov</value></values>
+<values><value>budgetPerformance</value></values>
+<values><value>accessibilityFooter</value></values>
+<values><value>dhsGov</value></values>
+<values><value>whiteHouse</value></values>
+<values><value>siteMap</value></values>
+<values><value>plainWriting</value></values>
+</parameters>
+
+<example keyword="Example:">{footerLinks=accountability, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>accountability</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>accountability</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=femaGov, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>femaGov</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>femaGov</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=usaGov, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>usaGov</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>usaGov</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=inspectorGeneral, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>inspectorGeneral</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>inspectorGeneral</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=privacy, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>privacy</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>privacy</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=femaMobileApp, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>femaMobileApp</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>femaMobileApp</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=usaGovBus, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>usaGovBus</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>usaGovBus</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=noFearAct, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>noFearAct</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>noFearAct</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=foia, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>foia</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>foia</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=readyGov, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>readyGov</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>readyGov</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=cfdaGov, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>cfdaGov</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>cfdaGov</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=budgetPerformance, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>budgetPerformance</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>budgetPerformance</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=accessibilityFooter, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>accessibilityFooter</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>accessibilityFooter</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=dhsGov, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>dhsGov</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>dhsGov</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=whiteHouse, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>whiteHouse</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>whiteHouse</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=siteMap, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>siteMap</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>siteMap</parameter> page should open correctly</step>
+
+<example keyword="Example:">{footerLinks=plainWriting, category=daily}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on the <parameter>plainWriting</parameter> link under Additional Links</step>
+<step outcome="successful">Then the <parameter>plainWriting</parameter> page should open correctly</step>
+</examples>
+</scenario>
+<scenario keyword="Scenario:" title="Homepage - USA search feeds display results">
+<meta>
+<property keyword="@" name="category" value="daily"/>
+</meta>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I type into the USA search box</step>
+<step outcome="successful">Then I should be able to see results for that search</step>
+</scenario>
+<scenario keyword="Scenario:" title="Homepage - Apply Online - Verify the redirection from DAC when RI is cancelled">
+<examples keyword="Examples:">
+<step>Given I am on the Disaster Assistance homepage</step>
+<step>When I click on &lt;mainLinksItem&gt; within the main links bar</step>
+<step>Then I click on cancel and I should be redirected to the correct environment</step>
+<parameters>
+<names><name>mainLinksItem</name></names>
+<values><value>apply online</value></values>
+</parameters>
+
+<example keyword="Example:">{mainLinksItem=apply online}</example>
+<step outcome="successful">Given I am on the Disaster Assistance homepage</step>
+<step outcome="successful">When I click on <parameter>apply online</parameter> within the main links bar</step>
+<step outcome="successful">Then I click on cancel and I should be redirected to the correct environment</step>
+</examples>
+</scenario>
+</story>
