@@ -22,9 +22,9 @@ import java.util.concurrent.TimeUnit;
  *************************************************************************/
 
 public class DAPage extends PageObject {
-	
-	/*********************************************/ 
- 
+
+	/*********************************************/
+
 	@FindBy(xpath = "logo")
 	private WebElementFacade homeLogo;
 
@@ -38,35 +38,36 @@ public class DAPage extends PageObject {
 
 	/*********************************************/
 	private String env = System.getProperty("environment");
-	public String defaultUrl = "http://" + env + ".disasterassistance.gov";
+	//public String defaultUrl = "http://" + env + ".disasterassistance.gov";
+	public String defaultUrl = "http://drupal-service-daip-dev.apps.openshiftdev.egt-labs.com";
 
 
 	public DAPage(WebDriver driver) {
 		super(driver);
-		//driver.manage().window().maximize(); 
+		//driver.manage().window().maximize();
 		//driver.manage().window().setSize(new Dimension(400, 784));
-		this.setImplicitTimeout(10, TimeUnit.SECONDS); 
-	} 
-	
+		this.setImplicitTimeout(10, TimeUnit.SECONDS);
+	}
+
 	public void mobilePage() {
 		getDriver().manage().window().setSize(new Dimension(500, 500));
-	}    
+	}
 
 	public void clearCookies() {
 		this.getDriver().manage().deleteAllCookies();
 	}
-	
+
 	public String processWindows() {
-		
+
         // Store the current window handle
         String winHandleBefore = getDriver().getWindowHandle();
-        
+
         // Perform the click operation that opens new window
 
         // Switch to new window opened
         List<String> browserTabs = new ArrayList<String>(getDriver().getWindowHandles());
         getDriver().switchTo().window(browserTabs.get(1));
-    
+
         for (int i = 0; i < 10; i++) {
             try {
                 Thread.sleep(1000);
@@ -76,10 +77,10 @@ public class DAPage extends PageObject {
             // To check page ready state.
             if (!getDriver().getCurrentUrl().equals("about:blank")) {
                 System.out.println("done");
-                break;    
+                break;
             }
         }
-    
+
         // Perform the actions on new window
         Serenity.takeScreenshot();
         String windowUrl = getDriver().getCurrentUrl();
@@ -87,12 +88,12 @@ public class DAPage extends PageObject {
 
         // Close the new window, if that window no more required
         getDriver().close();
-        
+
         // Switch back to original browser (first window)
         getDriver().switchTo().window(winHandleBefore);
 
         // Continue with original browser (first window)
         return windowUrl;
-        
+
     }
 }

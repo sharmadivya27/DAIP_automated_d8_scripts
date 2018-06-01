@@ -21,10 +21,10 @@ import net.thucydides.core.annotations.Steps;
  * @author Divya Sharma
  ************************************************************************/
 
-public class DailyRegressionSteps {
+public class DailyRegressionStepsAndroid {
 
 	@Steps
-	User user;
+	UserAndroid user;
 
 	/*********************************************/
 
@@ -563,7 +563,7 @@ public class DailyRegressionSteps {
 		user.open_page("/es/sitemap");
 	}
 
-	@When("I click on a <menuLinks> within the sitemap")
+	@When("I click on a <menuLinks> within the sitemap (android)")
 	public void clickOnSitemapLink(@Named("menuLinks") String menuLinks) {
 		user.clickSiteMap(menuLinks);
 	}

@@ -149,9 +149,12 @@ public class DALandingPage extends PageObject {
 
 	@FindBy(xpath = "//*[@class='desktop-header']")
 	private WebElementFacade results;
-	
-	@FindBy(xpath = "/html/body/div[3]/div/section/div/div/div[1]/div[2]/div")
+	                  
+	@FindBy(xpath = "//*[@class='modal-bar']")
 	private WebElementFacade mobileResults;
+	
+	//@FindBy(xpath = "/html/body/div[1]/div[3]/div/section/div/div/div[1]/div[2]/div")
+	//private WebElementFacade mobileResults;
 
 	@FindBy(xpath = "//*[@id='edit-category-select']")
 	private WebElementFacade searchCategoryButton;
@@ -171,8 +174,8 @@ public class DALandingPage extends PageObject {
 	
 	@FindBy(xpath = "//*[@id='edit-submit-mobile']")
 	private WebElementFacade communityLeadersMobileSearch;
-
-	@FindBy(xpath = "/html/body/div[3]/div/section/div/div/div[1]/div[2]/div/div/a")
+	                 
+	@FindBy(xpath = " /html/body/div[1]/div[3]/div/section/div/div/div[1]/div[2]/div/div/a")
 	private WebElementFacade refineSearch;
 	
 	@FindBy(xpath = "//*[contains(@id,'edit-filter-by-mobile')]/div[1]/label")
@@ -399,7 +402,7 @@ public class DALandingPage extends PageObject {
 	}
 	
 	public void clickMobileCategoryType() {
-		clickRefineSearch();
+		//clickRefineSearch();
 		mobileCategoryType.click();
 	}
 
@@ -409,8 +412,10 @@ public class DALandingPage extends PageObject {
 	
 	public void clickMobileFederalAgency() {
 		daHomepage.pause(3000);
-		clickRefineSearch();
+		//clickRefineSearch();
+		System.out.println(mobileFederalAgency.getText());
 		mobileFederalAgency.click();
+		System.out.println("I clicked the button");
 	}
 
 	public void clickMobileFirstCategoryTypes() {
@@ -529,7 +534,8 @@ public class DALandingPage extends PageObject {
 	}
 	
 	public String getMobileResults() {
-		return mobileResults.getText();
+		System.out.println(mobileResults.getText());
+		return mobileResults.getText().replaceAll("\\D+","");
 	}
 
 	public void typeIntoSearchBar() {
@@ -541,7 +547,10 @@ public class DALandingPage extends PageObject {
 	
 	public void typeIntoMobileSearchBar() throws AWTException {
 		searchBar.click();
-		searchBar.type("disaster");
+		searchBar.sendKeys("disaster");
+		//searchBar.type("disaster");
+		System.out.println("finished typing");
+		daHomepage.pause(2000);
 		//clbody.click();
 		communityLeadersMobileSearch.click();
 		daHomepage.pause(5000);

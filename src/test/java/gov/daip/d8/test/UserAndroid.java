@@ -11,7 +11,7 @@ import gov.daip.d8.test.pageObject.DAPage;
 import gov.daip.d8.test.pageObject.DAHomepage;
 import gov.daip.d8.test.pageObject.DALandingPage;
 import gov.daip.d8.test.pageObject.DAQuestionnaire;
-import gov.daip.d8.test.pageObject.DASitemap;
+import gov.daip.d8.test.pageObject.DASitemapAndroid;
 import gov.daip.d8.test.pageObject.DrupalPage;
 import gov.daip.d8.test.exceptions.LocalResourcesException;
 import gov.daip.d8.test.exceptions.FeedException;
@@ -21,22 +21,22 @@ import gov.daip.d8.test.exceptions.StateException;
  * The "user" that is performing all of the actions on the web page. Provides an
  * extra layer of abstraction so all the functions called are named to emulate
  * actions that a real user would perform.
- * 
+ *
  * @author Chris Viqueira
  * @author Divya Sharma
  ************************************************************************/
 
-public class User {
+public class UserAndroid {
 
 	DAPage dapage;
 	DAHomepage daHomepage;
 	DALandingPage daLanding;
 	DAQuestionnaire daQues;
 	DrupalPage drupalPage;
-	DASitemap sitemap;
+	DASitemapAndroid sitemap;
 
 	/*********************************************/
-	
+
 	@Step
 	public void home() {
 		daHomepage.getDriver().get("https://www.disasterassistance.gov");
@@ -53,7 +53,7 @@ public class User {
 		Assert.assertEquals("Home | DisasterAssistance.gov | Access to Disaster Help and Resources",
 				dapage.shouldSeeHome());
 	}
-	
+
 	@Step
 	public void seeMobileHome() {
 		Assert.assertEquals("Home|",
@@ -61,7 +61,7 @@ public class User {
 	}
 
 	/*********************************************/
-	
+
 	@Step
 	public void open_page(String directoryPath) {
 		dapage.clearCookies();
@@ -73,13 +73,13 @@ public class User {
 		daHomepage.openAt(url);
 		daHomepage.pause(2000);
 	}
-	
+
 	@Step
 	public void seeSpanishMobileHome() {
 		Assert.assertEquals("Home|",
 				dapage.shouldSeeHome().replace("disasterassistance.gov", "").replaceAll("\n", "").replaceAll(" ", ""));
 	}
-	
+
 	// Opens the Mobile page
 	@Step
 	public void open_mobile_page(String directoryPath) {
@@ -98,7 +98,7 @@ public class User {
 	public void clickGetNavMenu() {
 		daHomepage.clickNavMenu();
 	}
-	
+
 	// (Mobile) verifies that all of the menus in nav meunu are visible
 	@Step
 	public void checkNavMenu(String navLink) {
@@ -116,8 +116,8 @@ public class User {
 			Assert.assertEquals(true, daHomepage.getSpanishVisible());
 		}
 	}
-	
-	
+
+
 	// (Mobile) clicks the links in the nav bar
 	@Step
 	public void clickGetNavMenuLinks(String navLink) {
@@ -133,9 +133,9 @@ public class User {
 			daHomepage.clickMobileHelp();
 		} else if ((navLink.equals("espanol")) || (navLink.equals("english"))) {
 			daHomepage.clickMobileSpanish();
-		} 
+		}
 	}
-	
+
 	// (Mobile) checks if all the links in the "Get Assistance" menu are visible
 	@Step
 	public void checkAssistanceMenuLink(String menuLink) {
@@ -159,7 +159,7 @@ public class User {
 			Assert.assertEquals(true, daHomepage.getFormsVisible());
 		}
 	}
-	
+
 	// (Mobile) clicks the links in the "Get Assistance" menu
 	@Step
 	public void clickGetMobileAssistanceMenuLinks(String menuLinks) {
@@ -184,7 +184,7 @@ public class User {
 			daHomepage.clickMobileForms();
 		}
 	}
-	
+
 	// (Mobile) checks if all the links in the "Information" menu are visible
 	@Step
 	public void checkInformationMenuLink(String menuLink) {
@@ -208,7 +208,7 @@ public class User {
 			Assert.assertEquals(true, daHomepage.getFactSheetsVisible());
 		}
 	}
-	
+
 	// (Mobile) clicks on the links in the "Information" tab
 	@Step
 	public void clickGetMobileInformationMenuLinks(String menuLink) {
@@ -233,7 +233,7 @@ public class User {
 		}
 	}
 
-	
+
 	// (Mobile) checks if all the links in the "About us" menu are visible
 	@Step
 	public void checkAboutUsMenuLink(String menuLink) {
@@ -243,7 +243,7 @@ public class User {
 			Assert.assertEquals(true, daHomepage.getPartnersVisible());
 		}
 	}
-	
+
 	// (Mobile) checks if all the links in the "About us" menu are visible
 	@Step
 	public void clickGetMobileAboutUsMenuLink(String menuLink) {
@@ -253,7 +253,7 @@ public class User {
 			daHomepage.clickMobilePartners();
 		}
 	}
-	
+
 	// (Mobile) checks if all the links in the "Help" menu are visible
 	@Step
 	public void checkHelpMenuLink(String menuLink) {
@@ -269,7 +269,7 @@ public class User {
 			Assert.assertEquals(true, daHomepage.getDownloadPluginsVisible());
 		}
 	}
-	
+
 	// (Mobile) clicks the links in the "Help" menu
 	@Step
 	public void clickGetMobileHelpMenuLink(String menuLink) {
@@ -285,7 +285,7 @@ public class User {
 			daHomepage.clickMobileDownloadPlugins();
 		}
 	}
-			
+
 
 	@Step
 	public void clickGetAssistanceMenuLinks(String menuLinks) {
@@ -382,6 +382,7 @@ public class User {
 	 *************************************************************************/
 	@Step
 	public void shouldSeePage(String expectedPageName) {
+		daHomepage.pause(3000);
 		switch (expectedPageName) {
 		case "get assistance":
 		case "obtener asistencia":
@@ -400,18 +401,18 @@ public class User {
 		case "immediate needs":
 		case "community resources":
 		case "próximo paso":
+		case "disaster types":
+		case "los Recursos del desastre":
 		case "disabilities or access and functional needs":
 		case "discapacidades o necesidades funcionales y de acceso":
 		case "older americans":
 		case "adultos mayores estadounidenses":
 		case "children and families":
 		case "niños y familias":
-		case "disaster types":
-		case "los Recursos del desastre":
 			// TODO: Should this assertion be done on all pages?
 			// If so, delete all cases above this and move this assertion to
 			// after switch
-			Assert.assertEquals(expectedPageName.toLowerCase(), daHomepage.pullPageTitle().toLowerCase().replace("created with sketch.", "").replaceAll("\n", ""));
+			Assert.assertEquals(expectedPageName.toLowerCase().replaceAll(" ",""), daHomepage.pullPageTitle().toLowerCase().replace("created with sketch.", "").replaceAll("\n", "").replaceAll(" ",""));
 			break;
 
 		case "other recovery help":
@@ -437,7 +438,7 @@ public class User {
 		case "accessibility":
 		case "download plug-ins":
 		case "descargar plug-ins":
-			Assert.assertEquals(expectedPageName.toLowerCase(), daHomepage.pullPageSubTitle().toLowerCase().replace("created with sketch.", "").replaceAll("\n", ""));
+			Assert.assertEquals(expectedPageName.toLowerCase().replaceAll(" ",""), daHomepage.pullPageSubTitle().toLowerCase().replace("created with sketch.", "").replaceAll("\n", "").replaceAll(" ",""));
 			break;
 		case "accesibilidad nav":
 			Assert.assertEquals(expectedPageName.toLowerCase().replaceAll(" nav", ""), daHomepage.pullPageSubTitle().toLowerCase().replace("created with sketch.", "").replaceAll("\n", ""));
@@ -452,7 +453,7 @@ public class User {
 			Assert.assertEquals("https://www.dhs.gov/previous-performance-and-accountability-reports", dapage.processWindows());
 			break;
 		case "privacy":
-			Assert.assertEquals("Privacy Policy", daHomepage.pullPageSubTitle());
+			Assert.assertEquals("Privacy Policy".replaceAll("\n", "").replaceAll(" ",""), daHomepage.pullPageSubTitle().replaceAll("\n", "").replaceAll(" ",""));
 			break;
 		case "privacidad":
 			Assert.assertEquals("Política de Privacidad", daHomepage.pullPageSubTitle());
@@ -537,7 +538,7 @@ public class User {
 			break;
 
 		case "faqs":
-			Assert.assertEquals("Frequently Asked Questions (FAQs)", daHomepage.pullPageSubTitle());
+			Assert.assertEquals("Frequently Asked Questions (FAQs)".replaceAll(" ",""), daHomepage.pullPageSubTitle().replaceAll(" ",""));
 			break;
 		case "preguntas Comunes":
 			Assert.assertEquals("Preguntas Comunes", daHomepage.pullPageSubTitle());
@@ -597,9 +598,22 @@ public class User {
 		case "volcano":
 		case "wildfires":
 		case "winter storm":
-			Assert.assertEquals(expectedPageName.toLowerCase(), daHomepage.pullPageSubTitle().toLowerCase().replace("created with sketch.", "").replaceAll("\n", ""));
+			Assert.assertEquals(expectedPageName.toLowerCase().replaceAll(" ",""), daHomepage.pullPageSubTitle().toLowerCase().replace("created with sketch.", "").replaceAll("\n", "").replaceAll(" ",""));
 			break;
-
+		case "disabilities or access and functional needs online resources":
+		case "disabilities or access and functional needs downloadable guides and resources":
+		case "disabilities or access and functional needs videos":
+		case "discapacidades o necesidades funcionales y de acceso y":
+		case "older americans online resources":
+		case "older americans downloadable guides and resources":
+		case "older americans videos":
+		case "adultos mayores estadounidenses ":
+		case "children and families online resources":
+		case "children and families downloadable guides and resources":
+		case "children and families videos":
+		case "niños y familias ":
+			Assert.assertEquals(expectedPageName.toLowerCase().replaceAll(" ", ""), (daHomepage.pullPageTitle() + " " + (daHomepage.pullPageSubTitle())).toLowerCase().replace("created with sketch.", "").replaceAll("\n", "").replaceAll(" ",""));
+			break;
 		default:
 			System.err.println("INVALID PAGE SENT");
 			break;
@@ -682,7 +696,7 @@ public class User {
 			daLanding.clickInfrastructure();
 		}
 	}
-	
+
 	@Step
 	public void clickMobileQuickSearch(String quickSearch) {
 		if ((quickSearch.equals("Community Preparedness")) || (quickSearch.equals("Preparación para la comunidad"))) {
@@ -700,11 +714,12 @@ public class User {
 			daLanding.clickMobileInfrastructure();
 		}
 	}
-	
-	
+
+
 
 	@Step
 	public void quickSearchResults() {
+		daHomepage.pause(3000);
 		Assert.assertTrue(daLanding.communityResults());
 	}
 
@@ -722,7 +737,7 @@ public class User {
 	public void declaredDisastersPage() {
 		daHomepage.typeAddressLookUpPage();
 	}
-	
+
 	@Step
 	public void declaredMobileDisasterPage() {
 		daHomepage.typeMobileAddressLookUpPage();
@@ -737,7 +752,7 @@ public class User {
 	public void declaredDisastersPageSpanish() {
 		daHomepage.typeAddressLookUpPageSpanish();
 	}
-	
+
 	@Step
 	public void declaredMobileDisastersPageSpanish() {
 		daHomepage.typeMobileAddressLookUpPageSpanish();
@@ -747,7 +762,7 @@ public class User {
 	public void disasterResults() {
 		Assert.assertTrue(daHomepage.disasterAppears());
 	}
-	
+
 	@Step
 	public void disasterMobileResults( ) {
 		Assert.assertTrue(daHomepage.disasterMobileAppears());
@@ -776,7 +791,7 @@ public class User {
 		daQues.getFOAResultsPage();
 		Assert.assertEquals(i, daQues.getNumQuesResults());
 	}
-	
+
 	@Step
 	public void checkMobileResults() {
 		daHomepage.pause(1000);
@@ -800,7 +815,7 @@ public class User {
 		daQues.getFOAResultsPage();
 		Assert.assertEquals(i, daQues.getNumEmploymentResults());
 	}
-	
+
 	@Step
 	public void verifyMobileFOAExpandedContentVisible() {
 		int i = daQues.getMobileResultsVal();
@@ -821,7 +836,7 @@ public class User {
 	public void clicksNextFOA() {
 		daQues.clickNextFOA();
 	}
-	
+
 	@Step
 	public void clickMobileNextFOA() {
 		daQues.clickMobileNextFOA();
@@ -836,7 +851,7 @@ public class User {
 	public void clicksApplyOnline() {
 		daQues.clickApplyOnline();
 	}
-	
+
 	@Step
 	public void clickMobileApplyOnline() {
 		daQues.clickMobileApplyOnline();
@@ -853,7 +868,7 @@ public class User {
 		boolean dacPageVisible = (daQues.checkStatusPageIsDisplayed() || daQues.dacPageIsDisplayed());
 		Assert.assertEquals(true, dacPageVisible);
 	}
-	
+
 	@Step
 	public void shouldSeeMobileDAC() {
 		daHomepage.pause(2000);
@@ -870,7 +885,7 @@ public class User {
 	public void checkTwitterFeed() throws FeedException {
 		daLanding.checkTwitterFeed();
 	}
-	
+
 	@Step
 	public void checkMobileTwitterFeed() throws FeedException {
 		daLanding.checkMobileTwitterFeed();
@@ -881,10 +896,11 @@ public class User {
 		daLanding.clickCategoryType();
 		daLanding.clickFirstCategoryTypes();
 	}
-	
+
 	@Step
 	public void clickMobileCategoryType() {
-		daHomepage.pause(1000);
+		daLanding.clickRefineSearch();
+		daHomepage.pause(3000);
 		daLanding.clickMobileCategoryType();
 		daHomepage.pause(1000);
 		daLanding.clickMobileFirstCategoryTypes();
@@ -895,20 +911,20 @@ public class User {
 	public void get42Results() {
 		Assert.assertEquals("Showing 1 - 10 of 42 results View 10 50 All", daLanding.getResults());
 	}
-	
+
 	@Step
 	public void get42MobileResults() {
-		Assert.assertEquals("42 Results", daLanding.getMobileResults().replace(" Refine Search", "").replaceAll("\n", ""));
+		Assert.assertEquals("42", daLanding.getMobileResults().replace(" Refine Search", "").replaceAll("\n", ""));
 	}
 
 	@Step
 	public void get42SpanishResults() {
 		Assert.assertEquals("Mostrando 1 - 10 de 42 resultados Ver 10 50 Todos", daLanding.getResults());
 	}
-	
+
 	@Step
 	public void get42SpanishMobileResults() {
-		Assert.assertEquals("42 Resultados", daLanding.getMobileResults().replace(" Redefinir la Busqueda", "").replaceAll("\n", ""));
+		Assert.assertEquals("42", daLanding.getMobileResults().replace(" Redefinir la Busqueda", "").replaceAll("\n", ""));
 	}
 
 	@Step
@@ -916,9 +932,11 @@ public class User {
 		daLanding.clickCategoryType();
 		daLanding.clickNextCategoryTypes();
 	}
-	
+
 	@Step
 	public void clickMobileNextCategoryType() {
+		daLanding.clickRefineSearch();
+		daHomepage.pause(3000);
 		daLanding.clickMobileCategoryType();
 		daLanding.clickMobileNextCategoryTypes();
 		daHomepage.pause(7000);
@@ -928,20 +946,20 @@ public class User {
 	public void get53Results() {
 		Assert.assertEquals("Showing 1 - 10 of 53 results View 10 50 All", daLanding.getResults());
 	}
-	
+
 	@Step
 	public void get53MobileResults() {
-		Assert.assertEquals("53 Results", daLanding.getMobileResults().replace(" Refine Search", "").replaceAll("\n", ""));
+		Assert.assertEquals("53", daLanding.getMobileResults().replace(" Refine Search", "").replaceAll("\n", ""));
 	}
 
 	@Step
 	public void get53SpanishResults() {
 		Assert.assertEquals("Mostrando 1 - 10 de 53 resultados Ver 10 50 Todos", daLanding.getResults());
 	}
-	
+
 	@Step
 	public void get53SpanishMobileResults() {
-		Assert.assertEquals("53 Resultados", daLanding.getMobileResults().replace(" Redefinir la Busqueda", "").replaceAll("\n", ""));
+		Assert.assertEquals("53", daLanding.getMobileResults().replace(" Redefinir la Busqueda", "").replaceAll("\n", ""));
 	}
 
 	@Step
@@ -952,29 +970,31 @@ public class User {
 
 	@Step
 	public void clickMobileFederalAgency() {
+		daLanding.clickRefineSearch();
+		daHomepage.pause(3000);
 		daLanding.clickMobileFederalAgency();
 		daLanding.clickMobileFirstSevenFederalAgencies();
 		daHomepage.pause(7000);
 	}
-	
+
 	@Step
 	public void get40Results() {
 		Assert.assertEquals("Showing 1 - 10 of 40 results View 10 50 All", daLanding.getResults());
 	}
-	
+
 	@Step
 	public void get40MobileResults() {
-		Assert.assertEquals("40 Results", daLanding.getMobileResults().replace(" Refine Search", "").replaceAll("\n", ""));
+		Assert.assertEquals("40", daLanding.getMobileResults().replace(" Refine Search", "").replaceAll("\n", ""));
 	}
 
 	@Step
 	public void get40SpanishResults() {
 		Assert.assertEquals("Mostrando 1 - 10 de 40 resultados Ver 10 50 Todos", daLanding.getResults());
 	}
-	
+
 	@Step
 	public void get40SpanishMobileResults() {
-		Assert.assertEquals("40 Resultados", daLanding.getMobileResults().replace(" Redefinir la Busqueda", "").replaceAll("\n", ""));
+		Assert.assertEquals("40", daLanding.getMobileResults().replace(" Redefinir la Busqueda", "").replaceAll("\n", ""));
 	}
 
 	@Step
@@ -982,9 +1002,11 @@ public class User {
 		daLanding.clickFederalAgency();
 		daLanding.clickNextFederalAgencies();
 	}
-	
+
 	@Step
 	public void clickMobileNextFederalAgency() {
+		daLanding.clickRefineSearch();
+		daHomepage.pause(3000);
 		daLanding.clickMobileFederalAgency();
 		daLanding.clickMobileNextFederalAgencies();
 		daHomepage.pause(7000);
@@ -997,17 +1019,18 @@ public class User {
 
 	@Step
 	public void get37MobileResults() {
-		Assert.assertEquals("37 Results", daLanding.getMobileResults().replace(" Refine Search", "").replaceAll("\n", ""));
+		daHomepage.pause(4000);
+		Assert.assertEquals("37", daLanding.getMobileResults().replace(" Refine Search", "").replaceAll("\n", ""));
 	}
-	
+
 	@Step
 	public void get37SpanishResults() {
 		Assert.assertEquals("Mostrando 1 - 10 de 37 resultados Ver 10 50 Todos", daLanding.getResults());
 	}
-	
+
 	@Step
 	public void get37SpanishMobileResults() {
-		Assert.assertEquals("37 Resultados", daLanding.getMobileResults().replace(" Redefinir la Busqueda", "").replaceAll("\n", ""));
+		Assert.assertEquals("37", daLanding.getMobileResults().replace(" Redefinir la Busqueda", "").replaceAll("\n", ""));
 	}
 
 	@Step
@@ -1030,7 +1053,7 @@ public class User {
 	public void typeSearchBar() {
 		daLanding.typeIntoSearchBar();
 	}
-	
+
 	@Step
 	public void typeMobileSearchBar() throws AWTException {
 		daLanding.typeIntoMobileSearchBar();
@@ -1088,15 +1111,39 @@ public class User {
 			sitemap.clickHealth();
 		} else if ((menuLinks.equals("your official documents")) || (menuLinks.equals("sus documentos oficiales"))) {
 			sitemap.clickOfficialDocs();
-		} else if ((menuLinks.equals("disabilities or access and functional needs"))
-				|| (menuLinks.equals("discapacidades o necesidades funcionales y de acceso"))) {
-			sitemap.clickDisabilities();
-		} else if ((menuLinks.equals("older americans")) || (menuLinks.equals("adultos mayores estadounidenses"))) {
-			sitemap.clickOlderAmericans();
-		} else if ((menuLinks.equals("children and families")) || (menuLinks.equals("niños y familias"))) {
-			sitemap.clickChildrenFamilies();
+		} else if ((menuLinks.contains("disabilities or access and functional needs"))
+				|| (menuLinks.contains("discapacidades o necesidades funcionales y de acceso"))) {
+			if (menuLinks.contains("online resources")) {
+				sitemap.clickDisabilitiesOnlineResources();
+			}
+			else if (menuLinks.contains("downloadable guides and resources")) {
+				sitemap.clickDisabilitiesDownload();
+			}
+			else {
+				sitemap.clickDisabilitiesVideos();
+			}
+		} else if ((menuLinks.contains("older americans")) || (menuLinks.equals("adultos mayores estadounidenses"))) {
+			if (menuLinks.contains("online resources")) {
+				sitemap.clickOlderOnlineResources();
+			}
+			else if (menuLinks.contains("downloadable guides and resources")) {
+				sitemap.clickOlderDownload();
+			}
+			else {
+				sitemap.clickOlderVideos();
+			}
+		} else if ((menuLinks.contains("children and families")) || (menuLinks.equals("niños y familias"))) {
+			if (menuLinks.contains("online resources")) {
+				sitemap.clickChildrenOnlineResources();
+			}
+			else if (menuLinks.contains("downloadable guides and resources")) {
+				sitemap.clickChildrenDownload();
+			}
+			else {
+				sitemap.clickChildrenVideos();
+			}
 		} else if ((menuLinks.equals("disaster types")) || (menuLinks.equals("los recursos del desastre"))) {
-			sitemap.clickDisasterTypes();
+			sitemap.clickOverview();
 		} else if ((menuLinks.equals("biological threat")) || (menuLinks.equals("amenaza biológica"))) {
 			sitemap.clickBiological();
 		} else if ((menuLinks.equals("chemical threat")) || (menuLinks.equals("amenaza química"))) {
@@ -1145,7 +1192,7 @@ public class User {
 			sitemap.clickDownloadPlugIns();
 		}
 	}
-	
+
 	@Step
 	public void clickGetAdditionalLinks(String footerLinks) {
 		if ((footerLinks.equals("accountability")) || (footerLinks.equals("responsibilidad"))) {
@@ -1184,11 +1231,11 @@ public class User {
 			daHomepage.clickPlanWriting();
 		}
 	}
-	
+
 	public void typeIntoUSASearch() {
 		daHomepage.typeIntoUSASearch();
 	}
-	
+
 	public void USASearchResultsAppear() {
 		Assert.assertTrue(daHomepage.viewUSASearchResults());
 	}

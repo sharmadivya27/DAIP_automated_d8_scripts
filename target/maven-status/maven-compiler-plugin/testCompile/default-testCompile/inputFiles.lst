@@ -1,6 +1,9 @@
 /Users/morrislagrand/daip_testing/DAIP_automated_d8_scripts_v2/src/test/java/gov/daip/d8/test/exceptions/EmploymentException.java
+/Users/morrislagrand/daip_testing/DAIP_automated_d8_scripts_v2/src/test/java/gov/daip/d8/test/DailyRegressionStepsAndroid.java
 /Users/morrislagrand/daip_testing/DAIP_automated_d8_scripts_v2/src/test/java/gov/daip/d8/test/pageObject/DASitemap.java
+/Users/morrislagrand/daip_testing/DAIP_automated_d8_scripts_v2/src/test/java/gov/daip/d8/test/UserAndroid.java
 /Users/morrislagrand/daip_testing/DAIP_automated_d8_scripts_v2/src/test/java/gov/daip/d8/test/pageObject/DrupalPage.java
+/Users/morrislagrand/daip_testing/DAIP_automated_d8_scripts_v2/src/test/java/gov/daip/d8/test/pageObject/DASitemapAndroid.java
 /Users/morrislagrand/daip_testing/DAIP_automated_d8_scripts_v2/src/test/java/gov/daip/d8/test/exceptions/FeedException.java
 /Users/morrislagrand/daip_testing/DAIP_automated_d8_scripts_v2/src/test/java/gov/daip/d8/test/exceptions/LocalResourcesException.java
 /Users/morrislagrand/daip_testing/DAIP_automated_d8_scripts_v2/src/test/java/com/browserstack/BrowserStackSerenityDriver.java

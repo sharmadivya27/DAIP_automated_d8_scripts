@@ -1,9 +1,12 @@
+gov/daip/d8/test/DailyRegressionStepsAndroid.class
+gov/daip/d8/test/pageObject/DASitemapAndroid.class
 gov/daip/d8/test/pageObject/DAQuestionnaire.class
 gov/daip/d8/test/exceptions/FeedException.class
 gov/daip/d8/test/pageObject/DAPage.class
 com/browserstack/BrowserStackSerenityDriver.class
 com/browserstack/BrowserStackSerenityTest.class
 gov/daip/d8/test/pageObject/DALandingPage.class
+gov/daip/d8/test/UserAndroid.class
 gov/daip/d8/test/exceptions/LocalResourcesException.class
 gov/daip/d8/test/DailyRegressionSteps.class
 gov/daip/d8/test/pageObject/DASitemap.class

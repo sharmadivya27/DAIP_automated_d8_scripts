@@ -8,7 +8,7 @@ import net.serenitybdd.core.annotations.findby.FindBy;
 import net.serenitybdd.core.pages.WebElementFacade;
 import net.thucydides.core.pages.PageObject;
 
-public class DASitemap extends PageObject {
+public class DASitemapAndroid extends PageObject {
 
 	// *************************************************************************
 	// FindBy / private variables section
@@ -123,6 +123,9 @@ public class DASitemap extends PageObject {
 	
 	@FindBy(xpath = "/html/body/div[3]/div/section/ul[1]/ul[2]/li[7]/a")
 	private WebElementFacade disasterTypesSitemap;
+	
+	@FindBy(xpath = "/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[7]/li[1]/a")
+	private WebElementFacade overview;
 
 	@FindBy(xpath = "/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[7]/li[2]/a")
 	private WebElementFacade biologicalSitemap;
@@ -245,22 +248,27 @@ public class DASitemap extends PageObject {
 	}
 
 	public void clickEvacuate() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[1]/li[9]/a");
 		evacuateSitemap.click();
 	}
 
 	public void clickLovedOnes() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[1]/li[9]/a");
 		lovedOnesSitemap.click();
 	}
 
 	public void clickEmergencyFood() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[1]/li[9]/a");
 		emergencyFoodSitemap.click();
 	}
 
 	public void clickEmergencyShelter() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[1]/li[9]/a");
 		shelterSitemap.click();
 	}
 
 	public void emergencyMedical() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[1]/li[9]/a");
 		medicalSitemap.click();
 	}
 
@@ -269,35 +277,73 @@ public class DASitemap extends PageObject {
 	}
 
 	public void yourHome() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[1]/li[9]/a");
 		yourHomeSitemap.click();
 	}
 
 	public void clickBusiness() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[1]/li[9]/a");
 		businessSitemap.click();
 	}
 
 	public void clickFinance() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[1]/li[9]/a");
 		financesSitemap.click();
 	}
 
 	public void clickHealth() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[1]/li[9]/a");
 		healthSitemap.click();
 	}
 
 	public void clickOfficialDocs() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[1]/li[9]/a");
 		officialDocumentsSitemap.click();
 	}
 
-	public void clickDisabilities() {
-		disabilitiesSitemap.click();
+	public void clickDisabilitiesOnlineResources() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[1]/li[9]/a");
+		disabilitiesOnlineResources.click();
+	}
+	
+	public void clickDisabilitiesDownload() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[1]/li[9]/a");
+		disabilitiesDownload.click();
+	}
+	
+	public void clickDisabilitiesVideos() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[1]/li[9]/a");
+		disabilitiesVideos.click();
 	}
 
-	public void clickOlderAmericans() {
-		olderAmericansSitemap.click();
+	public void clickOlderOnlineResources() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[4]/li[1]/a");
+		olderOnlineResources.click();
+	}
+	
+	public void clickOlderDownload() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[4]/li[1]/a");
+		olderDownload.click();
+	}
+	
+	public void clickOlderVideos() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[4]/li[1]/a");
+		olderVideos.click();
 	}
 
-	public void clickChildrenFamilies() {
-		childrenSitemap.click();
+	public void clickChildrenOnlineResources() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[4]/li[1]/a");
+		childrenResources.click();
+	}
+	
+	public void clickChildrenDownload() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[4]/li[1]/a");
+		childrenDownload.click();
+	}
+	
+	public void clickChildrenVideos() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[4]/li[1]/a");
+		childrenVideos.click();
 	}
 
 	public void clickDisasterTypes() {
@@ -305,109 +351,124 @@ public class DASitemap extends PageObject {
 	}
 
 	public void clickBiological() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		biologicalSitemap.click();
 	}
 
 	public void clickChemical() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		chemicalSitemap.click();
 	}
 
 	public void clickDrought() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		droughtSitemap.click();
 	}
 
 	public void clickEarthquake() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		earthquakeSitemap.click();
 	}
 
 	public void clickFire() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		fireSitemap.click();
 	}
 
 	public void clickFlood() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		floodSitemap.click();
 	}
 
 	public void clickHeat() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		heatSitemap.click();
 	}
 
 	public void clickHurricane() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		hurricaneSitemap.click();
 	}
 
 	public void clickLandslide() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		landslideSitemap.click();
 	}
 
 	public void clickRadiation() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		radiationSitemap.click();
 	}
 
 	public void clickTornado() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		tornadoSitemap.click();
 	}
 
 	public void clickTsunami() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		tsunami.click();
 	}
 
 	public void clickVolcano() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		volcano.click();
 	}
 
 	public void clickWildfires() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		wildfires.click();
 	}
 
 	public void clickWinterStorms() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		winterStorm.click();
 	}
 
 	public void clickForeignDisasters() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		foreignDisasters.click();
 	}
 
 	public void clickFactSheets() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
 		factSheets.click();
 	}
 
 	public void clickPartners() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[7]/li[6]/a");
 		partners.click();
 	}
 
 	public void clickFaqs() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[7]/li[6]/a");
 		faqs.click();
 	}
 
 	public void clickContactUs() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[7]/li[6]/a");
 		contactUs.click();
 	}
 
 	public void clickPrivacyPolicy() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[7]/li[6]/a");
 		privacyPolicy.click();
 	}
 
 	public void clickAccessibility() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[7]/li[6]/a");
 		accessibility.click();
 	}
 
 	public void clickDownloadPlugIns() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[7]/li[6]/a");
 		downloadPlugIns.click();
 	}
 	
-	public void clickOlderOnline() {
-		olderOnlineResources.click();
+	public void clickOverview() {
+		scrollTo("/html/body/div[1]/div[3]/div/section/ul[1]/ul[2]/ul[6]/li[3]/a");
+		overview.click();
 	}
-	
-	public void clickOlderDownloads() {
-		olderDownload.click();
-	}
-	
-	public void clickOlderVideo() {
-		olderVideos.click();
-	}
-	
 	public void scrollTo(String path) {
 		WebElement element = getDriver().findElement(By.xpath(path));
 		((JavascriptExecutor) getDriver()).executeScript("arguments[0].scrollIntoView(true);", element);

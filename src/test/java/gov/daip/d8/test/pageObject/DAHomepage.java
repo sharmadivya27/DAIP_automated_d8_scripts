@@ -225,10 +225,10 @@ public class DAHomepage extends PageObject {
 	private WebElementFacade USASearchResult;
 	
 	/***********Mobile Code****************/
-	              
+	 
 	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[1]/button")
 	private WebElementFacade navMenu;
-	                  
+
 	@FindBy(xpath = "/html/body/div[1]/div[1]/div/div[3]/nav/ul/li[1]/a")
 	private WebElementFacade getMobileHomeTab;
 	
@@ -859,7 +859,8 @@ public class DAHomepage extends PageObject {
 		String county = getDeclaredDisasterCounty();
 		this.openAt("https://www.disasterassistance.gov/get-assistance/address-lookup");
 		addressLookUpTextField.click();
-		addressLookUpTextField.type(county + "," + state);
+		addressLookUpTextField.sendKeys(county + "," + state);
+		//addressLookUpTextField.type(county + "," + state);
 		addressBody.click();
 		mobileSearchButton.click();
 		pause(4000);
@@ -891,6 +892,22 @@ public class DAHomepage extends PageObject {
 		this.openAt("https://www.disasterassistance.gov/es/obtener-asistencia/buscador-de-direcciones");
 		addressLookUpTextField.click();
 		addressLookUpTextField.type(county + "," + state);
+		addressLookUpButton.click();
+		pause(4000);
+	}
+	
+	/*************************************************************************
+	 * Types the declared disaster state and county into the Address Look-up
+	 * search field from the Address Look-Up page.
+	 * 
+	 *************************************************************************/
+	public void typeMobileAddressLookUpPageSpanish() {
+		String state = getDeclaredDisasterState();
+		String county = getDeclaredDisasterCounty();
+		this.openAt("https://www.disasterassistance.gov/es/obtener-asistencia/buscador-de-direcciones");
+		addressLookUpTextField.click();
+		addressLookUpTextField.type(county + "," + state);
+		addressBody.click();
 		addressLookUpButton.click();
 		pause(4000);
 	}
@@ -940,7 +957,7 @@ public class DAHomepage extends PageObject {
 	}
 	
 	public boolean URLMobileFlag() {
-		return getUrl().contains("mobileBrowser=True"); 
+		return getUrl().contains("mobile"); 
 	}
 	
 	/*************************************************************************

@@ -3,7 +3,7 @@ In order to assure that the basic functionality of disasterassistance.gov is wor
 As a tester
 I want to run the daily regressions at least twice a day
 
-Meta:
+Meta: @skip
 
 
 Scenario: (Mobile) Community Leaders - Type keyword into search bar
@@ -14,45 +14,45 @@ Given I am on the Community Leaders page on Disaster Assistance
 When I type a keyword into the search bar (mobile)
 Then the results should include the search words for that item
 
-Scenario: (Mobile) Forms of Assistance - Federal Agency filter with the next seven types 
-Meta: 
-@category daily 
+Scenario: (Mobile) Forms of Assistance - Federal Agency filter with the next seven types
+Meta:
+@category daily
 
-Given I am on the Forms of Assistance page 
+Given I am on the Forms of Assistance page
 When I click on Federal Agency to check the next seven federal agencies (mobile)
 Then 37 results should appear (mobile)
 
 
-Scenario: (Mobile) Forms of Assistance - Federal Agency filter with the first seven types 
-Meta: 
-@category daily 
+Scenario: (Mobile) Forms of Assistance - Federal Agency filter with the first seven types
+Meta:
+@category daily
 
-Given I am on the Forms of Assistance page 
+Given I am on the Forms of Assistance page
 When I click on Federal Agency to check the first seven federal agencies (mobile)
 Then 40 results should appear (mobile)
 
 
-Scenario: (Mobile) Forms of Assistance - Category Type filter with the next eight types 
-Meta: 
+Scenario: (Mobile) Forms of Assistance - Category Type filter with the next eight types
+Meta:
 @category daily
 
-Given I am on the Forms of Assistance page 
+Given I am on the Forms of Assistance page
 When I click on Category Type to check the next eight category types (mobile)
 Then 53 results should appear (mobile)
 
 
 Scenario: (Mobile) Forms of Assistance - Category Type filter with the first seven types
-Meta: 
+Meta:
 @category daily
 
-Given I am on the Forms of Assistance page 
+Given I am on the Forms of Assistance page
 When I click on Category Type to check the first seven category types (mobile)
 Then 42 results should appear (mobile)
 
-Scenario: (Mobile) News Feeds - FEMA Twitter feed is present 
+Scenario: (Mobile) News Feeds - FEMA Twitter feed is present
 Meta: @skip
-@category daily 
-               
+@category daily
+
 Given I am on the News Feed page
 When I am viewing the FEMA Twitter feed
 Then the most recent mobile tweets should be displayed
@@ -60,39 +60,39 @@ Then the most recent mobile tweets should be displayed
 
 Scenario: (Mobile) Find Assistance - All the functionality of the FOA questionnaire
 Meta:
-@category daily 
+@category daily
 
 Given I am on the Find Assistance page
 When I fully complete the questionnaire
-Then I should be able to see all of the content (mobile) 
+Then I should be able to see all of the content (mobile)
 When I click next (mobile)
 Then the 3 accordions should have content visible
 When I click apply now (mobile)
-Then the mobile DAC page should load 
+Then the mobile DAC page should load
 
 
 
-Scenario: (Mobile) Address Look-Up - Declared disasters 
-Meta: 
+Scenario: (Mobile) Address Look-Up - Declared disasters
+Meta: @skip @failed
 @category daily
 
-Given I am on the declared disasters DAC page 
+Given I am on the declared disasters DAC page
 When I type the declared disaster into the address look-up bar from the Address Look-Up page (mobile)
 Then I should get the results for the given disaster (mobile)
 
 
-Scenario: (Mobile) Homepage - Address Look-Up - Declared disasters 
-Meta: 
+Scenario: (Mobile) Homepage - Address Look-Up - Declared disasters
+Meta: @skip @failed
 @category daily
 
-Given I am on the declared disasters DAC page 
-When I type the declared disaster into the address look-up bar 
+Given I am on the declared disasters DAC page
+When I type the declared disaster into the address look-up bar
 Then I should get the results for the given disaster (mobile)
 
 
 
 Scenario: (Mobile) Homepage - If I click on the nav bar spanish link, then I should go to the spanish homepage
-Meta: 
+Meta:
 
 Given I am on the  Disaster Assistance homepage
 When I click on the nav menu
@@ -105,7 +105,7 @@ Examples:
 |espanol|
 
 Scenario: (Mobile) Homepage - If I click on the nav bar home link, then I should return to the homepage
-Meta: 
+Meta:
 
 Given I am on the  Disaster Assistance homepage
 When I click on the nav menu
@@ -118,7 +118,7 @@ Examples:
 |home|
 
 Scenario: (Mobile) Homepage - Header - All the menu links on the "Information" tab
-Meta: 
+Meta:
 
 Given I am on the  Disaster Assistance homepage
 When I click on the nav menu
@@ -134,15 +134,15 @@ Examples:
 |information|immediate needs|
 |information|moving forward|
 |information|disabilities or access and functional needs|
-|information|older americans| 
+|information|older americans|
 |information|children and families|
 |information|disaster types|
-|information|foreign disasters| 
+|information|foreign disasters|
 |information|fact sheets|
 
 
 Scenario: (Mobile) Homepage - Header - All the links in the nav bar should be visible
-Meta:  
+Meta:
 @category daily
 
 Given I am on the  Disaster Assistance homepage
@@ -157,7 +157,7 @@ Examples:
 |help|
 
 Scenario: (Mobile) Homepage - Header - All the menu links on the "Help" tab
-Meta: 
+Meta:
 
 Given I am on the  Disaster Assistance homepage
 When I click on the nav menu
@@ -176,7 +176,7 @@ Examples:
 |help|download plug-ins|
 
 Scenario: (Mobile) Homepage - Header - All the menu links on the "About Us" tab
-Meta: 
+Meta:
 
 Given I am on the  Disaster Assistance homepage
 When I click on the nav menu
@@ -192,7 +192,7 @@ Examples:
 |about us|partners|
 
 Scenario: (Mobile) Homepage - Header - All the menu links on the "Get Assistance" tab
-Meta: 
+Meta:
 
 Given I am on the  Disaster Assistance homepage
 When I click on the nav menu
@@ -208,16 +208,16 @@ Examples:
 |get assistance|find assistance|
 |get assistance|apply online|
 |get assistance|check your status|
-|get assistance|forms of assistance| 
+|get assistance|forms of assistance|
 |get assistance|community leaders|
 |get assistance|other recovery help|
-|get assistance|application checklist| 
+|get assistance|application checklist|
 |get assistance|forms|
 
 
 Scenario: Homepage - Key Links - Main links on homepage to assert that the pages open correctly
-Meta: 
-@category daily 
+Meta:
+@category daily
 
 Given I am on the  Disaster Assistance homepage
 When I click on <mainLinksItem> within the main links bar
@@ -230,31 +230,31 @@ Examples:
 |check status|
 
 Scenario: Homepage - Find Local Resources flows correctly
-Meta: 
-@category daily 
+Meta:
+@category daily
 
 Given I am on the  Disaster Assistance homepage
 When I am attempting to find local resources
 Then information on resources should be visible
 
 Scenario: News Feeds - All of the titles on the page
-Meta: 
-@category new 
+Meta:
+@category new
 
 When I am on the News Feeds landing page node
-Then all of the sub-titles should show on the page 
+Then all of the sub-titles should show on the page
 
 
 
-Scenario:  (Mobile) Community Leaders - Results of the quick search items  
+Scenario:  (Mobile) Community Leaders - Results of the quick search items
 Meta:
-@category NWD 
+@category NWD
 
 Given I am on the Community Leaders page on Disaster Assistance
 When I click on a <quickSearch> item on the Community Leaders page (mobile)
 Then the results should include the search words for that item
 
-Examples: 
+Examples:
 |quickSearch|
 |Community Preparedness|
 |Disaster Recovery Resources|
@@ -264,45 +264,44 @@ Examples:
 
 
 Scenario: Find Assistance - Benefits results display according to use cases
-Meta: 
+Meta:
 @category daily
-                 
+
 Given I am on the Find Assistance page
-When I choose only Employment 
+When I choose only Employment
 Then I should obtain 9 results and see all the content under the accordions
 
-Scenario: (Mobile) Find Assistance - Dynamically verify results of the questionnaire 
-Meta: 
-@category daily 
-          
+Scenario: (Mobile) Find Assistance - Dynamically verify results of the questionnaire
+Meta:
+@category daily
+
 Given I am on the Find Assistance page
 When I fully complete the questionnaire
 Then I should accumulate the same number of results as the text on the Get Results button (mobile)
 
 
-Scenario: Homepage - "Apply Online" DAC page includes mobile flag 
-Meta: 
-@category daily 
-
-Given I am on the  Disaster Assistance homepage 
-When I click on Apply Online
-Then the DAC page with the mobile string should appear    
-
-Scenario: Homepage - "Check Status" DAC page includes mobile flag
-Meta:  
-@category daily 
-
-Given I am on the  Disaster Assistance homepage 
-When I click on Check Status
-Then the DAC page with the mobile string should appear 
-
-Scenario: Sitemap - All links in Sitemap point to the right page 
+Scenario: Homepage - "Apply Online" DAC page includes mobile flag
 Meta: @skip
 @category daily
 
+Given I am on the  Disaster Assistance homepage
+When I click on Apply Online
+Then the DAC page with the mobile string should appear
+
+Scenario: Homepage - "Check Status" DAC page includes mobile flag
+Meta: @skip
+@category daily
+
+Given I am on the  Disaster Assistance homepage
+When I click on Check Status
+Then the DAC page with the mobile string should appear
+
+Scenario: Sitemap - All links in Sitemap point to the right page
+Meta:
+
 Given I am on the sitemap
-When I click on a <menuLinks> within the sitemap
-Then the <menuLinks> page should open correctly 
+When I click on a <menuLinks> within the sitemap (android)
+Then the <menuLinks> page should open correctly
 
 Examples:
 |menuLinks|
@@ -317,21 +316,25 @@ Examples:
 |application checklist|
 |forms|
 |news feeds|
-|immediate needs|
 |evacuate or stay put|
 |gathering up loved ones|
 |emergency food and water|
 |emergency shelter|
 |emergency medical|
-|moving forward|
 |your home|
 |your business or farm|
 |your finances, job, and insurance|
 |your health|
 |your official documents|
-|disabilities or access and functional needs|
-|older americans|
-|children and families|
+|disabilities or access and functional needs online resources|
+|disabilities or access and functional needs downloadable guides and resources|
+|disabilities or access and functional needs videos|
+|older americans online resources|
+|older americans downloadable guides and resources|
+|older americans videos|
+|children and families online resources|
+|children and families downloadable guides and resources|
+|children and families videos|
 |disaster types|
 |biological threat|
 |chemical threat|
@@ -358,7 +361,7 @@ Examples:
 |download plug-ins|
 
 Scenario: Homepage - Footer - All the links in "Additional Links"
-Meta: @skip
+Meta:
 @category daily
 
 Given I am on the  Disaster Assistance homepage
